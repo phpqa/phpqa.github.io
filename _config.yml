@@ -20,10 +20,10 @@ gems:
 # PHP QA
 ### ### ### ### ### ###
 
-author: Bart Reunes
+author: Bart Reunes   
 name: PHP Quality Assurance Tools
 description: A list of PHP Quality Assurance Tools
-url: ~
+url: //phpqa.github.io
 
 title: PHP Quality Assurance Tools
 subtitle: Looking for tools to make your PHP code even better? Dive right into the exciting world of PHP QA!
