@@ -1,0 +1,108 @@
+---
+---
+
+/* Card
+-------------------------------------------------- */
+
+.card-metrics {
+  padding: .5rem;
+}
+.card-metrics .badge {
+  font-size: 60%;
+}
+.card-block {
+  position: relative;
+  padding-right: 35px;
+}
+.card-actions {
+  position: absolute;
+  top: .25rem;
+  right: 0;
+  width: 35px;
+  text-align: right;
+}
+.btn-card-action {
+  padding: .25rem;
+  border-right-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-card-action.btn-website:hover {
+  color: #fff;
+  background-color: #0275d8;
+}
+.btn-card-action.btn-terms:hover {
+  color: #000;
+  background-color: #f2e31c;
+}
+.btn-card-action.btn-wiki:hover {
+  color: #000;
+  background-color: #cef2e0;
+}
+.btn-card-action.btn-docs:hover {
+  color: #000;
+  background-color: #cef2e0;
+}
+.btn-card-action.btn-demo:hover {
+  color: #fff;
+  background-color: #F05033;
+}
+.btn-card-action.btn-source:hover {
+  color: #fff;
+  background-color: #9CDAF0;
+}
+.btn-card-action.btn-docker:hover {
+  color: #fff;
+  background-color: #1488C6;
+}
+.card-tags {
+  padding: .5rem;
+}
+.card-tags .badge {
+  font-size: 60%;
+}
+
+/* Navbar
+-------------------------------------------------- */
+.navbar {
+  margin-bottom: 20px;
+}
+.navbar .fa.fa-fw {
+  display: inline-block;
+  width: 1.3em;
+}
+
+/* Sidebar
+-------------------------------------------------- */
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  box-sizing: border-box;
+}
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  font-size: small;
+}
+
+/* Sticky footer
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}

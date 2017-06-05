@@ -1,0 +1,100 @@
+---
+layout: bootstrap4
+---
+
+<div class="row">
+    <div class="col-md-12">
+        <article class="post">
+            <h1>{{ page.title }}</h1>
+
+            <dl class="row">
+                {% if page.website != '' and page.website != nil and page.website != page.source %}
+                <dt class="col-sm-3"><i class="fa fa-globe fa-fw"></i> Website</dt>
+                <dd class="col-sm-9"><a href="{{ page.website }}" target="_blank">{{ page.website }}</a></dd>
+                {% endif %}
+
+                {% if page.terms != '' and page.terms != nil %}
+                <dt class="col-sm-3"><i class="fa fa-thumbs-o-up fa-fw"></i> Terms (Of Service)</dt>
+                <dd class="col-sm-9"><a href="{{ page.terms }}" target="_blank">{{ page.terms }}</a></dd>
+                {% endif %}
+
+                {% if page.wiki != '' and page.wiki != nil %}
+                <dt class="col-sm-3"><i class="fa fa-list-alt fa-fw"></i> Wiki</dt>
+                <dd class="col-sm-9"><a href="{{ page.wiki }}" target="_blank">{{ page.wiki }}</a></dd>
+                {% endif %}
+
+                {% if page.docs != '' and page.docs != nil %}
+                <dt class="col-sm-3"><i class="fa fa-info fa-fw"></i> Documentation</dt>
+                <dd class="col-sm-9"><a href="{{ page.docs }}" target="_blank">{{ page.docs }}</a></dd>
+                {% endif %}
+
+                {% if page.demo != '' and page.demo != nil %}
+                <dt class="col-sm-3"><i class="fa fa-desktop fa-fw"></i> Demo</dt>
+                <dd class="col-sm-9"><a href="{{ page.demo }}" target="_blank">{{ page.demo }}</a></dd>
+                {% endif %}
+
+                {% if page.source != '' and page.source != nil %}
+                {% if page.source contains 'github.com' %}
+                <dt class="col-sm-3"><i class="fa fa-github fa-fw"></i> Source code</dt>
+                {% else if page.source contains 'gitlab.com' %}
+                <dt class="col-sm-3"><i class="fa fa-gitlab fa-fw"></i> Source code</dt>
+                {% else %}
+                <dt class="col-sm-3"><i class="fa fa-code fa-fw"></i> Source code</dt>
+                {% endif %}
+                <dd class="col-sm-9"><a href="{{ page.source }}" target="_blank">{{ page.source }}</a></dd>
+                {% endif %}
+
+                {% if page.authors != '' and page.authors != nil %}
+                {% assign authorlength = page.authors | size %}
+                <dt class="col-sm-3"><i class="fa fa-user fa-fw"></i> Author{% if authorlength > 1 %}s{% endif %}</dt>
+                <dd class="col-sm-9">{{ page.authors | join: ', ' }}</dd>
+                {% endif %}
+
+                {% if page.license != '' and page.license != nil %}
+                <dt class="col-sm-3"><i class="fa fa-id-card fa-fw"></i> License</dt>
+                {% if page.license-url != '' and page.license-url != nil %}
+                <dd class="col-sm-9"><a href="{{ page.license-url }}" target="_blank">{{ page.license }}</a></dd>
+                {% else %}
+                <dd class="col-sm-9">{{ page.license }}</dd>
+                {% endif %}
+                {% endif %}
+
+                {% if page.dependencies != '' and page.dependencies != nil %}
+                <dt class="col-sm-3"><i class="fa fa-check-square-o fa-fw" aria-hidden="true"></i> Dependencies</dt>
+                <dd class="col-sm-9">{{ page.dependencies | join: ', ' | default: '-' }}</dd>
+                {% endif %}
+
+                {% if page.command != '' and page.command != nil %}
+                <dt class="col-sm-3"><i class="fa fa-terminal fa-fw" aria-hidden="true"></i> Command</dt>
+                <dd class="col-sm-9">{{ page.command }}</dd>
+                {% endif %}
+
+                {% if page.docker != '' and page.docker != nil %}
+                <dt class="col-sm-3"><i class="fa fa-ship fa-fw"></i> Docker image</dt>
+                <dd class="col-sm-9"><a href="https://hub.docker.com/r/{{ page.docker }}" target="_blank">{{ page.docker
+                    }}</a></dd>
+                {% endif %}
+            </dl>
+
+            {% if page.packagist != '' and page.packagist != nil %}
+            <p>
+                <a href="{{ page.source }}" title="stars" class="badge badge-pill badge-default">
+                    <i class="fa fa-star"></i>
+                    <span data-packagist-repository-name="{{ page.packagist }}" data-packagist-metric="star">*</span>
+                </a>
+                <a href="{{ page.source }}" title="watchers" class="badge badge-pill badge-default">
+                    <i class="fa fa-eye"></i>
+                    <span data-packagist-repository-name="{{ page.packagist }}" data-packagist-metric="watch">*</span>
+                </a>
+                <a href="{{ page.source }}" title="forks" class="badge badge-pill badge-default">
+                    <i class="fa fa-code-fork"></i>
+                    <span data-packagist-repository-name="{{ page.packagist }}" data-packagist-metric="fork">*</span>
+                </a>
+            </p>
+            {% endif %}
+
+            {{ content }}
+
+        </article>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+---
+layout: page
+title: News
+---
+
+<div class="row">
+    {% for post in site.posts %}
+    <div class="col-6">
+        <article class="post">
+
+            <strong>{{ post.title }}</strong>
+
+            <div class="entry">
+                {{ post.excerpt }}
+            </div>
+
+            <a href="{{ site.url }}{{ post.url }}" class="read-more pull-right">Read more &rarr;</a>
+        </article>
+    </div>
+    {% endfor %}
+</div>

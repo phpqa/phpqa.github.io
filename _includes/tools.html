@@ -1,0 +1,115 @@
+<div class="row">
+    {% assign tools = site.tools | sort: 'title' %}
+    {% for tool in tools %}
+    <div class="col-12 col-sm-6 col-lg-4 tool">
+        <div class="card mb-4">
+            <div class="card-header card-metrics text-right">
+                {% if tool.packagist != '' and tool.packagist != nil %}
+                <a href="{{ tool.source }}" title="stars" class="badge badge-pill badge-default">
+                    <i class="fa fa-star"></i>
+                    <span data-packagist-repository-name="{{ tool.packagist }}" data-packagist-metric="star">*</span>
+                </a>
+                <a href="{{ tool.source }}" title="watchers" class="badge badge-pill badge-default">
+                    <i class="fa fa-eye"></i>
+                    <span data-packagist-repository-name="{{ tool.packagist }}" data-packagist-metric="watch">*</span>
+                </a>
+                <a href="{{ tool.source }}" title="forks" class="badge badge-pill badge-default">
+                    <i class="fa fa-code-fork"></i>
+                    <span data-packagist-repository-name="{{ tool.packagist }}" data-packagist-metric="fork">*</span>
+                </a>
+                {% endif %}
+                {% if page.comments-count %}
+                <a href="{{ site.url }}{{ tool.url }}" title="comments" class="badge badge-pill badge-default">
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                    <span data-disqus-identifier="{{ tool.id }}" class="disqus-comment-count">0</span>
+                </a>
+                {% endif %}
+            </div>
+            <div class="card-block">
+                
+                {{ tool.excerpt }}
+
+                <p class="small">
+                    by {{ tool.authors | join: ', ' }}
+                </p>
+                <a href="{{ site.url }}{{ tool.url }}">
+                    More information &rarr;
+                </a>
+                <div class="card-actions">
+                    {% if tool.website != '' and tool.website != nil and tool.website != tool.source %}
+                    <a href="{{ tool.website }}" title="Website"
+                       data-toggle="tooltip" data-placement="right"
+                       class="btn btn-secondary btn-website btn-sm btn-card-action mb-1">
+                        <i class="fa fa-globe fa-fw"></i>
+                    </a>
+                    {% endif %}
+                    {% if tool.terms != '' and tool.terms != nil %}
+                    <a href="{{ tool.terms }}" title="Terms (Of Service)"
+                       data-toggle="tooltip" data-placement="right"
+                       class="btn btn-secondary btn-terms btn-sm btn-card-action mb-1">
+                        <i class="fa fa-thumbs-o-up fa-fw"></i>
+                    </a>
+                    {% endif %}
+                    {% if tool.wiki != '' and tool.wiki != nil %}
+                    <a href="{{ tool.wiki }}" title="Wiki"
+                       data-toggle="tooltip" data-placement="right"
+                       class="btn btn-secondary btn-wiki btn-sm btn-card-action mb-1">
+                        <i class="fa fa-list-alt fa-fw"></i>
+                    </a>
+                    {% endif %}
+                    {% if tool.docs != '' and tool.docs != nil %}
+                    <a href="{{ tool.docs }}" title="Documentation"
+                       data-toggle="tooltip" data-placement="right"
+                       class="btn btn-secondary btn-docs btn-sm btn-card-action mb-1">
+                        <i class="fa fa-info fa-fw"></i>
+                    </a>
+                    {% endif %}
+                    {% if tool.demo != '' and tool.demo != nil %}
+                    <a href="{{ tool.demo }}" title="Demo"
+                       data-toggle="tooltip" data-placement="right"
+                       class="btn btn-secondary btn-demo btn-sm btn-card-action mb-1">
+                        <i class="fa fa-desktop fa-fw"></i>
+                    </a>
+                    {% endif %}
+                    {% if tool.source != '' and tool.source != nil %}
+                    <a href="{{ tool.source }}" title="Source"
+                       data-toggle="tooltip" data-placement="right"
+                       class="btn btn-secondary btn-source btn-sm btn-card-action mb-1">
+                        <i class="fa fa-code fa-fw"></i>
+                    </a>
+                    {% endif %}
+                    {% if tool.docker != '' and tool.docker != nil %}
+                    <a href="https://hub.docker.com/r/{{ tool.docker }}" title="Docker"
+                       data-toggle="tooltip" data-placement="right"
+                       class="btn btn-secondary btn-docker btn-sm btn-card-action mb-1">
+                        <i class="fa fa-ship fa-fw"></i>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="card-footer card-tags text-muted text-right">
+                {% if tool.tags contains 'alpha' %}
+                <a href="#" class="badge badge-info" data-tool-tag-filter="alpha">alpha</a>
+                {% endif %}
+                {% if tool.tags contains 'unmaintained' %}
+                <a href="#" class="badge badge-warning" data-tool-tag-filter="unmaintained">unmaintained</a>
+                {% endif %}
+                {% if tool.tags contains 'deprecated' %}
+                <a href="#" class="badge badge-danger" data-tool-tag-filter="deprecated">deprecated</a>
+                {% endif %}
+                {% assign tags = tool.tags | sort:'title' %}
+                {% for tag in tags %}
+                {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' %}
+                <a href="#" class="badge badge-default" data-tool-tag-filter="{{ tag }}">
+                    {{ tag }}
+                </a>
+                {% endunless %}
+                {% endfor %}
+                {% if tool.docker != '' and tool.docker != nil %}
+                <a href="#" class="badge badge-default" data-tool-tag-filter="docker image">docker image</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,59 @@
+# GitHub Pages
+### ### ### ### ### ###
+
+github: [metadata]                          # set by GitHub Pages, can be overwritten
+#lsi: false                                 # set by GitHub Pages, cannot be changed
+#safe: true                                 # set by GitHub Pages, cannot be changed
+#source: [your repo's top level directory]  # set by GitHub Pages, cannot be changed
+#incremental: false                         # set by GitHub Pages, cannot be changed
+#highlighter: rouge                         # set by GitHub Pages, cannot be changed
+#gist:
+#  noscript: false                          # set by GitHub Pages, cannot be changed
+kramdown:
+  input: GFM                                # set by GitHub Pages, can be overwritten
+  hard_wrap: false                          # set by GitHub Pages, can be overwritten
+#  math_engine: mathjax                     # set by GitHub Pages, cannot be changed
+gems:
+  - jekyll-coffeescript                     # set by GitHub Pages, can be overwritten
+  - jekyll-paginate                         # set by GitHub Pages, can be overwritten
+
+# PHP QA
+### ### ### ### ### ###
+
+author: Bart Reunes
+name: PHP Quality Assurance Tools
+description: A list of PHP Quality Assurance Tools
+url: ~
+
+title: PHP Quality Assurance Tools
+subtitle: Looking for tools to make your PHP code even better? Dive right into the exciting world of PHP QA!
+
+excerpt_separator: <!--more-->
+
+disqus: phpqa
+google_analytics: UA-100482560-1
+
+gems:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+
+exclude:
+  - CNAME
+  - docker-compose.yml 
+  - LICENSE
+  - README.md
+
+collections:
+
+  pages:
+    output: true
+    permalink: /:title.html
+
+  tools:
+    output: true
+    permalink: /:collection/:title.html
+
+  posts:
+    output: true
+    permalink: /:collection/:categories/:year/:month/:day/:title.html
+    

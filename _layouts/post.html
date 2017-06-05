@@ -1,0 +1,21 @@
+---
+layout: bootstrap4
+---
+
+<div class="row">
+    <div class="col-md-12">
+        <article class="post">
+            {% if page.title != '' and page.title != nil %}
+            <h1>{{ page.title }}</h1>
+            {% endif %}
+
+            <div class="entry">
+                {{ content }}
+            </div>
+
+            <div class="date">
+                <small>Written on {{ page.date | date: "%Y-%m-%d" }}</small>
+            </div>
+        </article>
+    </div>
+</div>
