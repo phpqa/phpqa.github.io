@@ -3,7 +3,7 @@
     {% for tool in tools %}
     <div class="col-12 col-sm-6 col-xl-4 tool">
         <div class="card mb-4">
-            <div class="card-header card-metrics text-right">
+            <div class="card-header card-metrics">
                 {% if tool.packagist != '' and tool.packagist != nil %}
                 <a href="{{ tool.source }}" title="stars" class="badge badge-pill badge-default badge-outline">
                     <i class="fa fa-star"></i>
