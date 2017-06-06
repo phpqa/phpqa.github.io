@@ -35,56 +35,18 @@
                 <a href="{{ site.url }}{{ tool.url }}">
                     More information &rarr;
                 </a>
+
                 <div class="card-actions">
-                    {% if tool.website != '' and tool.website != nil and tool.website != tool.source %}
-                    <a href="{{ tool.website }}" title="Website"
-                       data-toggle="tooltip" data-placement="right"
-                       class="btn btn-secondary btn-website btn-sm btn-card-action mb-1">
-                        <i class="fa fa-globe fa-fw"></i>
+                    {% for action in site.actions %}
+                    {% assign key = action[0] %}
+                    {% if tool[key] != '' and tool[key] != nil and (key != 'website' or tool.website != tool.source) %}
+                    <a href="{{ action[1].url-prefix }}{{ tool[key] }}" title="{{ action[1].title }}"
+                       data-toggle="tooltip" data-placement="left"
+                       class="btn btn-secondary {{ action[1].class }} btn-sm btn-card-action mb-1">
+                        <i class="fa {{ action[1].icon }} fa-fw"></i>
                     </a>
                     {% endif %}
-                    {% if tool.terms != '' and tool.terms != nil %}
-                    <a href="{{ tool.terms }}" title="Terms (Of Service)"
-                       data-toggle="tooltip" data-placement="right"
-                       class="btn btn-secondary btn-terms btn-sm btn-card-action mb-1">
-                        <i class="fa fa-thumbs-o-up fa-fw"></i>
-                    </a>
-                    {% endif %}
-                    {% if tool.wiki != '' and tool.wiki != nil %}
-                    <a href="{{ tool.wiki }}" title="Wiki"
-                       data-toggle="tooltip" data-placement="right"
-                       class="btn btn-secondary btn-wiki btn-sm btn-card-action mb-1">
-                        <i class="fa fa-list-alt fa-fw"></i>
-                    </a>
-                    {% endif %}
-                    {% if tool.docs != '' and tool.docs != nil %}
-                    <a href="{{ tool.docs }}" title="Documentation"
-                       data-toggle="tooltip" data-placement="right"
-                       class="btn btn-secondary btn-docs btn-sm btn-card-action mb-1">
-                        <i class="fa fa-info fa-fw"></i>
-                    </a>
-                    {% endif %}
-                    {% if tool.demo != '' and tool.demo != nil %}
-                    <a href="{{ tool.demo }}" title="Demo"
-                       data-toggle="tooltip" data-placement="right"
-                       class="btn btn-secondary btn-demo btn-sm btn-card-action mb-1">
-                        <i class="fa fa-desktop fa-fw"></i>
-                    </a>
-                    {% endif %}
-                    {% if tool.source != '' and tool.source != nil %}
-                    <a href="{{ tool.source }}" title="Source"
-                       data-toggle="tooltip" data-placement="right"
-                       class="btn btn-secondary btn-source btn-sm btn-card-action mb-1">
-                        <i class="fa fa-code fa-fw"></i>
-                    </a>
-                    {% endif %}
-                    {% if tool.docker != '' and tool.docker != nil %}
-                    <a href="https://hub.docker.com/r/{{ tool.docker }}" title="Docker"
-                       data-toggle="tooltip" data-placement="right"
-                       class="btn btn-secondary btn-docker btn-sm btn-card-action mb-1">
-                        <i class="fa fa-ship fa-fw"></i>
-                    </a>
-                    {% endif %}
+                    {% endfor %}
                 </div>
             </div>
             <div class="card-footer card-tags text-muted">

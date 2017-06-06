@@ -28,6 +28,16 @@ url: //phpqa.io
 title: PHP Quality Assurance Tools
 subtitle: Looking for tools to make your PHP code even better? Dive right into the exciting world of PHP QA!
 
+actions:
+  website: { title: Website, class: btn-website, icon: fa-globe }
+  terms: { title: Terms (Of Service), class: btn-terms, icon: fa-thumbs-o-up }
+  wiki: { title: Wiki, class: btn-wiki, icon: fa-list-alt }
+  docs: { title: Documentation, class: btn-docs, icon: fa-info }
+  demo: { title: Demo, class: btn-demo, icon: fa-desktop }
+  source: { title: Source, class: btn-source, icon: fa-code }
+  docker: { title: Docker, url-prefix: 'https://hub.docker.com/r/', class: btn-docker, icon: fa-ship }
+
+
 excerpt_separator: <!--more-->
 
 disqus: phpqa
