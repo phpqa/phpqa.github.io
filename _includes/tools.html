@@ -25,11 +25,16 @@
 
         <div class="tool_text_filters mb-4">
             <form class="form-inline">
-                <input type="text" class="form-control" placeholder="Filter">
+                <label class="sr-only" for="filter">Search tools</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                    <input type="text" class="form-control form-control-sm" id="filter" placeholder="Search tools">
+                </div>
+                <div class="current_tool_filters"></div>
             </form>
         </div>
 
-        <div class="current_tool_filters mb-4"></div>
+
     </div>
 </div>
 
