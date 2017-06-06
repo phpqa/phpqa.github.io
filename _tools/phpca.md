@@ -4,9 +4,9 @@ title:          PhpCodeAnalyzer
 authors:        [Sergei Vanyushin]
 license:        {url: 'https://github.com/wapmorgan/PhpCodeAnalyzer/blob/master/LICENSE.md', label: 'BSD 3-clause "New" or "Revised" License'}
 website:        {url: 'https://github.com/wapmorgan/PhpCodeAnalyzer'}
-source:         {url: 'https://github.com/wapmorgan/PhpCodeAnalyzer'}
-packagist:      {url: 'https://packagist.org/packages/wapmorgan/php-code-analyzer', label: 'wapmorgan/php-code-analyzer'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/phpca', label: 'phpqa/phpca'}
+github:         {name: wapmorgan/PhpCodeAnalyzer}
+packagist:      {name: wapmorgan/php-code-analyzer}               
+docker:         {name: phpqa/phpca}     
 command:        phpca 
 tags:           [bugs finder, built-in php extensions, cli] 
 comments:       true

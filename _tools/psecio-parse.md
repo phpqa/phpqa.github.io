@@ -4,9 +4,9 @@ title:          Parse - A PHP Security Scanner
 authors:        [Chris Cornutt]
 license:        {url: 'https://github.com/psecio/parse/blob/master/README.md', label: 'MIT license'}
 website:        {url: 'https://github.com/psecio/parse'}
-source:         {url: 'https://github.com/psecio/parse'}
-packagist:      {url: 'https://packagist.org/packages/psecio/parse', label: 'psecio/parse'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/psecio-parse', label: 'phpqa/psecio-parse'}
+github:         {name: psecio/parse}
+packagist:      {name: psecio/parse}          
+docker:         {name: phpqa/psecio-parse}     
 command:        psecio-parse 
 tags:           [alpha, bugs finder, cli] 
 comments:       true

@@ -24,13 +24,15 @@ layout: bootstrap4
     {% assign key = property[0] %}
     {% if page[key] != '' and page[key] != nil %}
     {% if key != 'website' or page.website != page.source %}
+    {% capture mask %}{% if page[key].label != nil %}{{ page[key].label }}{% else %}{{ page[key].name }}{% endif %}{% endcapture %}
+    {% capture url %}{% if page[key].url != nil %}{{ page[key].url }}{% elsif page[key].name != nil %}{{ property[1].url-prefix }}{{ page[key].name }}{% else %}{{ page[key].name }}{% endif %}{% endcapture %}
     <dt class="col-sm-3"><i class="fa {{ property[1].icon }} fa-fw"></i> {{ property[1].label }}</dt>
-    {% if page[key].label != nil and page[key].url != nil %}
-    <dd class="col-sm-9"><a href="{{ page[key].url }}" target="_blank">{{ page[key].label }}</a></dd>
-    {% elsif page[key].label != nil %}
-    <dd class="col-sm-9">{{ page[key].label | inspect }}</dd>
-    {% elsif page[key].url != nil %}
-    <dd class="col-sm-9"><a href="{{ page[key].url }}" target="_blank">{{ page[key].url }}</a></dd>
+    {% if mask != '' and url != '' %}
+    <dd class="col-sm-9"><a href="{{ url }}" target="_blank">{{ mask }}</a></dd>
+    {% elsif mask != '' %}
+    <dd class="col-sm-9">{{ mask }}</dd>
+    {% elsif url != '' %}
+    <dd class="col-sm-9"><a href="{{ url }}" target="_blank">{{ url }}</a></dd>
     {% elsif property[1].multiple == true %}
     <dd class="col-sm-9">{{ page[key] | join: ', ' | default: '-' }}</dd>
     {% else %}

@@ -61,7 +61,7 @@
                 {% endif %}
             </div>
             <div class="card-block">
-                
+
                 {{ tool.excerpt }}
 
                 <p class="small">
@@ -76,7 +76,8 @@
                     {% assign key = property[0] %}
                     {% if property[1].button %}
                     {% if tool[key] != '' and tool[key] != nil and (key != 'website' or tool.website != tool.source) %}
-                    <a href="{{ tool[key].url }}" target="_blank" title="{{ property[1].label }}"
+                    {% capture url %}{% if tool[key].url != nil %}{{ tool[key].url }}{% else %}{{ property[1].url-prefix }}{{ tool[key].name }}{% endif %}{% endcapture %}
+                    <a href="{{ url }}" target="_blank" title="{{ property[1].label }}"
                        data-toggle="tooltip" data-placement="left"
                        class="btn btn-secondary {{ property[1].button-class }} btn-sm mb-1">
                         <i class="fa {{ property[1].icon }} fa-fw"></i>

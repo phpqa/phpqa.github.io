@@ -4,9 +4,9 @@ title:          Codeception
 authors:        [Michael Bodnarchuk]
 license:        {url: 'https://github.com/Codeception/Codeception/blob/2.3/LICENSE', label: 'MIT License'}
 website:        {url: 'http://codeception.com/'}
-source:         {url: 'https://github.com/codeception/codeception'}
-packagist:      {url: 'https://packagist.org/packages/codeception/codeception', label: 'codeception/codeception'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/codeception', label: 'phpqa/codeception'}
+github:         {name: codeception/codeception}
+packagist:      {name: codeception/codeception}               
+docker:         {name: phpqa/codeception}     
 command:        codeception
 tags:           [testing, cli]
 comments:       true

@@ -4,9 +4,9 @@ title:          PHP Code Beautifier and Fixer
 authors:        [Greg Sherwood]
 license:        {url: 'https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt', label: 'BSD 3-clause "New" or "Revised" License'}
 website:        {url: 'https://pear.php.net/package/PHP_CodeSniffer'}
-source:         {url: 'https://github.com/squizlabs/PHP_CodeSniffer'}
-packagist:      {url: 'https://packagist.org/packages/squizlabs/php_codesniffer', label: 'squizlabs/php_codesniffer'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/phpcbf', label: 'phpqa/phpcbf'}
+github:         {name: squizlabs/PHP_CodeSniffer}
+packagist:      {name: squizlabs/php_codesniffer}               
+docker:         {name: phpqa/phpcbf}     
 command:        phpcbf
 tags:           [coding standards, code fixer, code beautifier, cli] 
 comments:       true

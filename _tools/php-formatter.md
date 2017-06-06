@@ -4,9 +4,9 @@ title:          PHP Formatter
 authors:        [Marc Morera]
 license:        {url: 'https://github.com/mmoreram/php-formatter/blob/master/LICENSE', label: 'MIT License'}
 website:        {url: 'https://github.com/mmoreram/php-formatter'}
-source:         {url: 'https://github.com/mmoreram/php-formatter'}
-packagist:      {url: 'https://packagist.org/packages/mmoreram/php-formatter', label: 'mmoreram/php-formatter'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/php-formatter', label: 'phpqa/php-formatter'}
+github:         {name: mmoreram/php-formatter}
+packagist:      {name: mmoreram/php-formatter}               
+docker:         {name: phpqa/php-formatter}     
 command:        php-formatter 
 tags:           [coding standards, cli] 
 comments:       true

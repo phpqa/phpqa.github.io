@@ -4,7 +4,7 @@ title:          PHP Security Advisories Database
 authors:        [Fabien Potencier, FriendsOfPHP]
 license:        {url: 'https://github.com/FriendsOfPHP/security-advisories/blob/master/LICENSE', label: 'The Unlicense'}
 website:        {url: 'https://security.sensiolabs.org/database'}
-source:         {url: 'https://github.com/FriendsOfPHP/security-advisories'}
+github:         {name: FriendsOfPHP/security-advisories}
 tags:           [security, vulnerabilities database] 
 comments:       true
 ---

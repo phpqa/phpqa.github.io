@@ -5,9 +5,9 @@ authors:        [Hari Kodungallur, Nimish Pachapurkar, Benoit Pesty, James Brook
 license:        {url: 'https://github.com/PHPCheckstyle/phpcheckstyle/blob/master/LICENSE.txt', label: 'Open Software License version 2.1'}
 website:        {url: 'https://github.com/PHPCheckstyle/phpcheckstyle'}
 wiki:           {url: 'https://github.com/PHPCheckstyle/phpcheckstyle/wiki'}
-source:         {url: 'https://github.com/PHPCheckstyle/phpcheckstyle'}
-packagist:      {url: 'https://packagist.org/packages/phpcheckstyle/phpcheckstyle', label: 'phpcheckstyle/phpcheckstyle'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/phpcheckstyle', label: 'phpqa/phpcheckstyle'}
+github:         {name: PHPCheckstyle/phpcheckstyle}
+packagist:      {name: phpcheckstyle/phpcheckstyle}               
+docker:         {name: phpqa/phpcheckstyle}     
 command:        phpcheckstyle
 tags:           [coding standards, cli] 
 comments:       true

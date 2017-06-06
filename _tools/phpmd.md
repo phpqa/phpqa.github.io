@@ -4,9 +4,9 @@ title:          PHP Mess Detector
 authors:        [Manuel Pichler]
 license:        {url: 'https://github.com/phpmd/phpmd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 website:        {url: 'https://phpmd.org/'}
-source:         {url: 'https://github.com/phpmd/phpmd'}
-packagist:      {url: 'https://packagist.org/packages/phpmd/phpmd', label: 'phpmd/phpmd'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/phpmd', label: 'phpqa/phpmd'}
+github:         {name: phpmd/phpmd}
+packagist:      {name: phpmd/phpmd}               
+docker:         {name: phpqa/phpmd}     
 command:        phpmd 
 tags:           [bugs finder, mess detector, metrics, cli] 
 comments:       true

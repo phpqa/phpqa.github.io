@@ -4,9 +4,9 @@ title:          PHPVisualDebt
 authors:        [Michał Brzuchalski]
 license:        {url: 'https://github.com/phpvisualdebt/phpvisualdebt/blob/master/LICENSE', label: 'MIT License'}
 website:        {url: 'https://github.com/phpvisualdebt/phpvisualdebt'}
-source:         {url: 'https://github.com/phpvisualdebt/phpvisualdebt'}
-packagist:      {url: 'https://packagist.org/packages/phpvisualdebt/phpvisualdebt', label: 'phpvisualdebt/phpvisualdebt'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/phpvisualdebt', label: 'phpqa/phpvisualdebt'}
+github:         {name: phpvisualdebt/phpvisualdebt}
+packagist:      {name: phpvisualdebt/phpvisualdebt}          
+docker:         {name: phpqa/phpvisualdebt}     
 command:        phpvisualdebt
 tags:           [visuals, cli] 
 comments:       true

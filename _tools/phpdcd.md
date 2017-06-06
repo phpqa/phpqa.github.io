@@ -4,9 +4,9 @@ title:          PHP Dead Code Detector
 authors:        [Sebastian Bergmann]
 license:        {url: 'https://github.com/sebastianbergmann/phpdcd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 website:        {url: 'https://github.com/sebastianbergmann/phpdcd'}
-source:         {url: 'https://github.com/sebastianbergmann/phpdcd'}
-packagist:      {url: 'https://packagist.org/packages/sebastian/phpdcd', label: 'sebastian/phpdcd'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/phpdcd', label: 'phpqa/phpdcd'}
+github:         {name: sebastianbergmann/phpdcd}
+packagist:      {name: sebastian/phpdcd}               
+docker:         {name: phpqa/phpdcd}     
 command:        phpdcd
 tags:           [unmaintained, dead code detection, cli] 
 comments:       true

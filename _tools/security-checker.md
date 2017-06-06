@@ -5,9 +5,9 @@ authors:        [Fabien Potencier]
 license:        {url: 'https://github.com/sensiolabs/security-checker/blob/master/LICENSE', label: 'MIT License'}
 website:        {url: 'https://security.sensiolabs.org/'}
 demo:           {url: 'https://security.sensiolabs.org/check'}
-source:         {url: 'https://github.com/sensiolabs/security-checker'}
-packagist:      {url: 'https://packagist.org/packages/sensiolabs/security-checker', label: 'sensiolabs/security-checker'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/security-checker', label: 'phpqa/security-checker'}
+github:         {name: sensiolabs/security-checker}
+packagist:      {name: sensiolabs/security-checker}          
+docker:         {name: phpqa/security-checker}     
 command:        security-checker 
 tags:           [security, composer, vulnerabilities checker, cli, online service] 
 comments:       true

@@ -85,8 +85,8 @@ metadata:
   wiki:         { label: Wiki,                icon: fa-list-alt,        button: true,   button-class: btn-wiki      }
   docs:         { label: Documentation,       icon: fa-info,            button: true,   button-class: btn-docs      }
   demo:         { label: Demo,                icon: fa-desktop,         button: true,   button-class: btn-demo      }
-  source:       { label: Source,              icon: fa-code,            button: true,   button-class: btn-source    }
-  packagist:    { label: Packagist,           icon: fa-compass,         button: true,   button-class: btn-packagist }
-  docker:       { label: Docker,              icon: fa-ship,            button: true,   button-class: btn-docker    }
+  github:       { label: GitHub,              icon: fa-github,          button: true,   button-class: btn-github,     url-prefix: 'https://github.com/'             }
+  packagist:    { label: Packagist,           icon: fa-compass,         button: true,   button-class: btn-packagist,  url-prefix: 'https://packagist.org/packages/' }
+  docker:       { label: Docker,              icon: fa-ship,            button: true,   button-class: btn-docker,     url-prefix: 'https://hub.docker.com/r/'       }
   command:      { label: Command,             icon: fa-terminal                                                     }
   dependencies: { label: Dependencies,        icon: fa-check-square-o,  multiple: true                              }

@@ -4,9 +4,9 @@ title:          PHP Code Standard Fixer 2
 authors:        [Fabien Potencier, Dariusz Rumiński]
 license:        {url: 'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/LICENSE', label: 'MIT License'}
 website:        {url: 'http://cs.sensiolabs.org/'}
-source:         {url: 'https://github.com/FriendsOfPHP/PHP-CS-Fixer'}
-packagist:      {url: 'https://packagist.org/packages/friendsofphp/php-cs-fixer', label: 'friendsofphp/php-cs-fixer'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/php-cs-fixer', label: 'phpqa/php-cs-fixer'}
+github:         {name: FriendsOfPHP/PHP-CS-Fixer}
+packagist:      {name: friendsofphp/php-cs-fixer}               
+docker:         {name: phpqa/php-cs-fixer}     
 command:        php-cs-fixer  
 tags:           [code fixer, coding standards, psr, cli] 
 comments:       true

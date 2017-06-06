@@ -5,9 +5,9 @@ authors:        [Jean-François Lépine]
 license:        {url: 'https://github.com/phpmetrics/PhpMetrics/blob/master/LICENSE', label: 'MIT License'}
 website:        {url: 'http://www.phpmetrics.org/'}
 demo:           {url: 'http://www.phpmetrics.org/report/latest/index.html'}
-source:         {url: 'https://github.com/phpmetrics/PhpMetrics'}
-packagist:      {url: 'https://packagist.org/packages/phpmetrics/phpmetrics', label: 'phpmetrics/phpmetrics'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/phpmetrics', label: 'phpqa/phpmetrics'}
+github:         {name: phpmetrics/PhpMetrics}
+packagist:      {name: phpmetrics/phpmetrics}               
+docker:         {name: phpqa/phpmetrics}     
 command:        phpmetrics
 tags:           [metrics, cli] 
 comments:       true

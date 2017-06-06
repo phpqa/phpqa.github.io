@@ -4,9 +4,9 @@ title:          Phan
 authors:        [Rasmus Lerdorf, Andrew Morrison]
 license:        {url: 'https://github.com/etsy/phan/blob/master/LICENSE', label: 'MIT License'}
 website:        {url: 'https://github.com/etsy/phan'}
-source:         {url: 'https://github.com/etsy/phan'}
-packagist:      {url: 'https://packagist.org/packages/etsy/phan', label: 'etsy/phan'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/phan', label: 'phpqa/phan'}
+github:         {name: etsy/phan}
+packagist:      {name: etsy/phan}               
+docker:         {name: phpqa/phan}     
 command:        phan
 dependencies:   [pcntl,git,php-ast]  
 tags:           [bugs finder, static analysis, cli]

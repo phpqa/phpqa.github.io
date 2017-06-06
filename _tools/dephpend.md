@@ -4,9 +4,9 @@ title:          dePHPend
 authors:        [Michael Haeuslmann]
 license:        {url: 'https://github.com/mihaeu/dephpend/blob/develop/LICENSE', label: 'MIT License'}
 website:        {url: 'https://dephpend.com/'}
-source:         {url: 'https://github.com/mihaeu/dephpend'}
-packagist:      {url: 'https://packagist.org/packages/dephpend/dephpend', label: 'dephpend/dephpend'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/dephpend', label: 'phpqa/dephpend'}
+github:         {name: mihaeu/dephpend}
+packagist:      {name: dephpend/dephpend}               
+docker:         {name: phpqa/dephpend}     
 command:        dephpend
 tags:           [metrics, cli]
 comments:       true

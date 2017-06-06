@@ -4,9 +4,9 @@ title:          PHPLOC
 authors:        [Sebastian Bergmann]
 license:        {url: 'https://github.com/sebastianbergmann/phploc/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 website:        {url: 'https://github.com/sebastianbergmann/phploc'}
-source:         {url: 'https://github.com/sebastianbergmann/phploc'}
-packagist:      {url: 'https://packagist.org/packages/phploc/phploc', label: 'phploc/phploc'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/phploc', label: 'phpqa/phploc'}
+github:         {name: sebastianbergmann/phploc}
+packagist:      {name: phploc/phploc}               
+docker:         {name: phpqa/phploc}     
 command:        phploc
 tags:           [metrics, cli] 
 comments:       true

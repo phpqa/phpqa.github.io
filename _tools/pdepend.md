@@ -4,9 +4,9 @@ title:          PHP_Depend
 authors:        [Manuel Pichler]
 license:        {url: 'https://github.com/pdepend/pdepend/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 website:        {url: 'https://pdepend.org/'}
-source:         {url: 'https://github.com/pdepend/pdepend'}
-packagist:      {url: 'https://packagist.org/packages/pdepend/pdepend', label: 'pdepend/pdepend'}
-docker:         {url: 'https://hub.docker.com/r/phpqa/pdepend', label: 'phpqa/pdepend'}
+github:         {name: pdepend/pdepend}
+packagist:      {name: pdepend/pdepend}               
+docker:         {name: phpqa/pdepend}     
 command:        pdepend 
 tags:           [metrics, cli]
 comments:       true
