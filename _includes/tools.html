@@ -1,7 +1,7 @@
 <div class="row">
     {% assign tools = site.tools | sort: 'title' %}
     {% for tool in tools %}
-    <div class="col-12 col-sm-6 col-lg-4 tool">
+    <div class="col-12 col-sm-6 col-xl-4 tool">
         <div class="card mb-4">
             <div class="card-header card-metrics text-right">
                 {% if tool.packagist != '' and tool.packagist != nil %}
