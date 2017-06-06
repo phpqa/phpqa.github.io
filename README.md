@@ -10,4 +10,4 @@
     
 - Open the webpage (url only for native docker, docker for mac or docker for windows)
     
-    `http://localhost:4000`
+    `http://0.0.0.0:4000`
