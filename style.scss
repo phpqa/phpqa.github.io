@@ -6,9 +6,13 @@
 
 .card-metrics {
   padding: .5rem;
+  line-height: 1;
+  font-size: 80%;
+  font-weight: 400;
+  text-align: right;
 }
 .card-metrics .badge {
-  font-size: 60%;
+  margin: .25em;
 }
 .card-block {
   position: relative;
@@ -57,9 +61,81 @@
 }
 .card-tags {
   padding: .5rem;
+  line-height: 1;
+  font-size: 80%;
+  font-weight: 400;
+  text-align: right;
 }
 .card-tags .badge {
-  font-size: 60%;
+  margin: .25em;
+  cursor: pointer;
+}
+
+
+.card .badge-outline {
+  color: #000;
+  border: 1px solid #ccc;
+  background-color: transparent;
+}
+.card .badge-outline.badge-primary {
+  color: #0275d8;
+  border-color: #0275d8;
+}
+.card .badge-outline.badge-primary:hover,
+.card .badge-outline.badge-primary.active {
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+.card .badge-outline.badge-default {
+  color: #636c72;
+  border-color: #ccc;
+}
+.card .badge-outline.badge-default:hover,
+.card .badge-outline.badge-default.active {
+  color: #fff;
+  background-color: #636c72;
+  border-color: #636c72;
+}
+.card .badge-outline.badge-success {
+  color: #5cb85c;
+  border-color: #5cb85c;
+}
+.card .badge-outline.badge-success:hover,
+.card .badge-outline.badge-success.active {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+.card .badge-outline.badge-info {
+  color: #5bc0de;
+  border-color: #5bc0de;
+}
+.card .badge-outline.badge-info:hover,
+.card .badge-outline.badge-info.active {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+.card .badge-outline.badge-warning {
+  color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.card .badge-outline.badge-warning:hover,
+.card .badge-outline.badge-warning.active {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.card .badge-outline.badge-danger {
+  color: #d9534f;
+  border-color: #d9534f;
+}
+.card .badge-outline.badge-danger:hover,
+.card .badge-outline.badge-danger.active {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f;
 }
 
 /* Navbar
