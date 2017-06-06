@@ -24,7 +24,7 @@ layout: bootstrap4
     {% assign key = property[0] %}
     {% if page[key] != '' and page[key] != nil %}
     {% if key != 'website' or page.website != page.source %}
-    <dt class="col-sm-3"><i class="fa {{ property[1].icon }} fa-fw"></i> {{ property[1].title }}</dt>
+    <dt class="col-sm-3"><i class="fa {{ property[1].icon }} fa-fw"></i> {{ property[1].label }}</dt>
     {% if page[key].label != nil and page[key].url != nil %}
     <dd class="col-sm-9"><a href="{{ page[key].url }}" target="_blank">{{ page[key].label }}</a></dd>
     {% elsif page[key].label != nil %}
