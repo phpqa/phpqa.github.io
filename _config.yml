@@ -17,6 +17,22 @@ gems:
   - jekyll-coffeescript                     # set by GitHub Pages, can be overwritten
   - jekyll-paginate                         # set by GitHub Pages, can be overwritten
 
+# Jekyll settings
+### ### ### ### ### ###
+
+encoding: utf-8
+strict_front_matter: true
+excerpt_separator: <!--more-->
+exclude:
+  - CNAME
+  - docker-compose.yml
+  - LICENSE
+  - README.md
+  - _tools/_draft.md
+webrick:
+  headers:
+    X-Powered-By: PHP/6
+
 # PHP QA
 ### ### ### ### ### ###
 
@@ -28,30 +44,8 @@ url: //phpqa.io
 title: PHP Quality Assurance Tools
 subtitle: Looking for tools to make your PHP code even better? Dive right into the exciting world of PHP QA!
 
-actions:
-  website: { title: Website, class: btn-website, icon: fa-globe }
-  terms: { title: Terms (Of Service), class: btn-terms, icon: fa-thumbs-o-up }
-  wiki: { title: Wiki, class: btn-wiki, icon: fa-list-alt }
-  docs: { title: Documentation, class: btn-docs, icon: fa-info }
-  demo: { title: Demo, class: btn-demo, icon: fa-desktop }
-  source: { title: Source, class: btn-source, icon: fa-code }
-  docker: { title: Docker, url-prefix: 'https://hub.docker.com/r/', class: btn-docker, icon: fa-ship }
-
-
-excerpt_separator: <!--more-->
-
-disqus: phpqa
 google_analytics: UA-100482560-1
-
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-
-exclude:
-  - CNAME
-  - docker-compose.yml 
-  - LICENSE
-  - README.md
+disqus: phpqa
 
 collections:
 
@@ -66,4 +60,33 @@ collections:
   posts:
     output: true
     permalink: /:collection/:categories/:year/:month/:day/:title.html
-    
+
+navigation:
+  - { label: Tools,                   icon: fa-cogs,            url: /                                                      }
+  - { label: Usage,                   icon: fa-magic,           url: /usage                                                 }
+  - { label: News,                    icon: fa-list-alt,        url: /news                                                  }
+  - { label: About,                   icon: fa-info-circle,     url: /about                                                 }
+  - { label: Contact,                 icon: fa-sign-language,   url: 'https://github.com/phpqa/phpqa.github.io/issues'      }
+
+sidebar:
+  - { label: Static Analysis Tools,   icon: fa-list-ol,         url: 'https://github.com/exakat/php-static-analysis-tools'  }
+  - { label: PHP The Right Way,       icon: fa-thumbs-o-up,     url: 'http://www.phptherightway.com/'                       }
+  - { label: PHP The Wrong Way,       icon: fa-thumbs-o-down,   url: 'http://www.phpthewrongway.com/'                       }
+  - { label: PHP.UserGroup,           icon: fa-users,           url: 'http://php.ug/'                                       }
+  - { label: PHP Women,               icon: fa-venus,           url: 'http://phpwomen.org/'                                 }
+  - { label: PHP Mentoring,           icon: fa-graduation-cap,  url: 'https://php-mentoring.org/'                           }
+  - { label: OSMI,                    icon: fa-handshake-o,     url: 'https://osmihelp.org/'                                }
+
+metadata:
+  authors:      { label: Author(s),           icon: fa-user,            multiple: true                              }
+  website:      { label: Website,             icon: fa-globe,           button: true,   button-class: btn-website   }
+  license:      { label: License,             icon: fa-id-card                                                      }
+  terms:        { label: Terms (Of Service),  icon: fa-thumbs-o-up,     button: true,   button-class: btn-terms     }
+  wiki:         { label: Wiki,                icon: fa-list-alt,        button: true,   button-class: btn-wiki      }
+  docs:         { label: Documentation,       icon: fa-info,            button: true,   button-class: btn-docs      }
+  demo:         { label: Demo,                icon: fa-desktop,         button: true,   button-class: btn-demo      }
+  source:       { label: Source,              icon: fa-code,            button: true,   button-class: btn-source    }
+  packagist:    { label: Packagist,           icon: fa-compass,         button: true,   button-class: btn-packagist }
+  docker:       { label: Docker,              icon: fa-ship,            button: true,   button-class: btn-docker    }
+  command:      { label: Command,             icon: fa-terminal                                                     }
+  dependencies: { label: Dependencies,        icon: fa-check-square-o,  multiple: true                              }

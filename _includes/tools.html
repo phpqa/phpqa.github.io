@@ -1,21 +1,56 @@
 <div class="row">
+    <div class="col-12">
+        <div class="tool_tag_filters mb-4">
+            <a href="#alpha" data-tool-tag-filter="alpha" class="btn btn-sm btn-outline-info mb-1">
+                alpha
+            </a>
+            <a href="#unmaintained" data-tool-tag-filter="unmaintained" class="btn btn-sm btn-outline-warning mb-1">
+                unmaintained
+            </a>
+            <a href="#deprecated" data-tool-tag-filter="deprecated" class="btn btn-sm btn-outline-danger mb-1">
+                deprecated
+            </a>
+            {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | sort | uniq %}
+            {% for tag in tags %}
+            {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' or tag == 'docker image' %}
+            <a href="#{{ tag }}" data-tool-tag-filter="{{ tag }}" class="btn btn-sm btn-secondary mb-1">
+                {{ tag }}
+            </a>
+            {% endunless %}
+            {% endfor %}
+            <a href="#deprecated" data-tool-tag-filter="docker image" class="btn btn-sm btn-secondary mb-1">
+                docker image
+            </a>
+        </div>
+
+        <div class="tool_text_filters mb-4">
+            <form class="form-inline">
+                <input type="text" class="form-control" placeholder="Filter">
+            </form>
+        </div>
+
+        <div class="current_tool_filters mb-4"></div>
+    </div>
+</div>
+
+<div class="row">
     {% assign tools = site.tools | sort: 'title' %}
     {% for tool in tools %}
     <div class="col-12 col-sm-6 col-xl-4 tool">
         <div class="card mb-4">
             <div class="card-header card-metrics">
                 {% if tool.packagist != '' and tool.packagist != nil %}
-                <a href="{{ tool.source }}" title="stars" class="badge badge-pill badge-default badge-outline">
+                <a href="{{ tool.packagist.url }}" title="stars" class="badge badge-pill badge-default badge-outline">
                     <i class="fa fa-star"></i>
-                    <span data-packagist-repository-name="{{ tool.packagist }}" data-packagist-metric="star">*</span>
+                    <span data-packagist-repository-name="{{ tool.packagist.label }}" data-packagist-metric="star">*</span>
                 </a>
-                <a href="{{ tool.source }}" title="watchers" class="badge badge-pill badge-default badge-outline">
+                <a href="{{ tool.packagist.url }}" title="watchers" class="badge badge-pill badge-default badge-outline">
                     <i class="fa fa-eye"></i>
-                    <span data-packagist-repository-name="{{ tool.packagist }}" data-packagist-metric="watch">*</span>
+                    <span data-packagist-repository-name="{{ tool.packagist.label }}" data-packagist-metric="watch">*</span>
                 </a>
-                <a href="{{ tool.source }}" title="forks" class="badge badge-pill badge-default badge-outline">
+                <a href="{{ tool.packagist.url }}" title="forks" class="badge badge-pill badge-default badge-outline">
                     <i class="fa fa-code-fork"></i>
-                    <span data-packagist-repository-name="{{ tool.packagist }}" data-packagist-metric="fork">*</span>
+                    <span data-packagist-repository-name="{{ tool.packagist.label }}" data-packagist-metric="fork">*</span>
                 </a>
                 {% endif %}
                 {% if page.comments-count %}
@@ -32,19 +67,21 @@
                 <p class="small">
                     by {{ tool.authors | join: ', ' }}
                 </p>
-                <a href="{{ site.url }}{{ tool.url }}">
+                <a href="{{ site.url }}{{ tool.url }}" class="more-information">
                     More information &rarr;
                 </a>
 
                 <div class="card-actions">
-                    {% for action in site.actions %}
-                    {% assign key = action[0] %}
+                    {% for property in site.metadata %}
+                    {% assign key = property[0] %}
+                    {% if property[1].button %}
                     {% if tool[key] != '' and tool[key] != nil and (key != 'website' or tool.website != tool.source) %}
-                    <a href="{{ action[1].url-prefix }}{{ tool[key] }}" title="{{ action[1].title }}"
+                    <a href="{{ tool[key].url }}" target="_blank" title="{{ property[1].label }}"
                        data-toggle="tooltip" data-placement="left"
-                       class="btn btn-secondary {{ action[1].class }} btn-sm btn-card-action mb-1">
-                        <i class="fa {{ action[1].icon }} fa-fw"></i>
+                       class="btn btn-secondary {{ property[1].button-class }} btn-sm mb-1">
+                        <i class="fa {{ property[1].icon }} fa-fw"></i>
                     </a>
+                    {% endif %}
                     {% endif %}
                     {% endfor %}
                 </div>

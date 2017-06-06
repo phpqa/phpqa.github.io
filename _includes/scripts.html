@@ -1,0 +1,31 @@
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!--<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="{{ site.url }}/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Font Awesome -->
+<script src="https://use.fontawesome.com/2dbb7b4a28.js" async></script>
+
+<!-- Bootstrap initialisation -->
+<script src="{{ site.url }}/assets/js/bootstrap.js" async></script>
+
+<!-- Tools filters -->
+<script src="{{ site.url }}/assets/js/filters.js" async></script>
+
+<!-- Google Analytics -->
+<script src="{{ site.url }}/assets/js/google-analytics.js" async></script>
+
+<!-- Packagist metrics -->
+<script src="{{ site.url }}/assets/js/packagist.js" async></script>
+
+<!-- Disqus -->
+{% if page.comments %}
+<script src="{{ site.url }}/assets/js/disqus.js"></script>
+{% endif %}
+{% if page.comments-count %}
+<script id="dsq-count-scr" src="https://{{ site.disqus }}.disqus.com/count.js" async></script>
+{% endif %}

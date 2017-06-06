@@ -1,12 +1,17 @@
 ---
-layout: bootstrap4
+layout: page
+title: Tools
+title-visible: false
+permalink: index.html
 comments-count: true
 ---
 
 <div class="row">
     <div class="col-12 col-lg-9">
-        {% include jumbotron.html %}
-        {% include filters.html %}
+        <div class="jumbotron">
+            <h1>{{ site.title }}</h1>
+            <p>{{ site.subtitle }}</p>
+        </div>
         {% include tools.html %}
         {% include add-your-own.html %}
     </div>
@@ -14,3 +19,4 @@ comments-count: true
         {% include sidebar.html %}
     </div>
 </div>
+

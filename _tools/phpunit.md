@@ -1,16 +1,15 @@
 ---
-layout: tool
-title: PHPUnit
-authors: [Sebastian Bergmann]
-license: BSD 3-clause "New" or "Revised" License
-license-url: https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE
-website: http://www.phpunit.de/
-source: https://github.com/sebastianbergmann/phpunit 
-packagist: phpunit/phpunit
-docker: phpqa/phpunit
-command: phpunit
-tags: [testing, cli] 
-comments: true
+layout:         tool
+title:          PHPUnit
+authors:        [Sebastian Bergmann]
+license:        {url: 'https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
+website:        {url: 'http://www.phpunit.de/'}
+source:         {url: 'https://github.com/sebastianbergmann/phpunit'}
+packagist:      {url: 'https://packagist.org/packages/phpunit/phpunit', label: 'phpunit/phpunit'}
+docker:         {url: 'https://hub.docker.com/r/phpqa/phpunit', label: 'phpqa/phpunit'}
+command:        phpunit
+tags:           [testing, cli] 
+comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is a programmer-oriented testing framework for PHP.

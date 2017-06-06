@@ -1,33 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% if page.title != '' and page.title != nil %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+    <!-- Metadata -->
+    {% include meta.html %}
+    {% include ie9-html5shiv.html %}
 
-    <meta charset="utf-8">
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    {% if page.excerpt %}
-    <meta name="description" content="{{ page.excerpt| strip_html }}" />
-    <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
-    {% else %}
-    <meta name="description" content="{{ site.description }}">
-    <meta property="og:description" content="{{ site.description }}" />
-    {% endif %}
-    <meta name="author" content="{{ site.author }}" />
-    {% if page.title %}
-    <meta property="og:title" content="{{ page.title }}" />
-    <meta property="twitter:title" content="{{ page.title }}" />
-    {% endif %}
-    <meta http-equiv="Content-Security-Policy" content="default-src *; img-src 'self' https://i.creativecommons.org https://licensebuttons.net https://www.google-analytics.com data:; style-src 'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com https://use.fontawesome.com https://c.disquscdn.com; script-src 'self' https://code.jquery.com https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com https://use.fontawesome.com https://www.google-analytics.com https://{{ site.disqus }}.disqus.com https://disqus.com https://*.disquscdn.com">
-
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/style.css"/>
+    <!-- Stylesheets -->
+    {% include stylesheets.html %}
 </head>
 <body
         data-page-url="{{ site.url }}{{ page.url }}"
@@ -41,47 +20,37 @@
 
 <!-- Container -->
 <div id="main" role="main" class="container">
-    {{ content }}
+    {% if page.title != '' and page.title != nil and page.title-visible != false %}
+    <div class="row">
+        <div class="col-12">
+            <h1>{{ page.title }}</h1>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="row">
+        <div class="col-12">
+            {{ content }}
+        </div>
+    </div>
 
     {% if page.comments %}
-    <div id="disqus_thread"></div>
+    <div class="row">
+        <div class="col-12">
+            <div id="disqus_thread"></div>
+            <noscript>
+                Please enable JavaScript to view
+                the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+        </div>
+    </div>
     {% endif %}
 </div>
 
 <!-- Footer -->
-{% include footer.html %}
+{% include footer-with-license.html %}
 
-<!-- jQuery first, then Tether, then Bootstrap JS. -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<!--<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="{{ site.url }}/assets/js/ie10-viewport-bug-workaround.js"></script>
-
-<!-- Font Awesome -->
-<script src="https://use.fontawesome.com/2dbb7b4a28.js" async></script>
-
-<!-- Bootstrap initialisation -->
-<script src="{{ site.url }}/assets/js/bootstrap.js" async></script>
-
-<!-- Tools filters -->
-<script src="{{ site.url }}/assets/js/filters.js" async></script>
-
-<!-- Google Analytics -->
-<script src="{{ site.url }}/assets/js/google-analytics.js" async></script>
-
-<!-- Packagist metrics -->
-<script src="{{ site.url }}/assets/js/packagist.js" async></script>
-
-<!-- Disqus -->
-{% if page.comments %}
-<script src="{{ site.url }}/assets/js/disqus.js"></script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %}
-{% if page.comments-count %}
-<script id="dsq-count-scr" src="https://{{ site.disqus }}.disqus.com/count.js" async></script>
-{% endif %}
+<!-- Scripts -->
+{% include scripts.html %}
 </body>
 </html>

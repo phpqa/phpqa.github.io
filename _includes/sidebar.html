@@ -19,34 +19,14 @@
     <div class="col-6 col-lg-12">
         <h2>Community</h2>
         <div class="list-group">
-            <a href="https://github.com/exakat/php-static-analysis-tools" class="list-group-item justify-content-between">
-                Static Analysis Tools
-                <i class="fa fa-list-ol hidden-lg-down" aria-hidden="true"></i>
+            {% for item in site.sidebar %}
+            {% assign begin = item.url | slice: 0, 4 %}
+            <a href="{% unless begin == 'http' %}{{ site.url }}{% endunless %}{{ item.url }}"
+               class="list-group-item justify-content-between">
+                {{ item.label }}
+                <i class="fa {{ item.icon }} hidden-lg-down" aria-hidden="true"></i>
             </a>
-            <a href="http://www.phptherightway.com/" class="list-group-item justify-content-between">
-                PHP The Right Way
-                <i class="fa fa-thumbs-o-up hidden-lg-down" aria-hidden="true"></i>
-            </a>
-            <a href="http://www.phpthewrongway.com/" class="list-group-item justify-content-between">
-                PHP The Wrong Way
-                <i class="fa fa-thumbs-o-down hidden-lg-down" aria-hidden="true"></i>
-            </a>
-            <a href="http://php.ug/" class="list-group-item justify-content-between">
-                PHP.UserGroup
-                <i class="fa fa-users hidden-lg-down" aria-hidden="true"></i>
-            </a>
-            <a href="http://phpwomen.org/" class="list-group-item justify-content-between">
-                PHP Women
-                <i class="fa fa-venus hidden-lg-down" aria-hidden="true"></i>
-            </a>
-            <a href="https://php-mentoring.org/" class="list-group-item justify-content-between">
-                PHP Mentoring
-                <i class="fa fa-graduation-cap hidden-lg-down" aria-hidden="true"></i>
-            </a>
-            <a href="https://osmihelp.org/" class="list-group-item justify-content-between">
-                OSMI
-                <i class="fa fa-handshake-o hidden-lg-down" aria-hidden="true"></i>
-            </a>
+            {% endfor %}
         </div>
     </div>
 </div>

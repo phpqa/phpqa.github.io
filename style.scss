@@ -1,6 +1,75 @@
 ---
 ---
 
+/* Badge outline
+-------------------------------------------------- */
+.badge-outline {
+  color: #000;
+  border: 1px solid #ccc;
+  background-color: transparent;
+}
+.badge-outline.badge-primary {
+  color: #0275d8;
+  border-color: #0275d8;
+}
+.badge-outline.badge-primary:hover,
+.badge-outline.badge-primary.active {
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+.badge-outline.badge-default {
+  color: #636c72;
+  border-color: #ccc;
+}
+.badge-outline.badge-default:hover,
+.badge-outline.badge-default.active {
+  color: #fff;
+  background-color: #636c72;
+  border-color: #636c72;
+}
+.badge-outline.badge-success {
+  color: #5cb85c;
+  border-color: #5cb85c;
+}
+.badge-outline.badge-success:hover,
+.badge-outline.badge-success.active {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+.badge-outline.badge-info {
+  color: #5bc0de;
+  border-color: #5bc0de;
+}
+.badge-outline.badge-info:hover,
+.badge-outline.badge-info.active {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+.badge-outline.badge-warning {
+  color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.badge-outline.badge-warning:hover,
+.badge-outline.badge-warning.active {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.badge-outline.badge-danger {
+  color: #d9534f;
+  border-color: #d9534f;
+}
+.badge-outline.badge-danger:hover,
+.badge-outline.badge-danger.active {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+
 /* Card
 -------------------------------------------------- */
 
@@ -14,10 +83,15 @@
 .card-metrics .badge {
   margin: .25em;
 }
+
 .card-block {
   position: relative;
   padding-right: 35px;
 }
+.card-block .more-information {
+  font-size: 75%;
+}
+
 .card-actions {
   position: absolute;
   top: .25rem;
@@ -25,40 +99,45 @@
   width: 35px;
   text-align: right;
 }
-.btn-card-action {
+.card-actions .btn {
   padding: .25rem;
   border-right-width: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-card-action.btn-website:hover {
+.card-actions .btn.btn-website:hover {
   color: #fff;
   background-color: #0275d8;
 }
-.btn-card-action.btn-terms:hover {
+.card-actions .btn.btn-terms:hover {
   color: #000;
   background-color: #f2e31c;
 }
-.btn-card-action.btn-wiki:hover {
+.card-actions .btn.btn-wiki:hover {
   color: #000;
   background-color: #cef2e0;
 }
-.btn-card-action.btn-docs:hover {
+.card-actions .btn.btn-docs:hover {
   color: #000;
   background-color: #cef2e0;
 }
-.btn-card-action.btn-demo:hover {
+.card-actions .btn.btn-demo:hover {
   color: #fff;
   background-color: #F05033;
 }
-.btn-card-action.btn-source:hover {
+.card-actions .btn.btn-source:hover {
   color: #fff;
   background-color: #9CDAF0;
 }
-.btn-card-action.btn-docker:hover {
+.card-actions .btn.btn-packagist:hover {
+  color: #fff;
+  background-color: #f28d1a;
+}
+.card-actions .btn.btn-docker:hover {
   color: #fff;
   background-color: #1488C6;
 }
+
 .card-tags {
   padding: .5rem;
   line-height: 1;
@@ -69,73 +148,6 @@
 .card-tags .badge {
   margin: .25em;
   cursor: pointer;
-}
-
-
-.card .badge-outline {
-  color: #000;
-  border: 1px solid #ccc;
-  background-color: transparent;
-}
-.card .badge-outline.badge-primary {
-  color: #0275d8;
-  border-color: #0275d8;
-}
-.card .badge-outline.badge-primary:hover,
-.card .badge-outline.badge-primary.active {
-  color: #fff;
-  background-color: #0275d8;
-  border-color: #0275d8;
-}
-.card .badge-outline.badge-default {
-  color: #636c72;
-  border-color: #ccc;
-}
-.card .badge-outline.badge-default:hover,
-.card .badge-outline.badge-default.active {
-  color: #fff;
-  background-color: #636c72;
-  border-color: #636c72;
-}
-.card .badge-outline.badge-success {
-  color: #5cb85c;
-  border-color: #5cb85c;
-}
-.card .badge-outline.badge-success:hover,
-.card .badge-outline.badge-success.active {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #5cb85c;
-}
-.card .badge-outline.badge-info {
-  color: #5bc0de;
-  border-color: #5bc0de;
-}
-.card .badge-outline.badge-info:hover,
-.card .badge-outline.badge-info.active {
-  color: #fff;
-  background-color: #5bc0de;
-  border-color: #5bc0de;
-}
-.card .badge-outline.badge-warning {
-  color: #f0ad4e;
-  border-color: #f0ad4e;
-}
-.card .badge-outline.badge-warning:hover,
-.card .badge-outline.badge-warning.active {
-  color: #fff;
-  background-color: #f0ad4e;
-  border-color: #f0ad4e;
-}
-.card .badge-outline.badge-danger {
-  color: #d9534f;
-  border-color: #d9534f;
-}
-.card .badge-outline.badge-danger:hover,
-.card .badge-outline.badge-danger.active {
-  color: #fff;
-  background-color: #d9534f;
-  border-color: #d9534f;
 }
 
 /* Navbar

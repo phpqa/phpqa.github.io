@@ -1,6 +1,7 @@
 ---
 layout: page
 title: News
+title-visible: false
 ---
 
 <div class="row">
@@ -8,13 +9,13 @@ title: News
     <div class="col-6">
         <article class="post">
 
-            <strong>{{ post.title }}</strong>
+            <h2>{{ post.title }}</h2>
 
             <div class="entry">
                 {{ post.excerpt }}
             </div>
 
-            <a href="{{ site.url }}{{ post.url }}" class="read-more pull-right">Read more &rarr;</a>
+            <a href="{{ site.url }}{{ post.url }}" class="read-more">Read more &rarr;</a>
         </article>
     </div>
     {% endfor %}

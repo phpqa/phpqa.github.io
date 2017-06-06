@@ -6,36 +6,15 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+            {% for item in site.navigation %}
+            {% assign begin = item.url | slice: 0, 4 %}
             <li class="nav-item">
-                <a class="nav-link" href="{{ site.url }}/">
-                    <i class="fa fa-cogs fa-fw" aria-hidden="true"></i>
-                    Tools
+                <a class="nav-link" href="{% unless begin == 'http' %}{{ site.url }}{% endunless %}{{ item.url }}">
+                    <i class="fa {{ item.icon }} fa-fw" aria-hidden="true"></i>
+                    {{ item.label }}
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ site.url }}/usage">
-                    <i class="fa fa-magic fa-fw" aria-hidden="true"></i>
-                    Usage
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ site.url }}/news">
-                    <i class="fa fa-list-alt fa-fw" aria-hidden="true"></i>
-                    News
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ site.url }}/about">
-                    <i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>
-                    About
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://github.com/phpqa/phpqa.github.io/issues">
-                    <i class="fa fa-sign-language fa-fw" aria-hidden="true"></i>
-                    Contact
-                </a>
-            </li>
+            {% endfor %}
         </ul>
     </div>
 </nav>

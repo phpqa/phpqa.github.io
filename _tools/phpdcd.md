@@ -1,16 +1,15 @@
 ---
-layout: tool
-title: PHP Dead Code Detector    
-authors: [Sebastian Bergmann]
-license: BSD 3-clause "New" or "Revised" License 
-license-url: https://github.com/sebastianbergmann/phpdcd/blob/master/LICENSE
-website: https://github.com/sebastianbergmann/phpdcd
-source: https://github.com/sebastianbergmann/phpdcd
-packagist: sebastian/phpdcd
-docker: phpqa/phpdcd
-command: phpdcd
-tags: [unmaintained, dead code detection, cli] 
-comments: true
+layout:         tool
+title:          PHP Dead Code Detector    
+authors:        [Sebastian Bergmann]
+license:        {url: 'https://github.com/sebastianbergmann/phpdcd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
+website:        {url: 'https://github.com/sebastianbergmann/phpdcd'}
+source:         {url: 'https://github.com/sebastianbergmann/phpdcd'}
+packagist:      {url: 'https://packagist.org/packages/sebastian/phpdcd', label: 'sebastian/phpdcd'}
+docker:         {url: 'https://hub.docker.com/r/phpqa/phpdcd', label: 'phpqa/phpdcd'}
+command:        phpdcd
+tags:           [unmaintained, dead code detection, cli] 
+comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is a Dead Code Detector (DCD) for PHP code.

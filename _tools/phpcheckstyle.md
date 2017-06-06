@@ -1,17 +1,16 @@
 ---
-layout: tool
-title: PHPCheckstyle
-authors: [Hari Kodungallur, Nimish Pachapurkar, Benoit Pesty, James Brooks, Marcin Kurczewski]
-license: Open Software License version 2.1 
-license-url: https://github.com/PHPCheckstyle/phpcheckstyle/blob/master/LICENSE.txt
-website: https://github.com/PHPCheckstyle/phpcheckstyle
-wiki: https://github.com/PHPCheckstyle/phpcheckstyle/wiki
-source: https://github.com/PHPCheckstyle/phpcheckstyle 
-packagist: phpcheckstyle/phpcheckstyle
-docker: phpqa/phpcheckstyle
-command: phpcheckstyle
-tags: [coding standards, cli] 
-comments: true
+layout:         tool
+title:          PHPCheckstyle
+authors:        [Hari Kodungallur, Nimish Pachapurkar, Benoit Pesty, James Brooks, Marcin Kurczewski]
+license:        {url: 'https://github.com/PHPCheckstyle/phpcheckstyle/blob/master/LICENSE.txt', label: 'Open Software License version 2.1'}
+website:        {url: 'https://github.com/PHPCheckstyle/phpcheckstyle'}
+wiki:           {url: 'https://github.com/PHPCheckstyle/phpcheckstyle/wiki'}
+source:         {url: 'https://github.com/PHPCheckstyle/phpcheckstyle'}
+packagist:      {url: 'https://packagist.org/packages/phpcheckstyle/phpcheckstyle', label: 'phpcheckstyle/phpcheckstyle'}
+docker:         {url: 'https://hub.docker.com/r/phpqa/phpcheckstyle', label: 'phpqa/phpcheckstyle'}
+command:        phpcheckstyle
+tags:           [coding standards, cli] 
+comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is an open-source tool that helps PHP programmers adhere to certain coding conventions.

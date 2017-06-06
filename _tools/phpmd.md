@@ -1,16 +1,15 @@
 ---
-layout: tool
-title: PHP Mess Detector
-authors: [Manuel Pichler]
-license: BSD 3-clause "New" or "Revised" License
-license-url: https://github.com/phpmd/phpmd/blob/master/LICENSE
-website: https://phpmd.org/
-source: https://github.com/phpmd/phpmd   
-packagist: phpmd/phpmd
-docker: phpqa/phpmd
-command: phpmd 
-tags: [bugs finder, mess detector, metrics, cli] 
-comments: true
+layout:         tool
+title:          PHP Mess Detector
+authors:        [Manuel Pichler]
+license:        {url: 'https://github.com/phpmd/phpmd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
+website:        {url: 'https://phpmd.org/'}
+source:         {url: 'https://github.com/phpmd/phpmd'}
+packagist:      {url: 'https://packagist.org/packages/phpmd/phpmd', label: 'phpmd/phpmd'}
+docker:         {url: 'https://hub.docker.com/r/phpqa/phpmd', label: 'phpqa/phpmd'}
+command:        phpmd 
+tags:           [bugs finder, mess detector, metrics, cli] 
+comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) scans PHP source code and looks for potential problems such as possible bugs,

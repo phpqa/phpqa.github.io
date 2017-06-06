@@ -1,16 +1,15 @@
 ---
-layout: tool
-title: PHP Code Standard Fixer 2
-authors: [Fabien Potencier, Dariusz Rumiński]
-license: MIT License  
-license-url: https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/LICENSE
-website: http://cs.sensiolabs.org/
-source: https://github.com/FriendsOfPHP/PHP-CS-Fixer   
-packagist: friendsofphp/php-cs-fixer
-docker: phpqa/php-cs-fixer
-command: php-cs-fixer  
-tags: [code fixer, coding standards, psr, cli] 
-comments: true
+layout:         tool
+title:          PHP Code Standard Fixer 2
+authors:        [Fabien Potencier, Dariusz Rumiński]
+license:        {url: 'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/LICENSE', label: 'MIT License'}
+website:        {url: 'http://cs.sensiolabs.org/'}
+source:         {url: 'https://github.com/FriendsOfPHP/PHP-CS-Fixer'}
+packagist:      {url: 'https://packagist.org/packages/friendsofphp/php-cs-fixer', label: 'friendsofphp/php-cs-fixer'}
+docker:         {url: 'https://hub.docker.com/r/phpqa/php-cs-fixer', label: 'phpqa/php-cs-fixer'}
+command:        php-cs-fixer  
+tags:           [code fixer, coding standards, psr, cli] 
+comments:       true
 ---
 
 The [{{ page.title }}]({{ site.url }}{{ page.url }}) tool fixes most issues in your code when you want to follow the PHP coding standards as defined in the PSR-1 and PSR-2 documents and many more.
