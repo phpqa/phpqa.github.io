@@ -1,40 +1,50 @@
-<div class="row">
+<div class="row tool_filters">
     <div class="col-12">
-        <div class="tool_tag_filters mb-4">
-            <a href="#alpha" data-tool-tag-filter="alpha" class="btn btn-sm btn-outline-info mb-1">
-                alpha
-            </a>
-            <a href="#unmaintained" data-tool-tag-filter="unmaintained" class="btn btn-sm btn-outline-warning mb-1">
-                unmaintained
-            </a>
-            <a href="#deprecated" data-tool-tag-filter="deprecated" class="btn btn-sm btn-outline-danger mb-1">
-                deprecated
-            </a>
-            {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | sort | uniq %}
-            {% for tag in tags %}
-            {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' or tag == 'docker image' %}
-            <a href="#{{ tag }}" data-tool-tag-filter="{{ tag }}" class="btn btn-sm btn-secondary mb-1">
-                {{ tag }}
-            </a>
-            {% endunless %}
-            {% endfor %}
-            <a href="#deprecated" data-tool-tag-filter="docker image" class="btn btn-sm btn-secondary mb-1">
-                docker image
-            </a>
-        </div>
-
-        <div class="tool_text_filters mb-4">
-            <form class="form-inline">
-                <label class="sr-only" for="filter">Search tools</label>
-                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
-                    <input type="text" class="form-control form-control-sm" id="filter" placeholder="Search tools">
+        <div class="mb-4">
+            <div class="row">
+                <div class="col-6">
+                    <a href="#tool_tag_filters" class="btn btn-md btn-outline-primary mb-1" data-toggle="collapse"
+                       aria-expanded="false" aria-controls="tool_tag_filters">
+                        Filter by tag <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+                    </a>
                 </div>
-                <div class="current_tool_filters"></div>
-            </form>
+                <div class="col-6">
+                    <label class="sr-only" for="filter">Filter freely</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                        <input type="text" class="form-control" id="filter" placeholder="Filter freely" data-tool-search-filter="true">
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="tool_tag_filters" class="collapse">
+                <div class="tagcloud-justify">
+                    <a href="#alpha" data-tool-tag-filter="alpha" role="button" class="btn btn-sm btn-outline-info mb-1">
+                        alpha
+                    </a>
+                    <a href="#unmaintained" data-tool-tag-filter="unmaintained" role="button" class="btn btn-sm btn-outline-warning mb-1">
+                        unmaintained
+                    </a>
+                    <a href="#deprecated" data-tool-tag-filter="deprecated" role="button" class="btn btn-sm btn-outline-danger mb-1">
+                        deprecated
+                    </a>
+                    {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | sort | uniq %}
+                    {% for tag in tags %}
+                    {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' or tag == 'docker image' %}
+                    <a href="#{{ tag }}" data-tool-tag-filter="{{ tag }}" role="button" class="btn btn-sm btn-secondary mb-1">
+                        {{ tag }}
+                    </a>
+                    {% endunless %}
+                    {% endfor %}
+                    <a href="#deprecated" data-tool-tag-filter="docker image" role="button" class="btn btn-sm btn-secondary mb-1">
+                        docker image
+                    </a>
+                </div>
+            </div>
+
+            <div class="current_tool_filters text-right mt-1"></div>
         </div>
-
-
     </div>
 </div>
 

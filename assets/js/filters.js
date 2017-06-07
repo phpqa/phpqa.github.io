@@ -8,9 +8,9 @@
         
         (function () {
             var $tools = $('.tool'),
-                $tagFilters = $('.tool_tag_filters').find('[data-tool-tag-filter]'),
-                $toolTagFilters = $('.tool').find('[data-tool-tag-filter]'),
-                $searchFiltersField = $('.tool_text_filters').find('input'),
+                $toolFilters = $('.tool').find('[data-tool-tag-filter]'),
+                $tagFilters = $('.tool_filters').find('[data-tool-tag-filter]'),
+                $searchFiltersField = $('.tool_filters').find('[data-tool-search-filter]'),
                 $currentFiltersContainer = $('.current_tool_filters'),
                 activeClass = 'active';
 
@@ -21,8 +21,8 @@
                         event.preventDefault();
                     });
                 }
-                if ($toolTagFilters.length) {
-                    $toolTagFilters.on('click', function (event) {
+                if ($toolFilters.length) {
+                    $toolFilters.on('click', function (event) {
                         toggleByTagText($(this).data('tool-tag-filter'));
                         event.preventDefault();
                     });
