@@ -1,8 +1,18 @@
 ---
 ---
 
+/* Tags
+-------------------------------------------------- */
+
+.tagcloud-justify {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 /* Badge outline
 -------------------------------------------------- */
+
 .badge-outline {
   color: #000;
   border: 1px solid #ccc;
@@ -68,7 +78,6 @@
   background-color: #d9534f;
   border-color: #d9534f;
 }
-
 
 /* Card
 -------------------------------------------------- */
@@ -152,6 +161,7 @@
 
 /* Navbar
 -------------------------------------------------- */
+
 .navbar {
   margin-bottom: 20px;
 }
@@ -162,6 +172,7 @@
 
 /* Sidebar
 -------------------------------------------------- */
+
 .sidebar {
   position: -webkit-sticky;
   position: sticky;
@@ -171,12 +182,14 @@
 
 /* Footer
 -------------------------------------------------- */
+
 .footer {
   font-size: small;
 }
 
 /* Sticky footer
 -------------------------------------------------- */
+
 html {
   position: relative;
   min-height: 100%;
