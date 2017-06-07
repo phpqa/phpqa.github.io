@@ -59,6 +59,10 @@
 /* Tools & filters
 -------------------------------------------------- */
 
+.tools {
+  z-index: 1;
+}
+
 .tool_filters {
   position: -webkit-sticky;
   position: sticky;
@@ -66,33 +70,42 @@
   top: 0;
   box-sizing: border-box;
   background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .125);
+  -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .125);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .125);
+
+  .icon-collapse-toggle-flip-horizontal { // based on .fa-flip-horizontal
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    filter: none;
+  }
+
+  .collapsed .icon-collapse-toggle-flip-horizontal {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0)";
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    filter: none;
+  }
+
+  .fa.fa-fw {
+    display: inline-block;
+    width: 1.3em;
+  }
+
+  .tagcloud-justify {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
-.tools {
-  z-index: 1;
-}
 
-.icon-collapse-toggle-flip-horizontal { // based on .fa-flip-horizontal
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  filter: none;
-}
 
-.collapsed .icon-collapse-toggle-flip-horizontal {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0)";
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  filter: none;
-}
 
-.tagcloud-justify {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 
 /* Badge outline
 -------------------------------------------------- */
