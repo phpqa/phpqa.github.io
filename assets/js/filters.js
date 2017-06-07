@@ -24,6 +24,7 @@
                 if ($toolFilters.length) {
                     $toolFilters.on('click', function (event) {
                         toggleByTagText($(this).data('tool-tag-filter'));
+                        $(this).replaceWith($(this).clone(true, true)); // Fix hover state after click
                         event.preventDefault();
                     });
                 }
