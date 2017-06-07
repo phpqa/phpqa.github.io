@@ -54,7 +54,7 @@
 
             var addCurrentFilter = function (filterText, closeCallback) {
                 var $currentFilter = $('<span class="mr-2">'),
-                    $closeAnchor = $('<a href="#" aria-label="remove" title="Remove">');
+                    $closeAnchor = $('<button class="tool-tag-remove" aria-label="remove" title="Remove">');
                 $closeAnchor
                     .html('&times;')
                     .data('tool-filter', filterText)
