@@ -4,6 +4,20 @@
 /* Tags
 -------------------------------------------------- */
 
+.icon-collapse-toggle-flip-horizontal { // based on .fa-flip-horizontal
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  filter: none;
+}
+.collapsed .icon-collapse-toggle-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0)";
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  filter: none;
+}
 .tagcloud-justify {
   display: flex;
   justify-content: space-between;
