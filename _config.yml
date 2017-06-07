@@ -68,7 +68,7 @@ icons:
 
 navigation:
   tools:      { label: Tools,     icon: fa-cogs,          url: /          }
-  usage:      { label: Usage,     icon: fa-magic,         url: /usage     }
+  #usage:      { label: Usage,     icon: fa-magic,         url: /usage     }
   about:      { label: About,     icon: fa-info-circle,   url: /about     }
   community:  { label: Community, icon: fa-map-signs,     url: /community }
   news:       { label: News,      icon: fa-list-alt,      url: /news      }
