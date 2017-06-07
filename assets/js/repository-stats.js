@@ -36,6 +36,11 @@
                 $('[data-github-name="' + name + '"][data-metric="watchers"]').text(data.subscribers_count);
                 $('[data-github-name="' + name + '"][data-metric="forks"]').text(data.forks_count);
             };
+            var removeMetricsByPackagistName = function (name) {
+                $('[data-packagist-name="' + name + '"][data-metric]').each(function () {
+                    $(this).parent().remove();
+                });
+            };
             var removeMetricsByGitHubName = function (name) {
                 $('[data-github-name="' + name + '"][data-metric]').each(function () {
                     $(this).parent().remove();
@@ -53,17 +58,20 @@
                         function (data) {
                             updateMetricsFromPackagist(data);
                         },
-                        function () {
-                            gatherMetricsFromGitHub(
-                                nameOnGitHub,
-                                function (data) {
-                                    updateMetricsFromGitHub(data);
-                                },
-                                function () {
-                                    removeMetricsByGitHubName(nameOnGitHub);
-                                }
-                            )
-                        }
+                        (function (nameOnPackagist, nameOnGitHub) {
+                            return function () {
+                                removeMetricsByPackagistName(nameOnPackagist);
+                                // gatherMetricsFromGitHub(
+                                //     nameOnGitHub,
+                                //     function (data) {
+                                //         updateMetricsFromGitHub(data);
+                                //     },
+                                //     function () {
+                                //         removeMetricsByGitHubName(nameOnGitHub);
+                                //     }
+                                // )
+                            };
+                        }(nameOnPackagist, nameOnGitHub))
                     );
                 }
             });
