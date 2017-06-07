@@ -1,32 +1,6 @@
 <div class="row mb-4 sidebar">
-    <div class="col-6 col-lg-12">
-        <h2>News</h2>
-        <div class="list-group mb-4">
-            {% for post in site.posts limit:5 %}
-            <article class="post list-group-item">
-
-                <h3>{{ post.title }}</h3>
-
-                <div class="entry">
-                    {{ post.excerpt }}
-                </div>
-
-                <a href="{{ site.url }}{{ post.url }}" class="read-more">Read more &rarr;</a>
-            </article>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="col-6 col-lg-12">
-        <h2>Community</h2>
-        <div class="list-group">
-            {% for item in site.sidebar %}
-            {% assign begin = item.url | slice: 0, 4 %}
-            <a href="{% unless begin == 'http' %}{{ site.url }}{% endunless %}{{ item.url }}"
-               class="list-group-item justify-content-between">
-                {{ item.label }}
-                <i class="fa {{ item.icon }} hidden-lg-down" aria-hidden="true"></i>
-            </a>
-            {% endfor %}
-        </div>
+    <div class="col-lg-12 hidden-md-down">
+        <h2><a href="{{ site.url }}{{ site.navigation.news.url }}">News</a></h2>
+        {% include posts.html limit=5 %}
     </div>
 </div>

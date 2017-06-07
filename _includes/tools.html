@@ -1,53 +1,51 @@
-<div class="row tool_filters">
+<div class="row tool_filters pt-2 pb-2 mb-2">
     <div class="col-12">
-        <div class="mb-4">
-            <div class="row">
-                <div class="col-6">
-                    <a href="#tool_tag_filters" class="btn btn-md btn-outline-primary mb-1 collapsed" data-toggle="collapse"
-                       aria-expanded="false" aria-controls="tool_tag_filters">
-                        Filter by tag <i class="fa fa-chevron-circle-down icon-collapse-toggle-flip-horizontal" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <div class="col-6">
-                    <label class="sr-only" for="filter">Filter freely</label>
-                    <div class="input-group mb-2">
-                        <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
-                        <input type="text" class="form-control" id="filter" placeholder="Filter freely" data-tool-search-filter="true">
-                    </div>
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <label class="sr-only" for="filter">Filter freely</label>
+                <div class="input-group mb-2">
+                    <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                    <input type="text" class="form-control" id="filter" placeholder="Filter freely" data-tool-search-filter="true">
                 </div>
             </div>
-
-            <div id="tool_tag_filters" class="collapse">
-                <div class="tagcloud-justify">
-                    <a href="#alpha" data-tool-tag-filter="alpha" role="button" class="btn btn-sm btn-outline-info mb-1">
-                        alpha
-                    </a>
-                    <a href="#unmaintained" data-tool-tag-filter="unmaintained" role="button" class="btn btn-sm btn-outline-warning mb-1">
-                        unmaintained
-                    </a>
-                    <a href="#deprecated" data-tool-tag-filter="deprecated" role="button" class="btn btn-sm btn-outline-danger mb-1">
-                        deprecated
-                    </a>
-                    {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | sort | uniq %}
-                    {% for tag in tags %}
-                    {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' or tag == 'docker image' %}
-                    <a href="#{{ tag }}" data-tool-tag-filter="{{ tag }}" role="button" class="btn btn-sm btn-secondary mb-1">
-                        {{ tag }}
-                    </a>
-                    {% endunless %}
-                    {% endfor %}
-                    <a href="#deprecated" data-tool-tag-filter="docker image" role="button" class="btn btn-sm btn-secondary mb-1">
-                        docker image
-                    </a>
-                </div>
+            <div class="col-12 col-sm-6">
+                <a href="#tool_tag_filters" class="btn btn-md btn-secondary mb-1 collapsed pull-right"
+                   data-toggle="collapse" aria-expanded="false" aria-controls="tool_tag_filters">
+                    Filter by tag <i class="fa fa-chevron-circle-down icon-collapse-toggle-flip-horizontal" aria-hidden="true"></i>
+                </a>
             </div>
-
-            <div class="current_tool_filters text-right mt-1"></div>
         </div>
+
+        <div id="tool_tag_filters" class="collapse">
+            <div class="tagcloud-justify">
+                <a href="#alpha" data-tool-tag-filter="alpha" role="button" class="btn btn-sm btn-outline-info mb-1">
+                    alpha
+                </a>
+                <a href="#unmaintained" data-tool-tag-filter="unmaintained" role="button" class="btn btn-sm btn-outline-warning mb-1">
+                    unmaintained
+                </a>
+                <a href="#deprecated" data-tool-tag-filter="deprecated" role="button" class="btn btn-sm btn-outline-danger mb-1">
+                    deprecated
+                </a>
+                {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | sort | uniq %}
+                {% for tag in tags %}
+                {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' or tag == 'docker image' %}
+                <a href="#{{ tag }}" data-tool-tag-filter="{{ tag }}" role="button" class="btn btn-sm btn-secondary mb-1">
+                    {{ tag }}
+                </a>
+                {% endunless %}
+                {% endfor %}
+                <a href="#deprecated" data-tool-tag-filter="docker image" role="button" class="btn btn-sm btn-secondary mb-1">
+                    docker image
+                </a>
+            </div>
+        </div>
+
+        <div class="current_tool_filters text-right mt-2 mb-2"></div>
     </div>
 </div>
 
-<div class="row">
+<div class="row tools">
     {% assign tools = site.tools | sort: 'title' %}
     {% for tool in tools %}
     <div class="col-12 col-sm-6 col-xl-4 tool">

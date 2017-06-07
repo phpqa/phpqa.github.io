@@ -69,14 +69,14 @@ navigation:
   news:       { label: News,      icon: fa-list-alt,      url: /news      }
   contact:    { label: Contact,   icon: fa-sign-language, url: /contact   }
 
-sidebar:
-  - { label: Static Analysis Tools,   icon: fa-list-ol,         url: 'https://github.com/exakat/php-static-analysis-tools'  }
-  - { label: PHP The Right Way,       icon: fa-thumbs-o-up,     url: 'http://www.phptherightway.com/'                       }
-  - { label: PHP The Wrong Way,       icon: fa-thumbs-o-down,   url: 'http://www.phpthewrongway.com/'                       }
-  - { label: PHP.UserGroup,           icon: fa-users,           url: 'http://php.ug/'                                       }
-  - { label: PHP Women,               icon: fa-venus,           url: 'http://phpwomen.org/'                                 }
-  - { label: PHP Mentoring,           icon: fa-graduation-cap,  url: 'https://php-mentoring.org/'                           }
-  - { label: OSMI,                    icon: fa-handshake-o,     url: 'https://osmihelp.org/'                                }
+links:
+  - { label: Static Analysis Tools,   icon: fa-list-ol,         url: 'https://github.com/exakat/php-static-analysis-tools', description: 'A curated list of static analysis tools for PHP.'                           }
+  - { label: PHP The Right Way,       icon: fa-thumbs-o-up,     url: 'http://www.phptherightway.com/',                      description: 'Quick reference for PHP popular coding standards.'                          }
+  - { label: PHP The Wrong Way,       icon: fa-thumbs-o-down,   url: 'http://www.phpthewrongway.com/',                      description: 'A pragmatic view on PHP programming.'                                       }
+  - { label: PHP.UserGroup,           icon: fa-users,           url: 'http://php.ug/',                                      description: 'An international meeting-point for the PHP-Community.'                      }
+  - { label: PHP Women,               icon: fa-venus,           url: 'http://phpwomen.org/',                                description: 'An inclusive & global network providing support within the PHP community.'  }
+  - { label: PHP Mentoring,           icon: fa-graduation-cap,  url: 'https://php-mentoring.org/',                          description: 'Focus on creating networks of skilled developers from all walks of life.'   }
+  - { label: OSMI,                    icon: fa-handshake-o,     url: 'https://osmihelp.org/',                               description: 'Changing how we talk about mental health in the tech community.'            }
 
 metadata:
   authors:      { label: Author(s),           icon: fa-user,            multiple: true                              }
