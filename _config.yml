@@ -62,11 +62,12 @@ collections:
     permalink: /:collection/:categories/:year/:month/:day/:title.html
 
 navigation:
-  - { label: Tools,                   icon: fa-cogs,            url: /                                                      }
-  - { label: Usage,                   icon: fa-magic,           url: /usage                                                 }
-  - { label: News,                    icon: fa-list-alt,        url: /news                                                  }
-  - { label: About,                   icon: fa-info-circle,     url: /about                                                 }
-  - { label: Contact,                 icon: fa-sign-language,   url: 'https://github.com/phpqa/phpqa.github.io/issues'      }
+  tools:      { label: Tools,     icon: fa-cogs,          url: /          }
+  usage:      { label: Usage,     icon: fa-magic,         url: /usage     }
+  about:      { label: About,     icon: fa-info-circle,   url: /about     }
+  community:  { label: Community, icon: fa-map-signs,     url: /community }
+  news:       { label: News,      icon: fa-list-alt,      url: /news      }
+  contact:    { label: Contact,   icon: fa-sign-language, url: /contact   }
 
 sidebar:
   - { label: Static Analysis Tools,   icon: fa-list-ol,         url: 'https://github.com/exakat/php-static-analysis-tools'  }

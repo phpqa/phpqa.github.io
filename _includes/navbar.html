@@ -7,11 +7,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             {% for item in site.navigation %}
-            {% assign begin = item.url | slice: 0, 4 %}
+            {% assign begin = item[1].url | slice: 0, 4 %}
             <li class="nav-item">
-                <a class="nav-link" href="{% unless begin == 'http' %}{{ site.url }}{% endunless %}{{ item.url }}">
-                    <i class="fa {{ item.icon }} fa-fw" aria-hidden="true"></i>
-                    {{ item.label }}
+                <a class="nav-link" href="{% unless begin == 'http' %}{{ site.url }}{% endunless %}{{ item[1].url }}">
+                    <i class="fa {{ item[1].icon }} fa-fw" aria-hidden="true"></i>
+                    {{ item[1].label }}
                 </a>
             </li>
             {% endfor %}
