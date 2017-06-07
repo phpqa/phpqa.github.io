@@ -2,23 +2,6 @@
 layout: bootstrap4
 ---
 
-{% if page.packagist != '' and page.packagist != nil %}
-<span class="pull-right">
-    <a href="{{ page.packagist.url }}" title="stars" class="badge badge-pill badge-default badge-outline">
-        <i class="fa fa-star"></i>
-        <span data-packagist-repository-name="{{ page.packagist.label }}" data-packagist-metric="star">*</span>
-    </a>
-    <a href="{{ page.packagist.url }}" title="watchers" class="badge badge-pill badge-default badge-outline">
-        <i class="fa fa-eye"></i>
-        <span data-packagist-repository-name="{{ page.packagist.label }}" data-packagist-metric="watch">*</span>
-    </a>
-    <a href="{{ page.packagist.url }}" title="forks" class="badge badge-pill badge-default badge-outline">
-        <i class="fa fa-code-fork"></i>
-        <span data-packagist-repository-name="{{ page.packagist.label }}" data-packagist-metric="fork">*</span>
-    </a>
-</span>
-{% endif %}
-
 <dl class="row">
     {% for property in site.metadata %}
     {% assign key = property[0] %}
@@ -42,5 +25,25 @@ layout: bootstrap4
     {% endif %}
     {% endfor %}
 </dl>
+
+{% if page.github != nil %}
+<p>
+    {% capture github-url %}{% if page.github.url != nil %}{{ page.github.url }}{% else %}{{ site.metadata.github.url-prefix }}{{ page.github.name }}{% endif %}{% endcapture %}
+    {% capture github-name %}{% if page.github.name != nil %}{{ page.github.name }}{% else %}{{ page.github.url | replace: site.metadata.github.url-prefix, '' }}{% endif %}{% endcapture %}
+    {% capture packagist-name %}{% if page.packagist.name != nil %}{{ page.packagist.name }}{% else %}{{ page.packagist.url | replace: site.metadata.packagist.url-prefix, '' }}{% endif %}{% endcapture %}
+    <a href="{{ github-url }}" title="watchers" class="badge badge-pill badge-default badge-outline">
+        <i class="fa fa-eye"></i>
+        <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="watchers">0</span>
+    </a>
+    <a href="{{ github-url }}" title="stars" class="badge badge-pill badge-default badge-outline">
+        <i class="fa fa-star"></i>
+        <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="stargazers">0</span>
+    </a>
+    <a href="{{ github-url }}" title="forks" class="badge badge-pill badge-default badge-outline">
+        <i class="fa fa-code-fork"></i>
+        <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="forks">0</span>
+    </a>
+</p>
+{% endif %}
 
 {{ content }}

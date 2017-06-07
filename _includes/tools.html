@@ -54,18 +54,21 @@
     <div class="col-12 col-sm-6 col-xl-4 tool">
         <div class="card mb-4">
             <div class="card-header card-metrics">
-                {% if tool.packagist != '' and tool.packagist != nil %}
-                <a href="{{ tool.packagist.url }}" title="stars" class="badge badge-pill badge-default badge-outline">
-                    <i class="fa fa-star"></i>
-                    <span data-packagist-repository-name="{{ tool.packagist.label }}" data-packagist-metric="star">*</span>
-                </a>
-                <a href="{{ tool.packagist.url }}" title="watchers" class="badge badge-pill badge-default badge-outline">
+                {% if tool.github != nil %}
+                {% capture github-url %}{% if tool.github.url != nil %}{{ tool.github.url }}{% else %}{{ site.metadata.github.url-prefix }}{{ tool.github.name }}{% endif %}{% endcapture %}
+                {% capture github-name %}{% if tool.github.name != nil %}{{ tool.github.name }}{% else %}{{ tool.github.url | replace: site.metadata.github.url-prefix, '' }}{% endif %}{% endcapture %}
+                {% capture packagist-name %}{% if tool.packagist.name != nil %}{{ tool.packagist.name }}{% else %}{{ tool.packagist.url | replace: site.metadata.packagist.url-prefix, '' }}{% endif %}{% endcapture %}
+                <a href="{{ github-url }}" title="watchers" class="badge badge-pill badge-default badge-outline">
                     <i class="fa fa-eye"></i>
-                    <span data-packagist-repository-name="{{ tool.packagist.label }}" data-packagist-metric="watch">*</span>
+                    <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="watchers">0</span>
                 </a>
-                <a href="{{ tool.packagist.url }}" title="forks" class="badge badge-pill badge-default badge-outline">
+                <a href="{{ github-url }}" title="stars" class="badge badge-pill badge-default badge-outline">
+                    <i class="fa fa-star"></i>
+                    <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="stargazers">0</span>
+                </a>
+                <a href="{{ github-url }}" title="forks" class="badge badge-pill badge-default badge-outline">
                     <i class="fa fa-code-fork"></i>
-                    <span data-packagist-repository-name="{{ tool.packagist.label }}" data-packagist-metric="fork">*</span>
+                    <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="forks">0</span>
                 </a>
                 {% endif %}
                 {% if page.comments-count %}
