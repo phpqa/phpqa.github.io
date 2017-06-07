@@ -16,4 +16,35 @@
 <meta property="og:title" content="{{ page.title }}"/>
 <meta property="twitter:title" content="{{ page.title }}"/>
 {% endif %}
-<meta http-equiv="Content-Security-Policy" content="default-src *; img-src 'self' https://i.creativecommons.org https://licensebuttons.net https://www.google-analytics.com data:; style-src 'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com https://use.fontawesome.com https://c.disquscdn.com; script-src 'self' https://code.jquery.com https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com https://use.fontawesome.com https://www.google-analytics.com https://{{ site.disqus }}.disqus.com https://disqus.com https://*.disquscdn.com">
+<meta http-equiv="Content-Security-Policy" content="
+    default-src
+        *
+    ;
+    img-src
+        'self'
+        https://i.creativecommons.org
+        https://licensebuttons.net
+        https://*.disqus.com
+        https://*.disquscdn.com
+        https://www.google-analytics.com
+        data:
+    ;
+    style-src
+        'self'
+        'unsafe-inline'
+        https://maxcdn.bootstrapcdn.com
+        https://use.fontawesome.com
+        https://c.disquscdn.com
+    ;
+    script-src
+        'self'
+        https://code.jquery.com
+        https://cdnjs.cloudflare.com
+        https://maxcdn.bootstrapcdn.com
+        https://use.fontawesome.com
+        https://{{ site.disqus }}.disqus.com
+        https://disqus.com
+        https://*.disquscdn.com
+        https://www.google-analytics.com
+    ;
+">
