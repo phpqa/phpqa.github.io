@@ -27,6 +27,9 @@
                 <a href="#deprecated" data-tool-tag-filter="deprecated" role="button" class="btn btn-sm btn-outline-danger mb-1">
                     deprecated
                 </a>
+                <a href="#deprecated" data-tool-tag-filter="docker image" role="button" class="btn btn-sm btn-outline-primary mb-1">
+                    docker image
+                </a>
             </div>
             <div class="text-right">
                 {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | sort | uniq %}
@@ -37,9 +40,6 @@
                 </a>
                 {% endunless %}
                 {% endfor %}
-                <a href="#deprecated" data-tool-tag-filter="docker image" role="button" class="btn btn-sm btn-secondary mb-1">
-                    docker image
-                </a>
             </div>
         </div>
 
