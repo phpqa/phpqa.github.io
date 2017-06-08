@@ -2,14 +2,14 @@
 layout:         tool
 title:          PHP Assumptions
 authors:        [Rick Kuipers] 
-license:        {url: 'https://github.com/rskuipers/php-assumptions/blob/master/LICENSE', label: 'MIT License'}
 website:        {url: 'https://github.com/rskuipers/php-assumptions'}
+license:        {url: 'https://github.com/rskuipers/php-assumptions/blob/master/LICENSE', label: 'MIT License'}
 github:         {name: rskuipers/php-assumptions}
 packagist:      {name: rskuipers/php-assumptions}               
-docker:         {name: phpqa/phpa}     
+dockerhub:      {name: phpqa/phpa}     
 command:        phpa  
+dependencies:   []
 tags:           [static analysis, bugs finder, validation, assumptions, cli]
-comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is a static code analysis tool doing checks for weak assumptions.

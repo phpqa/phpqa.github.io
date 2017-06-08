@@ -2,14 +2,14 @@
 layout:         tool
 title:          PHP Copy/Paste Detector
 authors:        [Sebastian Bergmann]
-license:        {url: 'https://github.com/sebastianbergmann/phpcpd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 website:        {url: 'https://github.com/sebastianbergmann/phpcpd'}
+license:        {url: 'https://github.com/sebastianbergmann/phpcpd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 github:         {name: sebastianbergmann/phpcpd}
 packagist:      {name: sebastian/phpcpd}               
-docker:         {name: phpqa/phpcpd}     
+dockerhub:      {name: phpqa/phpcpd}     
 command:        phpcpd
+dependencies:   []
 tags:           [bugs finder, dry, code duplication, cli] 
-comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is a Copy/Paste Detector for PHP code.

@@ -1,14 +1,14 @@
 ---
 layout:         tool
 title:          Roave Security Advisories
-authors:        [Roave, Marco Pivetta]
-license:        {url: 'https://github.com/Roave/SecurityAdvisories/blob/master/LICENSE', label: 'MIT License'}
+authors:        [Marco Pivetta]
+companies:      [Roave]
 website:        {url: 'https://github.com/Roave/SecurityAdvisories'}
+license:        {url: 'https://github.com/Roave/SecurityAdvisories/blob/master/LICENSE', label: 'MIT License'}
 github:         {name: Roave/SecurityAdvisories}
 packagist:      {name: roave/security-advisories}          
 dependencies:   []
 tags:           [security, composer, vulnerabilities checker]
-comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) ensures that your application

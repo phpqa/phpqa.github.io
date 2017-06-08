@@ -2,15 +2,15 @@
 layout:         tool
 title:          SensioLabs Security Checker
 authors:        [Fabien Potencier]
-license:        {url: 'https://github.com/sensiolabs/security-checker/blob/master/LICENSE', label: 'MIT License'}
 website:        {url: 'https://security.sensiolabs.org/'}
+license:        {url: 'https://github.com/sensiolabs/security-checker/blob/master/LICENSE', label: 'MIT License'}
 demo:           {url: 'https://security.sensiolabs.org/check'}
 github:         {name: sensiolabs/security-checker}
 packagist:      {name: sensiolabs/security-checker}          
-docker:         {name: phpqa/security-checker}     
+dockerhub:      {name: phpqa/security-checker}     
 command:        security-checker 
+dependencies:   []
 tags:           [security, composer, vulnerabilities checker, cli, online service] 
-comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is a command line tool that checks if your

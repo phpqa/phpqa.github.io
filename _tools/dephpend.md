@@ -2,14 +2,14 @@
 layout:         tool
 title:          dePHPend
 authors:        [Michael Haeuslmann]
-license:        {url: 'https://github.com/mihaeu/dephpend/blob/develop/LICENSE', label: 'MIT License'}
 website:        {url: 'https://dephpend.com/'}
+license:        {url: 'https://github.com/mihaeu/dephpend/blob/develop/LICENSE', label: 'MIT License'}
 github:         {name: mihaeu/dephpend}
 packagist:      {name: dephpend/dephpend}               
-docker:         {name: phpqa/dephpend}     
+dockerhub:      {name: phpqa/dephpend}     
 command:        dephpend
+dependencies:   []
 tags:           [metrics, cli]
-comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) helps with bringing your PHP projects back in shape. 

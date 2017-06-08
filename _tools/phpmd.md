@@ -2,14 +2,14 @@
 layout:         tool
 title:          PHP Mess Detector
 authors:        [Manuel Pichler]
-license:        {url: 'https://github.com/phpmd/phpmd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 website:        {url: 'https://phpmd.org/'}
+license:        {url: 'https://github.com/phpmd/phpmd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 github:         {name: phpmd/phpmd}
 packagist:      {name: phpmd/phpmd}               
-docker:         {name: phpqa/phpmd}     
+dockerhub:      {name: phpqa/phpmd}     
 command:        phpmd 
+dependencies:   []
 tags:           [bugs finder, mess detector, metrics, cli] 
-comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) scans PHP source code and looks for potential problems such as possible bugs,

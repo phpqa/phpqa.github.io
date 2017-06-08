@@ -2,14 +2,14 @@
 layout:         tool
 title:          Codeception
 authors:        [Michael Bodnarchuk]
-license:        {url: 'https://github.com/Codeception/Codeception/blob/2.3/LICENSE', label: 'MIT License'}
 website:        {url: 'http://codeception.com/'}
+license:        {url: 'https://github.com/Codeception/Codeception/blob/2.3/LICENSE', label: 'MIT License'}
 github:         {name: codeception/codeception}
 packagist:      {name: codeception/codeception}               
-docker:         {name: phpqa/codeception}     
+dockerhub:      {name: phpqa/codeception}     
 command:        codeception
+dependencies:   []
 tags:           [testing, cli]
-comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is a modern full-stack testing framework for PHP.

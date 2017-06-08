@@ -1,20 +1,20 @@
 ---
 layout:         tool
 title:          
+website:        {url: 'https://'} 
 authors:        []
-website:        {url: 'https://', label: ''} 
+companies:      [] # TODO!
 license:        {url: 'https://', label: ''} 
 terms:          {url: 'https://', label: ''} 
-wiki:           {url: 'https://', label: ''} 
-docs:           {url: 'https://', label: ''} 
-demo:           {url: 'https://', label: ''} 
-source:         {name: ''} 
+wiki:           {url: 'https://'} 
+docs:           {url: 'https://'} 
+demo:           {url: 'https://'} 
+github:         {name: ''} 
 packagist:      {name: ''}
-docker:         {name: ''} 
+dockerhub:      ({name: [^}]+}) 
 command:        
 dependencies:   []
 tags:           []
-comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) ...

@@ -2,15 +2,15 @@
 layout:         tool
 title:          PHPCheckstyle
 authors:        [Hari Kodungallur, Nimish Pachapurkar, Benoit Pesty, James Brooks, Marcin Kurczewski]
-license:        {url: 'https://github.com/PHPCheckstyle/phpcheckstyle/blob/master/LICENSE.txt', label: 'Open Software License version 2.1'}
 website:        {url: 'https://github.com/PHPCheckstyle/phpcheckstyle'}
+license:        {url: 'https://github.com/PHPCheckstyle/phpcheckstyle/blob/master/LICENSE.txt', label: 'Open Software License version 2.1'}
 wiki:           {url: 'https://github.com/PHPCheckstyle/phpcheckstyle/wiki'}
 github:         {name: PHPCheckstyle/phpcheckstyle}
 packagist:      {name: phpcheckstyle/phpcheckstyle}               
-docker:         {name: phpqa/phpcheckstyle}     
+dockerhub:      {name: phpqa/phpcheckstyle}     
 command:        phpcheckstyle
+dependencies:   []
 tags:           [coding standards, cli] 
-comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is an open-source tool that helps PHP programmers adhere to certain coding conventions.

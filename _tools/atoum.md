@@ -2,14 +2,14 @@
 layout:         tool
 title:          atoum
 authors:        [Frédéric Hardy, Julien Bianchi]
-license:        {url: 'https://github.com/atoum/atoum/blob/master/LICENSE', label: 'BSD 3'}
 website:        {url: 'http://atoum.org/'}
+license:        {url: 'https://github.com/atoum/atoum/blob/master/LICENSE', label: 'BSD 3'}
 github:         {name: atoum/atoum}
 packagist:      {name: atoum/atoum}               
-docker:         {name: atoum/atoum}     
+dockerhub:      {name: atoum/atoum}     
 command:        atoum
+dependencies:   []
 tags:           [testing, cli]
-comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is a modern and intuitive testing framework for PHP.

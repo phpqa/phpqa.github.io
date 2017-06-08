@@ -6,7 +6,6 @@ website:        {url: 'https://www.versioneye.com/'}
 terms:          {url: 'https://www.versioneye.com/terms', label: 'Terms'}
 docs:           {url: 'https://www.versioneye.com/api/'}
 tags:           [free for open source, online service, security, security vulnerabilities, license violations, dependencies]
-comments:       true
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) notifies you
