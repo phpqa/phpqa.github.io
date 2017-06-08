@@ -1,13 +1,6 @@
-# PHP QA
+# PHP Quality Assurance Tools
 
-## Run the website locally
+Looking for tools to make your PHP code even better? Dive right into the exciting world of PHP QA!
 
-- Install docker-compose
 
-- Run the jekyll container
 
-    `docker-compose up`
-    
-- Open the webpage (url only for native docker, docker for mac or docker for windows)
-    
-    `http://0.0.0.0:4000`

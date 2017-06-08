@@ -6,8 +6,16 @@ comments: false
 
 ## Content
 
+* [Run the website locally](#run-the-website-locally)
 * [Add a tool](#add-a-tool)
 * [Send a Pull Request](#send-a-pull-request)
+
+## Run the website locally
+   
+- Install docker-compose as native docker, docker for mac or docker for windows
+- Run the Jekyll container by running the terminal command `docker-compose up`
+- Open the webpage at `http://0.0.0.0:4000` or `http://127.0.0.1:4000`
+- Keep track of Jekyll errors by running the terminal command `docker-compose logs -f` 
 
 ## Add a tool
 
