@@ -16,11 +16,14 @@ comments:       true
 
 <!--more--> 
 
-A simple, modern and intuitive unit testing framework for PHP!
+A simple, modern and intuitive unit testing framework for PHP.
 
-Just like SimpleTest or PHPUnit, atoum is a unit testing framework specific to the PHP language. However, it has been designed from the start with the following ideas in mind:
+Just like SimpleTest or PHPUnit, atoum is a unit testing framework specific to the PHP language. However, it has been designed from the start up with the following ideas in mind:
 * Can be implemented rapidly,
-* Simplify test development,
-* Allow for writing reliable, readable, and clear unit tests.
+* Simplifies test development,
+* Allows for writing reliable, readable, and clear unit tests.
 
-It also allow out-of-the-box to run tour test into [different mode](http://atoum.org/features.html#execution-engines): in parallel, in concurency, or simply inline (one after one). And has several nice helps for the devloper in they day-too-day usage.
+It allows to run your tests in several [different modes](http://atoum.org/features.html#execution-engines):
+in parallel, in concurrency, or simply one by one.
+ 
+It also ships with several helping tools for a developer in their day-to-day usage.
