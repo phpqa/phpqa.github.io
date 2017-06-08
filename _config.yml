@@ -85,6 +85,7 @@ links:
 
 metadata:
   authors:      { label: Author(s),           icon: fa-user,            multiple: true                              }
+  companies:    { label: Company,             icon: fa-building-o,      multiple: true                              }
   website:      { label: Website,             icon: fa-globe,           button: true,   button-class: btn-website   }
   license:      { label: License,             icon: fa-id-card                                                      }
   terms:        { label: Terms (Of Service),  icon: fa-thumbs-o-up,     button: true,   button-class: btn-terms     }

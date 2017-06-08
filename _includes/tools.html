@@ -82,7 +82,7 @@
                 {{ tool.excerpt }}
 
                 <p class="small">
-                    by {{ tool.authors | join: ', ' }}
+                    by {{ tool.authors | join: ', ' }}{% if tool.authors != nil and tool.companies !=nil %}, {% endif %}{{ tool.companies | join: ', ' }}
                 </p>
                 <a href="{{ site.url }}{{ tool.url }}" class="more-information">
                     More information &rarr;
