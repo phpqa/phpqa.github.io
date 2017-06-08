@@ -5,26 +5,26 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="{{ site.url }}/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="{{ '/assets/js/ie10-viewport-bug-workaround.js' | absolute_url }}"></script>
 
 <!-- Font Awesome -->
 <script src="https://use.fontawesome.com/2dbb7b4a28.js" async></script>
 
 <!-- Bootstrap initialisation -->
-<script src="{{ site.url }}/assets/js/bootstrap.js" async></script>
+<script src="{{ '/assets/js/bootstrap.js' | absolute_url }}" async></script>
 
 <!-- Tools filters -->
-<script src="{{ site.url }}/assets/js/filters.js" async></script>
+<script src="{{ '/assets/js/filters.js' | absolute_url }}" async></script>
 
 <!-- Google Analytics -->
-<script src="{{ site.url }}/assets/js/google-analytics.js" async></script>
+<script src="{{ '/assets/js/google-analytics.js' | absolute_url }}" async></script>
 
 <!-- Packagist metrics -->
-<script src="{{ site.url }}/assets/js/repository-stats.js" async></script>
+<script src="{{ '/assets/js/repository-stats.js' | absolute_url }}" async></script>
 
 <!-- Disqus -->
 {% if page.comments != false %}
-<script src="{{ site.url }}/assets/js/disqus.js"></script>
+<script src="{{ '/assets/js/disqus.js' | absolute_url }}"></script>
 {% endif %}
 {% if page.comments-count == true %}
 <script id="dsq-count-scr" src="https://{{ site.disqus }}.disqus.com/count.js" async></script>

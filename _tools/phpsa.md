@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [alpha, bugs finder, static analysis, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a development tool aimed at bringing complex analysis for PHP applications and libraries.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a development tool aimed at bringing complex analysis for PHP applications and libraries.
 
 <!--more--> 
 

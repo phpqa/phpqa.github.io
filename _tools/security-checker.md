@@ -13,7 +13,7 @@ dependencies:   []
 tags:           [security, composer, vulnerabilities checker, cli, online service] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a command line tool that checks if your
+[{{ page.title }}]({{ page.url | absolute_url }}) is a command line tool that checks if your
 application uses dependencies with known security vulnerabilities.
  
 <!--more--> 

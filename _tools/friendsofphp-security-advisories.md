@@ -8,7 +8,7 @@ github:         {name: FriendsOfPHP/security-advisories}
 tags:           [security, vulnerabilities database] 
 ---
 
-The [{{ page.title }}]({{ site.url }}{{ page.url }}) references known security vulnerabilities in various PHP projects and libraries.
+The [{{ page.title }}]({{ page.url | absolute_url }}) references known security vulnerabilities in various PHP projects and libraries.
  
 <!--more--> 
 

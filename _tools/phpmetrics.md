@@ -13,7 +13,7 @@ dependencies:   []
 tags:           [metrics, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) provides [software metrics](http://en.wikipedia.org/wiki/Software_metric) about PHP project and classes.
+[{{ page.title }}]({{ page.url | absolute_url }}) provides [software metrics](http://en.wikipedia.org/wiki/Software_metric) about PHP project and classes.
 
 <!--more-->
  

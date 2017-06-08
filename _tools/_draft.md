@@ -17,6 +17,6 @@ dependencies:   []
 tags:           []
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) ...
+[{{ page.title }}]({{ page.url | absolute_url }}) ...
 
 <!--more--> 

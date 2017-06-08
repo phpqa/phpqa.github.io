@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [alpha, bugs finder, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a static scanning tool to review your PHP code for potential security-related issues.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a static scanning tool to review your PHP code for potential security-related issues.
  
 <!--more--> 
 

@@ -12,6 +12,6 @@ dependencies:   []
 tags:           [visuals, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a Static Analyzer following QDD which Questions Everything that is leaving Visual Debt behind.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a Static Analyzer following QDD which Questions Everything that is leaving Visual Debt behind.
 
 <!--more--> 

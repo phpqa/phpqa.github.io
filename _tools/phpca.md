@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [bugs finder, built-in php extensions, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) finds usage of different non-built-in extensions in your php code.
+[{{ page.title }}]({{ page.url | absolute_url }}) finds usage of different non-built-in extensions in your php code.
  
 <!--more--> 
 

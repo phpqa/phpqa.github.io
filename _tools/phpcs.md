@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [coding standards, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.
+[{{ page.title }}]({{ page.url | absolute_url }}) tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.
 
 <!--more-->
 

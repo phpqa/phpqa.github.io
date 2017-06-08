@@ -2,13 +2,14 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="{{ site.url }}">{{ site.name }}</a>
+    <a class="navbar-brand" href="{{ site.navigation.tools.url | absolute_url }}">{{ site.name }}</a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             {% for item in site.navigation %}
+            {% assign begin = item[1].url | slice: 0, 4 %}
             <li class="nav-item">
-                <a class="nav-link" href="{{ item[1].url | absolute_url }}">
+                <a class="nav-link" href="{% if begin == 'http' %}{{ item[1].url }}{% else %}{{ item[1].url | absolute_url }}{% endif %}">
                     <i class="fa {{ item[1].icon }} fa-fw" aria-hidden="true"></i>
                     {{ item[1].label }}
                 </a>

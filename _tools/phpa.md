@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [static analysis, bugs finder, validation, assumptions, cli]
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a static code analysis tool doing checks for weak assumptions.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a static code analysis tool doing checks for weak assumptions.
 
 <!--more--> 
 

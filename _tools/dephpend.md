@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [metrics, cli]
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) helps with bringing your PHP projects back in shape. 
+[{{ page.title }}]({{ page.url | absolute_url }}) helps with bringing your PHP projects back in shape. 
 
 <!--more-->
  

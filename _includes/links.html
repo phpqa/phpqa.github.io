@@ -1,15 +1,10 @@
 <div class="links mb-4">
     {% for link in site.links limit:include.limit %}
     {% assign begin = link.url | slice: 0, 4 %}
-    <article class="link well mb-1">
-        <header>
-            <h3>
-                <a href="{% unless begin == 'http' %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.label }}</a>
-                <i class="fa {{ link.icon }} pull-right" aria-hidden="true"></i>
-            </h3>
-        </header>
-
-        <p>{{ link.description }}</p>
-    </article>
+    <div class="link mb-3">
+        <i class="link-icon fa {{ link.icon }} fa-fw fa-3x" aria-hidden="true"></i>
+        <strong><a href="{% if begin == 'http' %}{{ link.url }}{% else %}{{ link.url | absolute_url }}{% endif %}">{{ link.label }}</a></strong>
+        <br/>{{ link.description }}
+    </div>
     {% endfor %}
 </div>

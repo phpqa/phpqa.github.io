@@ -32,7 +32,7 @@
                 </a>
             </div>
             <div class="text-right">
-                {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | sort | uniq %}
+                {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | where_exp: 'content', 'content != ""' | sort | uniq %}
                 {% for tag in tags %}
                 {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' or tag == 'docker image' %}
                 <a href="#{{ tag }}" data-tool-tag-filter="{{ tag }}" role="button" class="btn btn-sm btn-secondary mb-1">
@@ -71,7 +71,7 @@
                 </a>
                 {% endif %}
                 {% if page.comments-count == true and tool.comments != false %}
-                <a href="{{ site.url }}{{ tool.url }}" title="comments" class="badge badge-pill badge-default badge-outline">
+                <a href="{{ tool.url | absolute_url }}" title="comments" class="badge badge-pill badge-default badge-outline">
                     <i class="fa fa-comments" aria-hidden="true"></i>
                     <span data-disqus-identifier="{{ tool.id }}" class="disqus-comment-count">0</span>
                 </a>
@@ -81,10 +81,13 @@
 
                 {{ tool.excerpt }}
 
+                {% if tool.authors != nil or tool.companies !=nil %}
                 <p class="small">
                     by {{ tool.authors | join: ', ' }}{% if tool.authors != nil and tool.companies !=nil %}, {% endif %}{{ tool.companies | join: ', ' }}
                 </p>
-                <a href="{{ site.url }}{{ tool.url }}" class="more-information">
+                {% endif %}
+                
+                <a href="{{ tool.url | absolute_url }}" class="more-information">
                     More information &rarr;
                 </a>
 

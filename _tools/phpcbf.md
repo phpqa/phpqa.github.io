@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [coding standards, code fixer, code beautifier, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) fixes violations of a defined coding standard.
+[{{ page.title }}]({{ page.url | absolute_url }}) fixes violations of a defined coding standard.
 
 <!--more-->
 

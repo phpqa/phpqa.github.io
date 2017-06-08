@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [metrics, cli]
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) shows you the quality of your design in the terms of extensibility, reusability and maintainability.
+[{{ page.title }}]({{ page.url | absolute_url }}) shows you the quality of your design in the terms of extensibility, reusability and maintainability.
 
 <!--more--> 
 
