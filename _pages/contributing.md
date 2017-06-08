@@ -12,7 +12,7 @@ comments: false
 
 ## Run the website locally
    
-- Install docker-compose as native docker, docker for mac or docker for windows
+- Install docker-compose through [Docker CE](https://www.docker.com/community-edition)
 - Run the Jekyll container by running the terminal command `docker-compose up`
 - Open the webpage at `http://0.0.0.0:4000` or `http://127.0.0.1:4000`
 - Keep track of Jekyll errors by running the terminal command `docker-compose logs -f` 
