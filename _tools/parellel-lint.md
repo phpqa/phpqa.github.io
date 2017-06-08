@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [bugs finder, lint, parallel, cli]
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) checks the syntax of PHP files faster than serial check, with a fancier output.
+[{{ page.title }}]({{ page.url | absolute_url }}) checks the syntax of PHP files faster than serial check, with a fancier output.
 
 <!--more--> 
 

@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [bugs finder, dry, code duplication, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a Copy/Paste Detector for PHP code.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a Copy/Paste Detector for PHP code.
 
 <!--more--> 
 

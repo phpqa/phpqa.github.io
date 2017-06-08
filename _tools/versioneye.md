@@ -8,7 +8,7 @@ docs:           {url: 'https://www.versioneye.com/api/'}
 tags:           [free for open source, online service, security, security vulnerabilities, license violations, dependencies]
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) notifies you
+[{{ page.title }}]({{ page.url | absolute_url }}) notifies you
 about security vulnerabilities, license violations and out-dated dependencies in your Git repositories.
 
 <!--more--> 

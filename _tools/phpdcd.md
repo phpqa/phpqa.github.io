@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [unmaintained, dead code detection, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a Dead Code Detector (DCD) for PHP code.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a Dead Code Detector (DCD) for PHP code.
  
 <!--more--> 
 

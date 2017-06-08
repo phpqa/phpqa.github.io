@@ -12,7 +12,7 @@ dependencies:   [pcntl,git,php-ast]
 tags:           [bugs finder, static analysis, cli]
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a static analyzer for PHP.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a static analyzer for PHP.
  
 <!--more--> 
 

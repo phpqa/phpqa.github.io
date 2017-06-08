@@ -12,7 +12,7 @@ dependencies:   [xsl]
 tags:           [documentation, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a documentation generator for PHP projects.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a documentation generator for PHP projects.
  
 <!--more--> 
 

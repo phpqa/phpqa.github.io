@@ -11,7 +11,7 @@ dependencies:   []
 tags:           [security, composer, vulnerabilities checker]
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) ensures that your application
+[{{ page.title }}]({{ page.url | absolute_url }}) ensures that your application
 doesn't have installed dependencies with known security vulnerabilities.
 
 <!--more--> 

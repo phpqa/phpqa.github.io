@@ -14,6 +14,6 @@ dependencies:   []
 tags:           [bugs finder, static analysis, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a static analysis tool for finding errors in PHP applications.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a static analysis tool for finding errors in PHP applications.
 
 <!--more--> 

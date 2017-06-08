@@ -9,7 +9,7 @@
     {% include stylesheets.html %}
 </head>
 <body
-        data-page-url="{{ site.url }}{{ page.url }}"
+        data-page-url="{{ page.url | absolute_url }}"
         data-page-title="{% if page.title != '' and page.title != nil %}{{ page.title }} – {% endif %}{{ site.name }}"
         data-page-disqus-identifier="{{ page.id }}"
         data-page-disqus-name="{{ site.disqus }}"

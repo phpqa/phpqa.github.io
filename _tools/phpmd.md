@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [bugs finder, mess detector, metrics, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) scans PHP source code and looks for potential problems such as possible bugs,
+[{{ page.title }}]({{ page.url | absolute_url }}) scans PHP source code and looks for potential problems such as possible bugs,
 dead code, suboptimal code, and overcomplicated expressions.
  
 <!--more--> 

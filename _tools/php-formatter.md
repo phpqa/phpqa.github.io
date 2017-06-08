@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [coding standards, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) aims to provide you some bulk actions for your PHP projects to ensure their consistency.
+[{{ page.title }}]({{ page.url | absolute_url }}) aims to provide you some bulk actions for your PHP projects to ensure their consistency.
 
 <!--more-->
 

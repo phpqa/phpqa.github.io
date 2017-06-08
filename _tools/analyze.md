@@ -12,6 +12,6 @@ dependencies:   [zip, git]
 tags:           [metrics, cli]
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a tool to visualize metrics and source code.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a tool to visualize metrics and source code.
 
 <!--more--> 

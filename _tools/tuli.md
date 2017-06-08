@@ -13,6 +13,6 @@ dependencies:   [git]
 tags:           [deprecated, bugs finder, static analysis, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a static analysis engine.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a static analysis engine.
 
 <!--more--> 

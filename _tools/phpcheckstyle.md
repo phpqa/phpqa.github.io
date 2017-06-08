@@ -13,7 +13,7 @@ dependencies:   []
 tags:           [coding standards, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is an open-source tool that helps PHP programmers adhere to certain coding conventions.
+[{{ page.title }}]({{ page.url | absolute_url }}) is an open-source tool that helps PHP programmers adhere to certain coding conventions.
  
 <!--more-->
 

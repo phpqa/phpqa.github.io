@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [coding standards, php compatibility, cli]
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a set of sniffs for PHP_CodeSniffer that checks for PHP version compatibility.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a set of sniffs for PHP_CodeSniffer that checks for PHP version compatibility.
 
 <!--more--> 
 

@@ -12,6 +12,6 @@ dependencies:   []
 tags:           [metrics, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a tool for quickly measuring the size and analyzing the structure of a PHP project.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a tool for quickly measuring the size and analyzing the structure of a PHP project.
 
 <!--more--> 

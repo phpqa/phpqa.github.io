@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [bugs finder, static analysis, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) focuses on finding errors in your code without actually running it.
+[{{ page.title }}]({{ page.url | absolute_url }}) focuses on finding errors in your code without actually running it.
  
 <!--more--> 
 

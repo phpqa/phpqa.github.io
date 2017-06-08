@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [testing, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a programmer-oriented testing framework for PHP.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a programmer-oriented testing framework for PHP.
  
 <!--more--> 
 

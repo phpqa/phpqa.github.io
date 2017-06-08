@@ -12,6 +12,6 @@ dependencies:   []
 tags:           [bugs finder, testability, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) analyses and produces a report with testability issues of a php codebase.
+[{{ page.title }}]({{ page.url | absolute_url }}) analyses and produces a report with testability issues of a php codebase.
 
 <!--more--> 

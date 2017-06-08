@@ -71,7 +71,7 @@
                 </a>
                 {% endif %}
                 {% if page.comments-count == true and tool.comments != false %}
-                <a href="{{ site.url }}{{ tool.url }}" title="comments" class="badge badge-pill badge-default badge-outline">
+                <a href="{{ tool.url | absolute_url }}" title="comments" class="badge badge-pill badge-default badge-outline">
                     <i class="fa fa-comments" aria-hidden="true"></i>
                     <span data-disqus-identifier="{{ tool.id }}" class="disqus-comment-count">0</span>
                 </a>
@@ -87,7 +87,7 @@
                 </p>
                 {% endif %}
                 
-                <a href="{{ site.url }}{{ tool.url }}" class="more-information">
+                <a href="{{ tool.url | absolute_url }}" class="more-information">
                     More information &rarr;
                 </a>
 

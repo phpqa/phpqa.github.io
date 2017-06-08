@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [code fixer, coding standards, psr, cli] 
 ---
 
-The [{{ page.title }}]({{ site.url }}{{ page.url }}) tool fixes most issues in your code when you want to follow the PHP coding standards as defined in the PSR-1 and PSR-2 documents and many more.
+The [{{ page.title }}]({{ page.url | absolute_url }}) tool fixes most issues in your code when you want to follow the PHP coding standards as defined in the PSR-1 and PSR-2 documents and many more.
 
 <!--more--> 
 

@@ -180,7 +180,7 @@ Quotes are not necessary, simply separate the tags with a comma.
 ### Description
 
 ```
-{% raw %}[{{ page.title }}]({{ site.url }}{{ page.url }}){% endraw %} is a website that lists many useful PHP QA tools.
+{% raw %}[{{ page.title }}]({{ page.url | absolute_url }}){% endraw %} is a website that lists many useful PHP QA tools.
 
 <!--more-->
 
@@ -190,7 +190,7 @@ It enlists many well-known as well as lesser known PHP Quality Assurance tools f
 The description is the part below the Jekyll Front Matter.
  
 Try to describe the tool in one short sentence. This will be the sentence that will be visible on the overview page.
-Try to use the name of the tool somewhere in the beginning, and do it by using this code {% raw %}`[{{ page.title }}]({{ site.url }}{{ page.url }})`{% endraw %}.
+Try to use the name of the tool somewhere in the beginning, and do it by using this code {% raw %}`[{{ page.title }}]({{ page.url | absolute_url }})`{% endraw %}.
 Then add the Jekyll excerpt_separator `<!--more-->`, and go wild with the longer description for the tool page.
  
 

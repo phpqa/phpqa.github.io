@@ -12,7 +12,7 @@ dependencies:   []
 tags:           [bugs finder, deprecated functions, php compatibility, cli] 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) finds deprecated functions, wrong functions usage, variables, ini directives and restricted identifiers in your php code.
+[{{ page.title }}]({{ page.url | absolute_url }}) finds deprecated functions, wrong functions usage, variables, ini directives and restricted identifiers in your php code.
  
 <!--more--> 
 
