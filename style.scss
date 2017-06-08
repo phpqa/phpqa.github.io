@@ -302,6 +302,22 @@ h3 a {
   color: inherit;
 }
 
+/* Links page
+-------------------------------------------------- */
+
+.links {
+  .link {
+    position: relative;
+    padding-left: 4.25em;
+  }
+  
+  .link-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 /* Footer
 -------------------------------------------------- */
 

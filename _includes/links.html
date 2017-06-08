@@ -1,8 +1,8 @@
 <div class="links mb-4">
     {% for link in site.links limit:include.limit %}
     {% assign begin = link.url | slice: 0, 4 %}
-    <div class="mb-3">
-        <i class="fa {{ link.icon }} fa-fw fa-3x pull-left" aria-hidden="true"></i>
+    <div class="link mb-3">
+        <i class="link-icon fa {{ link.icon }} fa-fw fa-3x" aria-hidden="true"></i>
         <strong><a href="{% unless begin == 'http' %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.label }}</a></strong>
         <br/>{{ link.description }}
     </div>
