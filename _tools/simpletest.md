@@ -9,7 +9,7 @@ packagist:      {name: 'simpletest/simpletest'}
 tags:           [testing]
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) a unit test framework for PHP.
+[{{ page.title }}]({{ site.url }}{{ page.url }}) is a unit test framework for PHP.
 
 <!--more--> 
 
