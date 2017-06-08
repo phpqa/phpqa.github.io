@@ -32,7 +32,7 @@
                 </a>
             </div>
             <div class="text-right">
-                {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | sort | uniq %}
+                {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | where_exp: 'content', 'content != ""' | sort | uniq %}
                 {% for tag in tags %}
                 {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' or tag == 'docker image' %}
                 <a href="#{{ tag }}" data-tool-tag-filter="{{ tag }}" role="button" class="btn btn-sm btn-secondary mb-1">

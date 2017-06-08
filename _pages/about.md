@@ -13,7 +13,7 @@ for ["The PHP Quality Assurance Toolchain"](http://phpqatools.org/).
 ## Charity
 
 A huge thanks to all the people who are maintaining one or more quality assurance tools for PHP:
-<br/>{{ site.tools | map: 'authors' | join: ',' | split:',' | sort | uniq | join: ', ' }}
+<br/>{{ site.tools | map: 'authors' | join: ',' | split:',' | where_exp: 'content', 'content != ""' | sort | uniq | join: ', ' }}
 
 ## Temperance
 
