@@ -7,7 +7,7 @@ license:        {url: 'https://github.com/kahlan/kahlan/blob/master/LICENSE.txt'
 docs:           {url: 'https://kahlan.github.io/docs/'} 
 github:         {name: 'kahlan/kahlan'} 
 packagist:      {name: 'kahlan/kahlan'}
-dockerhub:      ({name: 'kahlan/kahlan'}) 
+dockerhub:      {name: 'kahlan/kahlan'}
 command:        kahlan
 dependencies:   []
 tags:           [testing, bdd]
