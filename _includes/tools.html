@@ -17,7 +17,7 @@
         </div>
 
         <div id="tool_tag_filters" class="collapse">
-            <div class="tagcloud-justify">
+            <div>
                 <a href="#alpha" data-tool-tag-filter="alpha" role="button" class="btn btn-sm btn-outline-info mb-1">
                     alpha
                 </a>
@@ -27,6 +27,8 @@
                 <a href="#deprecated" data-tool-tag-filter="deprecated" role="button" class="btn btn-sm btn-outline-danger mb-1">
                     deprecated
                 </a>
+            </div>
+            <div class="text-right">
                 {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | sort | uniq %}
                 {% for tag in tags %}
                 {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' or tag == 'docker image' %}
