@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contributing
+title-visible: false
 comments: false
 ---
 
