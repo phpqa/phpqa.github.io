@@ -70,7 +70,7 @@
                     <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="forks">0</span>
                 </a>
                 {% endif %}
-                {% if page.comments-count %}
+                {% if page.comments-count == true and tool.comments != false %}
                 <a href="{{ site.url }}{{ tool.url }}" title="comments" class="badge badge-pill badge-default badge-outline">
                     <i class="fa fa-comments" aria-hidden="true"></i>
                     <span data-disqus-identifier="{{ tool.id }}" class="disqus-comment-count">0</span>

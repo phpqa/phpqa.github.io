@@ -2,6 +2,7 @@
 layout: page
 title: About
 title-visible: false
+comments: false
 ---
 
 ## Diligence

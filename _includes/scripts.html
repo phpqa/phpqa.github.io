@@ -23,9 +23,9 @@
 <script src="{{ site.url }}/assets/js/repository-stats.js" async></script>
 
 <!-- Disqus -->
-{% if page.comments %}
+{% if page.comments != false %}
 <script src="{{ site.url }}/assets/js/disqus.js"></script>
 {% endif %}
-{% if page.comments-count %}
+{% if page.comments-count == true %}
 <script id="dsq-count-scr" src="https://{{ site.disqus }}.disqus.com/count.js" async></script>
 {% endif %}
