@@ -4,7 +4,9 @@ rvm:
 
 install: gem install jekyll html-proofer jekyll-coffeescript jekyll-paginate
 
-script: jekyll build && htmlproofer ./_site
+script:
+  - jekyll build
+  - htmlproofer ./_site
 
 env:
   global:
