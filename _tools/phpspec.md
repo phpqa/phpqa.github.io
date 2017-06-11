@@ -12,8 +12,8 @@ dependencies:   [prophecy]
 tags:           [testing, specification]
 ---
 
-Spec BDD with [{{ page.title }}]({{ site.url }}{{ page.url }}). phpspec is a tool which can help you write
-clean and working PHP code using behaviour driven development or BDD. BDD is a technique derived from test-first development. 
+[{{ page.title }}]({{ site.url }}{{ page.url }}) is a tool which can help you write
+clean and working PHP code using Behaviour Driven Development (BDD). 
 
 <!--more--> 
 
