@@ -42,7 +42,7 @@ Most of the tools are named according to the actual command and phpqa/* docker i
 
 `layout:         tool` (`string`)
 
-This is Jekyll's layout field, and should always be `tool`. Avoid surrounding it with quotes.
+This is Jekyll's layout field, and should always be `tool`.
 
 ### Title
 
@@ -51,7 +51,6 @@ This is Jekyll's layout field, and should always be `tool`. Avoid surrounding it
 The title is the name of the tool, and is required for any added tool.
 Most of the time, this is the title on the tool's README page of GitHub.
 This field should also be used to start the description of the tool (see `description`).
-Avoid surrounding it with quotes.
 
 ### Website
 
@@ -62,7 +61,6 @@ This field is required for any tool. It should be an object with at least a `url
 - The property `url` is required, and will be used on both the overview as well as the tool page.
 YAML requires single quotes around it, as the colon in the url will throw it off. 
 - The property `label` is discouraged, and might be used to overwrite showing the url itself on the tool page.
-Avoid surrounding it with quotes.
 
 ### Authors
 
@@ -87,7 +85,6 @@ This field is required for any licensed tool. It should be an object with two pr
 - The property `url` is required, and will be used on the tool page.
 YAML requires single quotes around it, as the colon in the url will throw it off. 
 - The property `label` is required, and will be used to show the type of license on the tool page.
-Avoid surrounding it with quotes.
 
 ### Terms
 
@@ -98,7 +95,6 @@ This field is required for any online service. It should be an object with two p
 - The property `url` is required, and will be used on the tool page.
 YAML requires single quotes around it, as the colon in the url will throw it off. 
 - The property `label` is required, and will be used to show the type of license on the tool page.
-Avoid surrounding it with quotes.
 
 ### Wiki, Docs and/or Demo
 
@@ -112,7 +108,6 @@ If provided, they should be objects with at least a `url` property.
 - The property `url` is required, and will be used on both the overview as well as the tool page.
 YAML requires single quotes around it, as the colon in the url will throw it off. 
 - The property `label` is discouraged, and might be used to overwrite showing the url itself on the tool page.
-Avoid surrounding it with quotes.
 
 ### GitHub
 
@@ -120,7 +115,7 @@ Avoid surrounding it with quotes.
 
 This field is required for any tool with a GitHub repository. It should be an object with at least a `name` property.
 
-- The property `name` is required, and will be used on the tool page. Avoid surrounding it with quotes. 
+- The property `name` is required, and will be used on the tool page.
 - The property `url` is only ever needed if the tool repository url does not consists of a concatenation of
 'https://github.com/' and the name as mentioned before.
 If this property is not provided, the url will be generated this way by Jekyll.
@@ -133,7 +128,7 @@ The (auto-generated or provided) url will be used on both the overview as well a
 
 This field is required for any tool added to Packagist. It should be an object with at least a `name` property.
 
-- The property `name` is required, and will be used on the tool page. Avoid surrounding it with quotes. 
+- The property `name` is required, and will be used on the tool page. 
 - The property `url` is only ever needed if the tool repository url does not consists of a concatenation of
 'https://packagist.org/packages/' and the name as mentioned before.
 If this property is not provided, the url will be generated this way by Jekyll.
@@ -146,7 +141,7 @@ The (auto-generated or provided) url will be used on both the overview as well a
 
 This field is required for any tool that can be easily used with Docker. It should be an object with at least a `name` property.
 
-- The property `name` is required, and will be used on the tool page. Avoid surrounding it with quotes. 
+- The property `name` is required, and will be used on the tool page.
 - The property `url` is only ever needed if the tool repository url does not consists of a concatenation of
 'https://hub.docker.com/r/' and the name as mentioned before.
 If this property is not provided, the url will be generated this way by Jekyll.
@@ -158,7 +153,6 @@ The (auto-generated or provided) url will be used on both the overview as well a
 `command:        ` (`string`)
 
 The command is the command to be used with this tool, and most likely also the command to be used with the container.
-Avoid surrounding it with quotes.
 
 ### Dependencies
 
