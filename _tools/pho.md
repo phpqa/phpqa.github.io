@@ -13,6 +13,7 @@ tags:           [testing, bdd]
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is a BDD test framework for PHP, inspired by Jasmine and RSpec.
 
-<!--more--> 
-Features a familiar syntax, and a watch command to automatically re-run specs during development. It can 
-also be extended with custom matchers and reporters
+<!--more-->
+
+It features a familiar syntax, and a watch command to automatically re-run specs during development.
+It can also be extended with custom matchers and reporters.
