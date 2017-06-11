@@ -11,9 +11,11 @@ command:        behat
 tags:           [testing, bdd]
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is an open source [Behavior-Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) (BDD) framework for PHP.
-It is a tool to support you in delivering software that matters through continuous communication, deliberate discovery and test-automation.
+[{{ page.title }}]({{ site.url }}{{ page.url }}) is a tool to support you in delivering software that matters
+through continuous communication, deliberate discovery and test-automation.
 
 <!--more--> 
+
+It is an open source [Behavior-Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) (BDD) framework for PHP.
 
 To become a Behat’er in 30 minutes, just dive into the [quick-start](http://behat.org/en/latest/quick_start.html) guide and enjoy!
