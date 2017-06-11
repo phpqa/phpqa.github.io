@@ -12,6 +12,6 @@ dependencies:   []
 tags:           [testing, bdd]
 ---
 
-Bring your user and service stories to life through your tests. with [{{ page.title }}]({{ site.url }}{{ page.url }}).
+Bring your user and service stories to life through your tests with [{{ page.title }}]({{ site.url }}{{ page.url }}).
 
 <!--more--> 
