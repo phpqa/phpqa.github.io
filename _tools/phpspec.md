@@ -17,7 +17,7 @@ clean and working PHP code using Behaviour Driven Development (BDD).
 
 <!--more--> 
 
-BDD is a technique used at story level and spec level. phpspec is a tool for use at the spec level or 
-SpecBDD. The technique is to first use a tool like phpspec to describe the behaviour of an object you 
-are about to write. Next you write just enough code to meet that specification and finally you refactor 
-this code.
+BDD is a technique derived from test-first development. BDD is a technique used at story level and spec level.
+phpspec is a tool for use at the spec level or SpecBDD.
+The technique is to first use a tool like phpspec to describe the behaviour of an object you are about to write.
+Next you write just enough code to meet that specification and finally you refactor this code.
