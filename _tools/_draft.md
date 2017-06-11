@@ -3,7 +3,7 @@ layout:         tool
 title:          
 website:        {url: 'https://'} 
 authors:        []
-companies:      [] # TODO!
+companies:      []
 license:        {url: 'https://', label: ''} 
 terms:          {url: 'https://', label: ''} 
 wiki:           {url: 'https://'} 
