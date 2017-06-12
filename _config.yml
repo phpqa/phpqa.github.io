@@ -16,6 +16,7 @@ kramdown:
 gems:
   - jekyll-coffeescript                     # set by GitHub Pages, can be overwritten
   - jekyll-paginate                         # set by GitHub Pages, can be overwritten
+  - jekyll-seo-tag
 
 # Jekyll settings
 ### ### ### ### ### ###
@@ -38,14 +39,18 @@ webrick:
 
 author: Bart Reunes   
 name: PHP Quality Assurance Tools
-description: A list of PHP Quality Assurance Tools
+description: A community managed list of PHP Quality Assurance Tools
 url: https://phpqa.io
+lang: en_US
 
 title: PHP Quality Assurance Tools
 subtitle: Looking for tools to make your PHP code even better? Dive right into the exciting world of PHP QA!
 
 google_analytics: UA-100482560-1
 disqus: phpqa
+
+webmaster_verifications:
+  google: JITUi06ndisXmR9iEyEtJWMR7ZaYF8ycjhUTUvubBHk
 
 collections:
 
