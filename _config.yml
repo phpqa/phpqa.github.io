@@ -17,6 +17,7 @@ gems:
   - jekyll-coffeescript                     # set by GitHub Pages, can be overwritten
   - jekyll-paginate                         # set by GitHub Pages, can be overwritten
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Jekyll settings
 ### ### ### ### ### ###
