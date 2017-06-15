@@ -5,6 +5,6 @@
 
 ga('create', document.body.getAttribute('data-page-google_analytics-tracking_id'), 'auto');
 ga('send', 'pageview', {
-    'page': document.body.getAttribute('data-page-url'),
-    'title': document.body.getAttribute('data-page-title').replace("'", "\\\'")
+    'page': document.getElementsByTagName('body')[0].getAttribute('data-page-url'),
+    'title': document.getElementsByTagName("title")[0].innerHTML.replace("'", "\\\'")
 });
