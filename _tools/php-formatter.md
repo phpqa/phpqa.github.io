@@ -6,7 +6,7 @@ website:        {url: 'https://github.com/mmoreram/php-formatter'}
 license:        {url: 'https://github.com/mmoreram/php-formatter/blob/master/LICENSE', label: 'MIT License'}
 github:         {name: mmoreram/php-formatter}
 packagist:      {name: mmoreram/php-formatter}               
-dockerhub:      {name: phpqa/php-formatter}     
+dockerhub:      [{name: phpqa/php-formatter}]     
 command:        php-formatter 
 dependencies:   []
 tags:           [coding standards, cli] 

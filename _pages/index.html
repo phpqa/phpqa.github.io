@@ -14,11 +14,106 @@ comments-count: true
             <p>{{ site.subtitle }}</p>
         </div>
         <!--more-->
-        {% include tools.html %}
-        {% include add-your-own.html %}
+        <div class="row tool_filters pt-2 pb-2 mb-2">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <label class="sr-only" for="filter">Filter freely</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-addon hidden-lg-down">
+                                <i class="fa fa-fw fa-search" aria-hidden="true"></i>
+                            </div>
+                            <input type="text" class="form-control" id="filter" placeholder="Filter freely" data-tool-search-filter="true">
+                            <button class="input-group-addon btn btn-md btn-secondary collapsed"
+                                    data-toggle="collapse" data-target="#tool_tag_filters" aria-haspopup="true" aria-expanded="false">
+                                <nobr>or by tag <i class="fa fa-fw fa-chevron-circle-down icon-collapse-toggle-flip-horizontal" aria-hidden="true"></i></nobr>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tool_tag_filters" class="collapse">
+                    <div>
+                        <a href="#alpha" data-tool-tag-filter="alpha" role="button" class="btn btn-sm btn-outline-info mb-1">
+                            alpha
+                        </a>
+                        <a href="#unmaintained" data-tool-tag-filter="unmaintained" role="button" class="btn btn-sm btn-outline-warning mb-1">
+                            unmaintained
+                        </a>
+                        <a href="#deprecated" data-tool-tag-filter="deprecated" role="button" class="btn btn-sm btn-outline-danger mb-1">
+                            deprecated
+                        </a>
+                        <a href="#deprecated" data-tool-tag-filter="docker image" role="button" class="btn btn-sm btn-outline-primary mb-1">
+                            docker image
+                        </a>
+                    </div>
+                    <div class="text-right">
+                        {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | where_exp: 'content', 'content != ""' | sort | uniq %}
+                        {% for tag in tags %}
+                        {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' or tag == 'docker image' %}
+                        <a href="#{{ tag }}" data-tool-tag-filter="{{ tag }}" role="button" class="btn btn-sm btn-secondary mb-1">
+                            {{ tag }}
+                        </a>
+                        {% endunless %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="current_tool_filters text-right mt-2 mb-2"></div>
+            </div>
+        </div>
+
+        <div class="row tools">
+            {% assign tools = site.tools | sort: 'title' %}
+            {% for tool in tools %}
+            <div class="col-12 col-sm-6 col-xl-4 tool">
+                {% include tool-card.html tool=tool %}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-block">
+                        <p>
+                            <i class="fa fa-bug" aria-hidden="true"></i>
+                            Have you noticed something odd?
+                            Please <a href="https://github.com/phpqa/phpqa.github.io/issues">let us know</a>,
+                            so we can fix it.
+                        </p>
+
+                        <p class="pull-right mb-0">
+                            Want to see your own tool here?
+                            Feel free to <a href="{{ '/contributing' | absolute_url }}">contribute</a> to this list!
+                            <i class="fa fa-bolt" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-12 col-lg-3">
-        {% include sidebar.html %}
+        <div class="row mb-4 sidebar">
+            <div class="col-lg-12 hidden-md-down">
+                <h2><a href="{{ site.navigation.news.url | absolute_url }}">News</a></h2>
+                <div class="posts mb-4">
+                    {% for post in site.posts limit:3 %}
+                    <article class="post well mb-1">
+                        <header>
+                            <h3><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h3>
+                            <p>
+                                <time pubdate datetime="{{ post.date }}">{{ post.date | date_to_long_string }}</time>
+                            </p>
+                        </header>
+
+                        {{ post.excerpt }}
+
+                        <a href="{{ post.url | absolute_url }}" class="read-more">Read more &rarr;</a>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

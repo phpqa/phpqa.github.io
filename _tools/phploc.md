@@ -6,7 +6,7 @@ website:        {url: 'https://github.com/sebastianbergmann/phploc'}
 license:        {url: 'https://github.com/sebastianbergmann/phploc/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 github:         {name: sebastianbergmann/phploc}
 packagist:      {name: phploc/phploc}               
-dockerhub:      {name: phpqa/phploc}     
+dockerhub:      [{name: phpqa/phploc}]     
 command:        phploc
 dependencies:   []
 tags:           [metrics, cli] 

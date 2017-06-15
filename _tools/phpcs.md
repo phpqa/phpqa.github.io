@@ -6,7 +6,7 @@ website:        {url: 'https://pear.php.net/package/PHP_CodeSniffer'}
 license:        {url: 'https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt', label: 'BSD 3-clause "New" or "Revised" License'}
 github:         {name: squizlabs/PHP_CodeSniffer}
 packagist:      {name: squizlabs/php_codesniffer}               
-dockerhub:      {name: phpqa/phpcs}     
+dockerhub:      [{name: phpqa/phpcs}]     
 command:        phpcs  
 dependencies:   []
 tags:           [coding standards, cli] 

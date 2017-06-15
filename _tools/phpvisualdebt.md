@@ -6,7 +6,7 @@ website:        {url: 'https://github.com/phpvisualdebt/phpvisualdebt'}
 license:        {url: 'https://github.com/phpvisualdebt/phpvisualdebt/blob/master/LICENSE', label: 'MIT License'}
 github:         {name: phpvisualdebt/phpvisualdebt}
 packagist:      {name: phpvisualdebt/phpvisualdebt}          
-dockerhub:      {name: phpqa/phpvisualdebt}     
+dockerhub:      [{name: phpqa/phpvisualdebt}]     
 command:        phpvisualdebt
 dependencies:   []
 tags:           [visuals, cli] 

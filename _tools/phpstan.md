@@ -6,7 +6,7 @@ website:        {url: 'https://medium.com/@ondrejmirtes/phpstan-2939cd0ad0e3'}
 license:        {url: 'https://github.com/phpstan/phpstan/blob/master/LICENSE', label: 'MIT License'}
 github:         {name: phpstan/phpstan}
 packagist:      {name: phpstan/phpstan}               
-dockerhub:      {name: phpqa/phpstan}     
+dockerhub:      [{name: phpqa/phpstan}]     
 command:        phpstan
 dependencies:   []
 tags:           [bugs finder, static analysis, cli] 

@@ -7,7 +7,7 @@ license:        {url: 'https://github.com/PHPCheckstyle/phpcheckstyle/blob/maste
 wiki:           {url: 'https://github.com/PHPCheckstyle/phpcheckstyle/wiki'}
 github:         {name: PHPCheckstyle/phpcheckstyle}
 packagist:      {name: phpcheckstyle/phpcheckstyle}               
-dockerhub:      {name: phpqa/phpcheckstyle}     
+dockerhub:      [{name: phpqa/phpcheckstyle}]     
 command:        phpcheckstyle
 dependencies:   []
 tags:           [coding standards, cli] 

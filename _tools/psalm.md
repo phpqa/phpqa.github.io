@@ -8,7 +8,7 @@ license:        {url: 'https://github.com/vimeo/psalm/blob/master/LICENSE', labe
 wiki:           {url: 'https://github.com/vimeo/psalm/wiki'}
 github:         {name: vimeo/psalm}
 packagist:      {name: vimeo/psalm}          
-dockerhub:      {name: phpqa/psalm}     
+dockerhub:      [{name: phpqa/psalm}]     
 command:        psalm 
 dependencies:   []
 tags:           [bugs finder, static analysis, cli] 

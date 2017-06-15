@@ -6,7 +6,7 @@ website:        {url: 'https://github.com/psecio/parse'}
 license:        {url: 'https://github.com/psecio/parse/blob/master/README.md', label: 'MIT license'}
 github:         {name: psecio/parse}
 packagist:      {name: psecio/parse}          
-dockerhub:      {name: phpqa/psecio-parse}     
+dockerhub:      [{name: phpqa/psecio-parse}]     
 command:        psecio-parse 
 dependencies:   []
 tags:           [alpha, bugs finder, cli] 

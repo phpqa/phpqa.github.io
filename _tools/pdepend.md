@@ -6,7 +6,7 @@ website:        {url: 'https://pdepend.org/'}
 license:        {url: 'https://github.com/pdepend/pdepend/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 github:         {name: pdepend/pdepend}
 packagist:      {name: pdepend/pdepend}               
-dockerhub:      {name: phpqa/pdepend}     
+dockerhub:      [{name: phpqa/pdepend}]     
 command:        pdepend 
 dependencies:   []
 tags:           [metrics, cli]

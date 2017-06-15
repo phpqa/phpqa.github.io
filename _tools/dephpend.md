@@ -6,7 +6,7 @@ website:        {url: 'https://dephpend.com/'}
 license:        {url: 'https://github.com/mihaeu/dephpend/blob/develop/LICENSE', label: 'MIT License'}
 github:         {name: mihaeu/dephpend}
 packagist:      {name: dephpend/dephpend}               
-dockerhub:      {name: phpqa/dephpend}     
+dockerhub:      [{name: phpqa/dephpend}]     
 command:        dephpend
 dependencies:   []
 tags:           [metrics, cli]

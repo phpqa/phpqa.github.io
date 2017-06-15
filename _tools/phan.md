@@ -6,7 +6,7 @@ website:        {url: 'https://github.com/etsy/phan'}
 license:        {url: 'https://github.com/etsy/phan/blob/master/LICENSE', label: 'MIT License'}
 github:         {name: etsy/phan}
 packagist:      {name: etsy/phan}               
-dockerhub:      {name: phpqa/phan}     
+dockerhub:      [{name: phpqa/phan}]     
 command:        phan
 dependencies:   [pcntl,git,php-ast]  
 tags:           [bugs finder, static analysis, cli]

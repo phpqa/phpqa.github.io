@@ -6,7 +6,7 @@ website:        {url: 'http://atoum.org/'}
 license:        {url: 'https://github.com/atoum/atoum/blob/master/LICENSE', label: 'BSD 3'}
 github:         {name: atoum/atoum}
 packagist:      {name: atoum/atoum}               
-dockerhub:      {name: atoum/atoum}
+dockerhub:      [{name: atoum/atoum}]
 docs:           {url: 'http://docs.atoum.org'}
 command:        atoum
 dependencies:   []

@@ -1,0 +1,66 @@
+<dl class="row">
+    {% for property in site.metadata %}
+    {% assign key = property[0] %}
+    {% if property[1].multiple == true %}
+    {% assign values = page[key] %}
+    {% assign length = values | size %}
+    {% unless values.first == blank or values.first == nil %}
+    <dt class="col-sm-3"><i class="fa {{ property[1].icon }} fa-fw"></i> {{ property[1].label }}</dt>
+    <dd class="col-sm-9">
+        {% for value in values %}
+        {% capture mask %}{% if value.label != nil %}{{ value.label }}{% else %}{{ value.name }}{% endif %}{% endcapture %}
+        {% capture url %}{% if value.url != nil %}{{ value.url }}{% elsif value.name != nil %}{{ property[1].url-prefix }}{{ value.name }}{% else %}{{ value.name }}{% endif %}{% endcapture %}
+        {% if mask != '' and url != '' %}
+        <a href="{{ url }}" target="_blank">{{ mask }}</a>{% unless forloop.last %}, {% endunless %}
+        {% elsif mask != '' %}
+        {{ mask }}{% unless forloop.last %}, {% endunless %}
+        {% elsif url != '' %}
+        <a href="{{ url }}" target="_blank">{{ url }}</a>{% unless forloop.last %}, {% endunless %}
+        {% else %}
+        {{ value }}{% unless forloop.last %}, {% endunless %}
+        {% endif %}
+        {% endfor %}
+    </dd>
+    {% endunless %}
+    {% else %}
+    {% assign value = page[key] %}
+    {% unless value == blank or value == nil %}
+    <dt class="col-sm-3"><i class="fa {{ property[1].icon }} fa-fw"></i> {{ property[1].label }}</dt>
+    {% capture mask %}{% if value.label != nil %}{{ value.label }}{% else %}{{ value.name }}{% endif %}{% endcapture %}
+    {% capture url %}{% if value.url != nil %}{{ value.url }}{% elsif value.name != nil %}{{ property[1].url-prefix }}{{ value.name }}{% else %}{{ value.name }}{% endif %}{% endcapture %}
+    {% if mask != '' and url != '' %}
+    <dd class="col-sm-9"><a href="{{ url }}" target="_blank">{{ mask }}</a></dd>
+    {% elsif mask != '' %}
+    <dd class="col-sm-9">{{ mask }}</dd>
+    {% elsif url != '' %}
+    <dd class="col-sm-9"><a href="{{ url }}" target="_blank">{{ url }}</a></dd>
+    {% else %}
+    <dd class="col-sm-9">{{ value }}</dd>
+    {% endif %}
+    {% endunless %}
+    {% endif %}
+    {% endfor %}
+</dl>
+
+{% if page.github != nil %}
+<p>
+    {% capture github-url %}{% if page.github.url != nil %}{{ page.github.url }}{% else %}{{
+    site.metadata.github.url-prefix }}{{ page.github.name }}{% endif %}{% endcapture %}
+    {% capture github-name %}{% if page.github.name != nil %}{{ page.github.name }}{% else %}{{ page.github.url |
+    replace: site.metadata.github.url-prefix, '' }}{% endif %}{% endcapture %}
+    {% capture packagist-name %}{% if page.packagist.name != nil %}{{ page.packagist.name }}{% else %}{{
+    page.packagist.url | replace: site.metadata.packagist.url-prefix, '' }}{% endif %}{% endcapture %}
+    <a href="{{ github-url }}" title="watchers" class="badge badge-pill badge-default badge-outline">
+        <i class="fa fa-eye"></i>
+        <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="watchers">0</span>
+    </a>
+    <a href="{{ github-url }}" title="stars" class="badge badge-pill badge-default badge-outline">
+        <i class="fa fa-star"></i>
+        <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="stargazers">0</span>
+    </a>
+    <a href="{{ github-url }}" title="forks" class="badge badge-pill badge-default badge-outline">
+        <i class="fa fa-code-fork"></i>
+        <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="forks">0</span>
+    </a>
+</p>
+{% endif %}

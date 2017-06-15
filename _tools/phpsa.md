@@ -6,7 +6,7 @@ website:        {url: 'https://phpsa.dmtry.me/'}
 license:        {url: 'https://github.com/ovr/phpsa/blob/master/LICENSE', label: 'MIT License'}
 github:         {name: ovr/phpsa}
 packagist:      {name: ovr/phpsa}               
-dockerhub:      {name: phpqa/phpsa}     
+dockerhub:      [{name: phpqa/phpsa}]     
 command:        phpsa  
 dependencies:   []
 tags:           [alpha, bugs finder, static analysis, cli] 

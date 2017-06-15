@@ -6,7 +6,7 @@ website:        {url: 'http://www.phpunit.de/'}
 license:        {url: 'https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 github:         {name: sebastianbergmann/phpunit}
 packagist:      {name: phpunit/phpunit}               
-dockerhub:      {name: phpqa/phpunit}     
+dockerhub:      [{name: phpqa/phpunit}]     
 command:        phpunit
 dependencies:   []
 tags:           [testing, cli] 

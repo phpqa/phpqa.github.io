@@ -7,7 +7,7 @@ license:        {url: 'https://github.com/sensiolabs/security-checker/blob/maste
 demo:           {url: 'https://security.sensiolabs.org/check'}
 github:         {name: sensiolabs/security-checker}
 packagist:      {name: sensiolabs/security-checker}          
-dockerhub:      {name: phpqa/security-checker}     
+dockerhub:      [{name: phpqa/security-checker}]     
 command:        security-checker 
 dependencies:   []
 tags:           [security, composer, vulnerabilities checker, cli, online service] 

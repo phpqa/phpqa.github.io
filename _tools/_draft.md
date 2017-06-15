@@ -11,8 +11,8 @@ docs:           {url: 'https://'}
 demo:           {url: 'https://'} 
 github:         {name: ''} 
 packagist:      {name: ''}
-dockerhub:      {name: ''}
-command:        
+dockerhub:      [{name: ''}]
+command:               
 dependencies:   []
 tags:           []
 ---

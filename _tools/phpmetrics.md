@@ -7,7 +7,7 @@ license:        {url: 'https://github.com/phpmetrics/PhpMetrics/blob/master/LICE
 demo:           {url: 'http://www.phpmetrics.org/report/latest/index.html'}
 github:         {name: phpmetrics/PhpMetrics}
 packagist:      {name: phpmetrics/phpmetrics}               
-dockerhub:      {name: phpqa/phpmetrics}     
+dockerhub:      [{name: phpqa/phpmetrics}]     
 command:        phpmetrics
 dependencies:   []
 tags:           [metrics, cli] 

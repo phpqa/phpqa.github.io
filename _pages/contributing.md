@@ -137,9 +137,10 @@ The (auto-generated or provided) url will be used on both the overview as well a
 
 ### DockerHub
 
-`dockerhub:      {name: ''}` (`object` with two properties: a required `name` and a discouraged `url`)
+`dockerhub:      [{name: ''}]` (`array` of `object`s with two properties: a required `name` and a discouraged `url`)
 
-This field is required for any tool that can be easily used with Docker. It should be an object with at least a `name` property.
+This field is required for any tool that can be easily used with Docker.
+It should be an array with at least one object that has at least a `name` property.
 
 - The property `name` is required, and will be used on the tool page.
 - The property `url` is only ever needed if the tool repository url does not consists of a concatenation of

@@ -305,16 +305,15 @@ h3 a {
 /* Links page
 -------------------------------------------------- */
 
-.links {
-  .link {
-    position: relative;
-    padding-left: 4.25em;
-  }
-  
-  .link-icon {
+.link {
+  position: relative;
+  padding-left: 4.25em;
+  min-height: 7rem;
+
+  .icon {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 1.25rem;
+    left: -1.15em;
   }
 }
 

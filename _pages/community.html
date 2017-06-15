@@ -5,4 +5,10 @@ title-visible: false
 comments: false
 ---
 
-{% include links.html %}
+<div class="row">
+    {% for link in site.links limit:include.limit %}
+    <div class="col-12 col-lg-6">
+        {% include link-card.html link=link %}
+    </div>
+    {% endfor %}
+</div>

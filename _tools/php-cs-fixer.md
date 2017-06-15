@@ -6,7 +6,7 @@ website:        {url: 'http://cs.sensiolabs.org/'}
 license:        {url: 'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/LICENSE', label: 'MIT License'}
 github:         {name: FriendsOfPHP/PHP-CS-Fixer}
 packagist:      {name: friendsofphp/php-cs-fixer}               
-dockerhub:      {name: phpqa/php-cs-fixer}     
+dockerhub:      [{name: phpqa/php-cs-fixer}]     
 command:        php-cs-fixer  
 dependencies:   []
 tags:           [code fixer, coding standards, psr, cli] 

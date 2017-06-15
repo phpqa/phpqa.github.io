@@ -6,7 +6,7 @@ website:        {url: 'https://phpmd.org/'}
 license:        {url: 'https://github.com/phpmd/phpmd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
 github:         {name: phpmd/phpmd}
 packagist:      {name: phpmd/phpmd}               
-dockerhub:      {name: phpqa/phpmd}     
+dockerhub:      [{name: phpqa/phpmd}]     
 command:        phpmd 
 dependencies:   []
 tags:           [bugs finder, mess detector, metrics, cli] 

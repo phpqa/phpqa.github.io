@@ -92,16 +92,16 @@ links:
   - { label: OSMI,                    icon: fa-handshake-o,     url: 'https://osmihelp.org/',                               description: 'Changing how we talk about mental health in the tech community.'                        }
 
 metadata:
-  authors:      { label: Author(s),           icon: fa-user,            multiple: true                              }
-  companies:    { label: Company,             icon: fa-building-o,      multiple: true                              }
-  website:      { label: Website,             icon: fa-globe,           button: true,   button-class: btn-website   }
-  license:      { label: License,             icon: fa-id-card                                                      }
-  terms:        { label: Terms (Of Service),  icon: fa-thumbs-o-up,     button: true,   button-class: btn-terms     }
-  wiki:         { label: Wiki,                icon: fa-list-alt,        button: true,   button-class: btn-wiki      }
-  docs:         { label: Documentation,       icon: fa-info,            button: true,   button-class: btn-docs      }
-  demo:         { label: Demo,                icon: fa-desktop,         button: true,   button-class: btn-demo      }
-  github:       { label: GitHub,              icon: fa-github,          button: true,   button-class: btn-github,     url-prefix: 'https://github.com/'             }
-  packagist:    { label: Packagist,           icon: fa-compass,         button: true,   button-class: btn-packagist,  url-prefix: 'https://packagist.org/packages/' }
-  dockerhub:    { label: DockerHub,           icon: fa-ship,            button: true,   button-class: btn-dockerhub,  url-prefix: 'https://hub.docker.com/r/'       }
-  command:      { label: Command,             icon: fa-terminal                                                     }
-  dependencies: { label: Dependencies,        icon: fa-check-square-o,  multiple: true                              }
+  authors:      { label: Author(s),           icon: fa-user,            multiple: true                                                }
+  companies:    { label: Company,             icon: fa-building-o,      multiple: true                                                }
+  website:      { label: Website,             icon: fa-globe,                             button: true,   button-class: btn-website   }
+  license:      { label: License,             icon: fa-id-card                                                                        }
+  terms:        { label: Terms (Of Service),  icon: fa-thumbs-o-up,                       button: true,   button-class: btn-terms     }
+  wiki:         { label: Wiki,                icon: fa-list-alt,                          button: true,   button-class: btn-wiki      }
+  docs:         { label: Documentation,       icon: fa-info,                              button: true,   button-class: btn-docs      }
+  demo:         { label: Demo,                icon: fa-desktop,                           button: true,   button-class: btn-demo      }
+  github:       { label: GitHub,              icon: fa-github,                            button: true,   button-class: btn-github,     url-prefix: 'https://github.com/'             }
+  packagist:    { label: Packagist,           icon: fa-compass,                           button: true,   button-class: btn-packagist,  url-prefix: 'https://packagist.org/packages/' }
+  dockerhub:    { label: DockerHub,           icon: fa-ship,            multiple: true,   button: true,   button-class: btn-dockerhub,  url-prefix: 'https://hub.docker.com/r/'       }
+  command:      { label: Command,             icon: fa-terminal                                                                       }
+  dependencies: { label: Dependencies,        icon: fa-check-square-o,  multiple: true                                                }

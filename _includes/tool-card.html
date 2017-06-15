@@ -1,0 +1,79 @@
+<div class="tool card mb-4">
+    <div class="card-header card-metrics">
+        {% if tool.github != nil %}
+        {% capture github-url %}{% if tool.github.url != nil %}{{ tool.github.url }}{% else %}{{ site.metadata.github.url-prefix }}{{ tool.github.name }}{% endif %}{% endcapture %}
+        {% capture github-name %}{% if tool.github.name != nil %}{{ tool.github.name }}{% else %}{{ tool.github.url | replace: site.metadata.github.url-prefix, '' }}{% endif %}{% endcapture %}
+        {% capture packagist-name %}{% if tool.packagist.name != nil %}{{ tool.packagist.name }}{% else %}{{ tool.packagist.url | replace: site.metadata.packagist.url-prefix, '' }}{% endif %}{% endcapture %}
+        <a href="{{ github-url }}" title="watchers" class="badge badge-pill badge-default badge-outline">
+            <i class="fa fa-eye"></i>
+            <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="watchers">0</span>
+        </a>
+        <a href="{{ github-url }}" title="stars" class="badge badge-pill badge-default badge-outline">
+            <i class="fa fa-star"></i>
+            <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="stargazers">0</span>
+        </a>
+        <a href="{{ github-url }}" title="forks" class="badge badge-pill badge-default badge-outline">
+            <i class="fa fa-code-fork"></i>
+            <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="forks">0</span>
+        </a>
+        {% endif %}
+        {% if page.comments-count == true and tool.comments != false %}
+        <a href="{{ tool.url | absolute_url }}" title="comments" class="badge badge-pill badge-default badge-outline">
+            <i class="fa fa-comments" aria-hidden="true"></i>
+            <span data-disqus-identifier="{{ tool.id }}" class="disqus-comment-count">0</span>
+        </a>
+        {% endif %}
+    </div>
+    <div class="card-block">
+
+        {{ tool.excerpt }}
+
+        {% if tool.authors != nil or tool.companies !=nil %}
+        <p class="small">
+            by {{ tool.authors | join: ', ' }}{% if tool.authors != nil and tool.companies !=nil %}, {% endif %}{{ tool.companies | join: ', ' }}
+        </p>
+        {% endif %}
+
+        <a href="{{ tool.url | absolute_url }}" class="more-information">
+            More information &rarr;
+        </a>
+
+        <div class="card-actions">
+            {% for property in site.metadata %}
+            {% assign key = property[0] %}
+            {% if property[1].button %}
+            {% if tool[key] != '' and tool[key] != nil and (key != 'website' or tool.website != tool.source) %}
+            {% capture url %}{% if tool[key].url != nil %}{{ tool[key].url }}{% else %}{{ property[1].url-prefix }}{{ tool[key].name }}{% endif %}{% endcapture %}
+            <a href="{{ url }}" target="_blank" title="{{ property[1].label }}"
+               data-toggle="tooltip" data-placement="left"
+               class="btn btn-secondary {{ property[1].button-class }} btn-sm mb-1">
+                <i class="fa {{ property[1].icon }} fa-fw"></i>
+            </a>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="card-footer card-tags text-muted">
+        {% if tool.tags contains 'alpha' %}
+        <span class="badge badge-info badge-outline" data-tool-tag-filter="alpha">alpha</span>
+        {% endif %}
+        {% if tool.tags contains 'unmaintained' %}
+        <span class="badge badge-warning badge-outline" data-tool-tag-filter="unmaintained">unmaintained</span>
+        {% endif %}
+        {% if tool.tags contains 'deprecated' %}
+        <span class="badge badge-danger badge-outline" data-tool-tag-filter="deprecated">deprecated</span>
+        {% endif %}
+        {% assign tags = tool.tags | sort %}
+        {% for tag in tags %}
+        {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' %}
+        <span class="badge badge-default badge-outline" data-tool-tag-filter="{{ tag }}">
+                    {{ tag }}
+                </span>
+        {% endunless %}
+        {% endfor %}
+        {% if tool.dockerhub != '' and tool.dockerhub != nil %}
+        <span class="badge badge-default badge-outline" data-tool-tag-filter="docker image">docker image</span>
+        {% endif %}
+    </div>
+</div>

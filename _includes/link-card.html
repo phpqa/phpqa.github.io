@@ -1,0 +1,11 @@
+<div class="link card mb-1">
+    <div class="card-block">
+        <i class="icon fa {{ link.icon }} fa-fw fa-3x" aria-hidden="true"></i>
+        <strong>
+            <a href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | absolute_url }}{% endif %}">
+                {{ link.label }}
+            </a>
+        </strong>
+        <br/>{{ link.description }}
+    </div>
+</div>
