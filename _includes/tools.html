@@ -117,7 +117,7 @@
                 {% if tool.tags contains 'deprecated' %}
                 <span class="badge badge-danger badge-outline" data-tool-tag-filter="deprecated">deprecated</span>
                 {% endif %}
-                {% assign tags = tool.tags | sort:'title' %}
+                {% assign tags = tool.tags | sort %}
                 {% for tag in tags %}
                 {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' %}
                 <span class="badge badge-default badge-outline" data-tool-tag-filter="{{ tag }}">
