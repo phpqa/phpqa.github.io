@@ -6,9 +6,9 @@ website:        {url: 'http://codeception.com/'}
 license:        {url: 'https://github.com/Codeception/Codeception/blob/2.3/LICENSE', label: 'MIT License'}
 github:         {name: codeception/codeception}
 packagist:      {name: codeception/codeception}               
-command:        codeception
 dockerhub:      [{name: phpqa/codeception}]
 phars:          [{name: PHP 7.x, url: 'http://codeception.com/codecept.phar'}, {name: PHP 5.x, url: 'http://codeception.com/php5/codecept.phar'}]
+command:        codecept
 dependencies:   []
 tags:           [testing, cli]
 ---
