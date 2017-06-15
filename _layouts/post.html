@@ -2,6 +2,8 @@
 layout: bootstrap4
 ---
 
-{{ content }}
+<p class="small">
+    Written on <time pubdate datetime="{{ post.date }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+</p>
 
-<p><em>Written on {{ page.date | date: "%Y-%m-%d" }}</em></p>
+{{ content }}
