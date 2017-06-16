@@ -1,6 +1,6 @@
 ---
 layout:         tool
-title:          PHP Compatibility Coding Standard for PHP_CodeSniffer
+title:          PHPCompatibility
 authors:        [Wim Godden]
 website:        {url: 'https://github.com/wimg/PHPCompatibility'}
 license:        {url: 'https://github.com/wimg/PHPCompatibility/blob/master/LICENSE', label: 'GNU Lesser General Public License v3.0 (LGPL)'}
