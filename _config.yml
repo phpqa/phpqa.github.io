@@ -74,24 +74,25 @@ icons:
   github-forks:       PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGhlaWdodD0nMTYnIHZlcnNpb249JzEuMScgdmlld0JveD0nMCAwIDEwIDE2JyB3aWR0aD0nMTAnPjxwYXRoIGZpbGwtcnVsZT0nZXZlbm9kZCcgZD0nTTggMWExLjk5MyAxLjk5MyAwIDAgMC0xIDMuNzJWNkw1IDggMyA2VjQuNzJBMS45OTMgMS45OTMgMCAwIDAgMiAxYTEuOTkzIDEuOTkzIDAgMCAwLTEgMy43MlY2LjVsMyAzdjEuNzhBMS45OTMgMS45OTMgMCAwIDAgNSAxNWExLjk5MyAxLjk5MyAwIDAgMCAxLTMuNzJWOS41bDMtM1Y0LjcyQTEuOTkzIDEuOTkzIDAgMCAwIDggMXpNMiA0LjJDMS4zNCA0LjIuOCAzLjY1LjggM2MwLS42NS41NS0xLjIgMS4yLTEuMi42NSAwIDEuMi41NSAxLjIgMS4yIDAgLjY1LS41NSAxLjItMS4yIDEuMnptMyAxMGMtLjY2IDAtMS4yLS41NS0xLjItMS4yIDAtLjY1LjU1LTEuMiAxLjItMS4yLjY1IDAgMS4yLjU1IDEuMiAxLjIgMCAuNjUtLjU1IDEuMi0xLjIgMS4yem0zLTEwYy0uNjYgMC0xLjItLjU1LTEuMi0xLjIgMC0uNjUuNTUtMS4yIDEuMi0xLjIuNjUgMCAxLjIuNTUgMS4yIDEuMiAwIC42NS0uNTUgMS4yLTEuMiAxLjJ6Jz48L3BhdGg%2BPC9zdmc%2B
 
 navigation:
-  tools:        { label: Tools,         icon: fa-cogs,          url: /                                                 }
-  #usage:        { label: Usage,         icon: fa-magic,         url: /usage                                            }
-  contributing: { label: Contributing,  icon: fa-sign-language, url: /contributing                                     }
-  about:        { label: About,         icon: fa-info-circle,   url: /about                                            }
-  community:    { label: Community,     icon: fa-map-signs,     url: /community                                        }
-  news:         { label: News,          icon: fa-list-alt,      url: /news                                             }
-  github:       { label: GitHub,        icon: fa-github,        url: 'https://github.com/phpqa/phpqa.github.io'        }
+  tools:        { label: Tools,         icon: fa-cogs,              url: /index.html                                  }
+  #usage:        { label: Usage,         icon: fa-magic,             url: /usage.html                                  }
+  contributing: { label: Contributing,  icon: fa-sign-language,     url: /contributing.html                           }
+  about:        { label: About,         icon: fa-info-circle,       url: /about.html                                  }
+  community:    { label: Community,     icon: fa-map-signs,         url: /community.html                              }
+  news:         { label: News,          icon: fa-list-alt,          url: /news.html                                   }
+  github:       { label: GitHub,        icon: fa-github,            url: 'https://github.com/phpqa/phpqa.github.io'   }
+  dockerhub:    { label: DockerHub,     icon: fa-ship,              url: 'https://hub.docker.com/u/phpqa/'            }
 
 links:
-  - { label: PHP.net Manual,          icon: fa-bookmark-o,      url: 'https://secure.php.net/manual/en/',                   description: 'PHP.net Manual'                                                                         }
-  - { label: PHP Internals Book,      icon: fa-book,            url: 'http://www.phpinternalsbook.com/',                    description: 'A collaborative effort to better document and describe how PHP works internally.'       }
-  - { label: PHP The Right Way,       icon: fa-thumbs-o-up,     url: 'http://www.phptherightway.com/',                      description: 'Quick reference for PHP popular coding standards.'                                      }
-  - { label: PHP The Wrong Way,       icon: fa-thumbs-o-down,   url: 'http://www.phpthewrongway.com/',                      description: 'A pragmatic view on PHP programming.'                                                   }
-  - { label: PHP.UserGroup,           icon: fa-users,           url: 'http://php.ug/',                                      description: 'An international meeting-point for the PHP-Community.'                                  }
-  - { label: PHP Women,               icon: fa-venus,           url: 'http://phpwomen.org/',                                description: 'An inclusive & global network providing support within the PHP community.'              }
-  - { label: PHP Mentoring,           icon: fa-graduation-cap,  url: 'https://php-mentoring.org/',                          description: 'Focus on creating networks of skilled developers from all walks of life.'               }
-  - { label: OSMI,                    icon: fa-handshake-o,     url: 'https://osmihelp.org/',                               description: 'Changing how we talk about mental health in the tech community.'                        }
-  - { label: Static Analysis Tools,   icon: fa-list-ol,         url: 'https://github.com/exakat/php-static-analysis-tools', description: 'A curated list of static analysis tools for PHP.'                                       }
+  - { label: PHP.net Manual,            icon: fa-bookmark-o,        url: 'https://secure.php.net/manual/en/',                   description: 'PHP.net Manual'                                                                         }
+  - { label: PHP Internals Book,        icon: fa-book,              url: 'http://www.phpinternalsbook.com/',                    description: 'A collaborative effort to better document and describe how PHP works internally.'       }
+  - { label: PHP The Right Way,         icon: fa-thumbs-o-up,       url: 'http://www.phptherightway.com/',                      description: 'Quick reference for PHP popular coding standards.'                                      }
+  - { label: PHP The Wrong Way,         icon: fa-thumbs-o-down,     url: 'http://www.phpthewrongway.com/',                      description: 'A pragmatic view on PHP programming.'                                                   }
+  - { label: PHP.UserGroup,             icon: fa-users,             url: 'http://php.ug/',                                      description: 'An international meeting-point for the PHP-Community.'                                  }
+  - { label: PHP Women,                 icon: fa-venus,             url: 'http://phpwomen.org/',                                description: 'An inclusive & global network providing support within the PHP community.'              }
+  - { label: PHP Mentoring,             icon: fa-graduation-cap,    url: 'https://php-mentoring.org/',                          description: 'Focus on creating networks of skilled developers from all walks of life.'               }
+  - { label: OSMI,                      icon: fa-handshake-o,       url: 'https://osmihelp.org/',                               description: 'Changing how we talk about mental health in the tech community.'                        }
+  - { label: Static Analysis Tools,     icon: fa-list-ol,           url: 'https://github.com/exakat/php-static-analysis-tools', description: 'A curated list of static analysis tools for PHP.'                                       }
 
 metadata:
   authors:      { label: Author(s),           icon: fa-user,            multiple: true                                                }
