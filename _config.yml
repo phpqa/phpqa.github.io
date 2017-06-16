@@ -18,6 +18,7 @@ gems:
   - jekyll-paginate                         # set by GitHub Pages, can be overwritten
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
 
 # Jekyll settings
 ### ### ### ### ### ###
