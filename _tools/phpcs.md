@@ -3,6 +3,7 @@ layout:         tool
 title:          PHP_CodeSniffer
 authors:        [Greg Sherwood]
 website:        {url: 'https://pear.php.net/package/PHP_CodeSniffer'}
+wiki:           {url: 'https://github.com/squizlabs/PHP_CodeSniffer/wiki'}
 license:        {url: 'https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt', label: 'BSD 3-clause "New" or "Revised" License'}
 github:         {name: squizlabs/PHP_CodeSniffer}
 packagist:      {name: squizlabs/php_codesniffer}               
