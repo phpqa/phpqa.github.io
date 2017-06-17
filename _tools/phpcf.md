@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/wapmorgan/PhpCodeFixer/blob/master/LIC
 github:         {name: wapmorgan/PhpCodeFixer}
 packagist:      {name: wapmorgan/php-code-fixer}               
 dockerhub:      [{name: phpqa/phpcf}]     
-command:        phpcf 
 composer-dev:   {command: 'vendor/bin/phpcf'} 
 composer-global: {command: 'phpcf'} 
 dependencies:   []

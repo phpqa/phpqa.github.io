@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/sebastianbergmann/phpcpd/blob/master/L
 github:         {name: sebastianbergmann/phpcpd}
 packagist:      {name: sebastian/phpcpd}               
 dockerhub:      [{name: phpqa/phpcpd}]     
-command:        phpcpd
 composer-dev:   {command: 'vendor/bin/phpcpd'}
 phar:           {url: 'https://phar.phpunit.de/phpcpd.phar'}
 dependencies:   []

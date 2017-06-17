@@ -8,7 +8,6 @@ license:        {url: 'https://github.com/squizlabs/PHP_CodeSniffer/blob/master/
 github:         {name: squizlabs/PHP_CodeSniffer}
 packagist:      {name: squizlabs/php_codesniffer}               
 dockerhub:      [{name: phpqa/phpcs}]     
-command:        phpcs  
 composer-dev:   {command: 'vendor/bin/phpcs'}  
 composer-global: {command: 'phpcs'} 
 git:            {command: 'bin/phpcs'}

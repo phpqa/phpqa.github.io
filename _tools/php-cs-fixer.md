@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/
 github:         {name: FriendsOfPHP/PHP-CS-Fixer}
 packagist:      {name: friendsofphp/php-cs-fixer}               
 dockerhub:      [{name: phpqa/php-cs-fixer}]     
-command:        php-cs-fixer  
 composer-global: {command: 'php-cs-fixer'}
 phar:           {url: {'No HTTPS': 'http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar'}}
 dependencies:   []

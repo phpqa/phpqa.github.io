@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/rskuipers/php-assumptions/blob/master/
 github:         {name: rskuipers/php-assumptions}
 packagist:      {name: rskuipers/php-assumptions}               
 dockerhub:      [{name: phpqa/phpa}]     
-command:        phpa  
 composer-dev:   {command: 'vendor/bin/phpa'}  
 dependencies:   []
 tags:           [static analysis, bugs finder, validation, assumptions, cli]

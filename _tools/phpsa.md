@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/ovr/phpsa/blob/master/LICENSE', label:
 github:         {name: ovr/phpsa}
 packagist:      {name: ovr/phpsa}               
 dockerhub:      [{name: phpqa/phpsa}]     
-command:        phpsa  
 composer-dev:   {command: 'vendor/bin/phpsa'}
 git:            {composer-install: true, command: 'bin/phpsa'}
 phar:           {url: {'X.X.X': 'https://github.com/ovr/phpsa/releases/download/X.X.X/phpsa.phar'}}

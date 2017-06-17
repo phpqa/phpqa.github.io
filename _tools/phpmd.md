@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/phpmd/phpmd/blob/master/LICENSE', labe
 github:         {name: phpmd/phpmd}
 packagist:      {name: phpmd/phpmd}               
 dockerhub:      [{name: phpqa/phpmd}]     
-command:        phpmd 
 composer-dev:   {command: 'vendor/bin/phpmd'}
 git:            {submodule-install: true, composer-install: true, command: 'src/bin/phpmd'}
 phar:           {url: 'https://static.phpmd.org/php/latest/phpmd.phar'}

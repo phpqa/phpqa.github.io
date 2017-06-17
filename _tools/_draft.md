@@ -12,7 +12,6 @@ demo:           {url: 'https://'}
 github:         {name: ''} 
 packagist:      {name: ''}
 dockerhub:      [{name: ''}]
-command:               
 dependencies:   []
 tags:           []
 ---

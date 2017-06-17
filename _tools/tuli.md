@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/ircmaxell/Tuli/blob/master/LICENSE', l
 github:         {name: ircmaxell/Tuli/}
 packagist:      {name: ircmaxell/tuli}          
 dockerhub:      [{name: phpqa/tuli}]     
-command:        tuli
 composer-dev:   {version: 'dev-master', command: 'tuli'}
 dependencies:   []
 dependencies:   [git] 

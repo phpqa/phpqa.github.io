@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/sebastianbergmann/phpdcd/blob/master/L
 github:         {name: sebastianbergmann/phpdcd}
 packagist:      {name: sebastian/phpdcd}               
 dockerhub:      [{name: phpqa/phpdcd}]     
-command:        phpdcd
 composer-dev:   {command: 'vendor/bin/phpdcd'}
 composer-global: {command: 'phpdcd'}
 phar:           {url: 'https://phar.phpunit.de/phpdcd.phar'}

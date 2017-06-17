@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/Behat/Behat/blob/master/LICENSE', labe
 docs:           {url: 'http://behat.org/en/latest/guides.html'} 
 github:         {name: 'Behat/Behat'} 
 packagist:      {name: 'behat/behat'}
-command:        behat        
 composer-dev:   {command: 'vendor/bin/behat'}       
 tags:           [testing, bdd]
 ---

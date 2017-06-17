@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/gjtorikian/html-proofer/blob/master/LI
 wiki:           {url: 'https://github.com/gjtorikian/html-proofer/wiki'} 
 github:         {name: 'gjtorikian/html-proofer'} 
 dockerhub:      [{name: 'phpqa/htmlproofer'}]
-command:        htmlproofer       
 gem:            {name: 'html-proofer', command: 'htmlproofer'}      
 dependencies:   [libcurl]
 tags:           [html, lint]

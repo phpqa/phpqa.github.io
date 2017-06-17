@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/Codeception/Codeception/blob/2.3/LICEN
 github:         {name: codeception/codeception}
 packagist:      {name: codeception/codeception}               
 dockerhub:      [{name: phpqa/codeception}]
-command:        codecept
 composer-dev:   {command: 'vendor/bin/codecept'}
 phar:           {url: {'No HTTPS': 'http://codeception.com/codecept.phar'}}
 dependencies:   []

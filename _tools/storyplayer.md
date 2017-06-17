@@ -7,7 +7,6 @@ license:        {url: 'http://datasift.github.io/storyplayer/v2/copyright.html',
 docs:           {url: 'http://datasift.github.io/storyplayer/v2/using/index.html'} 
 github:         {name: 'datasift/storyplayer'} 
 packagist:      {name: 'datasift/storyplayer'}
-command:        storyplayer
 composer-dev:   {command: 'vendor/bin/storyplayer'}
 dependencies:   []
 tags:           [testing, bdd]

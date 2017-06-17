@@ -8,7 +8,6 @@ docs:           {url: 'https://kahlan.github.io/docs/'}
 github:         {name: 'kahlan/kahlan'} 
 packagist:      {name: 'kahlan/kahlan'}
 dockerhub:      [{name: 'kahlan/kahlan'}]
-command:        kahlan
 composer-dev:   {command: 'vendor/bin/kahlan'}
 git:            {composer-install: true, command: 'bin/kahlan'}
 dependencies:   []

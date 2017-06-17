@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/squizlabs/PHP_CodeSniffer/blob/master/
 github:         {name: squizlabs/PHP_CodeSniffer}
 packagist:      {name: squizlabs/php_codesniffer}               
 dockerhub:      [{name: phpqa/phpcbf}]     
-command:        phpcbf
 composer-dev:   {command: 'vendor/bin/phpcbf'}
 composer-global: {command: 'phpcbf'}
 git:            {command: 'bin/phpcbf'}

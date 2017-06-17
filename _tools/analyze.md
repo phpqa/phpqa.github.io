@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/Qafoo/QualityAnalyzer/blob/master/LICE
 github:         {name: Qafoo/QualityAnalyzer}
 packagist:      {name: qafoo/quality-analyzer}               
 dockerhub:      [{name: phpqa/analyze}] 
-command:        analyze
 git:            {composer-install: true, command: 'bin/analyze'}
 dependencies:   [ext-zip, git]
 tags:           [metrics, cli]

@@ -107,5 +107,4 @@ metadata:
   github:       { label: GitHub,              icon: fa-github,                            button: true,   button-class: btn-github,     url-prefix: 'https://github.com/'             }
   packagist:    { label: Packagist,           icon: fa-compass,                           button: true,   button-class: btn-packagist,  url-prefix: 'https://packagist.org/packages/' }
   dockerhub:    { label: DockerHub,           icon: fa-ship,            multiple: true,   button: true,   button-class: btn-dockerhub,  url-prefix: 'https://hub.docker.com/r/'       }
-  command:      { label: Command,             icon: fa-terminal                                                                       }
   dependencies: { label: Dependencies,        icon: fa-check-square-o,  multiple: true                                                }

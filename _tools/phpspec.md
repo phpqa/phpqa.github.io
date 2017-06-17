@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/phpspec/phpspec/blob/master/LICENSE', 
 docs:           {url: 'https://www.phpspec.net/en/latest/manual/introduction.html'} 
 github:         {name: 'phpspec/phpspec'} 
 packagist:      {name: 'phpspec/phpspec'}
-command:        phpspec
 composer-dev:   {command: 'vendor/bin/phpspec'}
 dependencies:   [prophecy]
 tags:           [testing, specification]

@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/sensiolabs/security-checker/blob/maste
 demo:           {url: 'https://security.sensiolabs.org/check'}
 github:         {name: sensiolabs/security-checker}
 packagist:      {name: sensiolabs/security-checker}          
-command:        security-checker 
 dockerhub:      [{name: phpqa/security-checker}] 
 phar:           {url: {'No HTTPS': 'http://get.sensiolabs.org/security-checker.phar'}}
 dependencies:   []

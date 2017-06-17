@@ -6,7 +6,6 @@ authors:        [Daniel St. Jules]
 license:        {url: 'https://github.com/danielstjules/pho/blob/master/LICENSE', label: 'MIT'} 
 github:         {name: 'danielstjules/pho'} 
 packagist:      {name: 'danielstjules/pho'}
-command:        pho
 composer-global: {command: 'pho'}
 dependencies:   []
 tags:           [testing, bdd]

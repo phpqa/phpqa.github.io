@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/mmoreram/php-formatter/blob/master/LIC
 github:         {name: mmoreram/php-formatter}
 packagist:      {name: mmoreram/php-formatter}               
 dockerhub:      [{name: phpqa/php-formatter}]     
-command:        php-formatter 
 composer-global: {version: 'dev-master', command: 'php-formatter'}
 phar:           {url: {'master': 'https://github.com/mmoreram/php-formatter/blob/master/build/php-formatter.phar?raw=true'}}
 dependencies:   []

@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/etsy/phan/blob/master/LICENSE', label:
 github:         {name: etsy/phan}
 packagist:      {name: etsy/phan}               
 dockerhub:      [{name: phpqa/phan}]     
-command:        phan
 composer-dev:   {version: {'PHP 7.0': '0.8.x-dev', 'PHP 7.1': 'dev-master'}, command: 'phan'}
 git:            {composer-install: true, command: 'php phan'}
 phar:           {url: {'X.X.X': 'https://github.com/etsy/phan/releases/download/X.X.X/phan.phar'}}

@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/wapmorgan/PhpCodeAnalyzer/blob/master/
 github:         {name: wapmorgan/PhpCodeAnalyzer}
 packagist:      {name: wapmorgan/php-code-analyzer}               
 dockerhub:      [{name: phpqa/phpca}]     
-command:        phpca 
 composer-dev:   {command: 'vendor/bin/phpca'}
 dependencies:   []
 tags:           [bugs finder, built-in php extensions, cli] 

@@ -9,7 +9,6 @@ wiki:           {url: 'https://github.com/vimeo/psalm/wiki'}
 github:         {name: vimeo/psalm}
 packagist:      {name: vimeo/psalm}          
 dockerhub:      [{name: phpqa/psalm}]     
-command:        psalm 
 composer-dev:   {command: 'vendor/bin/psalm'}
 dependencies:   []
 tags:           [bugs finder, static analysis, cli] 

@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/JakubOnderka/PHP-Parallel-Lint/blob/ma
 github:         {name: JakubOnderka/PHP-Parallel-Lint}
 packagist:      {name: jakub-onderka/php-parallel-lint}               
 dockerhub:      [{name: phpqa/parallel-lint}]     
-command:        parallel-lint
 composer-dev:   {command: 'vendor/bin/parallel-lint'}
 dependencies:   []
 tags:           [bugs finder, lint, parallel, cli]

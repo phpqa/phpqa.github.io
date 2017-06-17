@@ -149,12 +149,6 @@ If this property is not provided, the url will be generated this way by Jekyll.
 If provided, YAML requires single quotes around it, as the colon in the url will throw it off.
 The (auto-generated or provided) url will be used on both the overview as well as the tool page.
  
-### Command
-
-`command:        ` (`string`)
-
-The command is the command to be used with this tool, and most likely also the command to be used with the container.
-
 ### Dependencies
 
 `dependencies:   []` (`string[]`)

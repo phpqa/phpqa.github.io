@@ -7,7 +7,6 @@ license:        {url: 'https://github.com/sebastianbergmann/phpunit/blob/master/
 github:         {name: sebastianbergmann/phpunit}
 packagist:      {name: phpunit/phpunit}               
 dockerhub:      [{name: phpqa/phpunit}]     
-command:        phpunit
 composer-dev:   {command: 'vendor/bin/phpunit'}
 phar:           {url: 'https://phar.phpunit.de/phpunit.phar'}
 dependencies:   []
