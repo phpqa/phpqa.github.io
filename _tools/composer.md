@@ -17,12 +17,16 @@ It allows you to declare the libraries your project depends on and it will manag
 
 <!--more--> 
 
-## Installation
-
-- on [Linux / Unix / OSX](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
-- on [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)
-
 ## Tools you can install with {{ page.title }}
 
-{% assign composer_tools = site.tools | where_exp: 'packagist', 'packagist.name != ""' %}
+{% assign composer_tools = site.tools | where_exp: 'item', 'item.packagist.name != nil' %}
 {% for tool in composer_tools %}[{{ tool.title }}]({{ tool.url | absolute_url }}){% if false == forloop.last %}, {% endif %}{% endfor %}
+
+## Verified installation
+
+For a verified installation, please check the official {{ page.title }} documentation.
+
+- [Download {{ page.title }} with PHP and the official installer](https://getcomposer.org/download/) 
+- [Install {{ page.title }} on Linux / Unix / OSX](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
+- [Install {{ page.title }} on Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)
+- [Install {{ page.title }} programmatically](https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md)
