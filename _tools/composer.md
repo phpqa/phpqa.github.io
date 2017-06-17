@@ -7,7 +7,8 @@ license:        {url: 'https://github.com/composer/composer/blob/master/LICENSE'
 docs:           {url: 'https://getcomposer.org/doc/'} 
 github:         {name: 'composer/composer'} 
 command:        composer
-dependencies:   [PHP 5.3.2]
+phar:           {url: 'https://getcomposer.org/composer.phar'}
+dependencies:   []
 tags:           [cli, dependency management]
 ---
 

@@ -9,6 +9,8 @@ github:         {name: phpmetrics/PhpMetrics}
 packagist:      {name: phpmetrics/phpmetrics}               
 dockerhub:      [{name: phpqa/phpmetrics}]     
 command:        phpmetrics
+composer-global: {command: 'phpmetrics'}
+phar:           {url: {'master': 'https://github.com/phpmetrics/PhpMetrics/blob/master/releases/phpmetrics.phar?raw=true', 'X.X.X': 'https://github.com/phpmetrics/PhpMetrics/releases/download/vX.X.X/phpmetrics.phar'}}
 dependencies:   []
 tags:           [metrics, cli] 
 ---

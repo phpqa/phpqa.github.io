@@ -6,7 +6,8 @@ companies:      [Roave]
 website:        {url: 'https://github.com/Roave/SecurityAdvisories'}
 license:        {url: 'https://github.com/Roave/SecurityAdvisories/blob/master/LICENSE', label: 'MIT License'}
 github:         {name: Roave/SecurityAdvisories}
-packagist:      {name: roave/security-advisories}          
+packagist:      {name: roave/security-advisories} 
+composer:       {}   
 dependencies:   []
 tags:           [security, composer, vulnerabilities checker]
 ---

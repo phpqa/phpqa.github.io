@@ -9,6 +9,10 @@ github:         {name: squizlabs/PHP_CodeSniffer}
 packagist:      {name: squizlabs/php_codesniffer}               
 dockerhub:      [{name: phpqa/phpcs}]     
 command:        phpcs  
+composer-dev:   {command: 'vendor/bin/phpcs'}  
+composer-global: {command: 'phpcs'} 
+git:            {command: 'bin/phpcs'}
+phar:           {url: 'https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar'}
 dependencies:   []
 tags:           [coding standards, cli] 
 ---

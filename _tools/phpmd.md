@@ -8,6 +8,9 @@ github:         {name: phpmd/phpmd}
 packagist:      {name: phpmd/phpmd}               
 dockerhub:      [{name: phpqa/phpmd}]     
 command:        phpmd 
+composer-dev:   {command: 'vendor/bin/phpmd'}
+git:            {submodule-install: true, composer-install: true, command: 'src/bin/phpmd'}
+phar:           {url: 'https://static.phpmd.org/php/latest/phpmd.phar'}
 dependencies:   []
 tags:           [bugs finder, mess detector, metrics, cli] 
 ---

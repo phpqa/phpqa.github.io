@@ -8,7 +8,9 @@ github:         {name: theseer/phpdox}
 packagist:      {name: theseer/phpdox}               
 dockerhub:      [{name: phpqa/phpdox}]     
 command:        phpdox
-dependencies:   [xsl]  
+git:            {composer-install: true, command: 'php phpdox'}
+phar:           {url: {'X.X.X': 'https://github.com/theseer/phpdox/releases/download/X.X.X/phpdox-X.X.X.phar'}}
+dependencies:   [ext-xsl]  
 tags:           [documentation, cli] 
 ---
 

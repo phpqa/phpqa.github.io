@@ -8,6 +8,10 @@ github:         {name: squizlabs/PHP_CodeSniffer}
 packagist:      {name: squizlabs/php_codesniffer}               
 dockerhub:      [{name: phpqa/phpcbf}]     
 command:        phpcbf
+composer-dev:   {command: 'vendor/bin/phpcbf'}
+composer-global: {command: 'phpcbf'}
+git:            {command: 'bin/phpcbf'}
+phar:           {url: 'https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar'}
 dependencies:   []
 tags:           [coding standards, code fixer, code beautifier, cli] 
 ---

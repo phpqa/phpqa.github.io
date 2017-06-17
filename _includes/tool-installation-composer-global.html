@@ -1,0 +1,54 @@
+{% assign name = include.composer.name %}
+{% unless name %}{% assign name = include.packagist.name %}{% endunless %}
+{% assign versions = include.composer.version %}
+{% unless versions.first or include.composer.version == nil %}{% assign versions = '' | split: '' | push: include.composer.version %}{% endunless %}
+{% assign commands = include.composer.command %}
+{% unless commands.first or include.composer.command == nil %}{% assign commands = '' | split: '' | push: include.composer.command %}{% endunless %}
+
+    <p>
+        Make sure you have
+        <a href="{{ site.tools | where: 'title', 'Composer' | map: 'url' | first | absolute_url }}">Composer</a>
+        installed.
+    </p>
+    <dl>
+        <dd class="well">
+            Require it as a <a href="https://getcomposer.org/doc/03-cli.md#global">global CLI utility</a>:
+            {% if versions %}
+            {% for item in versions %}
+            {% assign type = item[0] %}
+            {% assign version = item[1] %}{% unless version != nil %}{% assign version = item %}{% endunless %}
+            <br/>
+            <code class="highlighter-rouge">
+                composer global require {{ name }}{% if version != nil %}:{{ version }}{% endif %}
+            </code>
+            {% if type %}({{ type }}){% endif %}
+            {% endfor %}
+            {% else %}
+            <br/><code class="highlighter-rouge">composer global require {{ name }}</code>
+            {% endif %}
+            {% if include.composer.post-install %}
+            {% for item in include.composer.post-install %}
+            <br/>{{ item[0] }}:
+            <br/><code class="highlighter-rouge">{{ item[1] }}</code>
+            {% endfor %}
+            {% endif %}
+            {% if commands %}
+            <br/>Run it:
+            {% for item in commands %}
+            {% assign type = item[0] %}
+            {% assign command = item[1] %}{% unless command != nil %}{% assign command = item %}{% endunless %}
+            <br/>
+            <code class="highlighter-rouge">{{ command }}</code>
+            {% if type %}({{ type }}){% endif %}
+            {% endfor %}
+            {% endif %}
+            <br/>
+            <small>
+                Make sure your global
+                <a href="https://getcomposer.org/doc/articles/vendor-binaries.md">vendor binaries</a> directory
+                is in your $PATH environment variable.
+                Check the <a href="https://getcomposer.org/doc/03-cli.md#global">Composer documentation</a>
+                for more information.
+            </small>
+        </dd>
+    </dl>

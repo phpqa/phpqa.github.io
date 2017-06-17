@@ -6,6 +6,7 @@ authors:        [Marcus Baker, Jason Sweat, Travis Swicegood, Perrick Penet, Edw
 license:        {url: 'https://github.com/simpletest/simpletest/blob/master/LICENSE', label: 'LGPL-2.1'} 
 github:         {name: 'simpletest/simpletest'} 
 packagist:      {name: 'simpletest/simpletest'}
+composer-dev:   {command: 'vendor/bin/simpletest'}
 tags:           [testing]
 ---
 

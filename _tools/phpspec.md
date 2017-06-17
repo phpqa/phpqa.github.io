@@ -8,6 +8,7 @@ docs:           {url: 'https://www.phpspec.net/en/latest/manual/introduction.htm
 github:         {name: 'phpspec/phpspec'} 
 packagist:      {name: 'phpspec/phpspec'}
 command:        phpspec
+composer-dev:   {command: 'vendor/bin/phpspec'}
 dependencies:   [prophecy]
 tags:           [testing, specification]
 ---

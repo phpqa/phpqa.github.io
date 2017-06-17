@@ -8,6 +8,7 @@ github:         {name: phpvisualdebt/phpvisualdebt}
 packagist:      {name: phpvisualdebt/phpvisualdebt}          
 dockerhub:      [{name: phpqa/phpvisualdebt}]     
 command:        phpvisualdebt
+composer-dev:   {command: 'vendor/bin/phpvisualdebt'}
 dependencies:   []
 tags:           [visuals, cli] 
 ---

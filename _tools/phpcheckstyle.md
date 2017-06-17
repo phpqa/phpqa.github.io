@@ -9,6 +9,7 @@ github:         {name: PHPCheckstyle/phpcheckstyle}
 packagist:      {name: phpcheckstyle/phpcheckstyle}               
 dockerhub:      [{name: phpqa/phpcheckstyle}]     
 command:        phpcheckstyle
+composer-dev:   {version: 'dev-master', command: 'phpcheckstyle'}
 dependencies:   []
 tags:           [coding standards, cli] 
 ---

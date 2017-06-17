@@ -1,0 +1,33 @@
+{% assign commands = include.gem.command %}
+{% unless commands.first or include.composer.command == nil %}{% assign commands = '' | split: '' | push: include.gem.command %}{% endunless %}
+
+    <dl>
+        <dt>Gemfile</dt>
+        <dd class="well">
+            Add the following to your Gemfile:
+            <br/><code class="highlighter-rouge">gem '{{ include.gem.name }}'</code>
+            <br/>Execute:
+            <br/><code class="highlighter-rouge">bundle install</code>
+            {% if commands %}
+            <br/>Run it:
+            {% for item in commands %}
+            {% assign type = item[0] %}
+            {% assign command = item[1] %}{% unless command != nil %}{% assign command = item %}{% endunless %}
+            <br/><code class="highlighter-rouge">{{ command }}</code> {% if type %}({{ type }}){% endif %}
+            {% endfor %}
+            {% endif %}
+        </dd>
+        <dt>Commandline</dt>
+        <dd class="well">
+            Install it:
+            <br/><code class="highlighter-rouge">gem install {{ include.gem.name }}</code>
+            {% if commands %}
+            <br/>Run it:
+            {% for item in commands %}
+            {% assign type = item[0] %}
+            {% assign command = item[1] %}{% unless command != nil %}{% assign command = item %}{% endunless %}
+            <br/><code class="highlighter-rouge">{{ command }}</code> {% if type %}({{ type }}){% endif %}
+            {% endfor %}
+            {% endif %}
+        </dd>
+    </dl>

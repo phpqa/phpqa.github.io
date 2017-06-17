@@ -8,6 +8,7 @@ github:         {name: psecio/parse}
 packagist:      {name: psecio/parse}          
 dockerhub:      [{name: phpqa/psecio-parse}]     
 command:        psecio-parse 
+composer-dev:   {command: 'vendor/bin/psecio-parse'} 
 dependencies:   []
 tags:           [alpha, bugs finder, cli] 
 ---

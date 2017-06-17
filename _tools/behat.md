@@ -8,6 +8,7 @@ docs:           {url: 'http://behat.org/en/latest/guides.html'}
 github:         {name: 'Behat/Behat'} 
 packagist:      {name: 'behat/behat'}
 command:        behat        
+composer-dev:   {command: 'vendor/bin/behat'}       
 tags:           [testing, bdd]
 ---
 

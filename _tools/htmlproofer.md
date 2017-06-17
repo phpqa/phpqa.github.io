@@ -8,7 +8,8 @@ wiki:           {url: 'https://github.com/gjtorikian/html-proofer/wiki'}
 github:         {name: 'gjtorikian/html-proofer'} 
 dockerhub:      [{name: 'phpqa/htmlproofer'}]
 command:        htmlproofer       
-dependencies:   [gem, libcurl]
+gem:            {name: 'html-proofer', command: 'htmlproofer'}      
+dependencies:   [libcurl]
 tags:           [html, lint]
 ---
 

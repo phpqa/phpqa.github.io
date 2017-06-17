@@ -8,6 +8,7 @@ github:         {name: pdepend/pdepend}
 packagist:      {name: pdepend/pdepend}               
 dockerhub:      [{name: phpqa/pdepend}]     
 command:        pdepend 
+phar:           {url: 'https://static.pdepend.org/php/latest/pdepend.phar'}
 dependencies:   []
 tags:           [metrics, cli]
 ---

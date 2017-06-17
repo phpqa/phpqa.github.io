@@ -8,7 +8,8 @@ github:         {name: Qafoo/QualityAnalyzer}
 packagist:      {name: qafoo/quality-analyzer}               
 dockerhub:      [{name: phpqa/analyze}] 
 command:        analyze
-dependencies:   [zip, git]
+git:            {composer-install: true, command: 'bin/analyze'}
+dependencies:   [ext-zip, git]
 tags:           [metrics, cli]
 ---
 

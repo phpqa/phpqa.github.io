@@ -8,6 +8,8 @@ github:         {name: wapmorgan/PhpCodeFixer}
 packagist:      {name: wapmorgan/php-code-fixer}               
 dockerhub:      [{name: phpqa/phpcf}]     
 command:        phpcf 
+composer-dev:   {command: 'vendor/bin/phpcf'} 
+composer-global: {command: 'phpcf'} 
 dependencies:   []
 tags:           [bugs finder, deprecated functions, php compatibility, cli] 
 ---

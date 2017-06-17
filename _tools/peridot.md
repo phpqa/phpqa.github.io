@@ -9,6 +9,9 @@ docs:           {url: 'http://peridot-php.github.io/docs/'}
 github:         {name: 'peridot-php/peridot'} 
 packagist:      {name: 'peridot-php/peridot'}
 command:        peridot
+composer-dev:   {command: 'vendor/bin/peridot'}
+composer-global: {command: 'peridot'}
+phar:           {url: 'https://peridot-php.github.io/downloads/peridot.phar'}
 tags:           [testing, bdd]
 ---
 

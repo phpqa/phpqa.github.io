@@ -1,92 +1,100 @@
-{% if page.packagist.name != nil or page.phars != nil %}
+{% if page.composer != nil
+    or page.composer-dev != nil
+    or page.composer-global != nil
+    or page.git != nil
+    or page.gem != nil
+    or page.phar != nil %}
 <h2>Installation</h2>
 <ul>
-    {% if page.packagist.name != nil %}
+    {% if page.composer != nil %}
     <li>
         <a href="#composer" data-toggle="collapse" data-target="#composer" aria-expanded="false" aria-controls="composer">
-            as a Package
+            Install with Composer: PHP package as a dependency for your project
         </a>
     </li>
     {% endif %}
-    {% if page.phars != nil %}
+    {% if page.composer-dev != nil %}
+    <li>
+        <a href="#composer-dev" data-toggle="collapse" data-target="#composer-dev" aria-expanded="false" aria-controls="composer-dev">
+            Install with Composer: PHP package as a dev dependency for your project
+        </a>
+    </li>
+    {% endif %}
+    {% if page.composer-global != nil %}
+    <li>
+        <a href="#composer-global" data-toggle="collapse" data-target="#composer-global" aria-expanded="false" aria-controls="composer-global">
+            Install with Composer: PHP package as a global CLI utility
+        </a>
+    </li>
+    {% endif %}
+    {% if page.git != nil %}
+    <li>
+        <a href="#git" data-toggle="collapse" data-target="#git" aria-expanded="false" aria-controls="git">
+            Install with Git: Git repository as a local utility
+        </a>
+    </li>
+    {% endif %}
+    {% if page.gem != nil %}
+    <li>
+        <a href="#gem" data-toggle="collapse" data-target="#gem" aria-expanded="false" aria-controls="gem">
+            Install with RubyGems or Bundler: Gem as a dependency
+        </a>
+    </li>
+    {% endif %}
+    {% if page.phar != nil %}
     <li>
         <a href="#phar" data-toggle="collapse" data-target="#phar" aria-expanded="false" aria-controls="phar">
-            as a PHP Archive
+            Install with curl or wget: PHP archive as a CLI utility
         </a>
     </li>
     {% endif %}
 </ul>
 {% endif %}
 
-{% if page.packagist.name != nil %}
+{% if page.composer != nil %}
 <div id="composer" class="collapse">
-    <h3>Installation as a Package</h3>
-
-    <p>
-        Make sure you have
-        <a href="{{ site.tools | where: 'title', 'Composer' | map: 'url' | first | absolute_url }}">Composer</a>
-        installed.
-    </p>
-
-    <dl>
-        <dt>Locally</dt>
-        <dd class="well">
-            Require it as a <a href="https://getcomposer.org/doc/03-cli.md#require">dev dependency</a>:
-            <br/><code class="highlighter-rouge">composer require --dev {{ page.packagist.name }}</code>
-        </dd>
-    </dl>
-
-    <dl>
-        <dt>Globally</dt>
-        <dd class="well">
-            Install it as a <a href="https://getcomposer.org/doc/03-cli.md#global">global CLI utility</a>:
-            <br/><code class="highlighter-rouge">composer require global {{ page.packagist.name }}</code>
-            <br/>
-            <small>
-                Make sure your global
-                <a href="https://getcomposer.org/doc/articles/vendor-binaries.md">vendor binaries</a> directory
-                is in your $PATH environment variable.
-                Check the <a href="https://getcomposer.org/doc/03-cli.md#global">Composer documentation</a>
-                for more information.
-            </small>
-        </dd>
-    </dl>
+    <h3>Install with Composer: PHP package as a dependency for your project</h3>
+    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
+    {% include tool-installation-composer.html composer=page.composer packagist=page.packagist %}
 </div>
 {% endif %}
 
-{% if page.phars != nil %}
+{% if page.composer-dev != nil %}
+<div id="composer-dev" class="collapse">
+    <h3>Install with Composer: PHP package as a dev dependency for your project</h3>
+    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
+    {% include tool-installation-composer-dev.html composer=page.composer-dev packagist=page.packagist %}
+</div>
+{% endif %}
+
+{% if page.composer-global != nil %}
+<div id="composer-global" class="collapse">
+    <h3>Install with Composer: PHP package as a global CLI utility</h3>
+    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
+    {% include tool-installation-composer-global.html composer=page.composer-global packagist=page.packagist %}
+</div>
+{% endif %}
+
+{% if page.git != nil %}
+<div id="git" class="collapse">
+    <h3>Install with Git: Git repository as a local utility</h3>
+    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
+    {% include tool-installation-git.html git=page.git github=page.github %}
+</div>
+{% endif %}
+
+{% if page.gem != nil %}
+<div id="gem" class="collapse">
+    <h3>Install with RubyGems or Bundler: Gem as a dependency</h3>
+    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
+    {% include tool-installation-gem.html gem=page.gem %}
+</div>
+{% endif %}
+
+{% if page.phar != nil %}
 <div id="phar" class="collapse">
-    <h3>Installation as a PHP Archive</h3>
-
-    <dl>
-        {% for phar in page.phars %}
-        <dt>Locally, {{ phar.name }}</dt>
-        <dd class="well">
-            Download it:
-            <br/><code class="highlighter-rouge">wget {{ phar.url }}</code>
-            <br/>or
-            <br/><code class="highlighter-rouge">curl --remote-name {{ phar.url }}</code>
-            <br/>Execute it as:
-            <br/><code class="highlighter-rouge">php {{ phar.url | split: '/' | last }}</code>
-        </dd>
-        <dt>Globally, {{ phar.name }}</dt>
-        <dd class="well">
-            {% assign command = phar.url | split: '/' | last | replace: '.phar', '' %}
-            Install it:
-            <br/><code class="highlighter-rouge">sudo curl -sSL {{ phar.url }} -o /usr/local/bin/{{ command }}</code>
-            <br/><code class="highlighter-rouge">sudo chmod a+x /usr/local/bin/{{ command }}</code>
-            <br/>Execute it as:
-            <br/><code class="highlighter-rouge">{{ command }}</code>
-        </dd>
-        {% endfor %}
-    </dl>
+    <h3>Install with curl or wget: PHP archive as a CLI utility</h3>
+    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
+    {% include tool-installation-phar.html phar=page.phar %}
 </div>
 {% endif %}
-
-<!--
-<h3>as Phar Executable</h3>
-
-<h3>with Docker</h3>
-
-<h3>with Docker-compose</h3>
--->

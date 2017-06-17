@@ -8,6 +8,7 @@ github:         {name: edsonmedina/php_testability}
 packagist:      {name: edsonmedina/php_testability}          
 dockerhub:      [{name: phpqa/testability}]     
 command:        testability 
+composer-dev:   {version: 'dev-master', command: 'testability'}
 dependencies:   []
 tags:           [bugs finder, testability, cli] 
 ---

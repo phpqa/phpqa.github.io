@@ -7,6 +7,7 @@ license:        {url: 'https://github.com/danielstjules/pho/blob/master/LICENSE'
 github:         {name: 'danielstjules/pho'} 
 packagist:      {name: 'danielstjules/pho'}
 command:        pho
+composer-global: {command: 'pho'}
 dependencies:   []
 tags:           [testing, bdd]
 ---

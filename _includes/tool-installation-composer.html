@@ -1,0 +1,46 @@
+{% assign name = include.composer.name %}
+{% unless name %}{% assign name = include.packagist.name %}{% endunless %}
+{% assign versions = include.composer.version %}
+{% unless versions.first or include.composer.version == nil %}{% assign versions = '' | split: '' | push: include.composer.version %}{% endunless %}
+{% assign commands = include.composer.command %}
+{% unless commands.first or include.composer.command == nil %}{% assign commands = '' | split: '' | push: include.composer.command %}{% endunless %}
+
+    <p>
+        Make sure you have
+        <a href="{{ site.tools | where: 'title', 'Composer' | map: 'url' | first | absolute_url }}">Composer</a>
+        installed.
+    </p>
+    <dl>
+        <dd class="well">
+            Require it as a <a href="https://getcomposer.org/doc/03-cli.md#require">dependency</a>:
+            {% if versions %}
+            {% for item in versions %}
+            {% assign type = item[0] %}
+            {% assign version = item[1] %}{% unless version != nil %}{% assign version = item %}{% endunless %}
+            <br/>
+            <code class="highlighter-rouge">
+                composer require {{ name }}{% if version != nil %}:{{ version }}{% endif %}
+            </code>
+            {% if type %}({{ type }}){% endif %}
+            {% endfor %}
+            {% else %}
+            <br/><code class="highlighter-rouge">composer require {{ name }}</code>
+            {% endif %}
+            {% if include.composer.post-install %}
+            {% for item in include.composer.post-install %}
+            <br/>{{ item[0] }}:
+            <br/><code class="highlighter-rouge">{{ item[1] }}</code>
+            {% endfor %}
+            {% endif %}
+            {% if commands %}
+            <br/>Run it:
+            {% for item in commands %}
+            {% assign type = item[0] %}
+            {% assign command = item[1] %}{% unless command != nil %}{% assign command = item %}{% endunless %}
+            <br/>
+            <code class="highlighter-rouge">php {{ command }}</code>
+            {% if type %}({{ type }}){% endif %}
+            {% endfor %}
+            {% endif %}
+        </dd>
+    </dl>

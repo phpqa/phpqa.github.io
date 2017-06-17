@@ -8,6 +8,8 @@ github:         {name: sebastianbergmann/phploc}
 packagist:      {name: phploc/phploc}               
 dockerhub:      [{name: phpqa/phploc}]     
 command:        phploc
+composer-dev:   {command: 'vendor/bin/phploc'}
+phar:           {url: 'https://phar.phpunit.de/phploc.phar'}
 dependencies:   []
 tags:           [metrics, cli] 
 ---

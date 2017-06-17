@@ -1,0 +1,8 @@
+{% if include.dependencies != empty %}
+<p class="alert alert-danger">This tool has dependencies that need to be installed first: {{ include.dependencies | join: ', ' }}.</p>
+{% endif %}
+
+<!--
+ext-zip
+git
+-->
