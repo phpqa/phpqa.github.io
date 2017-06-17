@@ -1,6 +1,6 @@
 ---
 layout:         tool
-title:          PHP Code Standard Fixer 2
+title:          PHP Coding Standards Fixer 2
 authors:        [Fabien Potencier, Dariusz Rumiński]
 website:        {url: 'http://cs.sensiolabs.org/'}
 license:        {url: 'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/LICENSE', label: 'MIT License'}
