@@ -1,15 +1,18 @@
 ---
-layout:             tool
-title:              PHPSpec
+layout:             'tool'
+title:              'PHPSpec'
+authors:            ['Konstantin Kudryashov', 'Marcello Duarte', 'Ciaran McNulty'] 
+tags:               ['testing', 'specification']
+
 website:            {url: 'https://www.phpspec.net/'} 
-authors:            [Konstantin Kudryashov, Marcello Duarte, Ciaran McNulty]
 license:            {url: 'https://github.com/phpspec/phpspec/blob/master/LICENSE', label: 'MIT'} 
 docs:               {url: 'https://www.phpspec.net/en/latest/manual/introduction.html'} 
+
+dependencies:       ['prophecy']
 github:             {name: 'phpspec/phpspec'} 
 packagist:          {name: 'phpspec/phpspec'}
 composer-dev:       {command: 'vendor/bin/phpspec'}
-dependencies:       [prophecy]
-tags:               [testing, specification]
+
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is a tool which can help you write

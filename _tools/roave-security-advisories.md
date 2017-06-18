@@ -1,15 +1,19 @@
 ---
-layout:             tool
-title:              Roave Security Advisories
-authors:            [Marco Pivetta]
-companies:          [Roave]
+layout:             'tool'
+title:              'Roave Security Advisories'
+authors:            ['Marco Pivetta']
+companies:          ['Roave']
+tags:               ['security', 'composer', 'vulnerabilities checker']
+
 website:            {url: 'https://github.com/Roave/SecurityAdvisories'}
 license:            {url: 'https://github.com/Roave/SecurityAdvisories/blob/master/LICENSE', label: 'MIT License'}
-github:             {name: Roave/SecurityAdvisories}
-packagist:          {name: roave/security-advisories} 
-composer:           {} # will trigger a default setup, without run   
+
+github:             {name: 'Roave/SecurityAdvisories'}
+packagist:          {name: 'roave/security-advisories'} 
+
 dependencies:       []
-tags:               [security, composer, vulnerabilities checker]
+composer:           {} # will trigger a default setup, without run   
+
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) ensures that your application

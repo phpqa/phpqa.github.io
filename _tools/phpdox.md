@@ -1,16 +1,20 @@
 ---
-layout:             tool
-title:              phpDox
-authors:            [Arne Blankerts]
+layout:             'tool'
+title:              'phpDox'
+authors:            ['Arne Blankerts']    
+tags:               ['documentation', 'cli'] 
+
 website:            {url: 'http://phpdox.de/'}
 license:            {url: 'https://github.com/theseer/phpdox/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
-github:             {name: theseer/phpdox}
-packagist:          {name: theseer/phpdox}               
-dockerhub:          [{name: phpqa/phpdox}]     
+
+github:             {name: 'theseer/phpdox'}
+packagist:          {name: 'theseer/phpdox'}               
+dockerhub:          [{name: 'phpqa/phpdox'}]     
+
+dependencies:       ['ext-xsl']  
 git:                {install-composer-dependencies: true, command: 'php phpdox'}
 phar:               {url: {'X.X.X': 'https://github.com/theseer/phpdox/releases/download/X.X.X/phpdox-X.X.X.phar'}}
-dependencies:       [ext-xsl]  
-tags:               [documentation, cli] 
+
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) is a documentation generator for PHP projects.

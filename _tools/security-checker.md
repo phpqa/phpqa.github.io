@@ -1,16 +1,20 @@
 ---
-layout:             tool
-title:              SensioLabs Security Checker
-authors:            [Fabien Potencier]
+layout:             'tool'
+title:              'SensioLabs Security Checker'
+authors:            ['Fabien Potencier'] 
+tags:               ['security', 'composer', 'vulnerabilities checker', 'cli', 'online service'] 
+
 website:            {url: 'https://security.sensiolabs.org/'}
 license:            {url: 'https://github.com/sensiolabs/security-checker/blob/master/LICENSE', label: 'MIT License'}
 demo:               {url: 'https://security.sensiolabs.org/check'}
-github:             {name: sensiolabs/security-checker}
-packagist:          {name: sensiolabs/security-checker}          
-dockerhub:          [{name: phpqa/security-checker}] 
-phar:               {url: {'No HTTPS': 'http://get.sensiolabs.org/security-checker.phar'}}
+
+github:             {name: 'sensiolabs/security-checker'}
+packagist:          {name: 'sensiolabs/security-checker'}          
+dockerhub:          [{name: 'phpqa/security-checker'}] 
+
 dependencies:       []
-tags:               [security, composer, vulnerabilities checker, cli, online service] 
+phar:               {url: {'No HTTPS': 'http://get.sensiolabs.org/security-checker.phar'}}
+
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) is a command line tool that checks if your

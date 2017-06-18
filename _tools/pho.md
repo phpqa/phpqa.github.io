@@ -1,14 +1,18 @@
 ---
-layout:             tool
-title:              Pho
+layout:             'tool'
+title:              'Pho'
+authors:            ['Daniel St. Jules'] 
+tags:               ['testing', 'bdd']
+
 website:            {url: 'https://github.com/danielstjules/pho'} 
-authors:            [Daniel St. Jules]
 license:            {url: 'https://github.com/danielstjules/pho/blob/master/LICENSE', label: 'MIT'} 
+
 github:             {name: 'danielstjules/pho'} 
 packagist:          {name: 'danielstjules/pho'}
-composer-global:    {command: 'pho'}
+
 dependencies:       []
-tags:               [testing, bdd]
+composer-global:    {command: 'pho'}
+
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is a BDD test framework for PHP, inspired by Jasmine and RSpec.

@@ -1,17 +1,21 @@
 ---
-layout:             tool
-title:              PHP Dead Code Detector    
-authors:            [Sebastian Bergmann]
+layout:             'tool'
+title:              'PHP Dead Code Detector'
+authors:            ['Sebastian Bergmann'] 
+tags:               ['unmaintained', 'dead code detection', 'cli'] 
+
 website:            {url: 'https://github.com/sebastianbergmann/phpdcd'}
 license:            {url: 'https://github.com/sebastianbergmann/phpdcd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
-github:             {name: sebastianbergmann/phpdcd}
-packagist:          {name: sebastian/phpdcd}               
-dockerhub:          [{name: phpqa/phpdcd}]     
+
+github:             {name: 'sebastianbergmann/phpdcd'}
+packagist:          {name: 'sebastian/phpdcd'}               
+dockerhub:          [{name: 'phpqa/phpdcd'}]     
+
+dependencies:       []
 composer-dev:       {command: 'vendor/bin/phpdcd'}
 composer-global:    {command: 'phpdcd'}
 phar:               {url: 'https://phar.phpunit.de/phpdcd.phar'}
-dependencies:       []
-tags:               [unmaintained, dead code detection, cli] 
+
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) is a Dead Code Detector (DCD) for PHP code.

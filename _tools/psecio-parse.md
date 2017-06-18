@@ -1,15 +1,19 @@
 ---
-layout:             tool
-title:              Parse - A PHP Security Scanner
-authors:            [Chris Cornutt]
+layout:             'tool'
+title:              'Parse - A PHP Security Scanner'
+authors:            ['Chris Cornutt']    
+tags:               ['alpha', 'bugs finder', 'cli'] 
+
 website:            {url: 'https://github.com/psecio/parse'}
 license:            {url: 'https://github.com/psecio/parse/blob/master/README.md', label: 'MIT license'}
-github:             {name: psecio/parse}
-packagist:          {name: psecio/parse}          
-dockerhub:          [{name: phpqa/psecio-parse}]     
-composer-dev:       {command: 'vendor/bin/psecio-parse'} 
+
+github:             {name: 'psecio/parse'}
+packagist:          {name: 'psecio/parse'}          
+dockerhub:          [{name: 'phpqa/psecio-parse'}]     
+
 dependencies:       []
-tags:               [alpha, bugs finder, cli] 
+composer-dev:       {command: 'vendor/bin/psecio-parse'} 
+
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) is a static scanning tool to review your PHP code for potential security-related issues.

@@ -1,15 +1,19 @@
 ---
-layout:             tool
-title:              PhpCodeAnalyzer
-authors:            [Sergei Vanyushin]
+layout:             'tool'
+title:              'PhpCodeAnalyzer'
+authors:            ['Sergei Vanyushin']
+tags:               ['bugs finder', 'built-in php extensions', 'cli'] 
+
 website:            {url: 'https://github.com/wapmorgan/PhpCodeAnalyzer'}
 license:            {url: 'https://github.com/wapmorgan/PhpCodeAnalyzer/blob/master/LICENSE.md', label: 'BSD 3-clause "New" or "Revised" License'}
-github:             {name: wapmorgan/PhpCodeAnalyzer}
-packagist:          {name: wapmorgan/php-code-analyzer}               
-dockerhub:          [{name: phpqa/phpca}]     
-composer-dev:       {command: 'vendor/bin/phpca'}
+
+github:             {name: 'wapmorgan/PhpCodeAnalyzer'}
+packagist:          {name: 'wapmorgan/php-code-analyzer'}               
+dockerhub:          [{name: 'phpqa/phpca'}]     
+
 dependencies:       []
-tags:               [bugs finder, built-in php extensions, cli] 
+composer-dev:       {command: 'vendor/bin/phpca'}
+
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) finds usage of different non-built-in extensions in your php code.

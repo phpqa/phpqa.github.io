@@ -1,14 +1,17 @@
 ---
-layout:             tool
-title:              Behat          
+layout:             'tool'
+title:              'Behat'       
+authors:            ['Konstantin Kudryashov']
+tags:               ['testing', 'bdd']
+
 website:            {url: 'http://behat.org/'} 
-authors:            [Konstantin Kudryashov]
 license:            {url: 'https://github.com/Behat/Behat/blob/master/LICENSE', label: 'MIT'} 
 docs:               {url: 'http://behat.org/en/latest/guides.html'} 
+
 github:             {name: 'Behat/Behat'} 
 packagist:          {name: 'behat/behat'}
-composer-dev:       {command: 'vendor/bin/behat'}       
-tags:               [testing, bdd]
+composer-dev:       {command: 'vendor/bin/behat'} 
+
 ---
 
 [{{ page.title }}]({{ site.url }}{{ page.url }}) is a tool to support you in delivering software that matters

@@ -1,16 +1,20 @@
 ---
-layout:             tool
-title:              PHPStan - PHP Static Analysis Tool
-authors:            [Ondřej Mirtes]
+layout:             'tool'
+title:              'PHPStan - PHP Static Analysis Tool'
+authors:            ['Ondřej Mirtes']  
+tags:               ['bugs finder', 'static analysis', 'cli'] 
+
 website:            {url: 'https://medium.com/@ondrejmirtes/phpstan-2939cd0ad0e3'}
 license:            {url: 'https://github.com/phpstan/phpstan/blob/master/LICENSE', label: 'MIT License'}
-github:             {name: phpstan/phpstan}
-packagist:          {name: phpstan/phpstan}               
-dockerhub:          [{name: phpqa/phpstan}]     
+
+github:             {name: 'phpstan/phpstan'}
+packagist:          {name: 'phpstan/phpstan'}               
+dockerhub:          [{name: 'phpqa/phpstan'}]     
+
+dependencies:       []
 composer-dev:       {command: 'vendor/bin/phpstan'}
 phar:               {url: {'X.X.X': 'https://github.com/phpstan/phpstan/releases/download/X.X/phpstan-X.X.phar'}}
-dependencies:       []
-tags:               [bugs finder, static analysis, cli] 
+
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) focuses on finding errors in your code without actually running it.
