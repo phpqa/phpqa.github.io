@@ -2,8 +2,13 @@
 layout: bootstrap4
 ---
 
-<p class="small">
-    Written on <time pubdate datetime="{{ post.date }}">{{ page.date | date: "%Y-%m-%d" }}</time>
-</p>
+<article>
+    <p class="small">
+        Written
+        on <time pubdate datetime="{{ post.date }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+        by <author><a href="https://twitter.com/{{ page.author }}">{{ page.author }}</a></author>
+    </p>
 
-{{ content }}
+    {{ content }}
+
+</article>
