@@ -1,24 +1,25 @@
 # GitHub Pages
 ### ### ### ### ### ###
 
-github: [metadata]                          # set by GitHub Pages, can be overwritten
-#lsi: false                                 # set by GitHub Pages, cannot be changed
-#safe: true                                 # set by GitHub Pages, cannot be changed
-#source: [your repo's top level directory]  # set by GitHub Pages, cannot be changed
-#incremental: false                         # set by GitHub Pages, cannot be changed
-#highlighter: rouge                         # set by GitHub Pages, cannot be changed
+github: [metadata]                                    # set by GitHub Pages, can be overwritten
+#lsi: false                                           # set by GitHub Pages, cannot be changed
+#safe: true                                           # set by GitHub Pages, cannot be changed
+#source: [your repo's top level directory]            # set by GitHub Pages, cannot be changed
+#incremental: false                                   # set by GitHub Pages, cannot be changed
+#highlighter: rouge                                   # set by GitHub Pages, cannot be changed
 #gist:
-#  noscript: false                          # set by GitHub Pages, cannot be changed
+#  noscript: false                                    # set by GitHub Pages, cannot be changed
 kramdown:
-  input: GFM                                # set by GitHub Pages, can be overwritten
-  hard_wrap: false                          # set by GitHub Pages, can be overwritten
-#  math_engine: mathjax                     # set by GitHub Pages, cannot be changed
+  input: GFM                                          # set by GitHub Pages, can be overwritten
+  hard_wrap: false                                    # set by GitHub Pages, can be overwritten
+#  math_engine: mathjax                               # set by GitHub Pages, cannot be changed
+  smart_quotes: ["apos", "apos", "quot", "quot"]      # turn off smart quotes
 gems:
-  - jekyll-coffeescript                     # set by GitHub Pages, can be overwritten
-  - jekyll-paginate                         # set by GitHub Pages, can be overwritten
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
+  - jekyll-coffeescript                               # set by GitHub Pages, can be overwritten
+  - jekyll-paginate                                   # set by GitHub Pages, can be overwritten
+  - jekyll-seo-tag                                    # add seo tag
+  - jekyll-sitemap                                    # add sitemap
+  - jekyll-feed                                       # add rss feed
 
 # Jekyll settings
 ### ### ### ### ### ###
