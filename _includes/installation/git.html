@@ -11,7 +11,7 @@
         Make sure you have
         <a href="https://git-scm.com/">git</a>
         {% if include.git.install-composer-dependencies == true %}
-        and <a href="{{ site.tools | where: 'title', 'Composer' | map: 'url' | first | absolute_url }}">Composer</a>
+        and <a href="{{ site.projects | where: 'title', 'Composer' | map: 'url' | first | absolute_url }}">Composer</a>
         {% endif %}
         installed.
     </p>

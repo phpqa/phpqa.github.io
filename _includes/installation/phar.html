@@ -2,7 +2,7 @@
 {% unless urls.first or include.phar.url == nil %}{% assign urls = '' | split: '' | push: include.phar.url %}{% endunless %}
 
     <p class="alert alert-info">
-        The <a href="{{ site.tools | where: 'title', 'PHPUnit' | map: 'url' | first | absolute_url }}">PHPUnit</a>
+        The <a href="{{ site.projects | where: 'title', 'PHPUnit' | map: 'url' | first | absolute_url }}">PHPUnit</a>
         <a href="https://phpunit.de/manual/current/en/phpunit-book.html">documentation</a> has a clear manual on how to
         <a href="https://phpunit.de/manual/current/en/phpunit-book.html#installation.phar">install PHARs on Windows</a>.
     </p>

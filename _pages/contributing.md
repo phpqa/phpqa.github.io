@@ -21,8 +21,8 @@ comments: false
 ## Add a project
 
 If you want to add your own project, the easiest way is probably
-to copy the [`_draft.md`](https://raw.githubusercontent.com/phpqa/phpqa.github.io/master/_tools/_draft.md) page
-from the `_tools` directory.
+to copy the [`_draft.md`](https://raw.githubusercontent.com/phpqa/phpqa.github.io/master/_projects/_draft.md) page
+from the `__projects` directory.
 
 Most of the *.md files are named according to their short name or their command, but the choice might be yours.
 
@@ -326,7 +326,7 @@ and go wild with the longer description that will be completely visible on the d
 ## Send a Pull Request
 
 Fork the [phpqa.github.io repository](https://github.com/phpqa/phpqa.github.io),
-add your file to the `_tools` directory, and send us a [Pull Request](https://github.com/phpqa/phpqa.github.io/pulls).
+add your file to the `__projects` directory, and send us a [Pull Request](https://github.com/phpqa/phpqa.github.io/pulls).
 
 ## Notes
 

@@ -4,7 +4,7 @@ title: About Composer and PHARs
 author: MetalArend
 ---
 
-All tools have an installation section now.
+All projects have an installation section now.
  
 <!--more-->
 
@@ -17,8 +17,7 @@ but after today, I certainly am hoping at least one of the PHAR tools will make 
 Cause yes, as [Stephan Hochdörfer](https://twitter.com/shochdoerfer) mentioned,
 we [do have a problem](https://blog.bitexpert.de/blog/solving-the-require-dev-problem/).
 
-I certainly would love to add more secure instructions on how to download your PHARs and tools
-in a verifiable way.
+I certainly would love to add more secure instructions on how to download PHARs and packages in a verifiable way.
 
 Let the era of a lovechild between [Composer](https://getcomposer.org/) and [PHIVE]((https://phar.io/)) begin!
 
