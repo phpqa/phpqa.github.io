@@ -1,5 +1,5 @@
 {% assign commands = include.gem.command %}
-{% unless commands.first or include.composer.command == nil %}{% assign commands = '' | split: '' | push: include.gem.command %}{% endunless %}
+{% unless commands.first or include.gem.command == nil %}{% assign commands = '' | split: '' | push: include.gem.command %}{% endunless %}
 
     <dl>
         <dt>Gemfile</dt>
@@ -8,6 +8,12 @@
             <br/><code class="highlighter-rouge">gem '{{ include.gem.name }}'</code>
             <br/>Execute:
             <br/><code class="highlighter-rouge">bundle install</code>
+            {% if include.gem.further-instructions %}
+            {% for item in include.gem.further-instructions %}
+            <br/>{{ item[0] }}:
+            <br/><code class="highlighter-rouge">{{ item[1] }}</code>
+            {% endfor %}
+            {% endif %}
             {% if commands %}
             <br/>Run it:
             {% for item in commands %}

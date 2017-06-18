@@ -7,7 +7,7 @@ license:        {url: 'https://github.com/wimg/PHPCompatibility/blob/master/LICE
 github:         {name: wimg/PHPCompatibility}
 packagist:      {name: wimg/php-compatibility}               
 dockerhub:      [{name: phpqa/php-compatibility}]     
-composer-dev:   {version: 'dev-feature/fix-102-107-directory-layout', post-install: {'Inform PHPCS about the new standard': 'php vendor/bin/phpcs --config-set installed_paths vendor/wimg/php-compatibility'}, command: 'vendor/bin/phpcs --standard=PHPCompatibility'} 
+composer-dev:   {version: 'dev-feature/fix-102-107-directory-layout', further-instructions: {'Inform PHPCS about the new standard': 'php vendor/bin/phpcs --config-set installed_paths vendor/wimg/php-compatibility'}, command: 'vendor/bin/phpcs --standard=PHPCompatibility'} 
 dependencies:   []
 tags:           [coding standards, php compatibility, cli]
 ---

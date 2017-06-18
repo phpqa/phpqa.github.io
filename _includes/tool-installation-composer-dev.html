@@ -26,8 +26,8 @@
             {% else %}
             <br/><code class="highlighter-rouge">composer require --dev {{ name }}</code>
             {% endif %}
-            {% if include.composer.post-install %}
-            {% for item in include.composer.post-install %}
+            {% if include.composer.further-instructions %}
+            {% for item in include.composer.further-instructions %}
             <br/>{{ item[0] }}:
             <br/><code class="highlighter-rouge">{{ item[1] }}</code>
             {% endfor %}

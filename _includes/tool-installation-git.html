@@ -5,7 +5,7 @@
 {% assign url = github-url | replace: 'https://', 'git://' | append: '.git' %}
 {% endunless %}
 {% assign commands = include.git.command %}
-{% unless commands.first or include.composer.command == nil %}{% assign commands = '' | split: '' | push: include.git.command %}{% endunless %}
+{% unless commands.first or include.git.command == nil %}{% assign commands = '' | split: '' | push: include.git.command %}{% endunless %}
 
     <p>
         Make sure you have
@@ -29,6 +29,12 @@
             {% if include.git.composer-install == true %}
             <br/>Install the project dependencies:
             <br/><code class="highlighter-rouge">composer install</code>
+            {% endif %}
+            {% if include.git.further-instructions %}
+            {% for item in include.git.further-instructions %}
+            <br/>{{ item[0] }}:
+            <br/><code class="highlighter-rouge">{{ item[1] }}</code>
+            {% endfor %}
             {% endif %}
             {% if commands %}
             <br/>Run it:

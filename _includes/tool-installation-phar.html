@@ -22,6 +22,12 @@
             <br/><code class="highlighter-rouge">wget -O {{ file }} {{ url }}</code>
             <br/><small><em>or</em></small>
             <br/><code class="highlighter-rouge">curl -sSL {{ url }} -o {{ file }}</code>
+            {% if include.phar.further-instructions %}
+            {% for item in include.phar.further-instructions %}
+            <br/>{{ item[0] }}:
+            <br/><code class="highlighter-rouge">{{ item[1] }}</code>
+            {% endfor %}
+            {% endif %}
             <br/>Use it:
             <br/><code class="highlighter-rouge">php {{ file }}</code>
         </dd>
@@ -36,6 +42,12 @@
             <br/>Install it as an executable:
             <br/><code class="highlighter-rouge">chmod a+x {{ file }}</code>
             <br/><code class="highlighter-rouge">sudo mv {{ file }} /usr/local/bin/{{ command }}</code>
+            {% if include.phar.further-instructions %}
+            {% for item in include.phar.further-instructions %}
+            <br/>{{ item[0] }}:
+            <br/><code class="highlighter-rouge">{{ item[1] }}</code>
+            {% endfor %}
+            {% endif %}
             <br/>Use it:
             <br/><code class="highlighter-rouge">{{ command }}</code>
         </dd>
