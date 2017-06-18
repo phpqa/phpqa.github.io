@@ -8,7 +8,7 @@ github:         {name: mihaeu/dephpend}
 packagist:      {name: dephpend/dephpend}               
 dockerhub:      [{name: phpqa/dephpend}]     
 composer-global: {version: 'dev-master', command: 'dephpend'}
-git:            {composer-install: true, command: 'bin/dephpend'}
+git:                {install-composer-dependencies: true, command: 'bin/dephpend'}
 phar:           {url: 'https://phar.dephpend.com/dephpend.phar'}
 dependencies:   []
 tags:           [metrics, cli]

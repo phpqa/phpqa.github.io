@@ -9,7 +9,7 @@ github:         {name: 'kahlan/kahlan'}
 packagist:      {name: 'kahlan/kahlan'}
 dockerhub:      [{name: 'kahlan/kahlan'}]
 composer-dev:   {command: 'vendor/bin/kahlan'}
-git:            {composer-install: true, command: 'bin/kahlan'}
+git:                {install-composer-dependencies: true, command: 'bin/kahlan'}
 dependencies:   []
 tags:           [testing, bdd]
 ---

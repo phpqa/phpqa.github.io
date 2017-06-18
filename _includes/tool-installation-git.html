@@ -10,7 +10,7 @@
     <p>
         Make sure you have
         <a href="https://git-scm.com/">git</a>
-        {% if include.git.composer-install == true %}
+        {% if include.git.install-composer-dependencies == true %}
         and <a href="{{ site.tools | where: 'title', 'Composer' | map: 'url' | first | absolute_url }}">Composer</a>
         {% endif %}
         installed.
@@ -22,11 +22,11 @@
             <code class="highlighter-rouge">git clone {{ url }}</code>
             <br/>Change into the new directory:
             <br/><code class="highlighter-rouge">cd {{ url | split: '/' | last | replace: '.git', '' }}</code>
-            {% if include.git.submodule-install == true %}
+            {% if include.git.update-submodules == true %}
             <br/>Update the submodules:
             <br/><code class="highlighter-rouge">git submodule update --init</code>
             {% endif %}
-            {% if include.git.composer-install == true %}
+            {% if include.git.install-composer-dependencies == true %}
             <br/>Install the project dependencies:
             <br/><code class="highlighter-rouge">composer install</code>
             {% endif %}

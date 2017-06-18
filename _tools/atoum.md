@@ -8,7 +8,7 @@ github:         {name: atoum/atoum}
 packagist:      {name: atoum/atoum}               
 dockerhub:      [{name: atoum/atoum}]
 docs:           {url: 'http://docs.atoum.org'}
-git:            {composer-install: true, command: 'bin/atoum'}
+git:                {install-composer-dependencies: true, command: 'bin/atoum'}
 phar:           {url: {'X.X.X': 'https://github.com/atoum/atoum/releases/download/X.X.X/atoum.phar'}}
 dependencies:   []
 tags:           [testing, cli]

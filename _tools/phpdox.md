@@ -7,7 +7,7 @@ license:        {url: 'https://github.com/theseer/phpdox/blob/master/LICENSE', l
 github:         {name: theseer/phpdox}
 packagist:      {name: theseer/phpdox}               
 dockerhub:      [{name: phpqa/phpdox}]     
-git:            {composer-install: true, command: 'php phpdox'}
+git:                {install-composer-dependencies: true, command: 'php phpdox'}
 phar:           {url: {'X.X.X': 'https://github.com/theseer/phpdox/releases/download/X.X.X/phpdox-X.X.X.phar'}}
 dependencies:   [ext-xsl]  
 tags:           [documentation, cli] 

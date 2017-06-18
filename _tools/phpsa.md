@@ -8,7 +8,7 @@ github:         {name: ovr/phpsa}
 packagist:      {name: ovr/phpsa}               
 dockerhub:      [{name: phpqa/phpsa}]     
 composer-dev:   {command: 'vendor/bin/phpsa'}
-git:            {composer-install: true, command: 'bin/phpsa'}
+git:                {install-composer-dependencies: true, command: 'bin/phpsa'}
 phar:           {url: {'X.X.X': 'https://github.com/ovr/phpsa/releases/download/X.X.X/phpsa.phar'}}
 dependencies:   []
 tags:           [alpha, bugs finder, static analysis, cli] 
