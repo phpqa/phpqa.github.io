@@ -14,7 +14,7 @@ comments-count: true
             <p>{{ site.subtitle }}</p>
         </div>
         <!--more-->
-        <div class="row tool_filters pt-2 pb-2 mb-2">
+        <div class="row filters pt-2 pb-2 mb-2">
             <div class="col-12">
                 <div class="row">
                     <div class="col-12 col-sm-6">
@@ -23,27 +23,27 @@ comments-count: true
                             <div class="input-group-addon hidden-lg-down">
                                 <i class="fa fa-fw fa-search" aria-hidden="true"></i>
                             </div>
-                            <input type="text" class="form-control" id="filter" placeholder="Filter freely" data-tool-search-filter="true">
+                            <input type="text" class="form-control" id="filter" placeholder="Filter freely" data-search-filter="true">
                             <button class="input-group-addon btn btn-md btn-secondary collapsed"
-                                    data-toggle="collapse" data-target="#tool_tag_filters" aria-haspopup="true" aria-expanded="false">
+                                    data-toggle="collapse" data-target="#tag_filters" aria-haspopup="true" aria-expanded="false">
                                 <nobr>or by tag <i class="fa fa-fw fa-chevron-circle-down icon-collapse-toggle-flip-horizontal" aria-hidden="true"></i></nobr>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div id="tool_tag_filters" class="collapse">
+                <div id="tag_filters" class="collapse">
                     <div>
-                        <a href="#alpha" data-tool-tag-filter="alpha" role="button" class="btn btn-sm btn-outline-info mb-1">
+                        <a href="#alpha" data-tag-filter="alpha" role="button" class="btn btn-sm btn-outline-info mb-1">
                             alpha
                         </a>
-                        <a href="#unmaintained" data-tool-tag-filter="unmaintained" role="button" class="btn btn-sm btn-outline-warning mb-1">
+                        <a href="#unmaintained" data-tag-filter="unmaintained" role="button" class="btn btn-sm btn-outline-warning mb-1">
                             unmaintained
                         </a>
-                        <a href="#deprecated" data-tool-tag-filter="deprecated" role="button" class="btn btn-sm btn-outline-danger mb-1">
+                        <a href="#deprecated" data-tag-filter="deprecated" role="button" class="btn btn-sm btn-outline-danger mb-1">
                             deprecated
                         </a>
-                        <a href="#deprecated" data-tool-tag-filter="docker image" role="button" class="btn btn-sm btn-outline-primary mb-1">
+                        <a href="#deprecated" data-tag-filter="docker image" role="button" class="btn btn-sm btn-outline-primary mb-1">
                             docker image
                         </a>
                     </div>
@@ -51,7 +51,7 @@ comments-count: true
                         {% assign tags = site.tools | map: 'tags' | join: ',' | split:',' | where_exp: 'content', 'content != ""' | sort | uniq %}
                         {% for tag in tags %}
                         {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' or tag == 'docker image' %}
-                        <a href="#{{ tag }}" data-tool-tag-filter="{{ tag }}" role="button" class="btn btn-sm btn-secondary mb-1">
+                        <a href="#{{ tag }}" data-tag-filter="{{ tag }}" role="button" class="btn btn-sm btn-secondary mb-1">
                             {{ tag }}
                         </a>
                         {% endunless %}
@@ -59,7 +59,7 @@ comments-count: true
                     </div>
                 </div>
 
-                <div class="current_tool_filters text-right mt-2 mb-2"></div>
+                <div class="current_filters text-right mt-2 mb-2"></div>
             </div>
         </div>
 

@@ -17,10 +17,10 @@ It allows you to declare the libraries your project depends on and it will manag
 
 <!--more--> 
 
-## Tools you can install with {{ page.title }}
+## Packages you can install with {{ page.title }}
 
-{% assign composer_tools = site.tools | where_exp: 'item', 'item.packagist.name != nil' %}
-{% for tool in composer_tools %}[{{ tool.title }}]({{ tool.url | absolute_url }}){% if false == forloop.last %}, {% endif %}{% endfor %}
+{% assign packages = site.tools | where_exp: 'item', 'item.packagist.name != nil' %}
+{% for package in packages %}[{{ package.title }}]({{ package.url | absolute_url }}){% if false == forloop.last %}, {% endif %}{% endfor %}
 
 ## Verified installation
 

@@ -40,13 +40,13 @@ webrick:
 ### ### ### ### ### ###
 
 author: Bart Reunes   
-name: PHP Quality Assurance Tools
-description: A community managed list of PHP Quality Assurance Tools
+name: PHP Quality Assurance
+description: A community managed website about PHP Quality Assurance
 url: https://phpqa.io
 lang: en_US
 
-title: PHP Quality Assurance Tools
-subtitle: Looking for tools to make your PHP code / projects even better? Dive right into the exciting world of PHP QA!
+title: PHP Quality Assurance
+subtitle: Looking for ways to make your PHP code even better? Find the projects that can help you!
 
 google_analytics: UA-100482560-1
 disqus: phpqa

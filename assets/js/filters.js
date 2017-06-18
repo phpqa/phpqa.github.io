@@ -8,22 +8,22 @@
         
         (function () {
             var $tools = $('.tool'),
-                $toolFilters = $('.tool').find('[data-tool-tag-filter]'),
-                $tagFilters = $('.tool_filters').find('[data-tool-tag-filter]'),
-                $searchFiltersField = $('.tool_filters').find('[data-tool-search-filter]'),
-                $currentFiltersContainer = $('.current_tool_filters'),
+                $toolFilters = $('.tool').find('[data-tag-filter]'),
+                $tagFilters = $('.filters').find('[data-tag-filter]'),
+                $searchFiltersField = $('.filters').find('[data-search-filter]'),
+                $currentFiltersContainer = $('.current_filters'),
                 activeClass = 'active';
 
             var initiate = function () {
                 if ($tagFilters.length) {
                     $tagFilters.on('click', function (event) {
-                        toggleByTagText($(this).data('tool-tag-filter'));
+                        toggleByTagText($(this).data('tag-filter'));
                         event.preventDefault();
                     });
                 }
                 if ($toolFilters.length) {
                     $toolFilters.on('click', function (event) {
-                        toggleByTagText($(this).data('tool-tag-filter'));
+                        toggleByTagText($(this).data('tag-filter'));
                         $(this).replaceWith($(this).clone(true, true)); // Fix hover state after click
                         event.preventDefault();
                     });
@@ -38,7 +38,7 @@
 
             var getActiveTagFilterTexts = function () {
                 return $tagFilters.filter('.' + activeClass).map(function () {
-                    return $(this).data('tool-tag-filter');
+                    return $(this).data('tag-filter');
                 });
             };
 
@@ -92,11 +92,11 @@
                 });
             };
 
-            var updateToolsVisibility = function () {
+            var updateCardsVisibility = function () {
                 // Filter tools with tag filters
                 var activeFiltersLength = $tagFilters.filter('.' + activeClass).length;
                 $tools.each(function () {
-                    var isToolVisible = $(this).find('[data-tool-tag-filter].' + activeClass).length === activeFiltersLength;
+                    var isToolVisible = $(this).find('[data-tag-filter].' + activeClass).length === activeFiltersLength;
                     $(this).toggleClass(activeClass, isToolVisible);
                 });
 
@@ -123,9 +123,9 @@
             };
 
             var toggleByTagText = function (tagText) {
-                var $tagFilter = $tagFilters.filter('[data-tool-tag-filter="' + tagText + '"]');
-                $('[data-tool-tag-filter="' + tagText + '"]').toggleClass(activeClass, !$tagFilter.hasClass(activeClass));
-                updateToolsVisibility();
+                var $tagFilter = $tagFilters.filter('[data-tag-filter="' + tagText + '"]');
+                $('[data-tag-filter="' + tagText + '"]').toggleClass(activeClass, !$tagFilter.hasClass(activeClass));
+                updateCardsVisibility();
                 updateCurrentFilters();
             };
 
@@ -133,7 +133,7 @@
                 if (searchText !== $searchFiltersField.val()) {
                     $searchFiltersField.val(searchText);
                 }
-                updateToolsVisibility();
+                updateCardsVisibility();
                 updateCurrentFilters();
             };
 

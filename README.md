@@ -1,6 +1,6 @@
-# PHP Quality Assurance Tools
+# PHP Quality Assurance
 
-Looking for tools to make your PHP code / projects even better? Dive right into the exciting world of PHP QA!
+Looking for ways to make your PHP code even better? Find the projects that can help you!
 
 
 
