@@ -9,7 +9,7 @@ license:            {url: 'https://github.com/phpstan/phpstan/blob/master/LICENS
 
 github:             {name: 'phpstan/phpstan'}
 packagist:          {name: 'phpstan/phpstan'}               
-dockerhub:          [{name: 'phpqa/phpstan'}]     
+dockerhub:          [{name: 'phpstan/phpstan'}, {name: 'phpqa/phpstan'}]     
 
 dependencies:       []
 composer-dev:       {command: 'vendor/bin/phpstan'}
