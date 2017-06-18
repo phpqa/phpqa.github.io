@@ -15,8 +15,8 @@ comments-count: true
                 Written on
                 <time pubdate datetime="{{ post.date }}">{{ page.date | date: "%Y-%m-%d" }}</time>
                 {% if page.comments-count == true %}
-                // <i class="fa fa-fw fa-comments" aria-hidden="true"></i>
-                <span data-disqus-identifier="{{ post.id }}" class="disqus-comment-count">0</span>
+                - {{ post.content | number_of_words }} words
+                - <span data-disqus-identifier="{{ post.id }}" class="disqus-comment-count">0</span> comments
                 {% endif %}
             </p>
             

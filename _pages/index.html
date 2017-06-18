@@ -101,8 +101,10 @@ comments-count: true
                     <article class="post well mb-1">
                         <header>
                             <h3><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h3>
-                            <p>
+                            <p class="small">
                                 <time pubdate datetime="{{ post.date }}">{{ post.date | date_to_long_string }}</time>
+                                - {{ post.content | number_of_words }} words
+                                - <span data-disqus-identifier="{{ post.id }}" class="disqus-comment-count">0</span> comments
                             </p>
                         </header>
 
