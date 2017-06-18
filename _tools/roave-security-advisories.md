@@ -7,7 +7,7 @@ website:        {url: 'https://github.com/Roave/SecurityAdvisories'}
 license:        {url: 'https://github.com/Roave/SecurityAdvisories/blob/master/LICENSE', label: 'MIT License'}
 github:         {name: Roave/SecurityAdvisories}
 packagist:      {name: roave/security-advisories} 
-composer:       {}   
+composer:           {} # will trigger a default setup, without run   
 dependencies:   []
 tags:           [security, composer, vulnerabilities checker]
 ---
