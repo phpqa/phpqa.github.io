@@ -11,7 +11,8 @@ github:             {name: 'etsy/phan'}
 packagist:          {name: 'etsy/phan'}               
 dockerhub:          [{name: 'phpqa/phan'}]     
 
-dependencies:       ['pcntl', 'git', 'ext-ast']  
+dependencies:       ['pcntl', 'git', 'ext-ast']
+brew:               {name: ['php71', 'php71-ast', 'phan']}
 composer-dev:       {version: {'PHP 7.0': '0.8.x-dev', 'PHP 7.1': 'dev-master'}, command: 'phan'}
 git:                {install-composer-dependencies: true, command: 'php phan'}
 phar:               {url: {'X.X.X': 'https://github.com/etsy/phan/releases/download/X.X.X/phan.phar'}}

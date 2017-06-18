@@ -16,6 +16,7 @@ dependencies:       []
 composer-dev:       {command: 'vendor/bin/phpcs'}  
 composer-global:    {command: 'phpcs'} 
 git:                {command: 'bin/phpcs'}
+pear:               {name: 'PHP_CodeSniffer'}
 phar:               {url: 'https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar'}
 
 ---

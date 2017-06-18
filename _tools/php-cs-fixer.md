@@ -12,6 +12,7 @@ packagist:          {name: 'friendsofphp/php-cs-fixer'}
 dockerhub:          [{name: 'phpqa/php-cs-fixer'}]     
 
 dependencies:       []
+brew:               {name: 'homebrew/php/php-cs-fixer'}
 composer-global:    {command: 'php-cs-fixer'}
 phar:               {url: {'No HTTPS': 'http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar'}}
 

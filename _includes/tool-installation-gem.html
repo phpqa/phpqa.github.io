@@ -5,7 +5,7 @@
         <dt>Gemfile</dt>
         <dd class="well">
             Add the following to your Gemfile:
-            <br/><code class="highlighter-rouge">gem '{{ include.gem.name }}'</code>
+            <br/><code class="highlighter-rouge">gem '{{ include.gem.name | join: ' ' }}'</code>
             <br/>Execute:
             <br/><code class="highlighter-rouge">bundle install</code>
             {% if include.gem.further-instructions %}
