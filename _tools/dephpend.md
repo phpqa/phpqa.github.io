@@ -1,17 +1,17 @@
 ---
-layout:         tool
-title:          dePHPend
-authors:        [Michael Haeuslmann]
-website:        {url: 'https://dephpend.com/'}
-license:        {url: 'https://github.com/mihaeu/dephpend/blob/develop/LICENSE', label: 'MIT License'}
-github:         {name: mihaeu/dephpend}
-packagist:      {name: dephpend/dephpend}               
-dockerhub:      [{name: phpqa/dephpend}]     
-composer-global: {version: 'dev-master', command: 'dephpend'}
+layout:             tool
+title:              dePHPend
+authors:            [Michael Haeuslmann]
+website:            {url: 'https://dephpend.com/'}
+license:            {url: 'https://github.com/mihaeu/dephpend/blob/develop/LICENSE', label: 'MIT License'}
+github:             {name: mihaeu/dephpend}
+packagist:          {name: dephpend/dephpend}               
+dockerhub:          [{name: phpqa/dephpend}]     
+composer-global:    {version: 'dev-master', command: 'dephpend'}
 git:                {install-composer-dependencies: true, command: 'bin/dephpend'}
-phar:           {url: 'https://phar.dephpend.com/dephpend.phar'}
-dependencies:   []
-tags:           [metrics, cli]
+phar:               {url: 'https://phar.dephpend.com/dephpend.phar'}
+dependencies:       []
+tags:               [metrics, cli]
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) helps with bringing your PHP projects back in shape. 

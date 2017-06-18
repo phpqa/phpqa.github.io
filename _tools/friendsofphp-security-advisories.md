@@ -1,11 +1,11 @@
 ---
-layout:         tool
-title:          PHP Security Advisories Database
-authors:        [Fabien Potencier, FriendsOfPHP]
-website:        {url: 'https://security.sensiolabs.org/database'}
-license:        {url: 'https://github.com/FriendsOfPHP/security-advisories/blob/master/LICENSE', label: 'The Unlicense'}
-github:         {name: FriendsOfPHP/security-advisories}
-tags:           [security, vulnerabilities database] 
+layout:             tool
+title:              PHP Security Advisories Database
+authors:            [Fabien Potencier, FriendsOfPHP]
+website:            {url: 'https://security.sensiolabs.org/database'}
+license:            {url: 'https://github.com/FriendsOfPHP/security-advisories/blob/master/LICENSE', label: 'The Unlicense'}
+github:             {name: FriendsOfPHP/security-advisories}
+tags:               [security, vulnerabilities database] 
 ---
 
 The [{{ page.title }}]({{ page.url | absolute_url }}) references known security vulnerabilities in various PHP projects and libraries.

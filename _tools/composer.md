@@ -1,14 +1,14 @@
 ---
-layout:         tool
-title:          Composer
-website:        {url: 'https://getcomposer.org/'} 
-authors:        [Nils Adermann, Jordi Boggiano]
-license:        {url: 'https://github.com/composer/composer/blob/master/LICENSE', label: 'MIT License'} 
-docs:           {url: 'https://getcomposer.org/doc/'} 
-github:         {name: 'composer/composer'} 
-phar:           {url: 'https://getcomposer.org/composer.phar'}
-dependencies:   []
-tags:           [cli, dependency management]
+layout:             tool
+title:              Composer
+website:            {url: 'https://getcomposer.org/'} 
+authors:            [Nils Adermann, Jordi Boggiano]
+license:            {url: 'https://github.com/composer/composer/blob/master/LICENSE', label: 'MIT License'} 
+docs:               {url: 'https://getcomposer.org/doc/'} 
+github:             {name: 'composer/composer'} 
+phar:               {url: 'https://getcomposer.org/composer.phar'}
+dependencies:       []
+tags:               [cli, dependency management]
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) is a tool for dependency management in PHP.

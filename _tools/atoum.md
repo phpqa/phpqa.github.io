@@ -1,17 +1,17 @@
 ---
-layout:         tool
-title:          atoum
-authors:        [Frédéric Hardy, Julien Bianchi]
-website:        {url: 'http://atoum.org/'}
-license:        {url: 'https://github.com/atoum/atoum/blob/master/LICENSE', label: 'BSD 3'}
-github:         {name: atoum/atoum}
-packagist:      {name: atoum/atoum}               
-dockerhub:      [{name: atoum/atoum}]
-docs:           {url: 'http://docs.atoum.org'}
+layout:             tool
+title:              atoum
+authors:            [Frédéric Hardy, Julien Bianchi]
+website:            {url: 'http://atoum.org/'}
+license:            {url: 'https://github.com/atoum/atoum/blob/master/LICENSE', label: 'BSD 3'}
+github:             {name: atoum/atoum}
+packagist:          {name: atoum/atoum}               
+dockerhub:          [{name: atoum/atoum}]
+docs:               {url: 'http://docs.atoum.org'}
 git:                {install-composer-dependencies: true, command: 'bin/atoum'}
-phar:           {url: {'X.X.X': 'https://github.com/atoum/atoum/releases/download/X.X.X/atoum.phar'}}
-dependencies:   []
-tags:           [testing, cli]
+phar:               {url: {'X.X.X': 'https://github.com/atoum/atoum/releases/download/X.X.X/atoum.phar'}}
+dependencies:       []
+tags:               [testing, cli]
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) is a modern and intuitive testing framework for PHP.

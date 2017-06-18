@@ -1,10 +1,10 @@
 ---
-layout:         tool
-title:          SensioLabs Insight
-companies:      [SensioLabs]
-website:        {url: 'https://insight.sensiolabs.com/'}
-terms:          {url: 'https://insight.sensiolabs.com/terms', label: 'Terms'}
-tags:           [free for open source, online service, security]
+layout:             tool
+title:              SensioLabs Insight
+companies:          [SensioLabs]
+website:            {url: 'https://insight.sensiolabs.com/'}
+terms:              {url: 'https://insight.sensiolabs.com/terms', label: 'Terms'}
+tags:               [free for open source, online service, security]
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) continuously analyzes your code
