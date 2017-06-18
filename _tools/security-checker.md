@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'SensioLabs Security Checker'
 authors:            ['Fabien Potencier'] 
 tags:               ['security', 'composer', 'vulnerabilities checker', 'cli', 'online service'] 

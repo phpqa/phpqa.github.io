@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'peridot'
 authors:            ['Brian Scaturro', 'Austin Morris'] 
 tags:               ['testing', 'bdd']

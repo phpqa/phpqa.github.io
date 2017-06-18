@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Parse - A PHP Security Scanner'
 authors:            ['Chris Cornutt']    
 tags:               ['alpha', 'bugs finder', 'cli'] 

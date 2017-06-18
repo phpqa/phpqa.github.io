@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'dePHPend'
 authors:            ['Michael Haeuslmann'] 
 tags:               ['metrics', 'cli']

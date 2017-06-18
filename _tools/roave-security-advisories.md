@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Roave Security Advisories'
 authors:            ['Marco Pivetta']
 companies:          ['Roave']

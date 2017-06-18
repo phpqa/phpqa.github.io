@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PhpCodeAnalyzer'
 authors:            ['Sergei Vanyushin']
 tags:               ['bugs finder', 'built-in php extensions', 'cli'] 

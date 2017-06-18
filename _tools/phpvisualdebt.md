@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHPVisualDebt'
 authors:            ['Michał Brzuchalski'] 
 tags:               ['visuals', 'cli']

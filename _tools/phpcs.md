@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP_CodeSniffer'
 authors:            ['Greg Sherwood'] 
 tags:               ['coding standards', 'cli']

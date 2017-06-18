@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Codeception'
 authors:            ['Michael Bodnarchuk'] 
 tags:               ['testing', 'cli']

@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP Assumptions'
 authors:            ['Rick Kuipers']   
 tags:               ['static analysis', 'bugs finder', 'validation', 'assumptions', 'cli']

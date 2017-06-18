@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Psalm'
 authors:            ['Matthew Brown']
 companies:          ['Vimeo']   

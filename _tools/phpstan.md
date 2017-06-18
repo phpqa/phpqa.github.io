@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHPStan - PHP Static Analysis Tool'
 authors:            ['Ondřej Mirtes']  
 tags:               ['bugs finder', 'static analysis', 'cli'] 

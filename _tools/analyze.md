@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Qafoo Quality Analyzer'
 authors:            ['Kore Nordmann']
 tags:               ['metrics', 'cli']

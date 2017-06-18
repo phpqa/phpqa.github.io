@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Tuli'
 authors:            ['Anthony Ferrara']
 tags:               ['deprecated', 'bugs finder', 'static analysis', 'cli'] 

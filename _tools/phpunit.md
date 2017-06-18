@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHPUnit'
 authors:            ['Sebastian Bergmann'] 
 tags:               ['testing', 'cli'] 

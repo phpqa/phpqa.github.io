@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Storyplayer'
 authors:            ['Stuart Herbert', 'Michael Heap'] 
 tags:               ['testing', 'bdd']

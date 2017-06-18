@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'SensioLabs Insight'
 companies:          ['SensioLabs']   
 tags:               ['free for open source', 'online service', 'security']

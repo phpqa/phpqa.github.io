@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP Coding Standards Fixer 2'
 authors:            ['Fabien Potencier', 'Dariusz Rumiński']
 tags:               ['code fixer', 'coding standards', 'psr', 'cli'] 

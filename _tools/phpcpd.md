@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP Copy/Paste Detector'
 authors:            ['Sebastian Bergmann']
 tags:               ['bugs finder', 'dry', 'code duplication', 'cli'] 

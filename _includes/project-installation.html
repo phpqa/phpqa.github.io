@@ -70,62 +70,62 @@
 {% if page.brew != nil %}
 <div id="brew" class="collapse">
     <h3>Install from a Brew package (with Brew)</h3>
-    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
-    {% include tool-installation-brew.html brew=page.brew %}
+    {% include dependencies-alert.html dependencies=page.dependencies %}
+    {% include installation/brew.html brew=page.brew %}
 </div>
 {% endif %}
 {% if page.composer != nil %}
 <div id="composer" class="collapse">
     <h3>Install from a Composer package as a dependency (with Composer)</h3>
-    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
-    {% include tool-installation-composer.html composer=page.composer packagist=page.packagist %}
+    {% include dependencies-alert.html dependencies=page.dependencies %}
+    {% include installation/composer.html composer=page.composer packagist=page.packagist %}
 </div>
 {% endif %}
 
 {% if page.composer-dev != nil %}
 <div id="composer-dev" class="collapse">
     <h3>Install from a Composer package as a dev dependency (with Composer)</h3>
-    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
-    {% include tool-installation-composer-dev.html composer=page.composer-dev packagist=page.packagist %}
+    {% include dependencies-alert.html dependencies=page.dependencies %}
+    {% include installation/composer-dev.html composer=page.composer-dev packagist=page.packagist %}
 </div>
 {% endif %}
 
 {% if page.composer-global != nil %}
 <div id="composer-global" class="collapse">
     <h3>Install from a Composer package as a global CLI utility (with Composer)</h3>
-    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
-    {% include tool-installation-composer-global.html composer=page.composer-global packagist=page.packagist %}
+    {% include dependencies-alert.html dependencies=page.dependencies %}
+    {% include installation/composer-global.html composer=page.composer-global packagist=page.packagist %}
 </div>
 {% endif %}
 
 {% if page.git != nil %}
 <div id="git" class="collapse">
     <h3>Install from a Git repository (with Git)</h3>
-    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
-    {% include tool-installation-git.html git=page.git github=page.github %}
+    {% include dependencies-alert.html dependencies=page.dependencies %}
+    {% include installation/git.html git=page.git github=page.github %}
 </div>
 {% endif %}
 
 {% if page.gem != nil %}
 <div id="gem" class="collapse">
     <h3>Install from a RubyGems gem (with RubyGems or Bundler)</h3>
-    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
-    {% include tool-installation-gem.html gem=page.gem %}
+    {% include dependencies-alert.html dependencies=page.dependencies %}
+    {% include installation/gem.html gem=page.gem %}
 </div>
 {% endif %}
 
 {% if page.pear != nil %}
 <div id="pear" class="collapse">
     <h3>Install from a PEAR package (with PEAR)</h3>
-    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
-    {% include tool-installation-pear.html pear=page.pear %}
+    {% include dependencies-alert.html dependencies=page.dependencies %}
+    {% include installation/pear.html pear=page.pear %}
 </div>
 {% endif %}
 
 {% if page.phar != nil %}
 <div id="phar" class="collapse">
     <h3>Install from a PHP Archive (with curl or wget)</h3>
-    {% include tool-dependencies-alert.html dependencies=page.dependencies %}
-    {% include tool-installation-phar.html phar=page.phar %}
+    {% include dependencies-alert.html dependencies=page.dependencies %}
+    {% include installation/phar.html phar=page.phar %}
 </div>
 {% endif %}

@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Composer'
 authors:            ['Nils Adermann', 'Jordi Boggiano'] 
 tags:               ['cli', 'dependency management']

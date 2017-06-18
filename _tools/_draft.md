@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              ''
 authors:            ['']
 companies:          ['']

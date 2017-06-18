@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP Security Advisories Database'
 authors:            ['Fabien Potencier', 'FriendsOfPHP'] 
 tags:               ['security', 'vulnerabilities database'] 

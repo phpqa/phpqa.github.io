@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP Formatter'
 authors:            ['Marc Morera'] 
 tags:               ['coding standards', 'cli'] 

@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'atoum'
 authors:            ['Frédéric Hardy', 'Julien Bianchi'] 
 tags:               ['testing', 'cli']

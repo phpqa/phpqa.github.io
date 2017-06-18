@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP Parallel Lint'
 authors:            ['Jakub Onderka'] 
 tags:               ['bugs finder', 'lint', 'parallel', 'cli']

@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PhpCodeFixer'
 authors:            ['Sergei Vanyushin']
 tags:               ['bugs finder', 'deprecated functions', 'php compatibility', 'cli'] 

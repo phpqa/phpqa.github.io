@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP Mess Detector'
 authors:            ['Manuel Pichler']   
 tags:               ['bugs finder', 'mess detector', 'metrics', 'cli'] 

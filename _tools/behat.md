@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Behat'       
 authors:            ['Konstantin Kudryashov']
 tags:               ['testing', 'bdd']

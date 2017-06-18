@@ -64,10 +64,10 @@ comments-count: true
         </div>
 
         <div class="row tools">
-            {% assign tools = site.tools | sort: 'title' %}
-            {% for tool in tools %}
+            {% assign projects = site.tools | sort: 'title' %}
+            {% for project in projects %}
             <div class="col-12 col-sm-6 col-xl-4 tool">
-                {% include tool-card.html tool=tool %}
+                {% include project-card.html project=project %}
             </div>
             {% endfor %}
         </div>

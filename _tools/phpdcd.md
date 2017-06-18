@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP Dead Code Detector'
 authors:            ['Sebastian Bergmann'] 
 tags:               ['unmaintained', 'dead code detection', 'cli'] 

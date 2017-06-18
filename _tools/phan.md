@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Phan'
 authors:            ['Rasmus Lerdorf', 'Andrew Morrison'] 
 tags:               ['bugs finder', 'static analysis', 'cli']

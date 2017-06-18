@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Scrutinizer'
 authors:            ['Johannes Schmitt'] 
 tags:               ['free for open source', 'online service', 'continuous integration']

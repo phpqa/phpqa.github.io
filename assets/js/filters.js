@@ -54,12 +54,12 @@
 
             var addCurrentFilter = function (filterText, closeCallback) {
                 var $currentFilter = $('<span class="mr-2">'),
-                    $closeAnchor = $('<button class="tool-tag-remove" aria-label="remove" title="Remove">');
+                    $closeAnchor = $('<button class="filter-remove" aria-label="remove" title="Remove">');
                 $closeAnchor
                     .html('&times;')
-                    .data('tool-filter', filterText)
+                    .data('current-filter', filterText)
                     .on('click', function (event) {
-                        closeCallback($(this).data('tool-filter'));
+                        closeCallback($(this).data('current-filter'));
                         event.preventDefault();
                     });
                 $currentFilter.append(document.createTextNode($.trim(filterText)));

@@ -38,36 +38,36 @@ This is basically valid YAML in between triple-dashed lines.
 
 ##### Layout
 
-layout: `string` 'tool'
+layout: `string` 'project'
 
-Jekyll's layout field. This is a **required** field, and should **always** be 'tool'.
+Jekyll's layout field. This is a **required** field, and should **always** be 'project'.
 
 ##### Title
 
 title: `string` *title*
 
-The official name of the tool. This is a **required** field, and will mostly be the main title of the GitHub's README.
+The official name of the project. This is a **required** field, and will mostly be the main title of the GitHub's README.
 
-This field should also be used to start the description of the tool (see [`description`](#description)).
+This field should also be used to start the description of the project (see [`description`](#description)).
 
 ##### Authors
 
 authors: `string[]` *authors* = nil
 
-The authors of the project. This is an **optional** field, but is strongly **encouraged** for any tool that has a publicly available repository.
+The authors of the project. This is an **optional** field, but is strongly **encouraged** for any project that has a publicly available repository.
 
 ##### Companies
 
 companies: `string[]` *companies* = nil
 
-The companies behind the project. This is an **optional** field, but is strongly **encouraged** for any tool that has a company backing it.
+The companies behind the project. This is an **optional** field, but is strongly **encouraged** for any project that has a company backing it.
     
 ##### Tags
 
 tags: `string[]` *tags*
 
 A list of tags describing this project. This is a **required** field, as the tags are being used on the overview page.
-They provide easy filtering for anyone looking for a tool for a certain use case.
+They provide easy filtering in an ever-growing list.
 Try to be as specific as possible, while also keeping the amount of new tags down.
     
 #### Online resources
@@ -82,20 +82,20 @@ The website for the project. This is a **required** field, and should be an obje
     - The `url`<sup>[1](#notes)</sup> for this website.
 - label: *optional*, *discouraged*
     - The label for this website.
-    - This field will be used to overwrite the visible url on the tool detail page.
+    - This field will be used to overwrite the visible url on the project detail page.
 
 ##### License
 
 license: `object` {url: `string` *url*, label: `string` *label*}
 
-The license for the project. This is a **required** for licensed projects.
+The license for the project. This is a **required** field for licensed projects.
 It should be an object with at least a `url` and a `label` property.
 
 - url: *required*
     - The `url`<sup>[1](#notes)</sup> where this license can be read in full.
 - label: *required* 
     - The type of this license. Examples are 'MIT License'. <!-- TODO list all examples --> 
-    - This field will be used to overwrite the visible url on the tool detail page.
+    - This field will be used to overwrite the visible url on the project detail page.
 
 ##### Terms
 
@@ -108,7 +108,7 @@ It should be an object with at least a `url` and a `label` property.
     - The `url`<sup>[1](#notes)</sup> where the terms can be read in full.
 - label: *required* 
     - The exact name for these terms. Examples are 'Terms of Service', 'Terms'. <!-- TODO list all examples -->
-    - This field will be used to overwrite the visible url on the tool detail page.
+    - This field will be used to overwrite the visible url on the project detail page.
 
 ##### Wiki, Docs and/or Demo
 
@@ -126,7 +126,7 @@ They should all be an object with at least a `url`.
     - The `url`<sup>[1](#notes)</sup> where this wiki / documentation / demo can be found.
 - label: *optional*, *discouraged*
     - The label for this wiki / documentation / demo.
-    - This field will be used to overwrite the visible url on the tool detail page.
+    - This field will be used to overwrite the visible url on the project detail page.
      
 #### Discoverability      
 
@@ -190,7 +190,7 @@ Each entry should be an object with at least a `name`.
 dependencies: `string[]` *dependencies* = []
 
 A list of dependencies the project relies on, other than PHP itself.
-Some projects require php extensions enabled, or special libraries added before installing the tool.
+Some projects require php extensions enabled, or special libraries added before installing the project.
 This field is **optional**.
 
 ##### Composer
@@ -217,10 +217,10 @@ They should all be an object with most of the times at least a `command` propert
 - further-instructions: *optional*
     - [Further instructions](#-further-instructions) can be provided.
 - command: *optional*
-    - The `command` that will be available to run the tool after installation.
+    - The `command` that will be available after installation.
     - This field is a mixed field, it can be
         either `string` *command*, `string[]` [`string` *command*] or `object` {`string` *type*: `string` *command*}.
-        - The `string` or `string[]` option is useful for specifying how to run the tool after the installation.
+        - The `string` or `string[]` option is useful for specifying which commands are available after the installation.
         - The `object` option helps with mentioning specific actions: `{'initiate': 'command', 'run': 'command'}`.
 
 ##### Gem
@@ -237,10 +237,10 @@ It should be an object with at least a `name` property.
 - further-instructions: *optional*
     - [Further instructions](#-further-instructions) can be provided.
 - command: *optional*, *encouraged*
-    - The `command` that will be available to run the tool after installation.
+    - The `command` that will be available after installation.
     - This field is a mixed field, it can be
         either `string` *command*, `string[]` [`string` *command*] or `object` {`string` *type*: `string` *command*}.
-        - The `string` or `string[]` option is useful for specifying how to run the tool after the installation.
+        - The `string` or `string[]` option is useful for specifying which commands are available after the installation.
         - The `object` option helps with mentioning specific actions: `{'initiate': 'command', 'run': 'command'}`.
 
 ##### Git
@@ -262,10 +262,10 @@ It should be an object with at best at least a `command` property.
 - further-instructions: *optional*
     - [Further instructions](#-further-instructions) can be provided.
 - command: *optional*, *encouraged*
-    - The `command` that will be available to run the tool after installation.
+    - The `command` that will be available after installation.
     - This field is a mixed field, it can be
         either `string` *command*, `string[]` [`string` *command*] or `object` {`string` *type*: `string` *command*}.
-        - The `string` or `string[]` option is useful for specifying how to run the tool after the installation.
+        - The `string` or `string[]` option is useful for specifying which commands are available after the installation.
         - The `object` option helps with mentioning specific actions: `{'initiate': 'command', 'run': 'command'}`.
 
 ##### PHAR
@@ -282,8 +282,8 @@ It should be an object with a `url` property.
     - This field is a mixed field, it can be
         either `string` *url*, `string[]` [`string` *url*] or `object` {`string` *type*: `string` *url*}.
         - The `string` or `string[]` option can provide one or more PHAR locations.
-        - The `object` option helps with targeting specific environments: `{'PHP 7': 'https://url.to/tool'}`.
-            It can also be used to provide more context: `{'No HTTPS': 'http://url.to/tool'}`.
+        - The `object` option helps with targeting specific environments: `{'PHP 7': 'https://url.to/project'}`.
+            It can also be used to provide more context: `{'No HTTPS': 'http://url.to/project'}`.
 - further-instructions: *optional*
     - [Further instructions](#-further-instructions) can be provided.
 
@@ -296,7 +296,7 @@ most of the installation options [`composer`](#composer), [`gem`](#gem), [`git`]
 Simply add the option to the object to provide further instructions.
  
 - further-instructions: *optional*
-    - A list with steps to run directly after installation, to prepare the tool to be used.
+    - A list with steps to run directly after installation, to prepare before first use.
 - description: *optional*
     - The instruction of the step, like "Add the file to your directory".
     - The command for this step, like "mv file directory/file".
@@ -315,13 +315,13 @@ It enlists many well-known as well as lesser known PHP Quality Assurance project
 The description is the part below the Jekyll Front Matter.
 It consists of two parts, separated by the Jekyll excerpt_separator `{{ site.excerpt_separator }}`.
 
-The first part of the description should try to describe the tool in one short sentence.
+The first part of the description should try to describe the project in one short sentence.
 This will be the sentence that will be visible on the overview page.
-Try to use the name of the tool somewhere in the beginning,
+Try to use the name of the project somewhere in the beginning,
 and do it by using this code {% raw %}`[{{ page.title }}]({{ page.url | absolute_url }})`{% endraw %}.
 
 Then add the Jekyll excerpt_separator `{{ site.excerpt_separator }}`,
-and go wild with the longer description that will be completely visible on the tool page.
+and go wild with the longer description that will be completely visible on the detail page.
  
 ## Send a Pull Request
 

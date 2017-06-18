@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Kahlan'
 companies:          ['CrysaLEAD']
 tags:               ['testing', 'bdd']

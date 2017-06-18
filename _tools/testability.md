@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP_Testability'
 authors:            ['Edson Medina']
 tags:               ['bugs finder', 'testability', 'cli'] 

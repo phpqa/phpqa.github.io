@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHPLOC'
 authors:            ['Sebastian Bergmann'] 
 tags:               ['metrics', 'cli'] 

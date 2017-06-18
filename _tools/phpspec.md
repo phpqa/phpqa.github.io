@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHPSpec'
 authors:            ['Konstantin Kudryashov', 'Marcello Duarte', 'Ciaran McNulty'] 
 tags:               ['testing', 'specification']

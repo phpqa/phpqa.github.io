@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Pho'
 authors:            ['Daniel St. Jules'] 
 tags:               ['testing', 'bdd']

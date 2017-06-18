@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'Smart Analyzer for PHP'
 authors:            ['Dmitry Patsura'] 
 tags:               ['alpha', 'bugs finder', 'static analysis', 'cli'] 

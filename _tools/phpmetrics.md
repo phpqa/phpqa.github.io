@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PhpMetrics'
 authors:            ['Jean-François Lépine']
 tags:               ['metrics', 'cli'] 

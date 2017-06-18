@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP Code Beautifier and Fixer'
 authors:            ['Greg Sherwood'] 
 tags:               ['coding standards', 'code fixer', 'code beautifier', 'cli'] 

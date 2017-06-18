@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHPCheckstyle'
 authors:            ['Hari Kodungallur', 'Nimish Pachapurkar', 'Benoit Pesty', 'James Brooks', 'Marcin Kurczewski'] 
 tags:               ['coding standards', 'cli'] 

@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHP_Depend'
 authors:            ['Manuel Pichler']
 tags:               ['metrics', 'cli']

@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'PHPCompatibility'
 authors:            ['Wim Godden'] 
 tags:               ['coding standards', 'php compatibility', 'cli']

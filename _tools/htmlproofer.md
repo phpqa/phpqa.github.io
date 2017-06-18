@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'HTMLProofer'
 authors:            ['Garen Torikian'] 
 tags:               ['html', 'lint']

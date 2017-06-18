@@ -1,5 +1,5 @@
 ---
-layout:             'tool'
+layout:             'project'
 title:              'phpDox'
 authors:            ['Arne Blankerts']    
 tags:               ['documentation', 'cli'] 
