@@ -1,6 +1,6 @@
 <div class="project card mb-4">
     <div class="card-header card-metrics">
-        {% if project.github != nil %}
+        {% if project.packagist != nil and project.github != nil %}
         {% capture github-url %}{% if project.github.url != nil %}{{ project.github.url }}{% else %}{{ site.metadata.github.url-prefix }}{{ project.github.name }}{% endif %}{% endcapture %}
         {% capture github-name %}{% if project.github.name != nil %}{{ project.github.name }}{% else %}{{ project.github.url | replace: site.metadata.github.url-prefix, '' }}{% endif %}{% endcapture %}
         {% capture packagist-name %}{% if project.packagist.name != nil %}{{ project.packagist.name }}{% else %}{{ project.packagist.url | replace: site.metadata.packagist.url-prefix, '' }}{% endif %}{% endcapture %}
@@ -68,8 +68,8 @@
         {% for tag in tags %}
         {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' %}
         <span class="badge badge-default badge-outline" data-tag-filter="{{ tag }}">
-                    {{ tag }}
-                </span>
+            {{ tag }}
+        </span>
         {% endunless %}
         {% endfor %}
         {% if project.dockerhub != '' and project.dockerhub != nil %}
