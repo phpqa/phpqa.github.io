@@ -2,6 +2,7 @@
 layout:             'project'
 title:              'SensioLabs Security Checker'
 authors:            ['Fabien Potencier'] 
+companies:          ['SensioLabs'] 
 tags:               ['security', 'composer', 'vulnerabilities checker', 'cli', 'online service'] 
 
 website:            {url: 'https://security.sensiolabs.org/'}
@@ -22,8 +23,23 @@ application uses dependencies with known security vulnerabilities.
  
 <!--more--> 
 
-It uses the [SensioLabs Security Check Web service][1] and the [Security Advisories Database][2].
+This tool is backed by the [PHP Security Advisories Database]({{ site.projects | where: 'title', 'PHP Security Advisories Database' | map: 'url' | first | absolute_url }}).
 
-[1]: http://security.sensiolabs.org/
-[2]: https://github.com/FriendsOfPHP/security-advisories
-[3]: http://get.sensiolabs.org/security-checker.phar
+## Usage
+
+This tool can be used in several ways:
+
+* Upload your `composer.lock` file on [{{ page.website.url }}]({{ page.website.url }});
+
+* Use it as a CLI tool:
+
+    ```php security-checker security:check /path/to/composer.lock```
+
+* Use the web service directly:
+
+    ```curl -H "Accept: text/plain" https://security.sensiolabs.org/check_lock -F lock=@/path/to/composer.lock```
+
+   It will return all vulnerabilities detected in your dependencies in plain
+   text. You can also retrieve the information in the JSON format:
+
+    ```curl -H "Accept: application/json" https://security.sensiolabs.org/check_lock -F lock=@/path/to/composer.lock```
