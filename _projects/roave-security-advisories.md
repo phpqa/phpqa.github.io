@@ -12,7 +12,7 @@ github:             {name: 'Roave/SecurityAdvisories'}
 packagist:          {name: 'roave/security-advisories'} 
 
 dependencies:       []
-composer:           {} # will trigger a default setup, without run   
+composer:           {name: 'roave/security-advisories', version: 'dev-master'}   
 
 ---
 
