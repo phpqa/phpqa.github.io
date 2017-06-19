@@ -8,6 +8,7 @@ website:            {url: 'https://security.sensiolabs.org/database'}
 license:            {url: 'https://github.com/FriendsOfPHP/security-advisories/blob/master/LICENSE', label: 'The Unlicense'}
 
 github:             {name: 'FriendsOfPHP/security-advisories'}
+packagist:          {name: 'sensiolabs/security-advisories'}
 
 ---
 

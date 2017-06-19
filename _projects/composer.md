@@ -8,8 +8,10 @@ website:            {url: 'https://getcomposer.org/'}
 license:            {url: 'https://github.com/composer/composer/blob/master/LICENSE', label: 'MIT License'} 
 docs:               {url: 'https://getcomposer.org/doc/'} 
 
-dependencies:       []
 github:             {name: 'composer/composer'} 
+packagist:          {name: 'composer/composer'}
+ 
+dependencies:       []
 phar:               {url: 'https://getcomposer.org/composer.phar'}
 
 ---
