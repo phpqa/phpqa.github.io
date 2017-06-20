@@ -23,7 +23,8 @@ application uses dependencies with known security vulnerabilities.
  
 <!--more--> 
 
-This tool is backed by the [PHP Security Advisories Database]({{ site.projects | where: 'title', 'PHP Security Advisories Database' | map: 'url' | first | absolute_url }}).
+This tool is backed by the [SensioLabs Security Check Web service]({{ page.website.url }})
+and the [PHP Security Advisories Database]({{ site.projects | where: 'title', 'PHP Security Advisories Database' | map: 'url' | first | absolute_url }}).
 
 ## Usage
 
