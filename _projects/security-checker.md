@@ -28,7 +28,7 @@ and the [PHP Security Advisories Database]({{ site.projects | where: 'title', 'P
 
 ## Usage
 
-This tool can be used in several ways:
+Checking your composer file can be done in several ways:
 
 * Upload your `composer.lock` file on [{{ page.website.url }}]({{ page.website.url }});
 
@@ -36,7 +36,7 @@ This tool can be used in several ways:
 
     ```php security-checker security:check /path/to/composer.lock```
 
-* Use the web service directly:
+* Use the web service with curl:
 
     ```curl -H "Accept: text/plain" https://security.sensiolabs.org/check_lock -F lock=@/path/to/composer.lock```
 
