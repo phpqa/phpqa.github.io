@@ -45,7 +45,7 @@
             {% if project[key] != '' and project[key] != nil and (key != 'website' or project.website != project.source) %}
             {% capture url %}{% if project[key].url != nil %}{{ project[key].url }}{% else %}{{ property[1].url-prefix }}{{ project[key].name }}{% endif %}{% endcapture %}
             <a href="{{ url }}" target="_blank" title="{{ property[1].label }}"
-               data-toggle="tooltip" data-placement="left"
+               data-toggle="tooltip" data-placement="left" data-animation="false"
                class="btn btn-secondary {{ property[1].button-class }} btn-sm mb-1">
                 <i class="fa {{ property[1].icon }} fa-fw"></i>
             </a>
