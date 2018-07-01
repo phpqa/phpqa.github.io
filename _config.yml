@@ -14,7 +14,7 @@ kramdown:
   hard_wrap: false                                    # set by GitHub Pages, can be overwritten
 #  math_engine: mathjax                               # set by GitHub Pages, cannot be changed
   smart_quotes: ["apos", "apos", "quot", "quot"]      # turn off smart quotes
-gems:
+plugins:
   - jekyll-coffeescript                               # set by GitHub Pages, can be overwritten
   - jekyll-paginate                                   # set by GitHub Pages, can be overwritten
   - jekyll-seo-tag                                    # add seo tag
