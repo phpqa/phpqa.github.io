@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PHP_Testability'
-authors:            ['Edson Medina']
 tags:               ['bugs finder', 'testability', 'cli'] 
 
-website:            {url: 'https://github.com/edsonmedina/php_testability'}
-license:            {url: 'https://github.com/edsonmedina/php_testability/blob/master/LICENSE', label: 'GNU General Public License v2.0'}
+authors:            [{name: 'Edson Medina'}]
 
-github:             {name: 'edsonmedina/php_testability'}
-packagist:          {name: 'edsonmedina/php_testability'}          
+website:            [{url: 'https://github.com/edsonmedina/php_testability'}]
+license:            [{url: 'https://github.com/edsonmedina/php_testability/blob/master/LICENSE', label: 'GNU General Public License v2.0'}]
+
+github:             [{name: 'edsonmedina/php_testability'}]
+packagist:          [{name: 'edsonmedina/php_testability'}]          
 dockerhub:          [{name: 'phpqa/testability'}]     
 
 dependencies:       []

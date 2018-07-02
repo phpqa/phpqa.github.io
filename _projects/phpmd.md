@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PHP Mess Detector'
-authors:            ['Manuel Pichler']   
 tags:               ['bugs finder', 'mess detector', 'metrics', 'cli'] 
 
-website:            {url: 'https://phpmd.org/'}
-license:            {url: 'https://github.com/phpmd/phpmd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
+authors:            [{name: 'Manuel Pichler'}]   
 
-github:             {name: 'phpmd/phpmd'}
-packagist:          {name: 'phpmd/phpmd'}               
+website:            [{url: 'https://phpmd.org/'}]
+license:            [{url: 'https://github.com/phpmd/phpmd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}]
+
+github:             [{name: 'phpmd/phpmd'}]
+packagist:          [{name: 'phpmd/phpmd'}]               
 dockerhub:          [{name: 'phpqa/phpmd'}]     
 
 dependencies:       []

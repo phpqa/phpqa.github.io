@@ -1,16 +1,17 @@
 ---
 layout:             'project'
 title:              'SensioLabs Security Checker'
-authors:            ['Fabien Potencier'] 
-companies:          ['SensioLabs'] 
 tags:               ['security', 'composer', 'vulnerabilities checker', 'cli', 'online service'] 
 
-website:            {url: 'https://security.sensiolabs.org/'}
-license:            {url: 'https://github.com/sensiolabs/security-checker/blob/master/LICENSE', label: 'MIT License'}
-demo:               {url: 'https://security.sensiolabs.org/check'}
+authors:            [{name: 'Fabien Potencier'}] 
+companies:          [{name: 'SensioLabs'}] 
 
-github:             {name: 'sensiolabs/security-checker'}
-packagist:          {name: 'sensiolabs/security-checker'}          
+website:            [{url: 'https://security.sensiolabs.org/'}]
+license:            [{url: 'https://github.com/sensiolabs/security-checker/blob/master/LICENSE', label: 'MIT License'}]
+demo:               [{url: 'https://security.sensiolabs.org/check'}]
+
+github:             [{name: 'sensiolabs/security-checker'}]
+packagist:          [{name: 'sensiolabs/security-checker'}]          
 dockerhub:          [{name: 'phpqa/security-checker'}] 
 
 dependencies:       []

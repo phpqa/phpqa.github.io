@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PHP Coding Standards Fixer 2'
-authors:            ['Fabien Potencier', 'Dariusz Rumiński']
 tags:               ['code fixer', 'coding standards', 'psr', 'cli'] 
 
-website:            {url: 'http://cs.sensiolabs.org/'}
-license:            {url: 'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/LICENSE', label: 'MIT License'}
+authors:            [{name: 'Fabien Potencier'}, {name: 'Dariusz Rumiński'}]
 
-github:             {name: 'FriendsOfPHP/PHP-CS-Fixer'}
-packagist:          {name: 'friendsofphp/php-cs-fixer'}               
+website:            [{url: 'http://cs.sensiolabs.org/'}]
+license:            [{url: 'https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'FriendsOfPHP/PHP-CS-Fixer'}]
+packagist:          [{name: 'friendsofphp/php-cs-fixer'}]               
 dockerhub:          [{name: 'phpqa/php-cs-fixer'}]     
 
 dependencies:       []

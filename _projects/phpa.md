@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PHP Assumptions'
-authors:            ['Rick Kuipers']   
 tags:               ['static analysis', 'bugs finder', 'validation', 'assumptions', 'cli']
 
-website:            {url: 'https://github.com/rskuipers/php-assumptions'}
-license:            {url: 'https://github.com/rskuipers/php-assumptions/blob/master/LICENSE', label: 'MIT License'}
+authors:            [{name: 'Rick Kuipers'}]   
 
-github:             {name: 'rskuipers/php-assumptions'}
-packagist:          {name: 'rskuipers/php-assumptions'}               
+website:            [{url: 'https://github.com/rskuipers/php-assumptions'}]
+license:            [{url: 'https://github.com/rskuipers/php-assumptions/blob/master/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'rskuipers/php-assumptions'}]
+packagist:          [{name: 'rskuipers/php-assumptions'}]               
 dockerhub:          [{name: 'phpqa/phpa'}]     
 
 dependencies:       []

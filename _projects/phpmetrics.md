@@ -1,15 +1,16 @@
 ---
 layout:             'project'
 title:              'PhpMetrics'
-authors:            ['Jean-François Lépine']
 tags:               ['metrics', 'cli'] 
 
-website:            {url: 'http://www.phpmetrics.org/'}
-license:            {url: 'https://github.com/phpmetrics/PhpMetrics/blob/master/LICENSE', label: 'MIT License'}
-demo:               {url: 'http://www.phpmetrics.org/report/latest/index.html'}
+authors:            [{name: 'Jean-François Lépine'}]
 
-github:             {name: 'phpmetrics/PhpMetrics'}
-packagist:          {name: 'phpmetrics/phpmetrics'}               
+website:            [{url: 'http://www.phpmetrics.org/'}]
+license:            [{url: 'https://github.com/phpmetrics/PhpMetrics/blob/master/LICENSE', label: 'MIT License'}]
+demo:               [{url: 'http://www.phpmetrics.org/report/latest/index.html'}]
+
+github:             [{name: 'phpmetrics/PhpMetrics'}]
+packagist:          [{name: 'phpmetrics/phpmetrics'}]               
 dockerhub:          [{name: 'phpqa/phpmetrics'}]     
 
 dependencies:       []

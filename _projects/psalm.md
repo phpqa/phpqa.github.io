@@ -1,16 +1,17 @@
 ---
 layout:             'project'
 title:              'Psalm'
-authors:            ['Matthew Brown']
-companies:          ['Vimeo']   
 tags:               ['bugs finder', 'static analysis', 'cli'] 
 
-website:            {url: 'https://getpsalm.org/'}
-license:            {url: 'https://github.com/vimeo/psalm/blob/master/LICENSE', label: 'MIT License'}
-wiki:               {url: 'https://github.com/vimeo/psalm/wiki'}
+authors:            [{name: 'Matthew Brown'}]
+companies:          [{name: 'Vimeo'}]   
 
-github:             {name: 'vimeo/psalm'}
-packagist:          {name: 'vimeo/psalm'}          
+website:            [{url: 'https://getpsalm.org/'}]
+license:            [{url: 'https://github.com/vimeo/psalm/blob/master/LICENSE', label: 'MIT License'}]
+wiki:               [{url: 'https://github.com/vimeo/psalm/wiki'}]
+
+github:             [{name: 'vimeo/psalm'}]
+packagist:          [{name: 'vimeo/psalm'}]          
 dockerhub:          [{name: 'phpqa/psalm'}]     
 
 dependencies:       []

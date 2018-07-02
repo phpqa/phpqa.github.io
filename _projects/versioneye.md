@@ -1,12 +1,13 @@
 ---
 layout:             'project'
 title:              'VersionEye'
-authors:            ['Robert Reiz']
 tags:               ['free for open source', 'online service', 'security', 'security vulnerabilities', 'license violations', 'dependencies']
 
-website:            {url: 'https://www.versioneye.com/'}
-terms:              {url: 'https://www.versioneye.com/terms', label: 'Terms'}
-docs:               {url: 'https://www.versioneye.com/api/'}
+authors:            [{name: 'Robert Reiz'}]
+
+website:            [{url: 'https://www.versioneye.com/'}]
+terms:              [{url: 'https://www.versioneye.com/terms', label: 'Terms'}]
+docs:               [{url: 'https://www.versioneye.com/api/'}]
 
 ---
 

@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'Codeception'
-authors:            ['Michael Bodnarchuk'] 
 tags:               ['testing', 'cli']
 
-website:            {url: 'http://codeception.com/'}
-license:            {url: 'https://github.com/Codeception/Codeception/blob/2.3/LICENSE', label: 'MIT License'}
+authors:            [{name: 'Michael Bodnarchuk'}] 
 
-github:             {name: 'codeception/codeception'}
-packagist:          {name: 'codeception/codeception'}               
+website:            [{url: 'http://codeception.com/'}]
+license:            [{url: 'https://github.com/Codeception/Codeception/blob/2.3/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'codeception/codeception'}]
+packagist:          [{name: 'codeception/codeception'}]               
 dockerhub:          [{name: 'phpqa/codeception'}]
 
 dependencies:       []

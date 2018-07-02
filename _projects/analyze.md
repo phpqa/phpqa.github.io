@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'Qafoo Quality Analyzer'
-authors:            ['Kore Nordmann']
 tags:               ['metrics', 'cli']
 
-website:            {url: 'https://github.com/Qafoo/QualityAnalyzer'}
-license:            {url: 'https://github.com/Qafoo/QualityAnalyzer/blob/master/LICENSE', label: 'GNU Affero General Public License v3.0'}
+authors:            [{name: 'Kore Nordmann'}]
 
-github:             {name: 'Qafoo/QualityAnalyzer'}
-packagist:          {name: 'qafoo/quality-analyzer'}               
+website:            [{url: 'https://github.com/Qafoo/QualityAnalyzer'}]
+license:            [{url: 'https://github.com/Qafoo/QualityAnalyzer/blob/master/LICENSE', label: 'GNU Affero General Public License v3.0'}]
+
+github:             [{name: 'Qafoo/QualityAnalyzer'}]
+packagist:          [{name: 'qafoo/quality-analyzer'}]               
 dockerhub:          [{name: 'phpqa/analyze'}] 
 
 dependencies:       ['ext-zip', 'git']

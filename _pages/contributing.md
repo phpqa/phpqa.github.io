@@ -50,18 +50,6 @@ The official name of the project. This is a **required** field, and will mostly 
 
 This field should also be used to start the description of the project (see [`description`](#description)).
 
-##### Authors
-
-authors: `string[]` *authors* = nil
-
-The authors of the project. This is an **optional** field, but is strongly **encouraged** for any project that has a publicly available repository.
-
-##### Companies
-
-companies: `string[]` *companies* = nil
-
-The companies behind the project. This is an **optional** field, but is strongly **encouraged** for any project that has a company backing it.
-    
 ##### Tags
 
 tags: `string[]` *tags*
@@ -69,14 +57,39 @@ tags: `string[]` *tags*
 A list of tags describing this project. This is a **required** field, as the tags are being used on the overview page.
 They provide easy filtering in an ever-growing list.
 Try to be as specific as possible, while also keeping the amount of new tags down.
-    
+
+##### Authors
+
+authors: `array` [`object` {name: `string` *name*, url: `string` *url* = nil}]
+
+The author(s) of the project. This is an **optional** field, but is strongly **encouraged** for any project that has a publicly available repository.
+It should be an array of objects with at least a `name` property.
+
+- name: *required*
+    - The `name` of the author.
+- url: *optional*
+    - The `url`<sup>[1](#notes)</sup> where the author can be reached.
+
+##### Companies
+
+companies: `array` [`object` {name: `string` *name*, url: `string` *url* = nil}]
+
+The compan(y/ies) behind the project. This is an **optional** field, but is strongly **encouraged** for any project that has a company backing it.
+It should be an array of objects with at least a `name` property.
+
+- name: *required*
+    - The `name` of the company.
+- url: *optional*
+    - The `url`<sup>[1](#notes)</sup> where the company can be reached.
+        
 #### Online resources
 
 ##### Website
 
-website: `object` {url: `string` *url*, label: `string` *label* = nil}
+website: `array` [`object` {url: `string` *url*, label: `string` *label* = nil}]
 
-The website for the project. This is a **required** field, and should be an object with at least a `url` property.
+The website(s) for the project. This is a **required** field.
+It should be an array of objects with at least a `url` property.
 
 - url: *required*
     - The `url`<sup>[1](#notes)</sup> for this website.
@@ -86,10 +99,10 @@ The website for the project. This is a **required** field, and should be an obje
 
 ##### License
 
-license: `object` {url: `string` *url*, label: `string` *label*}
+license: `array` [`object` {url: `string` *url*, label: `string` *label*}]
 
-The license for the project. This is a **required** field for licensed projects.
-It should be an object with at least a `url` and a `label` property.
+The license(s) for the project. This is a **required** field for licensed projects.
+It should be an array of objects with at least a `url` and a `label` property.
 
 - url: *required*
     - The `url`<sup>[1](#notes)</sup> where this license can be read in full.
@@ -99,10 +112,10 @@ It should be an object with at least a `url` and a `label` property.
 
 ##### Terms
 
-terms: `object` {url: `string` *url*, label: `string` *label*}
+terms: `array` [`object` {url: `string` *url*, label: `string` *label*}]
 
 The terms for the project. This is a **required** field for online services.
-It should be an object with at least a `url` and a `label` property.
+It should be an array of objects with at least a `url` and a `label` property.
         
 - url: *required*
     - The `url`<sup>[1](#notes)</sup> where the terms can be read in full.
@@ -112,15 +125,15 @@ It should be an object with at least a `url` and a `label` property.
 
 ##### Wiki, Docs and/or Demo
 
-wiki: `object` {url: `string` *url*, label: `string` *label* = nil}
+wiki: `array` [`object` {url: `string` *url*, label: `string` *label* = nil}]
 
-docs: `object` {url: `string` *url*, label: `string` *label* = nil}
+docs: `array` [`object` {url: `string` *url*, label: `string` *label* = nil}]
 
-demo: `object` {url: `string` *url*, label: `string` *label* = nil}
+demo: `array` [`object` {url: `string` *url*, label: `string` *label* = nil}]
 
 Extra fields for the project. These are all **optional** fields,
 but it is highly **encouraged** to provide them if possible.
-They should all be an object with at least a `url`.
+They should all be an array of objects with at least a `url`.
  
 - url: *required*
     - The `url`<sup>[1](#notes)</sup> where this wiki / documentation / demo can be found.
@@ -134,11 +147,11 @@ They should all be an object with at least a `url`.
 
 {% assign github-repository-icon = '<svg aria-hidden="true" class="octicon octicon-repo github-repository-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>' %}
 
-github: `object` {name: `string` *name*, url: `string` *url* = nil}
+github: `array` [`object` {name: `string` *name*, url: `string` *url* = nil}]
 
-The [GitHub](https://github.com/) repository behind this project.
+The [GitHub](https://github.com/) repositor(y/ies) behind this project.
 This field is **required** for projects with a [GitHub](https://github.com/) repository,
-and should be an object with at least a `name`.
+and should be an array of objects with at least a `name`.
 
 - name: *required*
     - The `name` of the GitHub project.
@@ -151,11 +164,11 @@ and should be an object with at least a `name`.
 
 ##### Packagist
 
-packagist: `object` {name: `string` *name*, url: `string` *url* = nil}
+packagist: `array` [`object` {name: `string` *name*, url: `string` *url* = nil}]
 
-The [Packagist](https://packagist.org/) package behind this project.
+The [Packagist](https://packagist.org/) package(s) behind this project.
 This field is **required** for projects available as a [Packagist](https://packagist.org/) package,
-and should be an object with at least a `name`.
+and should be an array of objects with at least a `name`.
 
 - name: *required*
     - The `name` of the Packagist project.
@@ -170,9 +183,9 @@ and should be an object with at least a `name`.
 
 dockerhub: `array` [`object` {name: `string` *name*, url: `string` *url* = nil}]
 
-A list of Docker images available on [DockerHub](https://hub.docker.com/) for this project.
+The Docker image(s) available on [DockerHub](https://hub.docker.com/) for this project.
 This field is **required** for projects that have a [DockerHub](https://hub.docker.com/) image available.
-Each entry should be an object with at least a `name`.
+It should be an array of objects with at least a `name`.
         
 - name: *required*
     - The `name` of the DockerHub image.

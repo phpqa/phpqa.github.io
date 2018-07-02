@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PHPStan - PHP Static Analysis Tool'
-authors:            ['Ondřej Mirtes']  
 tags:               ['bugs finder', 'static analysis', 'cli'] 
 
-website:            {url: 'https://medium.com/@ondrejmirtes/phpstan-2939cd0ad0e3'}
-license:            {url: 'https://github.com/phpstan/phpstan/blob/master/LICENSE', label: 'MIT License'}
+authors:            [{name: 'Ondřej Mirtes'}]  
 
-github:             {name: 'phpstan/phpstan'}
-packagist:          {name: 'phpstan/phpstan'}               
+website:            [{url: 'https://medium.com/@ondrejmirtes/phpstan-2939cd0ad0e3'}]
+license:            [{url: 'https://github.com/phpstan/phpstan/blob/master/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'phpstan/phpstan'}]
+packagist:          [{name: 'phpstan/phpstan'}]               
 dockerhub:          [{name: 'phpstan/phpstan'}, {name: 'phpqa/phpstan'}]     
 
 dependencies:       []

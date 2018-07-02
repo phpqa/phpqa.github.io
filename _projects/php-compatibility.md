@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PHPCompatibility'
-authors:            ['Wim Godden'] 
 tags:               ['coding standards', 'php compatibility', 'cli']
 
-website:            {url: 'https://github.com/wimg/PHPCompatibility'}
-license:            {url: 'https://github.com/wimg/PHPCompatibility/blob/master/LICENSE', label: 'GNU Lesser General Public License v3.0 (LGPL)'}
+authors:            [{name: 'Wim Godden'}] 
 
-github:             {name: 'wimg/PHPCompatibility'}
-packagist:          {name: 'wimg/php-compatibility'}               
+website:            [{url: 'https://github.com/wimg/PHPCompatibility'}]
+license:            [{url: 'https://github.com/wimg/PHPCompatibility/blob/master/LICENSE', label: 'GNU Lesser General Public License v3.0 (LGPL)'}]
+
+github:             [{name: 'wimg/PHPCompatibility'}]
+packagist:          [{name: 'wimg/php-compatibility'}]               
 dockerhub:          [{name: 'phpqa/php-compatibility'}]     
 
 dependencies:       []

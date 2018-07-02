@@ -1,15 +1,16 @@
 ---
 layout:             'project'
 title:              'Kahlan'
-companies:          ['CrysaLEAD']
 tags:               ['testing', 'bdd']
 
-website:            {url: 'https://kahlan.github.io/docs/'} 
-license:            {url: 'https://github.com/kahlan/kahlan/blob/master/LICENSE.txt', label: 'MIT'} 
-docs:               {url: 'https://kahlan.github.io/docs/'} 
+companies:          [{name: 'CrysaLEAD'}]
 
-github:             {name: 'kahlan/kahlan'} 
-packagist:          {name: 'kahlan/kahlan'}
+website:            [{url: 'https://kahlan.github.io/docs/'}] 
+license:            [{url: 'https://github.com/kahlan/kahlan/blob/master/LICENSE.txt', label: 'MIT'}] 
+docs:               [{url: 'https://kahlan.github.io/docs/'}] 
+
+github:             [{name: 'kahlan/kahlan'}] 
+packagist:          [{name: 'kahlan/kahlan'}]
 dockerhub:          [{name: 'kahlan/kahlan'}]
 
 dependencies:       []
@@ -18,7 +19,7 @@ git:                {install-composer-dependencies: true, command: 'bin/kahlan'}
 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a full-featured Unit & BDD test framework a la RSpec/JSpec 
+[{{ page.title }}]({{ page.url | absolute_url }}) is a full-featured Unit & BDD test framework a la RSpec/JSpec 
 which uses a `describe-it` syntax and moves testing in PHP one step forward.
 
 <!--more--> 

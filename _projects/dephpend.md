@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'dePHPend'
-authors:            ['Michael Haeuslmann'] 
 tags:               ['metrics', 'cli']
 
-website:            {url: 'https://dephpend.com/'}
-license:            {url: 'https://github.com/mihaeu/dephpend/blob/develop/LICENSE', label: 'MIT License'}
+authors:            [{name: 'Michael Haeuslmann'}] 
 
-github:             {name: 'mihaeu/dephpend'}
-packagist:          {name: 'dephpend/dephpend'}               
+website:            [{url: 'https://dephpend.com/'}]
+license:            [{url: 'https://github.com/mihaeu/dephpend/blob/develop/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'mihaeu/dephpend'}]
+packagist:          [{name: 'dephpend/dephpend'}]               
 dockerhub:          [{name: 'phpqa/dephpend'}]     
 
 dependencies:       []

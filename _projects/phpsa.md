@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'Smart Analyzer for PHP'
-authors:            ['Dmitry Patsura'] 
 tags:               ['alpha', 'bugs finder', 'static analysis', 'cli'] 
 
-website:            {url: 'https://phpsa.dmtry.me/'}
-license:            {url: 'https://github.com/ovr/phpsa/blob/master/LICENSE', label: 'MIT License'}
+authors:            [{name: 'Dmitry Patsura'}] 
 
-github:             {name: 'ovr/phpsa'}
-packagist:          {name: 'ovr/phpsa'}               
+website:            [{url: 'https://phpsa.dmtry.me/'}]
+license:            [{url: 'https://github.com/ovr/phpsa/blob/master/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'ovr/phpsa'}]
+packagist:          [{name: 'ovr/phpsa'}]               
 dockerhub:          [{name: 'phpqa/phpsa'}]     
 
 dependencies:       []

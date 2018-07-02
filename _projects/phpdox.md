@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'phpDox'
-authors:            ['Arne Blankerts']    
 tags:               ['documentation', 'cli'] 
 
-website:            {url: 'http://phpdox.de/'}
-license:            {url: 'https://github.com/theseer/phpdox/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
+authors:            [{name: 'Arne Blankerts'}]    
 
-github:             {name: 'theseer/phpdox'}
-packagist:          {name: 'theseer/phpdox'}               
+website:            [{url: 'http://phpdox.de/'}]
+license:            [{url: 'https://github.com/theseer/phpdox/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}]
+
+github:             [{name: 'theseer/phpdox'}]
+packagist:          [{name: 'theseer/phpdox'}]               
 dockerhub:          [{name: 'phpqa/phpdox'}]     
 
 dependencies:       ['ext-xsl']  

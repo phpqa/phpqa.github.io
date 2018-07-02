@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'HTMLProofer'
-authors:            ['Garen Torikian'] 
 tags:               ['html', 'lint']
 
-website:            {url: 'https://github.com/gjtorikian/html-proofer'} 
-license:            {url: 'https://github.com/gjtorikian/html-proofer/blob/master/LICENSE.txt', label: 'MIT License'} 
-wiki:               {url: 'https://github.com/gjtorikian/html-proofer/wiki'} 
+authors:            [{name: 'Garen Torikian'}] 
 
-github:             {name: 'gjtorikian/html-proofer'} 
+website:            [{url: 'https://github.com/gjtorikian/html-proofer'}] 
+license:            [{url: 'https://github.com/gjtorikian/html-proofer/blob/master/LICENSE.txt', label: 'MIT License'}] 
+wiki:               [{url: 'https://github.com/gjtorikian/html-proofer/wiki'}] 
+
+github:             [{name: 'gjtorikian/html-proofer'}] 
 dockerhub:          [{name: 'phpqa/htmlproofer'}]
 
 dependencies:       ['libcurl']

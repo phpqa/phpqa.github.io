@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'Parse - A PHP Security Scanner'
-authors:            ['Chris Cornutt']    
 tags:               ['alpha', 'bugs finder', 'cli'] 
 
-website:            {url: 'https://github.com/psecio/parse'}
-license:            {url: 'https://github.com/psecio/parse/blob/master/README.md', label: 'MIT license'}
+authors:            [{name: 'Chris Cornutt'}]    
 
-github:             {name: 'psecio/parse'}
-packagist:          {name: 'psecio/parse'}          
+website:            [{url: 'https://github.com/psecio/parse'}]
+license:            [{url: 'https://github.com/psecio/parse/blob/master/README.md', label: 'MIT license'}]
+
+github:             [{name: 'psecio/parse'}]
+packagist:          [{name: 'psecio/parse'}]          
 dockerhub:          [{name: 'phpqa/psecio-parse'}]     
 
 dependencies:       []

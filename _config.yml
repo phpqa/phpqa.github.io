@@ -99,15 +99,16 @@ links:
   - { label: Static Analysis Tools,     icon: fa-list-ol,           url: 'https://github.com/exakat/php-static-analysis-tools', description: 'A curated list of static analysis tools for PHP.'                                       }
 
 metadata:
-  authors:      { label: Author(s),           icon: fa-user,            multiple: true                                                }
-  companies:    { label: Company,             icon: fa-building-o,      multiple: true                                                }
-  website:      { label: Website,             icon: fa-globe,                             button: true,   button-class: btn-website   }
-  license:      { label: License,             icon: fa-id-card                                                                        }
-  terms:        { label: Terms (Of Service),  icon: fa-thumbs-o-up,                       button: true,   button-class: btn-terms     }
-  wiki:         { label: Wiki,                icon: fa-list-alt,                          button: true,   button-class: btn-wiki      }
-  docs:         { label: Documentation,       icon: fa-info,                              button: true,   button-class: btn-docs      }
-  demo:         { label: Demo,                icon: fa-desktop,                           button: true,   button-class: btn-demo      }
-  github:       { label: GitHub,              icon: fa-github,                            button: true,   button-class: btn-github,     url-prefix: 'https://github.com/'             }
-  packagist:    { label: Packagist,           icon: fa-compass,                           button: true,   button-class: btn-packagist,  url-prefix: 'https://packagist.org/packages/' }
-  dockerhub:    { label: DockerHub,           icon: fa-ship,            multiple: true,   button: true,   button-class: btn-dockerhub,  url-prefix: 'https://hub.docker.com/r/'       }
-  dependencies: { label: Dependencies,        icon: fa-check-square-o,  multiple: true                                                }
+  authors:      { label: Author(s),           icon: fa-user,                                                                                                          }
+  companies:    { label: Company,             icon: fa-building-o,                                                                                                    }
+  website:      { label: Website,             icon: fa-globe,             button: true,   button-class: btn-website                                                   }
+  license:      { label: License,             icon: fa-id-card,                                                                                                       }
+  terms:        { label: Terms (Of Service),  icon: fa-thumbs-o-up,       button: true,   button-class: btn-terms                                                     }
+  wiki:         { label: Wiki,                icon: fa-list-alt,          button: true,   button-class: btn-wiki                                                      }
+  docs:         { label: Documentation,       icon: fa-info,              button: true,   button-class: btn-docs                                                      }
+  demo:         { label: Demo,                icon: fa-desktop,           button: true,   button-class: btn-demo                                                      }
+  github:       { label: GitHub,              icon: fa-github,            button: true,   button-class: btn-github,     url-prefix: 'https://github.com/'             }
+  packagist:    { label: Packagist,           icon: fa-compass,           button: true,   button-class: btn-packagist,  url-prefix: 'https://packagist.org/packages/' }
+  dockerhub:    { label: DockerHub,           icon: fa-ship,              button: true,   button-class: btn-dockerhub,  url-prefix: 'https://hub.docker.com/r/'       }
+  dependencies: { label: Dependencies,        icon: fa-check-square-o,                                                                                                }
+

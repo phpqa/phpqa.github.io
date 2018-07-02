@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PHP Parallel Lint'
-authors:            ['Jakub Onderka'] 
 tags:               ['bugs finder', 'lint', 'parallel', 'cli']
 
-website:            {url: 'https://github.com/JakubOnderka/PHP-Parallel-Lint'}
-license:            {url: 'https://github.com/JakubOnderka/PHP-Parallel-Lint/blob/master/LICENSE', label: 'BSD 2-clause "Simplified" License'}
+authors:            [{name: 'Jakub Onderka'}] 
 
-github:             {name: 'JakubOnderka/PHP-Parallel-Lint'}
-packagist:          {name: 'jakub-onderka/php-parallel-lint'}               
+website:            [{url: 'https://github.com/JakubOnderka/PHP-Parallel-Lint'}]
+license:            [{url: 'https://github.com/JakubOnderka/PHP-Parallel-Lint/blob/master/LICENSE', label: 'BSD 2-clause "Simplified" License'}]
+
+github:             [{name: 'JakubOnderka/PHP-Parallel-Lint'}]
+packagist:          [{name: 'jakub-onderka/php-parallel-lint'}]               
 dockerhub:          [{name: 'phpqa/parallel-lint'}]     
 
 dependencies:       []

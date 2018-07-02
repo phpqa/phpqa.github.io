@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PHP Copy/Paste Detector'
-authors:            ['Sebastian Bergmann']
 tags:               ['bugs finder', 'dry', 'code duplication', 'cli'] 
 
-website:            {url: 'https://github.com/sebastianbergmann/phpcpd'}
-license:            {url: 'https://github.com/sebastianbergmann/phpcpd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
+authors:            [{name: 'Sebastian Bergmann'}]
 
-github:             {name: 'sebastianbergmann/phpcpd'}
-packagist:          {name: 'sebastian/phpcpd'}               
+website:            [{url: 'https://github.com/sebastianbergmann/phpcpd'}]
+license:            [{url: 'https://github.com/sebastianbergmann/phpcpd/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}]
+
+github:             [{name: 'sebastianbergmann/phpcpd'}]
+packagist:          [{name: 'sebastian/phpcpd'}]               
 dockerhub:          [{name: 'phpqa/phpcpd'}]     
 
 dependencies:       []

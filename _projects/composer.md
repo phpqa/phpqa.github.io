@@ -1,15 +1,16 @@
 ---
 layout:             'project'
 title:              'Composer'
-authors:            ['Nils Adermann', 'Jordi Boggiano'] 
 tags:               ['cli', 'dependency management']
 
-website:            {url: 'https://getcomposer.org/'} 
-license:            {url: 'https://github.com/composer/composer/blob/master/LICENSE', label: 'MIT License'} 
-docs:               {url: 'https://getcomposer.org/doc/'} 
+authors:            [{name: 'Nils Adermann'}, {name: 'Jordi Boggiano'}] 
 
-github:             {name: 'composer/composer'} 
-packagist:          {name: 'composer/composer'}
+website:            [{url: 'https://getcomposer.org/'}] 
+license:            [{url: 'https://github.com/composer/composer/blob/master/LICENSE', label: 'MIT License'}] 
+docs:               [{url: 'https://getcomposer.org/doc/'}] 
+
+github:             [{name: 'composer/composer'}] 
+packagist:          [{name: 'composer/composer'}]
  
 dependencies:       []
 phar:               {url: 'https://getcomposer.org/composer.phar'}

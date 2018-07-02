@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'Phan'
-authors:            ['Rasmus Lerdorf', 'Andrew Morrison'] 
 tags:               ['bugs finder', 'static analysis', 'cli']
 
-website:            {url: 'https://github.com/etsy/phan'}
-license:            {url: 'https://github.com/etsy/phan/blob/master/LICENSE', label: 'MIT License'}
+authors:            [{name: 'Rasmus Lerdorf'}, {name: 'Andrew Morrison'}] 
 
-github:             {name: 'etsy/phan'}
-packagist:          {name: 'etsy/phan'}               
+website:            [{url: 'https://github.com/etsy/phan'}]
+license:            [{url: 'https://github.com/etsy/phan/blob/master/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'etsy/phan'}]
+packagist:          [{name: 'etsy/phan'}]               
 dockerhub:          [{name: 'phpqa/phan'}]     
 
 dependencies:       ['pcntl', 'git', 'ext-ast']

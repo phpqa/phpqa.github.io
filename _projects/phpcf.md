@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PhpCodeFixer'
-authors:            ['Sergei Vanyushin']
 tags:               ['bugs finder', 'deprecated functions', 'php compatibility', 'cli'] 
 
-website:            {url: 'https://github.com/wapmorgan/PhpCodeFixer'}
-license:            {url: 'https://github.com/wapmorgan/PhpCodeFixer/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
+authors:            [{name: 'Sergei Vanyushin'}]
 
-github:             {name: 'wapmorgan/PhpCodeFixer'}
-packagist:          {name: 'wapmorgan/php-code-fixer'}               
+website:            [{url: 'https://github.com/wapmorgan/PhpCodeFixer'}]
+license:            [{url: 'https://github.com/wapmorgan/PhpCodeFixer/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}]
+
+github:             [{name: 'wapmorgan/PhpCodeFixer'}]
+packagist:          [{name: 'wapmorgan/php-code-fixer'}]               
 dockerhub:          [{name: 'phpqa/phpcf'}]     
 
 dependencies:       []

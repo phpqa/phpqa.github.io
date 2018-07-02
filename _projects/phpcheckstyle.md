@@ -1,15 +1,16 @@
 ---
 layout:             'project'
 title:              'PHPCheckstyle'
-authors:            ['Hari Kodungallur', 'Nimish Pachapurkar', 'Benoit Pesty', 'James Brooks', 'Marcin Kurczewski'] 
 tags:               ['coding standards', 'cli'] 
 
-website:            {url: 'https://github.com/PHPCheckstyle/phpcheckstyle'}
-license:            {url: 'https://github.com/PHPCheckstyle/phpcheckstyle/blob/master/LICENSE.txt', label: 'Open Software License version 2.1'}
-wiki:               {url: 'https://github.com/PHPCheckstyle/phpcheckstyle/wiki'}
+authors:            [{name: 'Hari Kodungallur'}, {name: 'Nimish Pachapurkar'}, {name: 'Benoit Pesty'}, {name: 'James Brooks'}, {name: 'Marcin Kurczewski'}] 
 
-github:             {name: 'PHPCheckstyle/phpcheckstyle'}
-packagist:          {name: 'phpcheckstyle/phpcheckstyle'}               
+website:            [{url: 'https://github.com/PHPCheckstyle/phpcheckstyle'}]
+license:            [{url: 'https://github.com/PHPCheckstyle/phpcheckstyle/blob/master/LICENSE.txt', label: 'Open Software License version 2.1'}]
+wiki:               [{url: 'https://github.com/PHPCheckstyle/phpcheckstyle/wiki'}]
+
+github:             [{name: 'PHPCheckstyle/phpcheckstyle'}]
+packagist:          [{name: 'phpcheckstyle/phpcheckstyle'}]               
 dockerhub:          [{name: 'phpqa/phpcheckstyle'}]     
 
 dependencies:       []

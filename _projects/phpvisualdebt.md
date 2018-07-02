@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PHPVisualDebt'
-authors:            ['Michał Brzuchalski'] 
 tags:               ['visuals', 'cli']
 
-website:            {url: 'https://github.com/phpvisualdebt/phpvisualdebt'}
-license:            {url: 'https://github.com/phpvisualdebt/phpvisualdebt/blob/master/LICENSE', label: 'MIT License'}
+authors:            [{name: 'Michał Brzuchalski'}] 
 
-github:             {name: 'phpvisualdebt/phpvisualdebt'}
-packagist:          {name: 'phpvisualdebt/phpvisualdebt'}          
+website:            [{url: 'https://github.com/phpvisualdebt/phpvisualdebt'}]
+license:            [{url: 'https://github.com/phpvisualdebt/phpvisualdebt/blob/master/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'phpvisualdebt/phpvisualdebt'}]
+packagist:          [{name: 'phpvisualdebt/phpvisualdebt'}]          
 dockerhub:          [{name: 'phpqa/phpvisualdebt'}]     
 
 dependencies:       [] 

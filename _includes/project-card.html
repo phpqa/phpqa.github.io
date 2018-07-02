@@ -1,9 +1,9 @@
 <div class="project card mb-4">
     <div class="card-header card-metrics">
-        {% if project.packagist != nil and project.github != nil %}
-        {% capture github-url %}{% if project.github.url != nil %}{{ project.github.url }}{% else %}{{ site.metadata.github.url-prefix }}{{ project.github.name }}{% endif %}{% endcapture %}
-        {% capture github-name %}{% if project.github.name != nil %}{{ project.github.name }}{% else %}{{ project.github.url | replace: site.metadata.github.url-prefix, '' }}{% endif %}{% endcapture %}
-        {% capture packagist-name %}{% if project.packagist.name != nil %}{{ project.packagist.name }}{% else %}{{ project.packagist.url | replace: site.metadata.packagist.url-prefix, '' }}{% endif %}{% endcapture %}
+        {% if project.packagist.first != nil and project.github.first != nil %}
+        {% capture github-url %}{% if project.github.first.url != nil %}{{ project.github.first.url }}{% else %}{{ site.metadata.github.url-prefix }}{{ project.github.first.name }}{% endif %}{% endcapture %}
+        {% capture github-name %}{% if project.github.first.name != nil %}{{ project.github.first.name }}{% else %}{{ project.github.first.url | replace: site.metadata.github.url-prefix, '' }}{% endif %}{% endcapture %}
+        {% capture packagist-name %}{% if project.packagist.first.name != nil %}{{ project.packagist.first.name }}{% else %}{{ project.packagist.first.url | replace: site.metadata.packagist.url-prefix, '' }}{% endif %}{% endcapture %}
         <a href="{{ github-url }}" title="watchers" class="badge badge-pill badge-default badge-outline">
             <i class="fa fa-eye"></i>
             <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="watchers">0</span>
@@ -28,28 +28,34 @@
 
         {{ project.excerpt }}
 
-        {% if project.authors != nil or project.companies !=nil %}
+        {% if project.authors != nil or project.companies != nil %}
         <p class="small">
-            by {{ project.authors | join: ', ' }}{% if project.authors != nil and project.companies !=nil %}, {% endif %}{{ project.companies | join: ', ' }}
+            by {{ project.authors | map: 'name' | join: ', ' }}{% if project.authors != nil and project.companies !=nil %}, {% endif %}{{ project.companies | map: 'name' | join: ', ' }}
         </p>
         {% endif %}
 
-        <a href="{{ project.url | absolute_url }}" class="more-information">
+        <a href="{{ project.url | absolute_url }}" class="more-information pull-right">
             More information &rarr;
         </a>
 
         <div class="card-actions">
-            {% for property in site.metadata %}
-            {% assign key = property[0] %}
-            {% if property[1].button %}
-            {% if project[key] != '' and project[key] != nil and (key != 'website' or project.website != project.source) %}
-            {% capture url %}{% if project[key].url != nil %}{{ project[key].url }}{% else %}{{ property[1].url-prefix }}{{ project[key].name }}{% endif %}{% endcapture %}
-            <a href="{{ url }}" target="_blank" title="{{ property[1].label }}"
+            {% for metadataItem in site.metadata %}
+            {% assign projectKey = metadataItem[0] %}
+            {% assign metadataProperties = metadataItem[1] %}
+            {% if metadataProperties.button %}
+            {% assign valueObjects = project[projectKey] %}
+            {% for valueObject in valueObjects %}
+            {% if valueObject != '' and valueObject != nil and (projectKey != 'website' or project.website != project.source) %}
+            {% capture url %}{% if valueObject.url != nil %}{{ valueObject.url }}{% elsif valueObject.name != nil %}{{ metadataProperties.url-prefix }}{{ valueObject.name }}{% endif %}{% endcapture %}
+            {% if url != '' and url != nil %}
+            <a href="{{ url }}" target="_blank" title="{{ metadataProperties.label }}"
                data-toggle="tooltip" data-placement="left" data-animation="false"
-               class="btn btn-secondary {{ property[1].button-class }} btn-sm mb-1">
-                <i class="fa {{ property[1].icon }} fa-fw"></i>
+               class="btn btn-secondary {{ metadataProperties.button-class }} btn-sm mb-1">
+                <i class="fa {{ metadataProperties.icon }} fa-fw"></i>
             </a>
             {% endif %}
+            {% endif %}
+            {% endfor %}
             {% endif %}
             {% endfor %}
         </div>

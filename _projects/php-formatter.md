@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PHP Formatter'
-authors:            ['Marc Morera'] 
 tags:               ['coding standards', 'cli'] 
 
-website:            {url: 'https://github.com/mmoreram/php-formatter'}
-license:            {url: 'https://github.com/mmoreram/php-formatter/blob/master/LICENSE', label: 'MIT License'}
+authors:            [{name: 'Marc Morera'}] 
 
-github:             {name: 'mmoreram/php-formatter'}
-packagist:          {name: 'mmoreram/php-formatter'}               
+website:            [{url: 'https://github.com/mmoreram/php-formatter'}]
+license:            [{url: 'https://github.com/mmoreram/php-formatter/blob/master/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'mmoreram/php-formatter'}]
+packagist:          [{name: 'mmoreram/php-formatter'}]               
 dockerhub:          [{name: 'phpqa/php-formatter'}]     
 
 dependencies:       []

@@ -1,11 +1,12 @@
 ---
 layout:             'project'
 title:              'SensioLabs Insight'
-companies:          ['SensioLabs']   
 tags:               ['free for open source', 'online service', 'security']
 
-website:            {url: 'https://insight.sensiolabs.com/'}
-terms:              {url: 'https://insight.sensiolabs.com/terms', label: 'Terms'}
+companies:          [{name: 'SensioLabs'}]   
+
+website:            [{url: 'https://insight.sensiolabs.com/'}]
+terms:              [{url: 'https://insight.sensiolabs.com/terms', label: 'Terms'}]
 
 ---
 

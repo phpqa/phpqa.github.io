@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'Tuli'
-authors:            ['Anthony Ferrara']
 tags:               ['deprecated', 'bugs finder', 'static analysis', 'cli'] 
 
-website:            {url: 'https://github.com/ircmaxell/Tuli/'}
-license:            {url: 'https://github.com/ircmaxell/Tuli/blob/master/LICENSE', label: 'MIT License'}
+authors:            [{name: 'Anthony Ferrara'}]
 
-github:             {name: 'ircmaxell/Tuli'}
-packagist:          {name: 'ircmaxell/tuli'}          
+website:            [{url: 'https://github.com/ircmaxell/Tuli/'}]
+license:            [{url: 'https://github.com/ircmaxell/Tuli/blob/master/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'ircmaxell/Tuli'}]
+packagist:          [{name: 'ircmaxell/tuli'}]          
 dockerhub:          [{name: 'phpqa/tuli'}]     
 
 dependencies:       ['git'] 

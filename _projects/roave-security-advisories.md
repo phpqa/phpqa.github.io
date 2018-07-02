@@ -1,15 +1,16 @@
 ---
 layout:             'project'
 title:              'Roave Security Advisories'
-authors:            ['Marco Pivetta']
-companies:          ['Roave']
 tags:               ['security', 'composer', 'vulnerabilities checker']
 
-website:            {url: 'https://github.com/Roave/SecurityAdvisories'}
-license:            {url: 'https://github.com/Roave/SecurityAdvisories/blob/master/LICENSE', label: 'MIT License'}
+authors:            [{name: 'Marco Pivetta'}]
+companies:          [{name: 'Roave'}]
 
-github:             {name: 'Roave/SecurityAdvisories'}
-packagist:          {name: 'roave/security-advisories'} 
+website:            [{url: 'https://github.com/Roave/SecurityAdvisories'}]
+license:            [{url: 'https://github.com/Roave/SecurityAdvisories/blob/master/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'Roave/SecurityAdvisories'}]
+packagist:          [{name: 'roave/security-advisories'}] 
 
 dependencies:       []
 composer:           {name: 'roave/security-advisories', version: 'dev-master'}   

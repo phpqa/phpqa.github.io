@@ -1,15 +1,16 @@
 ---
 layout:             'project'
 title:              'atoum'
-authors:            ['Frédéric Hardy', 'Julien Bianchi'] 
 tags:               ['testing', 'cli']
 
-website:            {url: 'http://atoum.org/'}
-license:            {url: 'https://github.com/atoum/atoum/blob/master/LICENSE', label: 'BSD 3'}
-docs:               {url: 'http://docs.atoum.org'}
+authors:            [{name: 'Frédéric Hardy'}, {name: 'Julien Bianchi'}] 
 
-github:             {name: 'atoum/atoum'}
-packagist:          {name: 'atoum/atoum'}               
+website:            [{url: 'http://atoum.org/'}]
+license:            [{url: 'https://github.com/atoum/atoum/blob/master/LICENSE', label: 'BSD 3'}]
+docs:               [{url: 'http://docs.atoum.org'}]
+
+github:             [{name: 'atoum/atoum'}]
+packagist:          [{name: 'atoum/atoum'}]               
 dockerhub:          [{name: 'atoum/atoum'}]
 
 dependencies:       []

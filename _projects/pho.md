@@ -1,21 +1,22 @@
 ---
 layout:             'project'
 title:              'Pho'
-authors:            ['Daniel St. Jules'] 
 tags:               ['testing', 'bdd']
 
-website:            {url: 'https://github.com/danielstjules/pho'} 
-license:            {url: 'https://github.com/danielstjules/pho/blob/master/LICENSE', label: 'MIT'} 
+authors:            [{name: 'Daniel St. Jules'}] 
 
-github:             {name: 'danielstjules/pho'} 
-packagist:          {name: 'danielstjules/pho'}
+website:            [{url: 'https://github.com/danielstjules/pho'}] 
+license:            [{url: 'https://github.com/danielstjules/pho/blob/master/LICENSE', label: 'MIT'}] 
+
+github:             [{name: 'danielstjules/pho'}] 
+packagist:          [{name: 'danielstjules/pho'}]
 
 dependencies:       []
 composer-global:    {command: 'pho'}
 
 ---
 
-[{{ page.title }}]({{ site.url }}{{ page.url }}) is a BDD test framework for PHP, inspired by Jasmine and RSpec.
+[{{ page.title }}]({{ page.url | absolute_url }}) is a BDD test framework for PHP, inspired by Jasmine and RSpec.
 
 <!--more-->
 

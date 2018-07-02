@@ -1,14 +1,15 @@
 ---
 layout:             'project'
 title:              'PHPUnit'
-authors:            ['Sebastian Bergmann'] 
 tags:               ['testing', 'cli'] 
 
-website:            {url: 'http://www.phpunit.de/'}
-license:            {url: 'https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}
+authors:            [{name: 'Sebastian Bergmann'}] 
 
-github:             {name: 'sebastianbergmann/phpunit'}
-packagist:          {name: 'phpunit/phpunit'}               
+website:            [{url: 'http://www.phpunit.de/'}]
+license:            [{url: 'https://github.com/sebastianbergmann/phpunit/blob/master/LICENSE', label: 'BSD 3-clause "New" or "Revised" License'}]
+
+github:             [{name: 'sebastianbergmann/phpunit'}]
+packagist:          [{name: 'phpunit/phpunit'}]               
 dockerhub:          [{name: 'phpqa/phpunit'}]     
 
 dependencies:       []
