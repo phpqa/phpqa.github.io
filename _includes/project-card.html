@@ -4,27 +4,27 @@
         {% capture github-url %}{% if project.github.first.url != nil %}{{ project.github.first.url }}{% else %}{{ site.metadata.github.url-prefix }}{{ project.github.first.name }}{% endif %}{% endcapture %}
         {% capture github-name %}{% if project.github.first.name != nil %}{{ project.github.first.name }}{% else %}{{ project.github.first.url | replace: site.metadata.github.url-prefix, '' }}{% endif %}{% endcapture %}
         {% capture packagist-name %}{% if project.packagist.first.name != nil %}{{ project.packagist.first.name }}{% else %}{{ project.packagist.first.url | replace: site.metadata.packagist.url-prefix, '' }}{% endif %}{% endcapture %}
-        <a href="{{ github-url }}" title="watchers" class="badge badge-pill badge-default badge-outline">
-            <i class="fa fa-eye"></i>
+        <a href="{{ github-url }}" title="watchers" class="badge badge-pill badge-dark badge-outline">
+            <i class="far fa-eye"></i>
             <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="watchers">0</span>
         </a>
-        <a href="{{ github-url }}" title="stars" class="badge badge-pill badge-default badge-outline">
-            <i class="fa fa-star"></i>
+        <a href="{{ github-url }}" title="stars" class="badge badge-pill badge-dark badge-outline">
+            <i class="far fa-star"></i>
             <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="stargazers">0</span>
         </a>
-        <a href="{{ github-url }}" title="forks" class="badge badge-pill badge-default badge-outline">
-            <i class="fa fa-code-fork"></i>
+        <a href="{{ github-url }}" title="forks" class="badge badge-pill badge-dark badge-outline">
+            <i class="fas fa-code-branch"></i>
             <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="forks">0</span>
         </a>
         {% endif %}
         {% if page.comments-count == true and project.comments != false %}
-        <a href="{{ project.url | absolute_url }}" title="comments" class="badge badge-pill badge-default badge-outline">
-            <i class="fa fa-comments" aria-hidden="true"></i>
+        <a href="{{ project.url | absolute_url }}" title="comments" class="badge badge-pill badge-dark badge-outline">
+            <i class="far fa-comments" aria-hidden="true"></i>
             <span data-disqus-identifier="{{ project.id }}" class="disqus-comment-count">0</span>
         </a>
         {% endif %}
     </div>
-    <div class="card-block">
+    <div class="card-body">
 
         {{ project.excerpt }}
 
@@ -34,7 +34,7 @@
         </p>
         {% endif %}
 
-        <a href="{{ project.url | absolute_url }}" class="more-information pull-right">
+        <a href="{{ project.url | absolute_url }}" class="more-information float-right">
             More information &rarr;
         </a>
 
@@ -50,8 +50,8 @@
             {% if url != '' and url != nil %}
             <a href="{{ url }}" target="_blank" title="{{ metadataProperties.label }}"
                data-toggle="tooltip" data-placement="left" data-animation="false"
-               class="btn btn-secondary {{ metadataProperties.button-class }} btn-sm mb-1">
-                <i class="fa {{ metadataProperties.icon }} fa-fw"></i>
+               class="btn btn-outline-secondary {{ metadataProperties.button-class }} btn-sm mb-1 animated-parent">
+                <i class="{{ metadataProperties.icon }} fa-fw animated-icon"></i>
             </a>
             {% endif %}
             {% endif %}
@@ -62,24 +62,22 @@
     </div>
     <div class="card-footer card-tags text-muted">
         {% if project.tags contains 'alpha' %}
-        <span class="badge badge-info badge-outline" data-tag-filter="alpha">alpha</span>
+        <a class="badge badge-info badge-outline" href="#alpha" data-tag-filter="alpha">alpha</a>
         {% endif %}
         {% if project.tags contains 'unmaintained' %}
-        <span class="badge badge-warning badge-outline" data-tag-filter="unmaintained">unmaintained</span>
+        <a class="badge badge-warning badge-outline" href="#unmaintained" data-tag-filter="unmaintained">unmaintained</a>
         {% endif %}
         {% if project.tags contains 'deprecated' %}
-        <span class="badge badge-danger badge-outline" data-tag-filter="deprecated">deprecated</span>
+        <a class="badge badge-danger badge-outline" href="#deprecated" data-tag-filter="deprecated">deprecated</a>
         {% endif %}
         {% assign tags = project.tags | sort %}
         {% for tag in tags %}
         {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' %}
-        <span class="badge badge-default badge-outline" data-tag-filter="{{ tag }}">
-            {{ tag }}
-        </span>
+        <a class="badge badge-dark badge-outline" href="#{{ tag }}" data-tag-filter="{{ tag }}">{{ tag }}</a>
         {% endunless %}
         {% endfor %}
         {% if project.dockerhub != '' and project.dockerhub != nil %}
-        <span class="badge badge-default badge-outline" data-tag-filter="docker image">docker image</span>
+        <a class="badge badge-dark badge-outline" href="#docker image" data-tag-filter="docker image">docker image</a>
         {% endif %}
     </div>
 </div>

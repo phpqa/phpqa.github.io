@@ -1,0 +1,5 @@
+@each $color, $value in $theme-colors {
+  .badge-outline.badge-#{$color} {
+    @include badge-outline-variant($value, $border-width);
+  }
+}

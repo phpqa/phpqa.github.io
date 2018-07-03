@@ -26,7 +26,7 @@
     style-src
         'self'
         'unsafe-inline'
-        https://maxcdn.bootstrapcdn.com
+        https://stackpath.bootstrapcdn.com
         https://use.fontawesome.com
         https://c.disquscdn.com
     ;
@@ -34,7 +34,7 @@
         'self'
         https://code.jquery.com
         https://cdnjs.cloudflare.com
-        https://maxcdn.bootstrapcdn.com
+        https://stackpath.bootstrapcdn.com
         https://use.fontawesome.com
         https://{{ site.disqus }}.disqus.com
         https://disqus.com
@@ -49,9 +49,9 @@
 
 <!-- Stylesheets -->
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 <!-- Overrides -->
-<link rel="stylesheet" type="text/css" href="{{ '/style.css' | absolute_url }}"/>
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | absolute_url }}"/>
 
 <!-- RSS -->
 {% feed_meta %}
@@ -68,19 +68,19 @@
 >
 
 <!-- Navbar -->
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{ site.navigation.projects.url | absolute_url }}">{{ site.name }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="{{ site.navigation.projects.url | absolute_url }}">{{ site.name }}</a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
             {% for item in site.navigation %}
             <li class="nav-item">
-                <a class="nav-link" href="{% if item[1].url contains 'http' %}{{ item[1].url }}{% else %}{{ item[1].url | absolute_url }}{% endif %}">
-                    <i class="fa {{ item[1].icon }} fa-fw" aria-hidden="true"></i>
-                    {{ item[1].label }}
+                <a class="nav-link animated-parent" href="{% if item[1].url contains 'http' %}{{ item[1].url }}{% else %}{{ item[1].url | absolute_url }}{% endif %}">
+                    <i class="{{ item[1].icon }} fa-fw animated-icon" aria-hidden="true"></i>
+                    {{ item[1].label }} <!--<span class="sr-only">(current)</span>-->
                 </a>
             </li>
             {% endfor %}
@@ -126,14 +126,15 @@
 </footer>
 
 <!-- Scripts -->
-<!-- jQuery first, then Tether, then Bootstrap JS. -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<!-- jQuery first, then Popper, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="{{ '/assets/js/ie10-viewport-bug-workaround.js' | absolute_url }}"></script>
 <!-- Font Awesome -->
-<script src="https://use.fontawesome.com/2dbb7b4a28.js" async></script>
+<!--<script src="https://use.fontawesome.com/2dbb7b4a28.js" async></script>-->
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 <!-- Bootstrap initialisation -->
 <script src="{{ '/assets/js/bootstrap.js' | absolute_url }}" async></script>
 <!-- Filters -->

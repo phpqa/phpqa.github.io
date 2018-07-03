@@ -1,17 +1,17 @@
 ---
 ---
 
+@import "bootstrap-4.1.1/scss/bootstrap.scss";
+@import "bootstrap-overwrites/scss/bootstrap.scss";
+
 /* Navbar
 -------------------------------------------------- */
 
 .navbar {
   margin-bottom: 20px;
-
-  .fa.fa-fw {
-    display: inline-block;
-    width: 1.28571429em;
-  }
 }
+
+a:hover i:before { transform: scale(2); }
 
 /* Sidebar
 -------------------------------------------------- */
@@ -111,179 +111,6 @@
   opacity: .5;
 }
 
-/* Badge outline
--------------------------------------------------- */
-
-.badge-outline {
-  color: #000;
-  border: 1px solid #ccc;
-  background-color: transparent;
-}
-
-.badge-outline.badge-primary {
-  color: #0275d8;
-  border-color: #0275d8;
-}
-
-.badge-outline.badge-primary:hover,
-.badge-outline.badge-primary.active {
-  color: #fff;
-  background-color: #0275d8;
-  border-color: #0275d8;
-}
-
-.badge-outline.badge-default {
-  color: #636c72;
-  border-color: #ccc;
-}
-
-.badge-outline.badge-default:hover,
-.badge-outline.badge-default.active {
-  color: #fff;
-  background-color: #636c72;
-  border-color: #636c72;
-}
-
-.badge-outline.badge-success {
-  color: #5cb85c;
-  border-color: #5cb85c;
-}
-
-.badge-outline.badge-success:hover,
-.badge-outline.badge-success.active {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #5cb85c;
-}
-
-.badge-outline.badge-info {
-  color: #5bc0de;
-  border-color: #5bc0de;
-}
-
-.badge-outline.badge-info:hover,
-.badge-outline.badge-info.active {
-  color: #fff;
-  background-color: #5bc0de;
-  border-color: #5bc0de;
-}
-
-.badge-outline.badge-warning {
-  color: #f0ad4e;
-  border-color: #f0ad4e;
-}
-
-.badge-outline.badge-warning:hover,
-.badge-outline.badge-warning.active {
-  color: #fff;
-  background-color: #f0ad4e;
-  border-color: #f0ad4e;
-}
-
-.badge-outline.badge-danger {
-  color: #d9534f;
-  border-color: #d9534f;
-}
-
-.badge-outline.badge-danger:hover,
-.badge-outline.badge-danger.active {
-  color: #fff;
-  background-color: #d9534f;
-  border-color: #d9534f;
-}
-
-/* Card
--------------------------------------------------- */
-
-.card-metrics {
-  padding: .5rem;
-  line-height: 1;
-  font-size: 80%;
-  font-weight: 400;
-  text-align: right;
-
-  .badge {
-    margin: .25em;
-  }
-}
-
-.card-block {
-  position: relative;
-  padding-right: 35px;
-
-  .more-information {
-    font-size: .75rem;
-  }
-}
-
-.card-actions {
-  position: absolute;
-  top: .25rem;
-  right: 0;
-  width: 35px;
-  text-align: right;
-
-  .btn {
-    padding: .25rem;
-    border-right-width: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-}
-
-.card-actions .btn.btn-website:hover {
-  color: #fff;
-  background-color: #0275d8;
-}
-
-.card-actions .btn.btn-terms:hover {
-  color: #000;
-  background-color: #f2e31c;
-}
-
-.card-actions .btn.btn-wiki:hover {
-  color: #000;
-  background-color: #cef2e0;
-}
-
-.card-actions .btn.btn-docs:hover {
-  color: #000;
-  background-color: #cef2e0;
-}
-
-.card-actions .btn.btn-demo:hover {
-  color: #fff;
-  background-color: #F05033;
-}
-
-.card-actions .btn.btn-github:hover {
-  color: #fff;
-  background-color: #9CDAF0;
-}
-
-.card-actions .btn.btn-packagist:hover {
-  color: #fff;
-  background-color: #f28d1a;
-}
-
-.card-actions .btn.btn-dockerhub:hover {
-  color: #fff;
-  background-color: #1488C6;
-}
-
-.card-tags {
-  padding: .5rem;
-  line-height: 1;
-  font-size: 80%;
-  font-weight: 400;
-  text-align: right;
-
-  .badge {
-    margin: .25em;
-    cursor: pointer;
-  }
-}
-
 /* Well
 -------------------------------------------------- */
 
@@ -299,6 +126,14 @@
 
 h3 a {
   color: inherit;
+}
+
+/* Icons
+-------------------------------------------------- */
+
+.fa-fw {
+  display: inline-block;
+  width: 1.25em;
 }
 
 /* Links page

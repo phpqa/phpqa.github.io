@@ -70,45 +70,56 @@ collections:
     output: true
     permalink: /:collection/:categories/:year/:month/:day/:title.html
 
+# TODO
+#  links:
+#    output: true
+#    permalink: /:collection/:slug.html
+
 icons:
   github-stargazers:  PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGhlaWdodD0nMTYnIHZlcnNpb249JzEuMScgdmlld0JveD0nMCAwIDE0IDE2JyB3aWR0aD0nMTQnPjxwYXRoIGZpbGwtcnVsZT0nZXZlbm9kZCcgZD0nTTE0IDZsLTQuOS0uNjRMNyAxIDQuOSA1LjM2IDAgNmwzLjYgMy4yNkwyLjY3IDE0IDcgMTEuNjcgMTEuMzMgMTRsLS45My00Ljc0eic%2BPC9wYXRoPjwvc3ZnPg%3D%3D
   github-watchers:    PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGhlaWdodD0nMTYnIHZlcnNpb249JzEuMScgdmlld0JveD0nMCAwIDE2IDE2JyB3aWR0aD0nMTYnPjxwYXRoIGZpbGwtcnVsZT0nZXZlbm9kZCcgZD0nTTguMDYgMkMzIDIgMCA4IDAgOHMzIDYgOC4wNiA2QzEzIDE0IDE2IDggMTYgOHMtMy02LTcuOTQtNnpNOCAxMmMtMi4yIDAtNC0xLjc4LTQtNCAwLTIuMiAxLjgtNCA0LTQgMi4yMiAwIDQgMS44IDQgNCAwIDIuMjItMS43OCA0LTQgNHptMi00YzAgMS4xMS0uODkgMi0yIDItMS4xMSAwLTItLjg5LTItMiAwLTEuMTEuODktMiAyLTIgMS4xMSAwIDIgLjg5IDIgMnonPjwvcGF0aD48L3N2Zz4%3D
   github-forks:       PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGhlaWdodD0nMTYnIHZlcnNpb249JzEuMScgdmlld0JveD0nMCAwIDEwIDE2JyB3aWR0aD0nMTAnPjxwYXRoIGZpbGwtcnVsZT0nZXZlbm9kZCcgZD0nTTggMWExLjk5MyAxLjk5MyAwIDAgMC0xIDMuNzJWNkw1IDggMyA2VjQuNzJBMS45OTMgMS45OTMgMCAwIDAgMiAxYTEuOTkzIDEuOTkzIDAgMCAwLTEgMy43MlY2LjVsMyAzdjEuNzhBMS45OTMgMS45OTMgMCAwIDAgNSAxNWExLjk5MyAxLjk5MyAwIDAgMCAxLTMuNzJWOS41bDMtM1Y0LjcyQTEuOTkzIDEuOTkzIDAgMCAwIDggMXpNMiA0LjJDMS4zNCA0LjIuOCAzLjY1LjggM2MwLS42NS41NS0xLjIgMS4yLTEuMi42NSAwIDEuMi41NSAxLjIgMS4yIDAgLjY1LS41NSAxLjItMS4yIDEuMnptMyAxMGMtLjY2IDAtMS4yLS41NS0xLjItMS4yIDAtLjY1LjU1LTEuMiAxLjItMS4yLjY1IDAgMS4yLjU1IDEuMiAxLjIgMCAuNjUtLjU1IDEuMi0xLjIgMS4yem0zLTEwYy0uNjYgMC0xLjItLjU1LTEuMi0xLjIgMC0uNjUuNTUtMS4yIDEuMi0xLjIuNjUgMCAxLjIuNTUgMS4yIDEuMiAwIC42NS0uNTUgMS4yLTEuMiAxLjJ6Jz48L3BhdGg%2BPC9zdmc%2B
 
 navigation:
-  projects:     { label: Projects,      icon: fa-cogs,              url: /index.html                                  }
-  #usage:        { label: Usage,         icon: fa-magic,             url: /usage.html                                  }
-  contributing: { label: Contributing,  icon: fa-sign-language,     url: /contributing.html                           }
-  about:        { label: About,         icon: fa-info-circle,       url: /about.html                                  }
-  community:    { label: Community,     icon: fa-map-signs,         url: /community.html                              }
-  news:         { label: News,          icon: fa-list-alt,          url: /news.html                                   }
-  github:       { label: GitHub,        icon: fa-github,            url: 'https://github.com/phpqa/phpqa.github.io'   }
-  dockerhub:    { label: DockerHub,     icon: fa-ship,              url: 'https://hub.docker.com/u/phpqa/'            }
+  projects:     { label: Projects,      icon: fas fa-cogs,              url: /index.html                                  }
+  community:    { label: Websites,      icon: fas fa-map-signs,         url: /websites.html                               }
+  about:        { label: About,         icon: fas fa-info-circle,       url: /about.html                                  }
+  news:         { label: News,          icon: fas fa-list-alt,          url: /news.html                                   }
+  #usage:        { label: Usage,         icon: fas fa-magic,             url: /usage.html                                  }
+  github:       { label: GitHub,        icon: fab fa-github,            url: 'https://github.com/phpqa/phpqa.github.io'   }
+  dockerhub:    { label: DockerHub,     icon: fab fa-docker,            url: 'https://hub.docker.com/u/phpqa/'            }
+  contributing: { label: Contributing,  icon: fas fa-sign-language,     url: /contributing.html                           }
 
 links:
-  - { label: PHP.net Manual,            icon: fa-bookmark-o,        url: 'https://secure.php.net/manual/en/',                   description: 'PHP.net Manual'                                                                         }
-  - { label: PHP Internals Book,        icon: fa-book,              url: 'http://www.phpinternalsbook.com/',                    description: 'A collaborative effort to better document and describe how PHP works internally.'       }
-  - { label: PHP The Right Way,         icon: fa-thumbs-o-up,       url: 'http://www.phptherightway.com/',                      description: 'Quick reference for PHP popular coding standards.'                                      }
-  - { label: PHP The Wrong Way,         icon: fa-thumbs-o-down,     url: 'http://www.phpthewrongway.com/',                      description: 'A pragmatic view on PHP programming.'                                                   }
-  - { label: PHP does not suck,         icon: fa-certificate,       url: 'https://phpdoesnotsuck.herokuapp.com/',               description: 'PHP is the Nickelback of programming languages.'                                        }
-  - { label: PHP TestFest,              icon: fa-code,              url: 'https://phptestfest.org/',                            description: 'PHP TestFest aims to improve the code coverage of the test suite for PHP.'              }
-  - { label: PHP.UserGroup,             icon: fa-users,             url: 'http://php.ug/',                                      description: 'An international meeting-point for the PHP-Community.'                                  }
-  - { label: PHP Women,                 icon: fa-venus,             url: 'http://phpwomen.org/',                                description: 'An inclusive & global network providing support within the PHP community.'              }
-  - { label: PHP Mentoring,             icon: fa-graduation-cap,    url: 'https://php-mentoring.org/',                          description: 'Focus on creating networks of skilled developers from all walks of life.'               }
-  - { label: OSMI,                      icon: fa-handshake-o,       url: 'https://osmihelp.org/',                               description: 'Changing how we talk about mental health in the tech community.'                        }
-  - { label: Static Analysis Tools,     icon: fa-list-ol,           url: 'https://github.com/exakat/php-static-analysis-tools', description: 'A curated list of static analysis tools for PHP.'                                       }
+  - { label: PHP.net Manual,            icon: far fa-bookmark,          url: 'https://secure.php.net/manual/en/',                   description: 'PHP.net Manual'                                                                         }
+  - { label: PHP Internals Book,        icon: fas fa-book,              url: 'http://www.phpinternalsbook.com/',                    description: 'A collaborative effort to better document and describe how PHP works internally.'       }
+  - { label: PHP The Right Way,         icon: far fa-thumbs-up,         url: 'http://www.phptherightway.com/',                      description: 'Quick reference for PHP popular coding standards.'                                      }
+  - { label: PHP The Wrong Way,         icon: far fa-thumbs-down,       url: 'http://www.phpthewrongway.com/',                      description: 'A pragmatic view on PHP programming.'                                                   }
+  - { label: PHP does not suck,         icon: fas fa-certificate,       url: 'https://phpdoesnotsuck.herokuapp.com/',               description: 'PHP is the Nickelback of programming languages.'                                        }
+  - { label: PHP TestFest,              icon: fas fa-code,              url: 'https://phptestfest.org/',                            description: 'PHP TestFest aims to improve the code coverage of the test suite for PHP.'              }
+  - { label: PHP.UserGroup,             icon: fas fa-users,             url: 'http://php.ug/',                                      description: 'An international meeting-point for the PHP-Community.'                                  }
+  - { label: PHP Women,                 icon: fas fa-venus,             url: 'http://phpwomen.org/',                                description: 'An inclusive & global network providing support within the PHP community.'              }
+  - { label: PHP Mentoring,             icon: fas fa-graduation-cap,    url: 'https://php-mentoring.org/',                          description: 'Focus on creating networks of skilled developers from all walks of life.'               }
+  - { label: OSMI,                      icon: far fa-handshake,         url: 'https://osmihelp.org/',                               description: 'Changing how we talk about mental health in the tech community.'                        }
+  - { label: Static Analysis Tools,     icon: fas fa-list-ol,           url: 'https://github.com/exakat/php-static-analysis-tools', description: 'A curated list of static analysis tools for PHP.'                                       }
 
 metadata:
-  authors:      { label: Author(s),           icon: fa-user,                                                                                                          }
-  companies:    { label: Company,             icon: fa-building-o,                                                                                                    }
-  website:      { label: Website,             icon: fa-globe,             button: true,   button-class: btn-website                                                   }
-  license:      { label: License,             icon: fa-id-card,                                                                                                       }
-  terms:        { label: Terms (Of Service),  icon: fa-thumbs-o-up,       button: true,   button-class: btn-terms                                                     }
-  wiki:         { label: Wiki,                icon: fa-list-alt,          button: true,   button-class: btn-wiki                                                      }
-  docs:         { label: Documentation,       icon: fa-info,              button: true,   button-class: btn-docs                                                      }
-  demo:         { label: Demo,                icon: fa-desktop,           button: true,   button-class: btn-demo                                                      }
-  github:       { label: GitHub,              icon: fa-github,            button: true,   button-class: btn-github,     url-prefix: 'https://github.com/'             }
-  packagist:    { label: Packagist,           icon: fa-compass,           button: true,   button-class: btn-packagist,  url-prefix: 'https://packagist.org/packages/' }
-  dockerhub:    { label: DockerHub,           icon: fa-ship,              button: true,   button-class: btn-dockerhub,  url-prefix: 'https://hub.docker.com/r/'       }
-  dependencies: { label: Dependencies,        icon: fa-check-square-o,                                                                                                }
+  authors:      { label: Author(s),           icon: far fa-user,                                                                                                      }
+  companies:    { label: Company,             icon: far fa-building,                                                                                                  }
+  website:      { label: Website,             icon: fas fa-globe,         button: true,   button-class: btn-website                                                   }
+  license:      { label: License,             icon: far fa-id-card,                                                                                                   }
+  terms:        { label: Terms (Of Service),  icon: far fa-thumbs-up,     button: true,   button-class: btn-terms                                                     }
+  wiki:         { label: Wiki,                icon: far fa-list-alt,      button: true,   button-class: btn-wiki                                                      }
+  docs:         { label: Documentation,       icon: fas fa-info,          button: true,   button-class: btn-docs                                                      }
+  demo:         { label: Demo,                icon: fas fa-desktop,       button: true,   button-class: btn-demo                                                      }
+  github:       { label: GitHub,              icon: fab fa-github,        button: true,   button-class: btn-github,     url-prefix: 'https://github.com/'             }
+  packagist:    { label: Packagist,           icon: far fa-compass,       button: true,   button-class: btn-packagist,  url-prefix: 'https://packagist.org/packages/' }
+  dockerhub:    { label: DockerHub,           icon: fab fa-docker,        button: true,   button-class: btn-dockerhub,  url-prefix: 'https://hub.docker.com/r/'       }
+  dependencies: { label: Dependencies,        icon: far fa-check-square,                                                                                              }
 
+# todos
+# - move links to a separate directory     
+# - make resources into types in one array
+# - make discoverability into types in one array
+# - use newer bootstrap version 4.1.1
+# - use Vue.js and bootstrap to add graphics?

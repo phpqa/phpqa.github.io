@@ -4,7 +4,7 @@
     {% assign metadataProperties = metadataItem[1] %}
     {% assign valueObjects = page[projectKey] %}
     {% unless valueObjects.first == blank or valueObjects.first == nil %}<!-- todo check if array is empty -->
-    <dt class="col-sm-3"><i class="fa {{ metadataProperties.icon }} fa-fw"></i> {{ metadataProperties.label }}</dt>
+    <dt class="col-sm-3"><i class="{{ metadataProperties.icon }} fa-fw"></i> {{ metadataProperties.label }}</dt>
     <dd class="col-sm-9">
         {% for valueObject in valueObjects %}
         {% capture mask %}{% if valueObject.label != nil %}{{ valueObject.label }}{% else %}{{ valueObject.name }}{% endif %}{% endcapture %}
@@ -29,16 +29,16 @@
     {% capture github-url %}{% if page.github.first.url != nil %}{{ page.github.first.url }}{% else %}{{ site.metadata.github.url-prefix }}{{ page.github.first.name }}{% endif %}{% endcapture %}
     {% capture github-name %}{% if page.github.first.name != nil %}{{ page.github.first.name }}{% else %}{{ page.github.first.url | replace: site.metadata.github.url-prefix, '' }}{% endif %}{% endcapture %}
     {% capture packagist-name %}{% if page.packagist.first.name != nil %}{{ page.packagist.first.name }}{% else %}{{ page.packagist.first.url | replace: site.metadata.packagist.url-prefix, '' }}{% endif %}{% endcapture %}
-    <a href="{{ github-url }}" title="watchers" class="badge badge-pill badge-default badge-outline">
-        <i class="fa fa-eye"></i>
+    <a href="{{ github-url }}" title="watchers" class="badge badge-pill badge-dark badge-outline">
+        <i class="far fa-eye"></i>
         <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="watchers">0</span>
     </a>
-    <a href="{{ github-url }}" title="stars" class="badge badge-pill badge-default badge-outline">
-        <i class="fa fa-star"></i>
+    <a href="{{ github-url }}" title="stars" class="badge badge-pill badge-dark badge-outline">
+        <i class="far fa-star"></i>
         <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="stargazers">0</span>
     </a>
-    <a href="{{ github-url }}" title="forks" class="badge badge-pill badge-default badge-outline">
-        <i class="fa fa-code-fork"></i>
+    <a href="{{ github-url }}" title="forks" class="badge badge-pill badge-dark badge-outline">
+        <i class="fas fa-code-branch"></i>
         <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="forks">0</span>
     </a>
 </p>
