@@ -5,6 +5,14 @@
   font-weight: 400;
   text-align: right;
 
+  a {
+    margin-left: .25em;
+    margin-right: .25em;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   .badge {
     margin: .25em;
   }
@@ -77,13 +85,16 @@
 
 .card-tags {
   padding: .5rem;
-  line-height: 1;
-  font-size: 80%;
+  line-height: 1.5;
+  font-size: 70%;
   font-weight: 400;
   text-align: right;
 
-  .badge {
-    margin: .25em;
+  a {
     cursor: pointer;
+    white-space: nowrap;
+    &.active {
+      text-decoration: underline;
+    }
   }
 }

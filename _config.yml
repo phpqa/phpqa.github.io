@@ -119,7 +119,4 @@ metadata:
 
 # todos
 # - move links to a separate directory     
-# - make resources into types in one array
-# - make discoverability into types in one array
-# - use newer bootstrap version 4.1.1
-# - use Vue.js and bootstrap to add graphics?
+# - use Vue.js?

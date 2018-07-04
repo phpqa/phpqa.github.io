@@ -4,22 +4,22 @@
         {% capture github-url %}{% if project.github.first.url != nil %}{{ project.github.first.url }}{% else %}{{ site.metadata.github.url-prefix }}{{ project.github.first.name }}{% endif %}{% endcapture %}
         {% capture github-name %}{% if project.github.first.name != nil %}{{ project.github.first.name }}{% else %}{{ project.github.first.url | replace: site.metadata.github.url-prefix, '' }}{% endif %}{% endcapture %}
         {% capture packagist-name %}{% if project.packagist.first.name != nil %}{{ project.packagist.first.name }}{% else %}{{ project.packagist.first.url | replace: site.metadata.packagist.url-prefix, '' }}{% endif %}{% endcapture %}
-        <a href="{{ github-url }}" title="watchers" class="badge badge-pill badge-dark badge-outline">
-            <i class="far fa-eye"></i>
+        <a href="{{ github-url }}" title="watchers" class="text-dark">
+            <i class="far fa-eye fa-fw"></i>
             <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="watchers">0</span>
         </a>
-        <a href="{{ github-url }}" title="stars" class="badge badge-pill badge-dark badge-outline">
-            <i class="far fa-star"></i>
+        <a href="{{ github-url }}" title="stars" class="text-dark">
+            <i class="far fa-star fa-fw"></i>
             <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="stargazers">0</span>
         </a>
-        <a href="{{ github-url }}" title="forks" class="badge badge-pill badge-dark badge-outline">
-            <i class="fas fa-code-branch"></i>
+        <a href="{{ github-url }}" title="forks" class="text-dark">
+            <i class="fas fa-code-branch fa-fw"></i>
             <span data-github-name="{{ github-name }}" data-packagist-name="{{ packagist-name }}" data-metric="forks">0</span>
         </a>
         {% endif %}
         {% if page.comments-count == true and project.comments != false %}
-        <a href="{{ project.url | absolute_url }}" title="comments" class="badge badge-pill badge-dark badge-outline">
-            <i class="far fa-comments" aria-hidden="true"></i>
+        <a href="{{ project.url | absolute_url }}" title="comments" class="text-dark">
+            <i class="far fa-comments fa-fw" aria-hidden="true"></i>
             <span data-disqus-identifier="{{ project.id }}" class="disqus-comment-count">0</span>
         </a>
         {% endif %}
@@ -62,22 +62,20 @@
     </div>
     <div class="card-footer card-tags text-muted">
         {% if project.tags contains 'alpha' %}
-        <a class="badge badge-info badge-outline" href="#alpha" data-tag-filter="alpha">alpha</a>
+        <a class="text-dark" href="#alpha" data-tag-filter="alpha"><i class="fas fa-vial"></i> alpha</a>,
         {% endif %}
         {% if project.tags contains 'unmaintained' %}
-        <a class="badge badge-warning badge-outline" href="#unmaintained" data-tag-filter="unmaintained">unmaintained</a>
+        <a class="text-dark" href="#unmaintained" data-tag-filter="unmaintained"><i class="far fa-eye-slash"></i> unmaintained</a>,
         {% endif %}
         {% if project.tags contains 'deprecated' %}
-        <a class="badge badge-danger badge-outline" href="#deprecated" data-tag-filter="deprecated">deprecated</a>
+        <a class="text-dark" href="#deprecated" data-tag-filter="deprecated"><i class="fas fa-unlink"></i> deprecated</a>,
         {% endif %}
-        {% assign tags = project.tags | sort %}
-        {% for tag in tags %}
-        {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' %}
-        <a class="badge badge-dark badge-outline" href="#{{ tag }}" data-tag-filter="{{ tag }}">{{ tag }}</a>
-        {% endunless %}
-        {% endfor %}
         {% if project.dockerhub != '' and project.dockerhub != nil %}
-        <a class="badge badge-dark badge-outline" href="#docker image" data-tag-filter="docker image">docker image</a>
+        <a class="text-dark" href="#docker image" data-tag-filter="docker image"><i class="fab fa-docker"></i> docker image</a>,
         {% endif %}
+        {% assign tags = project.tags | where_exp: 'tag', 'tag != ""' | where_exp: 'tag', 'tag != "deprecated"' | where_exp: 'tag', 'tag != "unmaintained"' | where_exp: 'tag', 'tag != "alpha"' | sort | uniq %}
+        {% for tag in tags %}
+        <a class="text-dark" href="#{{ tag }}" data-tag-filter="{{ tag }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
     </div>
 </div>

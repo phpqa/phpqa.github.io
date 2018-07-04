@@ -13,10 +13,4 @@
       border-color: color-yiq($bg);
     }
   }
-  &.active {
-    color: color-yiq($bg);
-    text-decoration: none;
-    background-color: darken($bg, 10%);
-    border-color: color-yiq($bg);
-  }
 }
