@@ -28,9 +28,9 @@
 }
 
 .card-actions {
-  position: absolute;
-  top: .25rem;
-  right: 0;
+  float: right;
+  margin-top: -1rem;
+  margin-right: -35px;
   width: 35px;
   text-align: right;
 

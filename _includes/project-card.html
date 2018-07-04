@@ -26,18 +26,6 @@
     </div>
     <div class="card-body">
 
-        {{ project.excerpt }}
-
-        {% if project.authors != nil or project.companies != nil %}
-        <p class="small">
-            by {{ project.authors | map: 'name' | join: ', ' }}{% if project.authors != nil and project.companies !=nil %}, {% endif %}{{ project.companies | map: 'name' | join: ', ' }}
-        </p>
-        {% endif %}
-
-        <a href="{{ project.url | absolute_url }}" class="more-information float-right">
-            More information &rarr;
-        </a>
-
         <div class="card-actions">
             {% for metadataItem in site.metadata %}
             {% assign projectKey = metadataItem[0] %}
@@ -59,6 +47,19 @@
             {% endif %}
             {% endfor %}
         </div>
+
+        {{ project.excerpt }}
+
+        {% if project.authors != nil or project.companies != nil %}
+        <p class="small">
+            by {{ project.authors | map: 'name' | join: ', ' }}{% if project.authors != nil and project.companies !=nil %}, {% endif %}{{ project.companies | map: 'name' | join: ', ' }}
+        </p>
+        {% endif %}
+
+        <a href="{{ project.url | absolute_url }}" class="more-information float-right">
+            More information &rarr;
+        </a>
+
     </div>
     <div class="card-footer card-tags text-muted">
         {% if project.tags contains 'alpha' %}
