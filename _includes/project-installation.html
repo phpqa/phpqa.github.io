@@ -71,14 +71,14 @@
 <div id="brew" class="collapse">
     <h3>Install from a Brew package (with Brew)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/brew.html brew=page.brew %}
+    {% include installation/brew.html brew=page.brew.first %}
 </div>
 {% endif %}
 {% if page.composer != nil %}
 <div id="composer" class="collapse">
     <h3>Install from a Composer package as a dependency (with Composer)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/composer.html composer=page.composer packagist=page.packagist %}
+    {% include installation/composer.html composer=page.composer packagist=page.packagist.first %}
 </div>
 {% endif %}
 
@@ -86,7 +86,7 @@
 <div id="composer-dev" class="collapse">
     <h3>Install from a Composer package as a dev dependency (with Composer)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/composer-dev.html composer=page.composer-dev packagist=page.packagist %}
+    {% include installation/composer-dev.html composer=page.composer-dev packagist=page.packagist.first %}
 </div>
 {% endif %}
 
@@ -94,7 +94,7 @@
 <div id="composer-global" class="collapse">
     <h3>Install from a Composer package as a global CLI utility (with Composer)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/composer-global.html composer=page.composer-global packagist=page.packagist %}
+    {% include installation/composer-global.html composer=page.composer-global packagist=page.packagist.first %}
 </div>
 {% endif %}
 
@@ -102,7 +102,7 @@
 <div id="git" class="collapse">
     <h3>Install from a Git repository (with Git)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/git.html git=page.git github=page.github %}
+    {% include installation/git.html git=page.git github=page.github.first %}
 </div>
 {% endif %}
 
@@ -110,7 +110,7 @@
 <div id="gem" class="collapse">
     <h3>Install from a RubyGems gem (with RubyGems or Bundler)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/gem.html gem=page.gem %}
+    {% include installation/gem.html gem=page.gem.first %}
 </div>
 {% endif %}
 
@@ -118,7 +118,7 @@
 <div id="pear" class="collapse">
     <h3>Install from a PEAR package (with PEAR)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/pear.html pear=page.pear %}
+    {% include installation/pear.html pear=page.pear.first %}
 </div>
 {% endif %}
 
@@ -126,6 +126,6 @@
 <div id="phar" class="collapse">
     <h3>Install from a PHP Archive (with curl or wget)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/phar.html phar=page.phar %}
+    {% include installation/phar.html phar=page.phar.first %}
 </div>
 {% endif %}
