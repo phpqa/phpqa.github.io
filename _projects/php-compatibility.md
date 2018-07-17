@@ -13,7 +13,7 @@ packagist:          [{name: 'phpcompatibility/php-compatibility'}]
 dockerhub:          [{name: 'phpqa/php-compatibility'}]     
 
 dependencies:       []
-composer-dev:       {version: 'dev-feature/fix-102-107-directory-layout', further-instructions: {'Inform PHPCS about the new standard': 'php vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility'}, command: 'vendor/bin/phpcs --standard=PHPCompatibility'} 
+composer-dev:       {further-instructions: {'Inform PHPCS about the new standard': 'php vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility/PHPCompatibility'}, command: 'vendor/bin/phpcs --standard=PHPCompatibility'} 
 
 ---
 
