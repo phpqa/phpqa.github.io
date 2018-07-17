@@ -71,7 +71,7 @@
 <div id="brew" class="collapse">
     <h3>Install from a Brew package (with Brew)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/brew.html brew=page.brew.first %}
+    {% include installation/brew.html brew=page.brew %}
 </div>
 {% endif %}
 {% if page.composer != nil %}
@@ -110,7 +110,7 @@
 <div id="gem" class="collapse">
     <h3>Install from a RubyGems gem (with RubyGems or Bundler)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/gem.html gem=page.gem.first %}
+    {% include installation/gem.html gem=page.gem %}
 </div>
 {% endif %}
 
@@ -118,7 +118,7 @@
 <div id="pear" class="collapse">
     <h3>Install from a PEAR package (with PEAR)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/pear.html pear=page.pear.first %}
+    {% include installation/pear.html pear=page.pear %}
 </div>
 {% endif %}
 
@@ -126,6 +126,6 @@
 <div id="phar" class="collapse">
     <h3>Install from a PHP Archive (with curl or wget)</h3>
     {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/phar.html phar=page.phar.first %}
+    {% include installation/phar.html phar=page.phar %}
 </div>
 {% endif %}
