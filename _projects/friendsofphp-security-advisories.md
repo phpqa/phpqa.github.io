@@ -1,7 +1,7 @@
 ---
 layout:             'project'
 title:              'PHP Security Advisories Database'
-tags:               ['security', 'vulnerabilities database'] 
+tags:               ['security', 'vulnerabilities', 'database'] 
 
 authors:            [{name: 'FriendsOfPHP'}] 
 

@@ -1,7 +1,7 @@
 ---
 layout:             'project'
 title:              'VersionEye'
-tags:               ['free for open source', 'online service', 'security', 'security vulnerabilities', 'license violations', 'dependencies']
+tags:               ['free for open source', 'online service', 'security', 'vulnerabilities', 'license violations', 'dependencies']
 
 authors:            [{name: 'Robert Reiz'}]
 
