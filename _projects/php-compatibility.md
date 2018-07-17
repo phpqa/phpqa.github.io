@@ -5,15 +5,15 @@ tags:               ['coding standards', 'php compatibility', 'cli']
 
 authors:            [{name: 'Wim Godden'}] 
 
-website:            [{url: 'https://github.com/wimg/PHPCompatibility'}]
-license:            [{url: 'https://github.com/wimg/PHPCompatibility/blob/master/LICENSE', label: 'GNU Lesser General Public License v3.0 (LGPL)'}]
+website:            [{url: 'https://github.com/PHPCompatibility/PHPCompatibility'}]
+license:            [{url: 'https://github.com/PHPCompatibility/PHPCompatibility/blob/master/LICENSE', label: 'GNU Lesser General Public License v3.0 (LGPL)'}]
 
-github:             [{name: 'wimg/PHPCompatibility'}]
-packagist:          [{name: 'wimg/php-compatibility'}]               
+github:             [{name: 'PHPCompatibility/PHPCompatibility'}]
+packagist:          [{name: 'phpcompatibility/php-compatibility'}]               
 dockerhub:          [{name: 'phpqa/php-compatibility'}]     
 
 dependencies:       []
-composer-dev:       {version: 'dev-feature/fix-102-107-directory-layout', further-instructions: {'Inform PHPCS about the new standard': 'php vendor/bin/phpcs --config-set installed_paths vendor/wimg/php-compatibility'}, command: 'vendor/bin/phpcs --standard=PHPCompatibility'} 
+composer-dev:       {version: 'dev-feature/fix-102-107-directory-layout', further-instructions: {'Inform PHPCS about the new standard': 'php vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility'}, command: 'vendor/bin/phpcs --standard=PHPCompatibility'} 
 
 ---
 
