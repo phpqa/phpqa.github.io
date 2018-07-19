@@ -67,13 +67,6 @@
 </ul>
 {% endif %}
 
-{% if page.brew != nil %}
-<div id="brew" class="collapse">
-    <h3>Install from a Brew package (with Brew)</h3>
-    {% include dependencies-alert.html dependencies=page.dependencies %}
-    {% include installation/brew.html brew=page.brew %}
-</div>
-{% endif %}
 {% if page.composer != nil %}
 <div id="composer" class="collapse">
     <h3>Install from a Composer package as a dependency (with Composer)</h3>
@@ -106,6 +99,13 @@
 </div>
 {% endif %}
 
+{% if page.brew != nil %}
+<div id="brew" class="collapse">
+    <h3>Install from a Brew package (with Brew)</h3>
+    {% include dependencies-alert.html dependencies=page.dependencies %}
+    {% include installation/brew.html brew=page.brew %}
+</div>
+{% endif %}
 {% if page.gem != nil %}
 <div id="gem" class="collapse">
     <h3>Install from a RubyGems gem (with RubyGems or Bundler)</h3>
