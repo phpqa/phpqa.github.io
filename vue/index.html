@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Metadata -->
+    <meta charset="utf-8"/>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'/>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Begin Jekyll SEO tag v2.4.0 -->
+    <title>Tools | PHP Quality Assurance</title>
+    <meta name="generator" content="Jekyll v3.7.3"/>
+    <meta property="og:title" content="Tools"/>
+    <meta name="author" content="Bart Reunes"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta name="description" content="Looking for ways to make your PHP code even better? Find the projects that can help you! Coding Standards Static Analysis Testing Vulnerabilities"/>
+    <meta property="og:description" content="Looking for ways to make your PHP code even better? Find the projects that can help you! Coding Standards Static Analysis Testing Vulnerabilities"/>
+    <link rel="canonical" href="http://0.0.0.0:4000/"/>
+    <meta property="og:url" content="http://0.0.0.0:4000/"/>
+    <meta property="og:site_name" content="PHP Quality Assurance"/>
+    <meta property="og:type" content="article"/>
+    <meta property="article:published_time" content="2018-07-05T14:42:19-05:00"/>
+    <meta name="google-site-verification" content="JITUi06ndisXmR9iEyEtJWMR7ZaYF8ycjhUTUvubBHk"/>
+    <meta name="msvalidate.01" content="3CB22B04462C70550E27942615BF8C01"/>
+    <script type="application/ld+json">
+{"@type":"WebSite","url":"http://0.0.0.0:4000/","headline":"Tools","name":"PHP Quality Assurance","datePublished":"2018-07-05T14:42:19-05:00","dateModified":"2018-07-05T14:42:19-05:00","author":{"@type":"Person","name":"Bart Reunes"},"description":"Looking for ways to make your PHP code even better? Find the projects that can help you! Coding Standards Static Analysis Testing Vulnerabilities","@context":"http://schema.org"}
+
+    </script>
+    <!-- End Jekyll SEO tag -->
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Vue -->
+    <script src="//unpkg.com/vue"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+
+    <!-- Stylesheets -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- Overrides -->
+    <link rel="stylesheet" type="text/css" href="http://0.0.0.0:4000/assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="http://0.0.0.0:4000/assets/css/vue.css"/>
+
+    <!-- RSS -->
+    <link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="PHP Quality Assurance"/>
+
+    <!-- Language -->
+    <link rel="alternate" href="http://0.0.0.0:4000/index.html" hreflang="en"/>
+
+</head>
+<body
+        data-page-url="http://0.0.0.0:4000/index.html"
+        data-page-disqus-name="phpqa"
+        data-page-disqus-identifier="/index"
+        data-page-google_analytics-tracking_id="UA-100482560-1"
+>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="http://0.0.0.0:4000/index.html">PHP Quality Assurance</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link animated-parent" href="http://0.0.0.0:4000/index.html">
+                    <i class="fas fa-cogs fa-fw animated-icon" aria-hidden="true"></i>
+                    Projects <!--<span class="sr-only">(current)</span>-->
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link animated-parent" href="http://0.0.0.0:4000/websites.html">
+                    <i class="fas fa-map-signs fa-fw animated-icon" aria-hidden="true"></i>
+                    Websites <!--<span class="sr-only">(current)</span>-->
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link animated-parent" href="http://0.0.0.0:4000/about.html">
+                    <i class="fas fa-info-circle fa-fw animated-icon" aria-hidden="true"></i>
+                    About <!--<span class="sr-only">(current)</span>-->
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link animated-parent" href="http://0.0.0.0:4000/news.html">
+                    <i class="fas fa-list-alt fa-fw animated-icon" aria-hidden="true"></i>
+                    News <!--<span class="sr-only">(current)</span>-->
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link animated-parent" href="https://github.com/phpqa/phpqa.github.io">
+                    <i class="fab fa-github fa-fw animated-icon" aria-hidden="true"></i>
+                    GitHub <!--<span class="sr-only">(current)</span>-->
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link animated-parent" href="https://hub.docker.com/u/phpqa/">
+                    <i class="fab fa-docker fa-fw animated-icon" aria-hidden="true"></i>
+                    DockerHub <!--<span class="sr-only">(current)</span>-->
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link animated-parent" href="http://0.0.0.0:4000/contributing.html">
+                    <i class="fas fa-sign-language fa-fw animated-icon" aria-hidden="true"></i>
+                    Contributing <!--<span class="sr-only">(current)</span>-->
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<!-- Container -->
+<div id="main" role="main" class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12 col-lg-9" id="search-widget">
+                    <div class="jumbotron mt-0 mb-0">
+                        <h1>PHP Quality Assurance</h1>
+                        <p>Looking for ways to make your PHP code even better? Find the projects that can help you!</p>
+                        <ul class="list-unstyled mb-0" v-cloak>
+                            <li>
+                                <tag v-bind:tag="'all'" inline-template>
+                                    <a v-bind:href="'#' + tag" v-on:click="activateExclusively" class="text-dark">
+                                        <i class="fas fa-chalkboard fa-fw mr-1"></i>All
+                                        &raquo;
+                                        <small>{{ projectsCounter }} projects</small>
+                                    </a>
+                                </tag>
+                            </li>
+                            <li>
+                                <tag v-bind:tag="'coding standards'" inline-template>
+                                    <a v-bind:href="'#' + tag" v-on:click="activateExclusively" class="text-dark">
+                                        <i class="fas fa-clipboard-list fa-fw mr-1"></i>Coding Standards
+                                        &raquo;
+                                        <small>{{ projectsCounter }} projects</small>
+                                    </a>
+                                </tag>
+                            </li>
+                            <li>
+                                <tag v-bind:tag="'static analysis'" inline-template>
+                                    <a v-bind:href="'#' + tag" v-on:click="activateExclusively" class="text-dark">
+                                        <i class="fas fa-eye fa-fw mr-1"></i>Static Analysis
+                                        &raquo;
+                                        <small>{{ projectsCounter }} projects</small>
+                                    </a>
+                                </tag>
+                            </li>
+                            <li>
+                                <tag v-bind:tag="'testing'" inline-template>
+                                    <a v-bind:href="'#' + tag" v-on:click="activateExclusively" class="text-dark">
+                                        <i class="fas fa-check-circle fa-fw mr-1"></i>Testing
+                                        &raquo;
+                                        <small>{{ projectsCounter }} projects</small>
+                                    </a>
+                                </tag>
+                            </li>
+                            <li>
+                                <tag v-bind:tag="'vulnerabilities'" inline-template>
+                                    <a v-bind:href="'#' + tag" v-on:click="activateExclusively" class="text-dark">
+                                        <i class="fas fa-user-secret fa-fw mr-1"></i>Vulnerabilities
+                                        &raquo;
+                                        <small>{{ projectsCounter }} projects</small>
+                                    </a>
+                                </tag>
+                            </li>
+                        </ul>
+                    </div>
+                    <button v-on:click="switchSortBy('title')">A-Z</button>
+                    <button v-on:click="switchSortBy('github-watchers')">Watchers</button>
+                    <button v-on:click="switchSortBy('github-stars')">Stars</button>
+                    <button v-on:click="switchSortBy('github-forks')">Forks</button>
+                    <!-- TODO <button v-on:click="switchSortBy('comments')">Comments</button>-->
+                    <!--more-->
+                    <div class="row sticky filters_container mb-2">
+                        <div class="col-12">
+
+                            <label class="sr-only" for="filter">Filter freely</label>
+
+                            <div class="input-group mb-2 mt-2">
+                                <div class="input-group-prepend hidden-lg-down">
+                                    <span class="input-group-text" id="search">
+                                        <i class="fas fa-fw fa-search" aria-hidden="true"></i>
+                                        <span v-cloak loading><span class="ml-1">{{ activeProjectsCounter }}</span></span>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" id="filter" placeholder="Filter freely" aria-label="Filter freely" aria-describedby="search" v-on:keyup="search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-md btn-outline-secondary collapsed"
+                                            data-toggle="collapse" data-target="#toggled_container" aria-haspopup="true" aria-expanded="false">
+                                        <nobr>or by tag
+                                            <i class="fas fa-fw fa-chevron-circle-down icon-collapse-toggle-flip-horizontal" aria-hidden="true"></i>
+                                        </nobr>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="toggled_container" class="collapse">
+                                <tag v-bind:tag="'alpha'" inline-template>
+                                    <a role="button" v-bind:href="'#' + tag" v-on:click="toggle" v-bind:class="{'btn btn-sm btn-outline-info mb-1 ml-1': true, 'active': active, 'font-weight-light': 0 === visibleProjectsCounter, 'font-weight-bold': isAnyFilterActive && 0 !== visibleProjectsCounter}">
+                                        <i class="fas fa-vial fa-fw"></i>
+                                        {{ tag }}
+                                        <span class="d-none d-lg-inline"> ({{ visibleProjectsCounter }}/{{ projectsCounter }})</span>
+                                    </a>
+                                </tag>
+                                <tag v-bind:tag="'unmaintained'" inline-template>
+                                    <a role="button" v-bind:href="'#' + tag" v-on:click="toggle" v-bind:class="{'btn btn-sm btn-outline-warning mb-1 ml-1': true, 'active': active, 'font-weight-light': 0 === visibleProjectsCounter, 'font-weight-bold': isAnyFilterActive && 0 !== visibleProjectsCounter}">
+                                        <i class="fas fa-eye-slash fa-fw"></i>
+                                        {{ tag }}
+                                        <span class="d-none d-lg-inline"> ({{ visibleProjectsCounter }}/{{ projectsCounter }})</span>
+                                    </a>
+                                </tag>
+                                <tag v-bind:tag="'deprecated'" inline-template>
+                                    <a role="button" v-bind:href="'#' + tag" v-on:click="toggle" v-bind:class="{'btn btn-sm btn-outline-danger mb-1 ml-1': true, 'active': active, 'font-weight-light': 0 === visibleProjectsCounter, 'font-weight-bold': isAnyFilterActive && 0 !== visibleProjectsCounter}">
+                                        <i class="fas fa-unlink fa-fw"></i>
+                                        {{ tag }}
+                                        <span class="d-none d-lg-inline"> ({{ visibleProjectsCounter }}/{{ projectsCounter }})</span>
+                                    </a>
+                                </tag>
+                                <div class="text-right">
+                                    <template v-for="(tag, index) in tags">
+                                        <tag v-bind:tag="tag" inline-template>
+                                            <a role="button" v-if="!['alpha', 'unmaintained', 'deprecated'].includes(tag)" v-on:click="toggle" v-bind:class="{'btn btn-sm btn-outline-secondary mb-1 ml-1': true, 'active': active, 'font-weight-light': 0 === visibleProjectsCounter, 'font-weight-bold': isAnyFilterActive && 0 !== visibleProjectsCounter}">
+                                                {{ tag }}
+                                                <span class="d-none d-lg-inline"> ({{ visibleProjectsCounter }}/{{ projectsCounter }})</span>
+                                            </a>
+                                        </tag>
+                                    </template>
+                                </div>
+                            </div>
+
+                            <div class="text-right mt-2 mb-2" data-current-filters-container="true">
+                                <template v-for="(tag, index) in activeTags">
+                                    <tag v-bind:tag="tag" inline-template>
+                                        <a role="button" v-on:click="toggle" class="btn btn-sm btn-outline-light">
+                                            {{ tag }} <i class="fas fa-times fa-fw"></i>
+                                        </a>
+                                    </tag>
+                                </template>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row non-sticky" v-cloak>
+                        <template v-for="project in projects">
+                            <project-card v-bind:key="project.id" v-bind:project="project" inline-template>
+                                <div class="col-12 col-sm-6 col-xl-4" v-if="visible">
+                                    <div class="project card mb-4">
+                                        <div class="card-header card-metrics">
+                                            <a v-if="0 != gitHubWatchers" v-bind:href="gitHubUrl" class="text-dark">
+                                                <i class="far fa-eye fa-fw"></i>
+                                                <span>{{ gitHubWatchers }}</span>
+                                            </a>
+                                            <a v-if="0 != gitHubStars" v-bind:href="gitHubUrl" class="text-dark">
+                                                <i class="far fa-star fa-fw"></i>
+                                                <span>{{ gitHubStars }}</span>
+                                            </a>
+                                            <a v-if="0 != gitHubForks" v-bind:href="gitHubUrl" class="text-dark">
+                                                <i class="fas fa-code-branch fa-fw"></i>
+                                                <span>{{ gitHubForks }}</span>
+                                            </a>
+                                            <a v-bind:href="absoluteProjectUrl" title="comments" class="text-dark">
+                                                <i class="far fa-comments fa-fw" aria-hidden="true"></i>
+                                                <span v-bind:data-disqus-identifier="project.id" class="disqus-comment-count">0</span>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-actions">
+                                                <a v-bind:href="resource.url" target="_blank" v-bind:title="resource.title"
+                                                   data-toggle="tooltip" data-placement="left" data-animation="false"
+                                                   v-bind:class="'btn btn-outline-secondary ' + resource.class + ' btn-sm mb-1 animated-parent'"
+                                                   v-for="resource in resources">
+                                                    <i v-bind:class="{
+                                                        'fas fa-globe':         'website' === resource.type,
+                                                        'far fa-handshake':     'license' === resource.type,
+                                                        'fas fa-file-contract': 'terms' === resource.type,
+                                                        'far fa-list-alt':      'wiki' === resource.type,
+                                                        'fas fa-info':          'docs' === resource.type,
+                                                        'fas fa-desktop':       'demo' === resource.type,
+                                                        'fab fa-github':        'github' === resource.type,
+                                                        'far fa-compass':       'packagist' === resource.type,
+                                                        'fab fa-docker':        'dockerhub' === resource.type,
+                                                        'fa-fw animated-icon':  true
+                                                    }"></i>
+                                                </a>
+                                            </div>
+                                            <p v-html="project.excerpt"></p>
+                                            <p class="small">
+                                                by
+                                                <span v-for="(author, index) in project.authors">
+                                                    {{ author.name }}<span v-if="((index + 1 < project.authors.length) || (index + 1 == project.authors.length && project.companies && project.companies.length > 0))">, </span>
+                                                </span>
+                                                <span v-for="(company, index) in project.companies">
+                                                    {{ company.name }}<span v-if="index + 1 < project.companies.length">, </span>
+                                                </span>
+                                            </p>
+                                            <a v-bind:href="absoluteProjectUrl" class="more-information float-right">
+                                                More information &rarr;
+                                            </a>
+                                        </div>
+                                        <div class="card-footer card-tags text-muted">
+                                            <template v-for="(tag, index) in project.tags">
+                                                <tag v-bind:tag="tag" inline-template><a v-on:click="toggle" v-bind:class="{'active': active}">{{ tag }}</a></tag><template v-if="index + 1 < project.tags.length">, </template>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </div>
+                            </project-card>
+                        </template>
+                        <div class="col-12" v-if="0 === activeProjectsCounter">
+                            <div class="card bg-warning mb-4">
+                                <div class="card-body">
+                                    No projects were found for your query!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row non-sticky mb-5">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p>
+                                        <i class="fas fa-bug fa-fw" aria-hidden="true"></i>
+                                        Have you noticed something odd?
+                                        Please <a href="https://github.com/phpqa/phpqa.github.io/issues">let us know</a>,
+                                        so we can fix it.
+                                    </p>
+
+                                    <p class="float-right mb-0">
+                                        Want to see your own project here?
+                                        Feel free to <a href="http://0.0.0.0:4000/contributing">contribute</a> to this
+                                        list!
+                                        <i class="fas fa-bolt fa-fw" aria-hidden="true"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    EMPTY
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-4">
+    <div class="container">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/></a>
+        <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">PHP Quality Assurance</span>
+        is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+        Attribution-ShareAlike 4.0 International License</a>.
+    </div>
+</footer>
+
+
+<!-- Scripts -->
+<!-- Vue -->
+<script src="projects.js"></script>
+<script src="index.js"></script>
+
+
+<!-- jQuery first, then Popper, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="http://0.0.0.0:4000/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Font Awesome -->
+<!--<script src="https://use.fontawesome.com/2dbb7b4a28.js" async></script>-->
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+<!-- Bootstrap initialisation -->
+<script src="http://0.0.0.0:4000/assets/js/bootstrap.js" async></script>
+<!-- Filters -->
+<script src="http://0.0.0.0:4000/assets/js/filters.js" async></script>
+<!-- Google Analytics -->
+<script src="http://0.0.0.0:4000/assets/js/google-analytics.js" async></script>
+<!-- Packagist metrics -->
+<script src="http://0.0.0.0:4000/assets/js/repository-stats.js" async></script>
+
+
+<script id="dsq-count-scr" src="https://phpqa.disqus.com/count.js" async></script>
+
+</body>
+</html>
