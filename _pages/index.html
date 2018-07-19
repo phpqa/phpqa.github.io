@@ -98,19 +98,21 @@ comments-count: true
                 <h2><a href="{{ site.navigation.news.url | absolute_url }}">News</a></h2>
                 <div class="posts mb-4">
                     {% for post in site.posts limit:3 %}
-                    <article class="post well mb-1">
-                        <header>
-                            <h3><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h3>
-                            <p class="small">
-                                <time pubdate datetime="{{ post.date }}">{{ post.date | date_to_long_string }}</time>
-                                - {{ post.content | number_of_words }} words
-                                - <span data-disqus-identifier="{{ post.id }}" class="disqus-comment-count">0</span> comments
-                            </p>
-                        </header>
+                    <article class="post card mb-1">
+                        <div class="card-body">
+                            <header>
+                                <h3><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h3>
+                                <p class="small">
+                                    <time pubdate datetime="{{ post.date }}">{{ post.date | date_to_long_string }}</time>
+                                    - {{ post.content | number_of_words }} words
+                                    - <span data-disqus-identifier="{{ post.id }}" class="disqus-comment-count">0</span> comments
+                                </p>
+                            </header>
 
-                        {{ post.excerpt }}
+                            {{ post.excerpt }}
 
-                        <a href="{{ post.url | absolute_url }}" class="read-more">Read more &rarr;</a>
+                            <a href="{{ post.url | absolute_url }}" class="read-more">Read more &rarr;</a>
+                        </div>
                     </article>
                     {% endfor %}
                 </div>

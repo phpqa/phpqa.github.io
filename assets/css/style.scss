@@ -1,8 +1,16 @@
 ---
 ---
 
-@import "bootstrap-4.1.1/scss/bootstrap.scss";
-@import "phpqa/scss/bootstrap.scss";
+$phpqa-green: #55c737;
+$phpqa-blue: #10A3ED;
+
+$primary: $phpqa-green;
+
+$jumbotron-bg: lighten($phpqa-green, 40%);
+$jumbotron-end: lighten($phpqa-blue, 40%);
+
+@import "bootstrap-4.1.1/bootstrap.scss";
+@import "phpqa/phpqa.scss";
 
 /* Navbar
 -------------------------------------------------- */
@@ -25,6 +33,9 @@
     padding-bottom: .5rem;
     font-size: 1.2rem;
     border-bottom: 1px solid rgba(0, 0, 0, .125);
+    -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .125);
+    -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .125);
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .125);
 
     a {
       color: inherit;
@@ -33,8 +44,6 @@
 
   article {
     font-size: .75rem;
-    background-color: #eceeef;
-    border: 0;
 
     h3 {
       font-size: 0.85rem;
@@ -107,6 +116,12 @@
   color: #000;
   text-shadow: 0 1px 0 #fff;
   opacity: .5;
+}
+
+/* Badge
+-------------------------------------------------- */
+.badge {
+  vertical-align: text-bottom;
 }
 
 /* Well
