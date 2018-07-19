@@ -5,9 +5,11 @@ tags:               ['unmaintained', 'free for open source', 'security', 'vulner
 
 authors:            [{name: 'Robert Reiz'}]
 
-website:            [{url: 'https://www.versioneye.com/'}]
-terms:              [{url: 'https://www.versioneye.com/terms', label: 'Terms'}]
-docs:               [{url: 'https://www.versioneye.com/api/'}]
+website:            [{url: 'https://github.com/versioneye/'}]
+license:            [{url: 'https://github.com/versioneye/ops_contrib/blob/master/LICENSE', label: 'MIT License'}]
+
+github:             [{name: 'versioneye/ops_contrib'}]
+dockerhub:          [{url: 'https://hub.docker.com/u/versioneye/'}]     
 
 ---
 
