@@ -43,9 +43,6 @@ comments-count: true
                         <a href="#deprecated" data-tag-filter="deprecated" role="button" class="btn btn-sm btn-outline-danger mb-1">
                             <i class="fas fa-unlink"></i> deprecated
                         </a>
-                        <a href="#deprecated" data-tag-filter="docker image" role="button" class="btn btn-sm btn-outline-primary mb-1">
-                            <i class="fab fa-docker"></i> docker image
-                        </a>
                     </div>
                     <div class="text-right">
                         {% assign tags = site.projects | map: 'tags' | join: ',' | split:',' | where_exp: 'tag', 'tag != ""' | where_exp: 'tag', 'tag != "deprecated"' | where_exp: 'tag', 'tag != "unmaintained"' | where_exp: 'tag', 'tag != "alpha"' | sort | uniq %}
