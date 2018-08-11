@@ -1,7 +1,7 @@
 ---
 layout:             'project'
 title:              'SensioLabs Security Checker'
-tags:               ['security', 'composer', 'vulnerabilities', 'checker', 'cli', 'online service'] 
+tags:               ['security', 'composer', 'vulnerabilities', 'checker', 'cli', 'online service', 'dependencies'] 
 
 authors:            [{name: 'Fabien Potencier'}] 
 companies:          [{name: 'SensioLabs'}] 
