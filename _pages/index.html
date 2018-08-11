@@ -171,7 +171,7 @@ vue: true
                 <div class="text-right mt-2 mb-2" data-current-filters-container="true">
                     <template v-for="(tag, index) in activeTags">
                         <tag v-bind:tag="tag" inline-template>
-                            <a href="#" role="button" v-on:click.prevent="toggle" class="btn btn-sm btn-outline-light">
+                            <a href="#" role="button" v-on:click.prevent="toggle" class="btn btn-sm btn-outline-secondary border-0">
                                 (( tag )) <i class="fas fa-times fa-fw"></i>
                             </a>
                         </tag>
