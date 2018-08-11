@@ -5,13 +5,19 @@
 {% assign commands = include.composer.command %}
 {% unless commands.first or include.composer.command == nil %}{% assign commands = '' | split: '' | push: include.composer.command %}{% endunless %}
 
-    <p>
+    <p class="alert alert-info">
         Make sure you have
         <a href="{{ site.projects | where: 'title', 'Composer' | map: 'url' | first | absolute_url }}">Composer</a>
+        {% if include.dependencies != nil && include.dependencies != empty && include.dependencies.first != nil %}
+        {% assign list = include.dependencies | join: ', ' %}
+        {% if list != '' %}
+        and all dependencies {{ list }}
+        {% endif %}
+        {% endif %}
         installed.
     </p>
-    <dl>
-        <dd class="well">
+    <div class="card mb-3">
+        <div class="card-body">
             Require it as a <a href="https://getcomposer.org/doc/03-cli.md#global">global CLI utility</a>:
             {% if versions %}
             {% for item in versions %}
@@ -50,5 +56,5 @@
                 Check the <a href="https://getcomposer.org/doc/03-cli.md#global">Composer documentation</a>
                 for more information.
             </small>
-        </dd>
-    </dl>
+        </div>
+    </div>

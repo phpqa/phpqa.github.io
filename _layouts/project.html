@@ -2,8 +2,63 @@
 layout: bootstrap4
 ---
 
-{% include project-metadata.html %}
+<project-card v-bind:project="projects.filter(function (project) { return project.title === '{{ page.title }}'; })[0]" inline-template>
+    <div v-cloak>
+        <dl class="row">
+            <template  v-if="authors">
+                <dt class="col-sm-3"><i class="far fa-user fa-fw"></i> Author(s)</dt>
+                <dd class="col-sm-9">(( authors ))</dd>
+            </template>
+            <template  v-if="companies">
+                <dt class="col-sm-3"><i class="far fa-building fa-fw"></i> Company</dt>
+                <dd class="col-sm-9">(( companies ))</dd>
+            </template>
+            <template v-for="resource in resources">
+                <dt class="col-sm-3">
+                    <i v-bind:class="{
+                                            'fas fa-globe':         'website' === resource.type,
+                                            'far fa-handshake':     'license' === resource.type,
+                                            'fas fa-file-contract': 'terms' === resource.type,
+                                            'far fa-list-alt':      'wiki' === resource.type,
+                                            'fas fa-info':          'docs' === resource.type,
+                                            'fas fa-desktop':       'demo' === resource.type,
+                                            'fab fa-github':        'github' === resource.type,
+                                            'far fa-compass':       'packagist' === resource.type,
+                                            'fab fa-docker':        'dockerhub' === resource.type,
+                                            'fa-fw':                true
+                                        }"></i>
+                    (( resource.label ))
+                </dt>
+                <dd class="col-sm-9">
+                    <a v-bind:href="resource.url" target="_blank" rel="noopener">
+                        (( resource.mask ))
+                    </a>
+                </dd>
+            </template>
+            <template  v-if="dependencies">
+                <dt class="col-sm-3"><i class="far fa-check-square fa-fw"></i> Dependencies</dt>
+                <dd class="col-sm-9">(( dependencies ))</dd>
+            </template>
+        </dl>
+
+        <p>
+            <a v-if="0 != gitHubWatchers" v-bind:href="gitHubUrl" class="badge badge-pill badge-dark badge-outline">
+                <i class="far fa-eye fa-fw"></i>
+                <span>(( gitHubWatchers ))</span>
+            </a>
+            <a v-if="0 != gitHubStars" v-bind:href="gitHubUrl" class="badge badge-pill badge-dark badge-outline">
+                <i class="far fa-star fa-fw"></i>
+                <span>(( gitHubStars ))</span>
+            </a>
+            <a v-if="0 != gitHubForks" v-bind:href="gitHubUrl" class="badge badge-pill badge-dark badge-outline">
+                <i class="fas fa-code-branch fa-fw"></i>
+                <span>(( gitHubForks ))</span>
+            </a>
+        </p>
+    </div>
+
+</project-card>
 
 {{ content }}
 
-{% include project-installation.html %}
+{% include installation.html %}

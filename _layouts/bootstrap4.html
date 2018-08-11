@@ -18,8 +18,6 @@
         'self'
         https://i.creativecommons.org
         https://licensebuttons.net
-        https://*.disqus.com
-        https://*.disquscdn.com
         https://www.google-analytics.com
         data:
     ;
@@ -28,17 +26,14 @@
         'unsafe-inline'
         https://stackpath.bootstrapcdn.com
         https://use.fontawesome.com
-        https://c.disquscdn.com
     ;
     script-src
         'self'
+        'unsafe-eval'
         https://code.jquery.com
         https://cdnjs.cloudflare.com
         https://stackpath.bootstrapcdn.com
         https://use.fontawesome.com
-        https://{{ site.disqus }}.disqus.com
-        https://disqus.com
-        https://*.disquscdn.com
         https://www.google-analytics.com
     ;
 ">
@@ -48,27 +43,43 @@
 <![endif]-->
 
 <!-- Stylesheets -->
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-<!-- Overrides -->
-<link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | absolute_url }}"/>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+<!-- Bootstrap CSS and own styles -->
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css' | relative_url }}"/>
 
 <!-- RSS -->
 {% feed_meta %}
 
 <!-- Language -->
-<link rel="alternate" href="{{ page.url | absolute_url }}" hreflang="en" />
+<link rel="alternate" href="{{ page.url | relative_url }}" hreflang="en" />
 
 </head>
 <body
-        data-page-url="{{ page.url | absolute_url }}"
-        data-page-disqus-name="{{ site.disqus }}"
-        data-page-disqus-identifier="{{ page.id }}"
+        data-page-url="{{ page.url | relative_url }}"
         data-page-google_analytics-tracking_id="{{ site.google_analytics }}"
 >
 
 <!-- Navbar -->
-{% include navigation.html site=site %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{{ site.navigation.projects.url | absolute_url }}">{{ site.name }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            {% for item in site.navigation %}
+            <li class="nav-item">
+                <a class="nav-link animated-parent" href="{% if item[1].url contains 'http' %}{{ item[1].url }}{% else %}{{ item[1].url | absolute_url }}{% endif %}">
+                    <i class="{{ item[1].icon }} fa-fw animated-icon" aria-hidden="true"></i>
+                    {{ item[1].label }} <!--<span class="sr-only">(current)</span>-->
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
 
 <!-- Container -->
 <div id="main" role="main" class="container">
@@ -84,21 +95,17 @@
             {{ content }}
         </div>
     </div>
-    {% if page.comments != false %}
-    <div class="row">
-        <div class="col-12">
-            <div id="disqus_thread"></div>
-            <noscript>
-                Please enable JavaScript to view
-                the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-            </noscript>
-        </div>
-    </div>
-    {% endif %}
 </div>
 
 <!-- Footer -->
-{% include footer.html site=site %}
+<footer class="footer mt-4">
+    <div class="container">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/></a>
+        <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">{{ site.title }}</span>
+        is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+        Attribution-ShareAlike 4.0 International License</a>.
+    </div>
+</footer>
 
 <!-- Scripts -->
 <!-- jQuery first, then Popper, then Bootstrap JS. -->
@@ -106,24 +113,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="{{ '/assets/js/ie10-viewport-bug-workaround.js' | absolute_url }}"></script>
+<script src="{{ '/assets/js/ie10-viewport-bug-workaround.js' | relative_url }}"></script>
+{% if page.vue != false %}
+<!-- Vue.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+<script src="{{ '/assets/js/projects.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/app.js' | relative_url }}"></script>
+{% endif %}
 <!-- Font Awesome -->
 <!--<script src="https://use.fontawesome.com/2dbb7b4a28.js" async></script>-->
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
 <!-- Bootstrap initialisation -->
-<script src="{{ '/assets/js/bootstrap.js' | absolute_url }}" async></script>
-<!-- Filters -->
-<script src="{{ '/assets/js/filters.js' | absolute_url }}" async></script>
+<script src="{{ '/assets/js/bootstrap.js' | relative_url }}" async></script>
 <!-- Google Analytics -->
-<script src="{{ '/assets/js/google-analytics.js' | absolute_url }}" async></script>
-<!-- Packagist metrics -->
-<script src="{{ '/assets/js/repository-stats.js' | absolute_url }}" async></script>
-{% if page.comments != false %}
-<!-- Disqus -->
-<script src="{{ '/assets/js/disqus.js' | absolute_url }}"></script>
-{% endif %}
-{% if page.comments-count == true %}
-<script id="dsq-count-scr" src="https://{{ site.disqus }}.disqus.com/count.js" async></script>
-{% endif %}
+<script src="{{ '/assets/js/google-analytics.js' | relative_url }}" async></script>
 </body>
 </html>

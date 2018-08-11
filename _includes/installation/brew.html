@@ -1,9 +1,15 @@
 {% assign commands = include.brew.command %}
 {% unless commands.first or include.brew.command == nil %}{% assign commands = '' | split: '' | push: include.brew.command %}{% endunless %}
 
-    <dl>
-        <dt>Commandline</dt>
-        <dd class="well">
+    {% if include.dependencies != nil && include.dependencies != empty && include.dependencies.first != nil %}
+    {% assign list = include.dependencies | join: ', ' %}
+    {% if list != '' %}
+    <p class="alert alert-info">Make sure all dependencies are installed: {{ list }}.</p>
+    {% endif %}
+    {% endif %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4 class="card-title">Commandline</h4>
             Install it:
             <br/><code class="highlighter-rouge">brew install {{ include.brew.name | join: ' ' }}</code>
             {% if commands %}
@@ -14,5 +20,5 @@
             <br/><code class="highlighter-rouge">{{ command }}</code> {% if type %}({{ type }}){% endif %}
             {% endfor %}
             {% endif %}
-        </dd>
-    </dl>
+        </div>
+    </div>

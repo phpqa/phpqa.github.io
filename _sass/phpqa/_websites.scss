@@ -1,0 +1,13 @@
+.websites {
+  .card {
+    position: relative;
+    padding-left: 4.25em;
+    min-height: 7rem;
+
+    .icon {
+      position: absolute;
+      top: 1.25rem;
+      left: -1.15em;
+    }
+  }
+}

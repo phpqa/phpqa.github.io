@@ -1,6 +1,19 @@
+// Bootstrap overwrites
 @import "mixins/badge";
 @import "animation";
 @import "badge";
 @import "card";
 @import "jumbotron";
+
+// Third party overwrites
+@import "fontawesome";
+@import "vue";
+
+// PHPQA style
+@import "navbar";
+@import "sidebar";
+@import "search";
+@import "websites";
+@import "code";
+@import "footer";
 

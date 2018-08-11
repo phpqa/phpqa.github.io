@@ -2,13 +2,22 @@
 layout: page
 title: Community
 title-visible: false
-comments: false
 ---
 
-<div class="row">
+<div class="row websites">
     {% for link in site.links limit:include.limit %}
     <div class="col-12 col-lg-6">
-        {% include link-card.html link=link %}
+        <div class="card mb-1">
+            <div class="card-body">
+                <i class="icon {{ link.icon }} fa-fw fa-3x" aria-hidden="true"></i>
+                <strong>
+                    <a href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | absolute_url }}{% endif %}">
+                        {{ link.label }}
+                    </a>
+                </strong>
+                <br/>{{ link.description }}
+            </div>
+        </div>
     </div>
     {% endfor %}
 </div>

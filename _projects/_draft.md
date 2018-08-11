@@ -17,7 +17,7 @@ github:             [{name: ''}]
 packagist:          [{name: ''}]
 dockerhub:          [{name: ''}]
 
-dependencies:       [''] # todo
+dependencies:       []
 composer:           {command: ''}
 composer-dev:       {command: ''}
 composer-global:    {command: ''}

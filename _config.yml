@@ -50,7 +50,6 @@ title: PHP Quality Assurance
 subtitle: Looking for ways to make your PHP code even better? Find the projects that can help you!
 
 google_analytics: UA-100482560-1
-disqus: phpqa
 
 webmaster_verifications:
   google: JITUi06ndisXmR9iEyEtJWMR7ZaYF8ycjhUTUvubBHk
@@ -69,11 +68,6 @@ collections:
   posts:
     output: true
     permalink: /:collection/:categories/:year/:month/:day/:title.html
-
-# TODO
-#  links:
-#    output: true
-#    permalink: /:collection/:slug.html
 
 icons:
   github-stargazers:  PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGhlaWdodD0nMTYnIHZlcnNpb249JzEuMScgdmlld0JveD0nMCAwIDE0IDE2JyB3aWR0aD0nMTQnPjxwYXRoIGZpbGwtcnVsZT0nZXZlbm9kZCcgZD0nTTE0IDZsLTQuOS0uNjRMNyAxIDQuOSA1LjM2IDAgNmwzLjYgMy4yNkwyLjY3IDE0IDcgMTEuNjcgMTEuMzMgMTRsLS45My00Ljc0eic%2BPC9wYXRoPjwvc3ZnPg%3D%3D
@@ -117,6 +111,42 @@ metadata:
   dockerhub:    { label: DockerHub,           icon: fab fa-docker,        button: true,   button-class: btn-dockerhub,  url-prefix: 'https://hub.docker.com/r/'       }
   dependencies: { label: Dependencies,        icon: far fa-check-square,                                                                                              }
 
-# todos
-# - move links to a separate directory     
-# - use Vue.js?
+project_keys:
+  - path
+  - output
+  - id
+  - url
+  - content
+  - collection
+  - excerpt
+  - relative_path
+  - draft
+  - categories
+
+  - layout
+  - title
+  - tags
+  - authors
+  - companies
+  - website
+  - license
+  - terms
+  - wiki               
+  - docs
+  - demo
+  - github
+  - packagist
+  - dockerhub
+  - dependencies
+  - composer
+  - composer-dev
+  - composer-global
+  - gem
+  - git
+  - phar
+
+  - slug
+  - ext
+  - date
+
+

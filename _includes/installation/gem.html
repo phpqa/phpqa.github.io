@@ -1,9 +1,15 @@
 {% assign commands = include.gem.command %}
 {% unless commands.first or include.gem.command == nil %}{% assign commands = '' | split: '' | push: include.gem.command %}{% endunless %}
 
-    <dl>
-        <dt>Gemfile</dt>
-        <dd class="well">
+    {% if include.dependencies != nil && include.dependencies != empty && include.dependencies.first != nil %}
+    {% assign list = include.dependencies | join: ', ' %}
+    {% if list != '' %}
+    <p class="alert alert-info">Make sure all dependencies are installed: {{ list }}.</p>
+    {% endif %}
+    {% endif %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4 class="card-title">Gemfile</h4>
             Add the following to your Gemfile:
             <br/><code class="highlighter-rouge">gem '{{ include.gem.name | join: ' ' }}'</code>
             <br/>Execute:
@@ -22,9 +28,11 @@
             <br/><code class="highlighter-rouge">{{ command }}</code> {% if type %}({{ type }}){% endif %}
             {% endfor %}
             {% endif %}
-        </dd>
-        <dt>Commandline</dt>
-        <dd class="well">
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4 class="card-title">Commandline</h4>
             Install it:
             <br/><code class="highlighter-rouge">gem install {{ include.gem.name }}</code>
             {% if commands %}
@@ -35,5 +43,5 @@
             <br/><code class="highlighter-rouge">{{ command }}</code> {% if type %}({{ type }}){% endif %}
             {% endfor %}
             {% endif %}
-        </dd>
-    </dl>
+        </div>
+    </div>

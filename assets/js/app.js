@@ -1,7 +1,7 @@
-// https://tc39.github.io/ecma262/#sec-array.prototype.includes
 if (!Array.prototype.includes) {
+    // https://tc39.github.io/ecma262/#sec-array.prototype.includes
     Object.defineProperty(Array.prototype, 'includes', {
-        value: function(searchElement, fromIndex) {
+        value: function (searchElement, fromIndex) {
 
             if (this == null) {
                 throw new TypeError('"this" is null or not defined');
@@ -46,6 +46,70 @@ if (!Array.prototype.includes) {
 
             // 8. Return false
             return false;
+        }
+    });
+}
+
+if (!Array.prototype.reduce) {
+    // Production steps of ECMA-262, Edition 5, 15.4.4.21
+    // Reference: http://es5.github.io/#x15.4.4.21
+    // https://tc39.github.io/ecma262/#sec-array.prototype.reduce
+    Object.defineProperty(Array.prototype, 'reduce', {
+        value: function (callback /*, initialValue*/) {
+            if (this === null) {
+                throw new TypeError('Array.prototype.reduce ' +
+                    'called on null or undefined');
+            }
+            if (typeof callback !== 'function') {
+                throw new TypeError(callback +
+                    ' is not a function');
+            }
+
+            // 1. Let O be ? ToObject(this value).
+            var o = Object(this);
+
+            // 2. Let len be ? ToLength(? Get(O, "length")).
+            var len = o.length >>> 0;
+
+            // Steps 3, 4, 5, 6, 7
+            var k = 0;
+            var value;
+
+            if (arguments.length >= 2) {
+                value = arguments[1];
+            } else {
+                while (k < len && !(k in o)) {
+                    k++;
+                }
+
+                // 3. If len is 0 and initialValue is not present,
+                //    throw a TypeError exception.
+                if (k >= len) {
+                    throw new TypeError('Reduce of empty array ' +
+                        'with no initial value');
+                }
+                value = o[k++];
+            }
+
+            // 8. Repeat, while k < len
+            while (k < len) {
+                // a. Let Pk be ! ToString(k).
+                // b. Let kPresent be ? HasProperty(O, Pk).
+                // c. If kPresent is true, then
+                //    i.  Let kValue be ? Get(O, Pk).
+                //    ii. Let accumulator be ? Call(
+                //          callbackfn, undefined,
+                //          « accumulator, kValue, k, O »).
+                if (k in o) {
+                    value = callback(value, o[k], k, o);
+                }
+
+                // d. Increase k by 1.
+                k++;
+            }
+
+            // 9. Return accumulator.
+            return value;
         }
     });
 }
@@ -97,30 +161,30 @@ if (!Array.prototype.indexOf) {
     };
 }
 
-if (!Array.prototype.filter){
-    Array.prototype.filter = function(func, thisArg) {
+if (!Array.prototype.filter) {
+    Array.prototype.filter = function (func, thisArg) {
         'use strict';
-        if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
+        if (!((typeof func === 'Function' || typeof func === 'function') && this))
             throw new TypeError();
 
         var len = this.length >>> 0,
             res = new Array(len), // preallocate array
             t = this, c = 0, i = -1;
-        if (thisArg === undefined){
-            while (++i !== len){
+        if (thisArg === undefined) {
+            while (++i !== len) {
                 // checks to see if the key was set
-                if (i in this){
-                    if (func(t[i], i, t)){
+                if (i in this) {
+                    if (func(t[i], i, t)) {
                         res[c++] = t[i];
                     }
                 }
             }
         }
-        else{
-            while (++i !== len){
+        else {
+            while (++i !== len) {
                 // checks to see if the key was set
-                if (i in this){
-                    if (func.call(thisArg, t[i], i, t)){
+                if (i in this) {
+                    if (func.call(thisArg, t[i], i, t)) {
                         res[c++] = t[i];
                     }
                 }
@@ -131,10 +195,6 @@ if (!Array.prototype.filter){
         return res;
     };
 }
-
-// TODO add sorting algorithms on stars and viewers and forks and alphabetic and comments
-// TODO check the original javascript code to remove
-// TODO move vuejs to the production branch
 
 var searchStore = {
     state: {
@@ -148,8 +208,6 @@ var searchStore = {
         sortParametersPerProjectId: {}
     },
     getProjects: function () {
-        // TODO implement sorting mechanism (could we make it work against a copy of the projects)
-        console.log('sorting', this.state.sortBy, this.state.sortOrder);
         var self = this;
         return this.state.projects.sort(function (a, b) {
             var sortBy = self.state.sortBy;
@@ -186,7 +244,7 @@ var searchStore = {
         var tags = [];
         var projects = this.state.projects;
         for (var projectIndex in projects) {
-            if (!projects.hasOwnProperty(projectIndex)){
+            if (!projects.hasOwnProperty(projectIndex)) {
                 continue;
             }
             var project = projects[projectIndex];
@@ -226,6 +284,9 @@ var searchStore = {
             this.toggleTag(tag);
         }
     },
+    getSearchText: function () {
+        return this.state.searchText;
+    },
     searchText: function (text) {
         this.state.searchText = text;
         this.updateProjectsVisibleFromTextFilter();
@@ -243,25 +304,37 @@ var searchStore = {
     },
     updateProjectsVisibleFromTextFilter: function () {
         var text = this.state.searchText;
-        var returnValue = function (value) { return value; };
-        var joinValues = function (value) { return value.join(' '); };
-        var returnLabelProperty = function (value) { return value.map(function (item) { return item.label ? (item.label) : ''; }); };
-        var returnNameProperty = function (value) { return value.map(function (item) { return item.name; }); };
+        var returnValue = function (value) {
+            return value;
+        };
+        var joinValues = function (value) {
+            return value.join(' ');
+        };
+        var returnLabelProperty = function (value) {
+            return value.map(function (item) {
+                return item.label ? (item.label) : '';
+            });
+        };
+        var returnNameProperty = function (value) {
+            return value.map(function (item) {
+                return item.name;
+            });
+        };
         var searchableProperties = {
-            'title':        returnValue,
-            'excerpt':      returnValue,
-            'tags':         joinValues,
-            'authors':      returnNameProperty,
-            'companies':    returnNameProperty,
-            'website':      returnLabelProperty,
-            'license':      returnLabelProperty,
-            'terms':        returnLabelProperty,
-            'wiki':         returnLabelProperty,
-            'docs':         returnLabelProperty,
-            'demo':         returnLabelProperty,
-            'github':       returnNameProperty,
-            'packagist':    returnNameProperty,
-            'dockerhub':    returnNameProperty
+            'title': returnValue,
+            'excerpt': returnValue,
+            'tags': joinValues,
+            'authors': returnNameProperty,
+            'companies': returnNameProperty,
+            'website': returnLabelProperty,
+            'license': returnLabelProperty,
+            'terms': returnLabelProperty,
+            'wiki': returnLabelProperty,
+            'docs': returnLabelProperty,
+            'demo': returnLabelProperty,
+            'github': returnNameProperty,
+            'packagist': returnNameProperty,
+            'dockerhub': returnNameProperty
         };
         var lcTextParts = text.toLowerCase().split(',');
         this.state.projectIdsFromProjectsVisibleFromTextFilter = this.state.projects.filter(function (project) {
@@ -292,7 +365,7 @@ var searchStore = {
     isProjectVisible: function (project) {
         return this.isProjectVisibleFromActiveTags(project) && this.isProjectVisibleAfterTextFilter(project);
     },
-    
+
     countProjectsForTag: function (tag) {
         return this.state.projects.filter(function (project) {
             return 'all' === tag || project.tags.includes(tag);
@@ -311,14 +384,52 @@ var searchStore = {
         }
         this.state.sortParametersPerProjectId[id][parameter] = value;
     },
-    switchSortBy: function (sortBy) {
-        // TODO
-        if (this.state.sortBy === sortBy) {
+    getCurrentSortBy: function () {
+        return this.state.sortBy;
+    },
+    getCurrentSortOrder: function () {
+        return this.state.sortOrder;
+    },
+    switchSort: function (sortBy, defaultSortOrder) {
+        if (this.state.sortBy !== sortBy) {
+            this.state.sortOrder = defaultSortOrder;
+        } else {
             this.state.sortOrder = 'asc' === this.state.sortOrder ? 'desc' : 'asc';
         }
         this.state.sortBy = sortBy;
     }
 };
+
+Vue.component('sort-dropdown', {
+    props: ['items'],
+    data: function () {
+        return {
+            searchStore: searchStore
+        };
+    },
+    methods: {
+        switchSort: function (sortBy, defaultSortOrder) {
+            this.searchStore.switchSort(sortBy, defaultSortOrder);
+        },
+        switchSortOrder: function () {
+            this.searchStore.switchSort(this.currentSortBy, this.currentSortOrder);
+        }
+    },
+    computed: {
+        currentSortBy: function () {
+            return this.searchStore.getCurrentSortBy();
+        },
+        currentSortOrder: function () {
+            return this.searchStore.getCurrentSortOrder();
+        },
+        isAscending: function () {
+            return 'asc' === this.searchStore.getCurrentSortOrder();
+        },
+        isDescending: function () {
+            return 'asc' !== this.searchStore.getCurrentSortOrder();
+        }
+    }
+});
 
 Vue.component('tag', {
     props: ['tag'],
@@ -332,6 +443,7 @@ Vue.component('tag', {
             this.searchStore.toggleTag(this.tag);
         },
         activateExclusively: function () {
+            this.searchStore.searchText('');
             this.searchStore.activateOnlyOneTag(this.tag);
         }
     },
@@ -362,18 +474,28 @@ Vue.component('project-card', {
         }
     },
     computed: {
+        authors: function () {
+            return this.project.authors ? this.project.authors.map(function (author) {
+                return author.name;
+            }).join(', ') : null;
+        },
+        companies: function () {
+            return this.project.companies ? this.project.companies.map(function (company) {
+                return company.name;
+            }).join(', ') : null;
+        },
         resources: function () {
             var resources = [];
             var resourceProperties = {
-                'website':      {'label': 'Website'                                                     },
-                'license':      {'label': 'License'                                                     },
-                'terms':        {'label': 'Terms (Of Service)'                                          },
-                'wiki':         {'label': 'Wiki'                                                        },
-                'docs':         {'label': 'Documentation'                                               },
-                'demo':         {'label': 'Demo'                                                        },
-                'github':       {'label': 'GitHub',    'urlPrefix': 'https://github.com/'               },
-                'packagist':    {'label': 'Packagist', 'urlPrefix': 'https://packagist.org/packages/'   },
-                'dockerhub':    {'label': 'DockerHub', 'urlPrefix': 'https://hub.docker.com/r/'         }
+                'website': {'label': 'Website'},
+                'license': {'label': 'License'},
+                'terms': {'label': 'Terms (Of Service)'},
+                'wiki': {'label': 'Wiki'},
+                'docs': {'label': 'Documentation'},
+                'demo': {'label': 'Demo'},
+                'github': {'label': 'GitHub', 'urlPrefix': 'https://github.com/'},
+                'packagist': {'label': 'Packagist', 'urlPrefix': 'https://packagist.org/packages/'},
+                'dockerhub': {'label': 'DockerHub', 'urlPrefix': 'https://hub.docker.com/r/'}
             };
             for (var property in resourceProperties) {
                 var settings = resourceProperties[property];
@@ -387,8 +509,11 @@ Vue.component('project-card', {
                                 // Return the mapped value
                                 return {
                                     'type': property,
-                                    // If a label is not found, return the default label, optionally with the name
+                                    'label': settings['label'],
+                                    // If a label is not found, return the default label
                                     'title': item.label ? item.label : settings['label'],
+                                    // Cascade through the name and the label, otherwise stick with the url
+                                    'mask': item.name ? item.name : (item.label ? item.label : item.url),
                                     // If a url is not found, create it from the prefix and the name
                                     'url': item.url ? item.url : (settings['urlPrefix'] + item.name)
                                 };
@@ -399,6 +524,9 @@ Vue.component('project-card', {
             }
             return resources;
         },
+        dependencies: function () {
+            return this.project.dependencies ? this.project.dependencies.join(', ') : null;
+        },
         gitHubUrl: function () {
             if (this.project.github[0].url) {
                 return this.project.github[0].url;
@@ -408,7 +536,7 @@ Vue.component('project-card', {
             }
             return null;
         },
-        absoluteProjectUrl: function () { // TODO leave this url to Jekyll?
+        absoluteProjectUrl: function () {
             return location.origin + this.project.url;
         },
         visible: function () {
@@ -438,18 +566,36 @@ Vue.component('project-card', {
     }
 });
 
-var app = new Vue({
-    el: '#search-widget',
-    data: {
-        searchStore: searchStore
+Vue.component('search-field', {
+    props: [],
+    data: function () {
+        return {
+            searchStore: searchStore
+        }
     },
     methods: {
         search: function (event) {
             return this.searchStore.searchText(event.target.value);
         },
-        switchSortBy: function (sortBy) {
-            this.searchStore.switchSortBy(sortBy);
+        clearSearch: function (event) {
+            return this.searchStore.searchText('');
         }
+    },
+    computed: {
+        searchText: function () {
+            return this.searchStore.getSearchText();
+        },
+        filteredProjectsCounter: function () {
+            return this.searchStore.countVisibleProjectsForTag('all');
+        }
+    }
+});
+
+var app = new Vue({
+    delimiters: ["((", "))"],
+    el: '#main',
+    data: {
+        searchStore: searchStore
     },
     computed: {
         projects: function () {
@@ -461,7 +607,7 @@ var app = new Vue({
         activeTags: function () {
             return this.searchStore.getActiveTags();
         },
-        activeProjectsCounter: function () {
+        visibleProjectsCounter: function () {
             return this.searchStore.countVisibleProjectsForTag('all');
         }
     }

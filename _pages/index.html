@@ -3,77 +3,263 @@ layout: page
 title: Tools
 title-visible: false
 permalink: index.html
-comments: false
-comments-count: true
+vue: true
 ---
 
 <div class="row">
+    
     <div class="col-12 col-lg-9">
-        <div class="jumbotron mt-0 mb-0">
+
+        <div class="jumbotron mt-0 mb-2">
             <h1>{{ site.title }}</h1>
             <p>{{ site.subtitle }}</p>
+            <ul class="list-unstyled mb-0" v-cloak loading>
+                <li>
+                    <tag v-bind:tag="'all'" inline-template>
+                        <a href="#" v-on:click.prevent="activateExclusively" class="text-dark">
+                            <i class="fas fa-chalkboard fa-fw mr-1"></i>All
+                            &raquo;
+                            <small>(( projectsCounter )) projects</small>
+                        </a>
+                    </tag>
+                </li>
+                <li>
+                    <tag v-bind:tag="'coding standards'" inline-template>
+                        <a href="#" v-on:click.prevent="activateExclusively" class="text-dark">
+                            <i class="fas fa-clipboard-list fa-fw mr-1"></i>Coding Standards
+                            &raquo;
+                            <small>(( projectsCounter )) projects</small>
+                        </a>
+                    </tag>
+                </li>
+                <li>
+                    <tag v-bind:tag="'static analysis'" inline-template>
+                        <a href="#" v-on:click.prevent="activateExclusively" class="text-dark">
+                            <i class="fas fa-eye fa-fw mr-1"></i>Static Analysis
+                            &raquo;
+                            <small>(( projectsCounter )) projects</small>
+                        </a>
+                    </tag>
+                </li>
+                <li>
+                    <tag v-bind:tag="'testing'" inline-template>
+                        <a href="#" v-on:click.prevent="activateExclusively" class="text-dark">
+                            <i class="fas fa-check-circle fa-fw mr-1"></i>Testing
+                            &raquo;
+                            <small>(( projectsCounter )) projects</small>
+                        </a>
+                    </tag>
+                </li>
+                <li>
+                    <tag v-bind:tag="'vulnerabilities'" inline-template>
+                        <a href="#" v-on:click.prevent="activateExclusively" class="text-dark">
+                            <i class="fas fa-user-secret fa-fw mr-1"></i>Vulnerabilities
+                            &raquo;
+                            <small>(( projectsCounter )) projects</small>
+                        </a>
+                    </tag>
+                </li>
+            </ul>
         </div>
+
         <!--more-->
-        <div class="row sticky filters_container mb-2">
-            <div class="col-12">
-                
-                <label class="sr-only" for="filter">Filter freely</label>
-                
-                <div class="input-group mb-2 mt-2">
-                    <div class="input-group-prepend hidden-lg-down">
-                        <span class="input-group-text" id="search"><i class="fas fa-fw fa-search" aria-hidden="true"></i></span>
+
+        <div class="row sticky filters_container mb-2" v-cloak>
+
+            <div class="col-12 col-sm-9 col-md-10">
+
+                <search-field inline-template>
+                    <div class="input-group mb-2 mt-2">
+                        <div class="input-group-prepend hidden-lg-down">
+                            <span class="input-group-text">
+                                <i class="fas fa-fw fa-search" aria-hidden="true"></i>
+                                <label id="search" class="sr-only" for="filter">Filter freely</label>
+                                <span v-cloak><span class="ml-1">(( filteredProjectsCounter ))</span></span>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control"
+                               id="filter" placeholder="Filter freely" aria-label="Filter freely" aria-describedby="search"
+                               v-on:keyup="search" v-bind:value="searchText"/>
+                        <div class="input-group-append search-clear-parent">
+                            <span v-if="searchText != ''" v-on:click.prevent="clearSearch" class="search-clear-button text-secondary">
+                                <i class="fas fa-times-circle"></i>
+                            </span>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-md btn-outline-secondary collapsed"
+                                    data-toggle="collapse" data-target="#toggled_container" aria-haspopup="true" aria-expanded="false">
+                                <nobr>or by tag <i class="fas fa-fw fa-chevron-circle-down icon-collapse-toggle-flip-horizontal" aria-hidden="true"></i></nobr>
+                            </button>
+                        </div>
                     </div>
-                    <input type="text" class="form-control" id="filter" placeholder="Filter freely" data-search-filter-field="true" aria-label="Filter freely" aria-describedby="search">
-                    <div class="input-group-append">
-                        <button class="btn btn-md btn-outline-secondary collapsed"
-                                data-toggle="collapse" data-target="#toggled_container" aria-haspopup="true" aria-expanded="false">
-                            <nobr>or by tag <i class="fas fa-fw fa-chevron-circle-down icon-collapse-toggle-flip-horizontal" aria-hidden="true"></i></nobr>
+                </search-field>
+
+            </div>
+
+            <div class="d-none d-sm-block col-sm-3 col-md-2 text-right">
+
+                <sort-dropdown
+                        v-bind:items="[
+                            {icon: 'fas fa-font', label: 'Alphabetically', sortBy: 'title', defaultSortOrder: 'asc'},
+                            {icon: 'far fa-eye', label: 'Watchers', sortBy: 'github-watchers', defaultSortOrder: 'desc'},
+                            {icon: 'far fa-star', label: 'Stars', sortBy: 'github-stars', defaultSortOrder: 'desc'},
+                            {icon: 'fas fa-code-branch', label: 'Forks', sortBy: 'github-forks', defaultSortOrder: 'desc'}
+                        ]"
+                        inline-template>
+                    <div class="btn-group mb-2 mt-2">
+                        <button type="button" class="btn btn-outline-secondary" v-on:click="switchSortOrder">
+                            <template v-for="item in items">
+                                <span v-bind:class="{'d-none': currentSortBy !== item.sortBy}"><i v-bind:class="'fa-fw ' + item.icon"></i></span>
+                            </template>
+                            <span v-bind:class="{'d-none': !isAscending}"><i class="fas fa-sort-down"></i></span>
+                            <span v-bind:class="{'d-none': !isDescending}"><i class="fas fa-sort-up"></i></span>
                         </button>
+                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <template v-for="item in items">
+                                <button class="dropdown-item" v-on:click="switchSort(item.sortBy, item.defaultSortOrder)" v-bind:class="{'active': currentSortBy === item.sortBy}">
+                                    <i v-bind:class="'fa-fw ' + item.icon"></i>
+                                    <i class="fas fa-sort-down" v-if="'asc' === item.defaultSortOrder"></i>
+                                    <i class="fas fa-sort-up" v-else></i>
+                                    <span class="ml-2">(( item.label ))</span>
+                                </button>
+                            </template>
+                        </div>
                     </div>
-                </div>
+                </sort-dropdown>
+
+            </div>
+
+            <div class="col-12">
 
                 <div id="toggled_container" class="collapse">
-                    <div>
-                        <a href="#alpha" data-tag-filter="alpha" role="button" class="btn btn-sm btn-outline-info mb-1">
-                            <i class="fas fa-vial"></i> alpha
+                    <tag v-bind:tag="'alpha'" inline-template>
+                        <a href="#" role="button" v-on:click.prevent="toggle" v-bind:class="{'btn btn-sm btn-outline-info mb-1 ml-1': true, 'active': active, 'font-weight-light': 0 === visibleProjectsCounter, 'font-weight-bold': isAnyFilterActive && 0 !== visibleProjectsCounter}">
+                            <i class="fas fa-vial fa-fw"></i>
+                            (( tag ))
+                            <span class="d-none d-lg-inline small"> (( visibleProjectsCounter ))/(( projectsCounter ))</span>
                         </a>
-                        <a href="#unmaintained" data-tag-filter="unmaintained" role="button" class="btn btn-sm btn-outline-warning mb-1">
-                            <i class="far fa-eye-slash"></i> unmaintained
+                    </tag>
+                    <tag v-bind:tag="'unmaintained'" inline-template>
+                        <a href="#" role="button" v-on:click.prevent="toggle" v-bind:class="{'btn btn-sm btn-outline-warning mb-1 ml-1': true, 'active': active, 'font-weight-light': 0 === visibleProjectsCounter, 'font-weight-bold': isAnyFilterActive && 0 !== visibleProjectsCounter}">
+                            <i class="fas fa-eye-slash fa-fw"></i>
+                            (( tag ))
+                            <span class="d-none d-lg-inline small"> (( visibleProjectsCounter ))/(( projectsCounter ))</span>
                         </a>
-                        <a href="#deprecated" data-tag-filter="deprecated" role="button" class="btn btn-sm btn-outline-danger mb-1">
-                            <i class="fas fa-unlink"></i> deprecated
+                    </tag>
+                    <tag v-bind:tag="'deprecated'" inline-template>
+                        <a href="#" role="button" v-on:click.prevent="toggle" v-bind:class="{'btn btn-sm btn-outline-danger mb-1 ml-1': true, 'active': active, 'font-weight-light': 0 === visibleProjectsCounter, 'font-weight-bold': isAnyFilterActive && 0 !== visibleProjectsCounter}">
+                            <i class="fas fa-unlink fa-fw"></i>
+                            (( tag ))
+                            <span class="d-none d-lg-inline small"> (( visibleProjectsCounter ))/(( projectsCounter ))</span>
                         </a>
-                    </div>
+                    </tag>
                     <div class="text-right">
-                        {% assign tags = site.projects | map: 'tags' | join: ',' | split:',' | where_exp: 'tag', 'tag != ""' | where_exp: 'tag', 'tag != "deprecated"' | where_exp: 'tag', 'tag != "unmaintained"' | where_exp: 'tag', 'tag != "alpha"' | sort | uniq %}
-                        {% for tag in tags %}
-                        {% unless tag == 'deprecated' or tag == 'unmaintained' or tag == 'alpha' or tag == 'docker image' %}
-                        <a href="#{{ tag }}" data-tag-filter="{{ tag }}" role="button" class="btn btn-sm btn-outline-secondary mb-1">
-                            {{ tag }}
-                        </a>
-                        {% endunless %}
-                        {% endfor %}
+                        <template v-for="(tag, index) in tags">
+                            <tag v-bind:tag="tag" inline-template>
+                                <a href="#" role="button" v-if="!['alpha', 'unmaintained', 'deprecated'].includes(tag)" v-on:click.prevent="toggle" v-bind:class="{'btn btn-sm btn-outline-secondary mb-1 ml-1': true, 'active': active, 'font-weight-light': 0 === visibleProjectsCounter, 'font-weight-bold': isAnyFilterActive && 0 !== visibleProjectsCounter}">
+                                    (( tag ))
+                                    <span class="d-none d-lg-inline small"> (( visibleProjectsCounter ))/(( projectsCounter ))</span>
+                                </a>
+                            </tag>
+                        </template>
                     </div>
                 </div>
 
-                <div class="text-right mt-2 mb-2" data-current-filters-container="true"></div>
+                <div class="text-right mt-2 mb-2" data-current-filters-container="true">
+                    <template v-for="(tag, index) in activeTags">
+                        <tag v-bind:tag="tag" inline-template>
+                            <a href="#" role="button" v-on:click.prevent="toggle" class="btn btn-sm btn-outline-light">
+                                (( tag )) <i class="fas fa-times fa-fw"></i>
+                            </a>
+                        </tag>
+                    </template>
+                </div>
 
             </div>
+
         </div>
-        <div class="row non-sticky">
-            {% assign projects = site.projects | sort: 'title' %}
-            {% for project in projects %}
-            <div class="col-12 col-sm-6 col-xl-4" data-filter-target="true">
-                {% include project-card.html project=project %}
+
+        <div class="row non-sticky" v-cloak>
+            <template v-for="project in projects">
+                <project-card v-bind:key="project.id" v-bind:project="project" inline-template>
+                    <div class="col-12 col-sm-6 col-xl-4 mt-2" v-if="visible">
+                        <div class="project card mb-4">
+                            <div class="card-header card-metrics">
+                                &nbsp;
+                                <a v-if="0 != gitHubWatchers" v-bind:href="gitHubUrl" class="text-dark">
+                                    <i class="far fa-eye fa-fw"></i>
+                                    <span>(( gitHubWatchers ))</span>
+                                </a>
+                                <a v-if="0 != gitHubStars" v-bind:href="gitHubUrl" class="text-dark">
+                                    <i class="far fa-star fa-fw"></i>
+                                    <span>(( gitHubStars ))</span>
+                                </a>
+                                <a v-if="0 != gitHubForks" v-bind:href="gitHubUrl" class="text-dark">
+                                    <i class="fas fa-code-branch fa-fw"></i>
+                                    <span>(( gitHubForks ))</span>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-actions">
+                                    <a v-bind:href="resource.url" target="_blank" rel="noopener" v-bind:title="resource.title"
+                                       data-toggle="tooltip" data-placement="left" data-animation="false"
+                                       v-bind:class="'btn btn-outline-secondary ' + resource.class + ' btn-sm mb-1 animated-parent'"
+                                       v-for="resource in resources">
+                                        <i v-bind:class="{
+                                            'fas fa-globe':         'website' === resource.type,
+                                            'far fa-handshake':     'license' === resource.type,
+                                            'fas fa-file-contract': 'terms' === resource.type,
+                                            'far fa-list-alt':      'wiki' === resource.type,
+                                            'fas fa-info':          'docs' === resource.type,
+                                            'fas fa-desktop':       'demo' === resource.type,
+                                            'fab fa-github':        'github' === resource.type,
+                                            'far fa-compass':       'packagist' === resource.type,
+                                            'fab fa-docker':        'dockerhub' === resource.type,
+                                            'fa-fw animated-icon':  true
+                                        }"></i>
+                                    </a>
+                                </div>
+                                <p v-html="project.excerpt"></p>
+                                <p class="text-muted">
+                                    by
+                                    <span v-for="(author, index) in project.authors">
+                                        (( author.name ))<span v-if="((index + 1 < project.authors.length) || (index + 1 == project.authors.length && project.companies && project.companies.length > 0))">, </span>
+                                    </span>
+                                    <span v-for="(company, index) in project.companies">
+                                        (( company.name ))<span v-if="index + 1 < project.companies.length">, </span>
+                                    </span>
+                                </p>
+                                <a v-bind:href="absoluteProjectUrl" class="more-information float-right">
+                                    More information &rarr;
+                                </a>
+                            </div>
+                            <div class="card-footer card-tags text-muted">
+                                <template v-for="(tag, index) in project.tags">
+                                    <tag v-bind:tag="tag" inline-template><a v-on:click="toggle" v-bind:class="{'active': active}">(( tag ))</a></tag><template v-if="index + 1 < project.tags.length">, </template>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </project-card>
+            </template>
+            <div class="col-12" v-if="0 === visibleProjectsCounter">
+                <div class="card bg-default mb-4">
+                    <div class="card-body">
+                        No projects were found for your query!
+                    </div>
+                </div>
             </div>
-            {% endfor %}
         </div>
+
         <div class="row non-sticky mb-5">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
                         <p>
-                            <i class="fas fa-bug" aria-hidden="true"></i>
+                            <i class="fas fa-bug fa-fw" aria-hidden="true"></i>
                             Have you noticed something odd?
                             Please <a href="https://github.com/phpqa/phpqa.github.io/issues">let us know</a>,
                             so we can fix it.
@@ -82,16 +268,21 @@ comments-count: true
                         <p class="float-right mb-0">
                             Want to see your own project here?
                             Feel free to <a href="{{ '/contributing' | absolute_url }}">contribute</a> to this list!
-                            <i class="fas fa-bolt" aria-hidden="true"></i>
+                            <i class="fas fa-bolt fa-fw" aria-hidden="true"></i>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
+
     <div class="col-12 col-lg-3">
+
         <div class="row mb-4 sidebar">
+
             <div class="col-lg-12 hidden-md-down">
+
                 <h2><a href="{{ site.navigation.news.url | absolute_url }}">News</a></h2>
                 <div class="posts mb-4">
                     {% for post in site.posts limit:3 %}
@@ -102,7 +293,6 @@ comments-count: true
                                 <p class="small">
                                     <time pubdate datetime="{{ post.date }}">{{ post.date | date_to_long_string }}</time>
                                     - {{ post.content | number_of_words }} words
-                                    - <span data-disqus-identifier="{{ post.id }}" class="disqus-comment-count">0</span> comments
                                 </p>
                             </header>
 
@@ -113,8 +303,12 @@ comments-count: true
                     </article>
                     {% endfor %}
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 </div>
 

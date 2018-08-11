@@ -2,7 +2,6 @@
 layout: page
 title: List
 title-visible: false
-comments: false
 ---
 
 {% assign items = site.projects | sort_natural: 'title' %}
@@ -15,11 +14,11 @@ comments: false
     {% for item in items %}
     <tr>
         <th>{{ item.title }}</th>
-        <td><a href="{{ item.website.first.url }}" target="_blank">{{ item.website.first.url }}</a></td>
+        <td><a href="{{ item.website.first.url }}" target="_blank" rel="noopener">{{ item.website.first.url }}</a></td>
         <td>
             {% if item.github.first != nil %}
             {% capture github-url %}{% if item.github.first.url != nil %}{{ item.github.first.url }}{% else %}{{ site.metadata.github.url-prefix }}{{ item.github.first.name }}{% endif %}{% endcapture %}
-            <a href="{{ github-url }}" target="_blank">GitHub</a>
+            <a href="{{ github-url }}" target="_blank" rel="noopener">GitHub</a>
             {% endif %}
         </td>
     </tr>

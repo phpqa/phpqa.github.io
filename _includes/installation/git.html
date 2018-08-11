@@ -1,22 +1,28 @@
 {% assign url = include.git.url %}
 {% unless url %}
 {% assign github-url = include.github.url %}
-{% unless github-url %}{% assign github-url = site.metadata.github.url-prefix | append: include.github.name %}{% endunless %}
+{% unless github-url %}{% assign github-url = 'https://github.com/' | append: include.github.name %}{% endunless %}
 {% assign url = github-url | replace: 'https://', 'git://' | append: '.git' %}
 {% endunless %}
 {% assign commands = include.git.command %}
 {% unless commands.first or include.git.command == nil %}{% assign commands = '' | split: '' | push: include.git.command %}{% endunless %}
 
-    <p>
+    <p class="alert alert-info">
         Make sure you have
         <a href="https://git-scm.com/">git</a>
         {% if include.git.install-composer-dependencies == true %}
         and <a href="{{ site.projects | where: 'title', 'Composer' | map: 'url' | first | absolute_url }}">Composer</a>
         {% endif %}
+        {% if include.dependencies != nil && include.dependencies != empty && include.dependencies.first != nil %}
+        {% assign list = include.dependencies | join: ', ' %}
+        {% if list != '' %}
+        and all dependencies {{ list }}
+        {% endif %}
+        {% endif %}
         installed.
     </p>
-    <dl>
-        <dd class="well">
+    <div class="card mb-3">
+        <div class="card-body">
             Git clone the repository:
             <br/>
             <code class="highlighter-rouge">git clone {{ url }}</code>
@@ -44,5 +50,5 @@
             <br/><code class="highlighter-rouge">{{ command }}</code> {% if type %}({{ type }}){% endif %}
             {% endfor %}
             {% endif %}
-        </dd>
-    </dl>
+        </div>
+    </div>

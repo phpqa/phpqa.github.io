@@ -1,0 +1,91 @@
+{% if page.brew != nil
+    or page.composer != nil
+    or page.composer-dev != nil
+    or page.composer-global != nil
+    or page.git != nil
+    or page.gem != nil
+    or page.pear != nil
+    or page.phar != nil %}
+<h2>Installation</h2>
+<ul>
+    {% if page.brew != nil %}
+    <li><a href="#brew">Install from a Brew package (with Brew)</a></li>
+    {% endif %}
+    {% if page.composer != nil %}
+    <li><a href="#composer">Install from a Composer package as a dependency (with Composer)</a></li>
+    {% endif %}
+    {% if page.composer-dev != nil %}
+    <li><a href="#composer-dev">Install from a Composer package as a dev dependency (with Composer)</a></li>
+    {% endif %}
+    {% if page.composer-global != nil %}
+    <li><a href="#composer-global">Install from a Composer package as a global CLI utility (with Composer)</a></li>
+    {% endif %}
+    {% if page.git != nil %}
+    <li><a href="#git">Install from a Git repository (with Git)</a></li>
+    {% endif %}
+    {% if page.gem != nil %}
+    <li><a href="#gem">Install from a RubyGems gem (with RubyGems or Bundler)</a></li>
+    {% endif %}
+    {% if page.pear != nil %}
+    <li><a href="#pear">Install from a PEAR package (with PEAR)</a></li>
+    {% endif %}
+    {% if page.phar != nil %}
+    <li><a href="#phar">Install from a PHP Archive (with curl or wget)</a></li>
+    {% endif %}
+</ul>
+{% endif %}
+
+{% if page.composer != nil %}
+<div id="composer">
+    <h3>Install from a Composer package as a dependency (with Composer)</h3>
+    {% include installation/composer.html composer=page.composer packagist=page.packagist.first dependencies=page.dependencies %}
+</div>
+{% endif %}
+
+{% if page.composer-dev != nil %}
+<div id="composer-dev">
+    <h3>Install from a Composer package as a dev dependency (with Composer)</h3>
+    {% include installation/composer-dev.html composer=page.composer-dev packagist=page.packagist.first dependencies=page.dependencies %}
+</div>
+{% endif %}
+
+{% if page.composer-global != nil %}
+<div id="composer-global">
+    <h3>Install from a Composer package as a global CLI utility (with Composer)</h3>
+    {% include installation/composer-global.html composer=page.composer-global packagist=page.packagist.first dependencies=page.dependencies %}
+</div>
+{% endif %}
+
+{% if page.git != nil %}
+<div id="git">
+    <h3>Install from a Git repository (with Git)</h3>
+    {% include installation/git.html git=page.git github=page.github.first dependencies=page.dependencies %}
+</div>
+{% endif %}
+
+{% if page.brew != nil %}
+<div id="brew">
+    <h3>Install from a Brew package (with Brew)</h3>
+    {% include installation/brew.html brew=page.brew dependencies=page.dependencies %}
+</div>
+{% endif %}
+{% if page.gem != nil %}
+<div id="gem">
+    <h3>Install from a RubyGems gem (with RubyGems or Bundler)</h3>
+    {% include installation/gem.html gem=page.gem dependencies=page.dependencies %}
+</div>
+{% endif %}
+
+{% if page.pear != nil %}
+<div id="pear">
+    <h3>Install from a PEAR package (with PEAR)</h3>
+    {% include installation/pear.html pear=page.pear dependencies=page.dependencies %}
+</div>
+{% endif %}
+
+{% if page.phar != nil %}
+<div id="phar">
+    <h3>Install from a PHP Archive (with curl or wget)</h3>
+    {% include installation/phar.html phar=page.phar dependencies=page.dependencies %}
+</div>
+{% endif %}

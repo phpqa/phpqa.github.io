@@ -11,12 +11,19 @@
         make sure to allow the execution of PHARs in your <code class="highlighter-rouge">php.ini</code>:
         <br/><code class="highlighter-rouge">suhosin.executor.include.whitelist = phar</code>
     </p>
-    <dl>
-        {% for item in urls %}
-        {% assign type = item[0] %}
-        {% assign url = item[1] %}{% unless url != nil %}{% assign url = item %}{% endunless %}
-        <dt>Locally {% if type %}({{ type }}){% endif %}</dt>
-        <dd class="well">
+    {% if include.dependencies != nil && include.dependencies != empty && include.dependencies.first != nil %}
+    {% assign list = include.dependencies | join: ', ' %}
+    {% if list != '' %}
+    <p class="alert alert-info">Make sure all dependencies are installed: {{ list }}.</p>
+    {% endif %}
+    {% endif %}
+
+    {% for item in urls %}
+    {% assign type = item[0] %}
+    {% assign url = item[1] %}{% unless url != nil %}{% assign url = item %}{% endunless %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4 class="card-title">Locally {% if type %}({{ type }}){% endif %}</h4>
             {% assign file = url | split: '/' | last | split: '?' | first %}
             Download it:
             <br/><code class="highlighter-rouge">wget -O {{ file }} {{ url }}</code>
@@ -30,9 +37,11 @@
             {% endif %}
             <br/>Use it:
             <br/><code class="highlighter-rouge">php {{ file }}</code>
-        </dd>
-        <dt>Globally {% if type %}({{ type }}){% endif %}</dt>
-        <dd class="well">
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h4 class="card-title">Globally {% if type %}({{ type }}){% endif %}</h4>
             {% assign file = url | split: '/' | last | split: '?' | first %}
             {% assign command = url | split: '/' | last | split: '?' | first | replace: '.phar', '' %}
             Download it:
@@ -50,6 +59,6 @@
             {% endif %}
             <br/>Use it:
             <br/><code class="highlighter-rouge">{{ command }}</code>
-        </dd>
-        {% endfor %}
-    </dl>
+        </div>
+    </div>
+    {% endfor %}

@@ -2,7 +2,6 @@
 layout: page
 title: Contributing
 title-visible: false
-comments: false
 ---
 
 ## Content
@@ -107,7 +106,8 @@ It should be an array of objects with at least a `url` and a `label` property.
 - url: *required*
     - The `url`<sup>[1](#notes)</sup> where this license can be read in full.
 - label: *required* 
-    - The type of this license. Examples are 'MIT License'. <!-- TODO list all examples --> 
+    - The type of this license.
+    Examples are: {{ site.projects | map: 'license' | where_exp: 'label', 'label != nil' | map: 'label' | sort | uniq | join: ', ' }}.
     - This field will be used to overwrite the visible url on the project detail page.
 
 ##### Terms
@@ -120,7 +120,8 @@ It should be an array of objects with at least a `url` and a `label` property.
 - url: *required*
     - The `url`<sup>[1](#notes)</sup> where the terms can be read in full.
 - label: *required* 
-    - The exact name for these terms. Examples are 'Terms of Service', 'Terms'. <!-- TODO list all examples -->
+    - The exact name for these terms.
+    Examples are: {{ site.projects | map: 'terms' | where_exp: 'label', 'label != nil' | map: 'label' | sort | uniq | join: ', ' }}.
     - This field will be used to overwrite the visible url on the project detail page.
 
 ##### Wiki, Docs and/or Demo

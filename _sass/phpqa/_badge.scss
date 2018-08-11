@@ -3,3 +3,7 @@
     @include badge-outline-variant($value, $border-width);
   }
 }
+
+.badge {
+  vertical-align: text-bottom;
+}

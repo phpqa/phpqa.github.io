@@ -2,22 +2,17 @@
 layout: page
 title: News
 title-visible: false
-comments: false
-comments-count: true
 ---
 
 <div class="posts mb-4">
     {% for post in site.posts %}
     <article class="post card mb-1">
         <div class="card-body">
-            <h3><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h3>
+            <h3>{{ post.title }}</h3>
             <p class="small">
                 Written on
-                <time pubdate datetime="{{ post.date }}">{{ page.date | date: "%Y-%m-%d" }}</time>
-                {% if page.comments-count == true %}
+                <time pubdate datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time>
                 - {{ post.content | number_of_words }} words
-                - <span data-disqus-identifier="{{ post.id }}" class="disqus-comment-count">0</span> comments
-                {% endif %}
             </p>
             
             {{ post.excerpt }}
