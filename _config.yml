@@ -93,20 +93,6 @@ links:
   - { label: OSMI,                      icon: far fa-handshake,         url: 'https://osmihelp.org/',                               description: 'Changing how we talk about mental health in the tech community.'                        }
   - { label: Static Analysis Tools,     icon: fas fa-list-ol,           url: 'https://github.com/exakat/php-static-analysis-tools', description: 'A curated list of static analysis tools for PHP.'                                       }
 
-metadata:
-  authors:      { label: Author(s),           icon: far fa-user,                                                                                                      }
-  companies:    { label: Company,             icon: far fa-building,                                                                                                  }
-  website:      { label: Website,             icon: fas fa-globe,         button: true,   button-class: btn-website                                                   }
-  license:      { label: License,             icon: far fa-id-card,                                                                                                   }
-  terms:        { label: Terms (Of Service),  icon: far fa-thumbs-up,     button: true,   button-class: btn-terms                                                     }
-  wiki:         { label: Wiki,                icon: far fa-list-alt,      button: true,   button-class: btn-wiki                                                      }
-  docs:         { label: Documentation,       icon: fas fa-info,          button: true,   button-class: btn-docs                                                      }
-  demo:         { label: Demo,                icon: fas fa-desktop,       button: true,   button-class: btn-demo                                                      }
-  github:       { label: GitHub,              icon: fab fa-github,        button: true,   button-class: btn-github,     url-prefix: 'https://github.com/'             }
-  packagist:    { label: Packagist,           icon: far fa-compass,       button: true,   button-class: btn-packagist,  url-prefix: 'https://packagist.org/packages/' }
-  dockerhub:    { label: DockerHub,           icon: fab fa-docker,        button: true,   button-class: btn-dockerhub,  url-prefix: 'https://hub.docker.com/r/'       }
-  dependencies: { label: Dependencies,        icon: far fa-check-square,                                                                                              }
-
 project_keys:
   - path
   - output

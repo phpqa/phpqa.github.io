@@ -161,7 +161,7 @@ and should be an array of objects with at least a `name`.
 - url: *optional*, *discouraged*
     - The `url`<sup>[1](#notes)</sup> where the GitHub repository can be found.
     - If this property is not provided, the `url` will be generated as a concatenation
-            of '{{ site.metadata.github.url-prefix }}' and the `name`.
+            of 'https://github.com/' and the `name`.
 
 ##### Packagist
 
@@ -178,7 +178,7 @@ and should be an array of objects with at least a `name`.
 - url: *optional*, *discouraged*
     - The `url`<sup>[1](#notes)</sup> where the Packagist package can be found.
     - If this property is not provided, the `url` will be generated as a concatenation
-            of '{{ site.metadata.packagist.url-prefix }}' and the `name`.
+            of 'https://packagist.org/packages/' and the `name`.
 
 ##### DockerHub
 
@@ -195,7 +195,7 @@ It should be an array of objects with at least a `name`.
 - url: *optional*, *discouraged*
     - The `url`<sup>[1](#notes)</sup> where the DockerHub image can be found.
     - If this property is not provided, the `url` will be generated as a concatenation
-            of '{{ site.metadata.dockerhub.url-prefix }}' and the `name`.
+            of 'https://hub.docker.com/r/' and the `name`.
 
 #### Installation
 
