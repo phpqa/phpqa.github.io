@@ -18,6 +18,8 @@ composer-dev:       {command: 'vendor/bin/infection'}
 composer-global:    {command: 'infection'}
 phar:               {url: 'https://github.com/infection/infection/releases/download/X.X.X/infection.phar'}
 
+twitter:            [{name: 'infection_php'}]
+
 ---
 
 [{{ page.title }}]({{ page.url | absolute_url }}) is a PHP mutation testing framework based 
