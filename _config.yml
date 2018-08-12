@@ -69,6 +69,8 @@ collections:
     output: true
     permalink: /:collection/:categories/:year/:month/:day/:title.html
 
+  websites:
+    output: false
 
 navigation:
   projects:     { label: Projects,      icon: fas fa-cogs,              url: /index.html                                  }
@@ -79,19 +81,6 @@ navigation:
   github:       { label: GitHub,        icon: fab fa-github,            url: 'https://github.com/phpqa/phpqa.github.io'   }
   dockerhub:    { label: DockerHub,     icon: fab fa-docker,            url: 'https://hub.docker.com/u/phpqa/'            }
   contributing: { label: Contributing,  icon: fas fa-sign-language,     url: /contributing.html                           }
-
-links:
-  - { label: PHP.net Manual,            icon: far fa-bookmark,          url: 'https://secure.php.net/manual/en/',                   description: 'PHP.net Manual'                                                                         }
-  - { label: PHP Internals Book,        icon: fas fa-book,              url: 'http://www.phpinternalsbook.com/',                    description: 'A collaborative effort to better document and describe how PHP works internally.'       }
-  - { label: PHP The Right Way,         icon: far fa-thumbs-up,         url: 'http://www.phptherightway.com/',                      description: 'Quick reference for PHP popular coding standards.'                                      }
-  - { label: PHP The Wrong Way,         icon: far fa-thumbs-down,       url: 'http://www.phpthewrongway.com/',                      description: 'A pragmatic view on PHP programming.'                                                   }
-  - { label: PHP does not suck,         icon: fas fa-certificate,       url: 'https://phpdoesnotsuck.herokuapp.com/',               description: 'PHP is the Nickelback of programming languages.'                                        }
-  - { label: PHP TestFest,              icon: fas fa-code,              url: 'https://phptestfest.org/',                            description: 'PHP TestFest aims to improve the code coverage of the test suite for PHP.'              }
-  - { label: PHP.UserGroup,             icon: fas fa-users,             url: 'http://php.ug/',                                      description: 'An international meeting-point for the PHP-Community.'                                  }
-  - { label: PHP Women,                 icon: fas fa-venus,             url: 'http://phpwomen.org/',                                description: 'An inclusive & global network providing support within the PHP community.'              }
-  - { label: PHP Mentoring,             icon: fas fa-graduation-cap,    url: 'https://php-mentoring.org/',                          description: 'Focus on creating networks of skilled developers from all walks of life.'               }
-  - { label: OSMI,                      icon: far fa-handshake,         url: 'https://osmihelp.org/',                               description: 'Changing how we talk about mental health in the tech community.'                        }
-  - { label: Static Analysis Tools,     icon: fas fa-list-ol,           url: 'https://github.com/exakat/php-static-analysis-tools', description: 'A curated list of static analysis tools for PHP.'                                       }
 
 project_keys:
   - path

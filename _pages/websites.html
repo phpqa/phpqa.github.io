@@ -1,21 +1,22 @@
 ---
 layout: page
-title: Community
+title: Websites
 title-visible: false
 ---
 
+{% assign websites = site.websites | sort: 'order' %}
 <div class="row websites">
-    {% for link in site.links limit:include.limit %}
+    {% for website in websites limit:include.limit %}
     <div class="col-12 col-lg-6">
         <div class="card mb-1">
             <div class="card-body">
-                <i class="icon {{ link.icon }} fa-fw fa-3x" aria-hidden="true"></i>
+                <i class="icon {{ website.icon }} fa-fw fa-3x" aria-hidden="true"></i>
                 <strong>
-                    <a href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | absolute_url }}{% endif %}">
-                        {{ link.label }}
+                    <a href="{% if website.site contains 'http' %}{{ website.site }}{% else %}{{ website.site | absolute_url }}{% endif %}">
+                        {{ website.title }}
                     </a>
                 </strong>
-                <br/>{{ link.description }}
+                <br/>{{ website.content }}
             </div>
         </div>
     </div>
