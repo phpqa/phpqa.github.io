@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'phpDox'
+order:              'phpdox'
 tags:               ['documentation', 'cli'] 
 
 authors:            [{name: 'Arne Blankerts'}]    

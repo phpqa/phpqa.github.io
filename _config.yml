@@ -96,6 +96,7 @@ project_keys:
 
   - layout
   - title
+  - order
   - tags
   - authors
   - companies

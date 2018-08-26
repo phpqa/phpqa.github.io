@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHPSpec'
+order:              'phpspec'
 tags:               ['testing', 'specification']
 
 authors:            [{name: 'Konstantin Kudryashov'}, {name: 'Marcello Duarte'}, {name: 'Ciaran McNulty'}] 

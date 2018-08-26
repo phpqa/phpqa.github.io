@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Scrutinizer'
+order:              'scrutinizer'
 tags:               ['free for open source', 'online service', 'continuous integration']
 
 authors:            [{name: 'Johannes Schmitt'}] 

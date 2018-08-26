@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHP Assumptions'
+order:              'php assumptions'
 tags:               ['static analysis', 'bugs finder', 'validation', 'assumptions', 'cli']
 
 authors:            [{name: 'Rick Kuipers'}]   

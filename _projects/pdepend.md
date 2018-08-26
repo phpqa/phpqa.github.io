@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHP_Depend'
+order:              'php_depend'
 tags:               ['metrics', 'cli']
 
 authors:            [{name: 'Manuel Pichler'}]

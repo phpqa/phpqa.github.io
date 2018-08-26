@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHPLOC'
+order:              'phploc'
 tags:               ['metrics', 'cli'] 
 
 authors:            [{name: 'Sebastian Bergmann'}] 

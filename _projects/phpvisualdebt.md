@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHPVisualDebt'
+order:              'phpvisualdebt'
 tags:               ['visuals', 'cli']
 
 authors:            [{name: 'Michał Brzuchalski'}] 

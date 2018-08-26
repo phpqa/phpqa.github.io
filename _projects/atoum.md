@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'atoum'
+order:              'atoum'
 tags:               ['testing', 'cli']
 
 authors:            [{name: 'Frédéric Hardy'}, {name: 'Julien Bianchi'}] 

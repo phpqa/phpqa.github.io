@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Codeception'
+order:              'codeception'
 tags:               ['testing', 'cli']
 
 authors:            [{name: 'Michael Bodnarchuk'}] 

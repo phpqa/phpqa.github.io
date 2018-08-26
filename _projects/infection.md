@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Infection'
+order:              'infection'
 tags:               ['cli', 'testing', 'mutations']
 
 authors:            [{name: 'Maks Rafalko'}]

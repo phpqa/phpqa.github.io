@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'SimpleTest'
+order:              'simpletest'
 tags:               ['testing']
 
 authors:            [{name: 'Marcus Baker'}, {name: 'Jason Sweat'}, {name: 'Travis Swicegood'}, {name: 'Perrick Penet'}, {name: 'Edward Z. Yang'}, {name: 'Jens A. Koch'}]

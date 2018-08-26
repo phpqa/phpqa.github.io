@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHP Coding Standards Fixer 2'
+order:              'php coding standards fixer 2'
 tags:               ['code fixer', 'coding standards', 'psr', 'cli'] 
 
 authors:            [{name: 'Fabien Potencier'}, {name: 'Dariusz Rumiński'}]

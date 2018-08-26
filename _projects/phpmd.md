@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHP Mess Detector'
+order:              'php mess detector'
 tags:               ['bugs finder', 'mess detector', 'metrics', 'cli'] 
 
 authors:            [{name: 'Manuel Pichler'}]   

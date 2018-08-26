@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Tuli'
+order:              'tuli'
 tags:               ['deprecated', 'bugs finder', 'static analysis', 'cli'] 
 
 authors:            [{name: 'Anthony Ferrara'}]

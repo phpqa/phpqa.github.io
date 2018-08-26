@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Behat'       
+order:              'behat'       
 tags:               ['testing', 'bdd']
 
 authors:            [{name: 'Konstantin Kudryashov'}]

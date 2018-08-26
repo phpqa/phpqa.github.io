@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'dePHPend'
+order:              'dephpend'
 tags:               ['metrics', 'cli']
 
 authors:            [{name: 'Michael Haeuslmann'}] 

@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Smart Analyzer for PHP'
+order:              'smart analyzer for php'
 tags:               ['alpha', 'bugs finder', 'static analysis', 'cli'] 
 
 authors:            [{name: 'Dmitry Patsura'}] 

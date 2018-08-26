@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHP_CodeSniffer'
+order:              'php_codesniffer'
 tags:               ['coding standards', 'cli']
 
 authors:            [{name: 'Greg Sherwood'}] 

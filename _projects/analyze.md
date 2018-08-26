@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Qafoo Quality Analyzer'
+order:              'qafoo quality analyzer'
 tags:               ['metrics', 'cli']
 
 authors:            [{name: 'Kore Nordmann'}]

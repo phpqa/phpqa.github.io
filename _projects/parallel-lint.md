@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHP Parallel Lint'
+order:              'php parallel lint'
 tags:               ['bugs finder', 'lint', 'parallel', 'cli']
 
 authors:            [{name: 'Jakub Onderka'}] 

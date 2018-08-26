@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHPCompatibility'
+order:              'phpcompatibility'
 tags:               ['coding standards', 'php compatibility', 'cli']
 
 authors:            [{name: 'Wim Godden'}] 

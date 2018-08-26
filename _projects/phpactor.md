@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Phpactor'
+order:              'phpactor'
 tags:               ['completion', 'refactoring']
 
 authors:            [{name: 'Daniel Leech'}]   

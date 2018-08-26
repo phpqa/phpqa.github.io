@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'peridot'
+order:              'peridot'
 tags:               ['testing', 'bdd']
 
 authors:            [{name: 'Brian Scaturro'}, {name: 'Austin Morris'}] 

@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHP Copy/Paste Detector'
+order:              'php copy/paste detector'
 tags:               ['bugs finder', 'dry', 'code duplication', 'cli'] 
 
 authors:            [{name: 'Sebastian Bergmann'}]

@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHPStan - PHP Static Analysis Tool'
+order:              'phpstan'
 tags:               ['bugs finder', 'static analysis', 'cli'] 
 
 authors:            [{name: 'Ondřej Mirtes'}]  

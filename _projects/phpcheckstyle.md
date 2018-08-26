@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHPCheckstyle'
+order:              'phpcheckstyle'
 tags:               ['coding standards', 'cli'] 
 
 authors:            [{name: 'Hari Kodungallur'}, {name: 'Nimish Pachapurkar'}, {name: 'Benoit Pesty'}, {name: 'James Brooks'}, {name: 'Marcin Kurczewski'}] 

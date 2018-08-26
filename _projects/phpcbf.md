@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHP Code Beautifier and Fixer'
+order:              'php code beautifier and fixer'
 tags:               ['coding standards', 'code fixer', 'code beautifier', 'cli'] 
 
 authors:            [{name: 'Greg Sherwood'}] 

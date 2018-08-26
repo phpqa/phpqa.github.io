@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Kahlan'
+order:              'kahlan'
 tags:               ['testing', 'bdd']
 
 companies:          [{name: 'CrysaLEAD'}]

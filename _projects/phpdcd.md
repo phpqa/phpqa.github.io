@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHP Dead Code Detector'
+order:              'php dead code detector'
 tags:               ['unmaintained', 'dead code detection', 'cli'] 
 
 authors:            [{name: 'Sebastian Bergmann'}] 

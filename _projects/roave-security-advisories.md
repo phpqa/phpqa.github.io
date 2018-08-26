@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Roave Security Advisories'
+order:              'roave security advisories'
 tags:               ['security', 'composer', 'vulnerabilities', 'checker', 'dependencies']
 
 authors:            [{name: 'Marco Pivetta'}]

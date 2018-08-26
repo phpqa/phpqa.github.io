@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Psalm'
+order:              'psalm'
 tags:               ['bugs finder', 'static analysis', 'cli'] 
 
 authors:            [{name: 'Matthew Brown'}]

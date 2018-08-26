@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHP Formatter'
+order:              'php formatter'
 tags:               ['coding standards', 'cli'] 
 
 authors:            [{name: 'Marc Morera'}] 

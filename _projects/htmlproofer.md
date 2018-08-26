@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'HTMLProofer'
+order:              'htmlproofer'
 tags:               ['html', 'lint']
 
 authors:            [{name: 'Garen Torikian'}] 

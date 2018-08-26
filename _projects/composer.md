@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Composer'
+order:              'composer'
 tags:               ['cli', 'dependency management']
 
 authors:            [{name: 'Nils Adermann'}, {name: 'Jordi Boggiano'}] 

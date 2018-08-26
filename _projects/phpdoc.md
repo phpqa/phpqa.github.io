@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'phpDocumentor'
+order:              'phpdocumentor'
 tags:               ['cli', 'documentation']
 
 authors:            [{name: 'Mike van Riel'}]

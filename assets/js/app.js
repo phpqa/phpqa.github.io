@@ -198,7 +198,7 @@ if (!Array.prototype.filter) {
 
 var searchStore = {
     state: {
-        sortBy: 'title',
+        sortBy: 'order',
         sortOrder: 'asc',
         projects: projects,
         searchText: '',

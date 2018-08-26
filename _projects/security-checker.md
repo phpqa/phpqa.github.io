@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'SensioLabs Security Checker'
+order:              'sensiolabs security checker'
 tags:               ['security', 'composer', 'vulnerabilities', 'checker', 'cli', 'online service', 'dependencies'] 
 
 authors:            [{name: 'Fabien Potencier'}] 

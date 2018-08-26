@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PhpCodeFixer'
+order:              'phpcodefixer'
 tags:               ['bugs finder', 'deprecated functions', 'php compatibility', 'cli'] 
 
 authors:            [{name: 'Sergei Vanyushin'}]

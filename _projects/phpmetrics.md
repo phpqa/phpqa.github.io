@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PhpMetrics'
+order:              'phpmetrics'
 tags:               ['metrics', 'cli'] 
 
 authors:            [{name: 'Jean-François Lépine'}]

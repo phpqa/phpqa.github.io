@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Storyplayer'
+order:              'storyplayer'
 tags:               ['testing', 'bdd']
 
 authors:            [{name: 'Stuart Herbert'}, {name: 'Michael Heap'}] 

@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PHPUnit'
+order:              'phpunit'
 tags:               ['testing', 'cli'] 
 
 authors:            [{name: 'Sebastian Bergmann'}] 

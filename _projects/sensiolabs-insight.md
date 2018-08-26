@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'SensioLabs Insight'
+order:              'sensiolabs insight'
 tags:               ['free for open source', 'online service', 'security']
 
 companies:          [{name: 'SensioLabs'}]   

@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'Parse - A PHP Security Scanner'
+order:              'parse'
 tags:               ['alpha', 'bugs finder', 'cli'] 
 
 authors:            [{name: 'Chris Cornutt'}]    

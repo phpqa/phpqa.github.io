@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              'PhpCodeAnalyzer'
+order:              'phpcodeanalyzer'
 tags:               ['bugs finder', 'built-in php extensions', 'cli'] 
 
 authors:            [{name: 'Sergei Vanyushin'}]
