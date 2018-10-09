@@ -7,9 +7,9 @@ tags:               ['security', 'composer', 'vulnerabilities', 'checker', 'cli'
 authors:            [{name: 'Fabien Potencier'}] 
 companies:          [{name: 'SensioLabs'}] 
 
-website:            [{url: 'https://security.sensiolabs.org/'}]
+website:            [{url: 'https://security.symfony.com/'}]
 license:            [{url: 'https://github.com/sensiolabs/security-checker/blob/master/LICENSE', label: 'MIT License'}]
-demo:               [{url: 'https://security.sensiolabs.org/check'}]
+demo:               [{url: 'https://security.symfony.com/'}]
 
 github:             [{name: 'sensiolabs/security-checker'}]
 packagist:          [{name: 'sensiolabs/security-checker'}]          
@@ -25,7 +25,7 @@ application uses dependencies with known security vulnerabilities.
  
 <!--more--> 
 
-This tool is backed by the [SensioLabs Security Check Web service]({{ page.website.url }})
+This tool is backed by the [Symfony Security Monitoring service]({{ page.website.url }})
 and the [PHP Security Advisories Database]({{ site.projects | where: 'title', 'PHP Security Advisories Database' | map: 'url' | first | absolute_url }}).
 
 ## Usage
@@ -36,13 +36,13 @@ Checking your composer file can be done in several ways:
 
 * Use it as a CLI tool:
 
-    ```php security-checker security:check /path/to/composer.lock```
+    ```php checker security:check /path/to/composer.lock```
 
 * Use the web service with curl:
 
-    ```curl -H "Accept: text/plain" https://security.sensiolabs.org/check_lock -F lock=@/path/to/composer.lock```
+    ```curl -H "Accept: text/plain" https://security.symfony.com/check_lock -F lock=@/path/to/composer.lock```
 
    It will return all vulnerabilities detected in your dependencies in plain
    text. You can also retrieve the information in the JSON format:
 
-    ```curl -H "Accept: application/json" https://security.sensiolabs.org/check_lock -F lock=@/path/to/composer.lock```
+    ```curl -H "Accept: application/json" https://security.symfony.com/check_lock -F lock=@/path/to/composer.lock```
