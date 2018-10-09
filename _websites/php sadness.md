@@ -1,7 +1,7 @@
 ---
 title:  PHP Sadness
 icon:   far fa-sad-tear       
-site:   https://phpdoesnotsuck.herokuapp.com/
+site:   http://phpsadness.com/
 order:  104
 ---
 
