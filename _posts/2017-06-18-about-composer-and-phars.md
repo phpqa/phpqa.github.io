@@ -19,7 +19,7 @@ we [do have a problem](https://blog.bitexpert.de/blog/solving-the-require-dev-pr
 
 I certainly would love to add more secure instructions on how to download PHARs and packages in a verifiable way.
 
-Let the era of a lovechild between [Composer](https://getcomposer.org/) and [PHIVE]((https://phar.io/)) begin!
+Let the era of a lovechild between [Composer](https://getcomposer.org/) and [PHIVE](https://phar.io/) begin!
 
 Sincerely,
 your buzzard.
