@@ -12,7 +12,6 @@ docs:               [{url: 'https://phpactor.github.io/phpactor/'}]
 
 github:             [{name: 'phpactor/phpactor'}]
 packagist:          [{name: 'phpactor/phpactor'}]               
-dockerhub:          [{name: 'phpqa/phpa'}]     
 
 dependencies:       []
 git:                {update-submodules: false, install-composer-dependencies: true, command: 'phpactor'}  
