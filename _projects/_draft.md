@@ -1,6 +1,7 @@
 ---
 layout:             'project'
 title:              ''
+order:              ''
 tags:               ['']
 
 authors:            [{name: ''}]
