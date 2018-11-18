@@ -15,7 +15,6 @@ github:             [{name: 'exakat/exakat'}]
 dockerhub:          [{name: 'exakat/exakat'}]
 
 dependencies:       ['Gremlin server', 'Java 8.x']
-phar:               {url: {'No HTTPS': 'http://dist.exakat.io/index.php?file=latest'}}
 
 ---
 
