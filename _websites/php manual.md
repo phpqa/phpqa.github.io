@@ -1,6 +1,6 @@
 ---
 title:  PHP.net Manual
-icon:   far fa-bookmark
+icon:   fab fa-php
 site:   https://secure.php.net/manual/
 order:  1
 ---
