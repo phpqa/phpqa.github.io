@@ -1,0 +1,8 @@
+---
+title:  Friends of PHP     
+icon:   fas fa-map-marked-alt         
+site:   https://friendsofphp.org/
+order:  504 
+---
+
+The Friends of PHP page shows all PHP meetups for the next 30 days.
