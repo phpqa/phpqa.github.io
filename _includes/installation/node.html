@@ -1,0 +1,79 @@
+{% for item in include.node %}
+<h3>Install from a Node package {{ item.suffix }} (with npm or yarn)</h3>
+
+<p class="alert alert-info">
+    Make sure you have
+    <a href="https://www.npmjs.com/get-npm">npm</a>
+    or <a href="https://yarnpkg.com/en/docs/install">yarn</a>
+    {% if include.dependencies != nil && include.dependencies != empty && include.dependencies.first != nil %}
+    {% assign list = include.dependencies | join: ', ' %}
+    {% if list != '' %}
+    and all dependencies {{ list }}
+    {% endif %}
+    {% endif %}
+    installed.
+</p>
+
+<div class="card mb-3">
+    <div class="card-body">
+        {% if true == item.dev %}
+        Require it as a dev dependency:
+        {% if true == item.yarn %}
+        <br/>
+        <code class="highlighter-rouge">
+            yarn add --dev
+            {% for package in item.packages %}
+            {{ package.name }}{% if package.version != nil %}@{{ package.version }}{% endif %}
+            {% endfor %}
+        </code>
+        {% endif %}
+        {% if true == item.yarn and true == item.npm %}<br/>or{% endif %}
+        {% if true == item.npm %}
+        <br/>
+        <code class="highlighter-rouge">
+            npm install --save-dev
+            {% for package in item.packages %}
+            {{ package.name }}{% if package.version != nil %}@{{ package.version }}{% endif %}
+            {% endfor %}
+        </code>
+        {% endif %}
+        {% endif %}
+        {% if true == item.dev and true == item.global %}<br/>{% endif %}
+        {% if true == item.global %}
+        Require it as a global dependency:
+        {% if true == item.yarn %}
+        <br/>
+        <code class="highlighter-rouge">
+            yarn global add
+            {% for package in item.packages %}
+            {{ package.name }}{% if package.version != nil %}@{{ package.version }}{% endif %}
+            {% endfor %}
+        </code>
+        {% endif %}
+        {% if true == item.yarn and true == item.npm %}<br/>or{% endif %}
+        {% if true == item.npm %}
+        <br/>
+        <code class="highlighter-rouge">
+            npm install --global
+            {% for package in item.packages %}
+            {{ package.name }}{% if package.version != nil %}@{{ package.version }}{% endif %}
+            {% endfor %}
+        </code>
+        {% endif %}
+        {% endif %}
+
+        {% if item.commands %}
+        {% for command in item.commands %}
+        <br/>{{ command.description }}:
+        {% if true == item.yarn %}
+        <br/><code class="highlighter-rouge">yarn run {{ command.executable }} {{ command.arguments }}</code>
+        {% endif %}
+        {% if true == item.yarn and true == item.npm %}<br/>or{% endif %}
+        {% if true == item.npm %}
+        <br/><code class="highlighter-rouge">npm run {{ command.executable }} -- {{ command.arguments }}</code>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endfor %}
