@@ -2,7 +2,7 @@
 layout:             'project'
 title:              'Phan'
 order:              'phan'
-tags:               ['bugs finder', 'static analysis', 'cli']
+tags:               ['bugs finder', 'static analysis', 'type safety', 'cli']
 
 authors:            [{name: 'Rasmus Lerdorf'}, {name: 'Andrew Morrison'}] 
 
