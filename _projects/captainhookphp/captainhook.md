@@ -23,12 +23,15 @@ It enables you to configure your git hook actions in a simple json file.
  
 <!--more-->
 
-You can use CaptainHook to validate or prepare your commit messages,
+You can use {{ page.title }} to validate or prepare your commit messages,
 ensure code quality or run unit tests before you commit or push changes to git.
 You can automatically clear local caches or install the latest composer dependencies after pulling the latest changes.
 
-CaptainHook makes it easy to share hooks within your team and even can make sure that everybody in your team
+{{ page.title }} makes it easy to share hooks within your team and even can make sure that everybody in your team
 activates the hooks locally.
 
 You can run cli commands, use some built in validators,
-or write your own PHP classes that get executed by CaptainHook. 
+or write your own PHP classes that get executed by {{ page.title }}.
+
+For those of you who use <a href="{{ site.projects | where: 'title', 'GrumPHP' | map: 'url' | first | absolute_url }}">GrumPHP</a>,
+there is a separate package to integrate {{ page.title }} within GrumPHP: [Captainhook - GrumPHP](https://github.com/CaptainHookPhp/GrumPHP).  
