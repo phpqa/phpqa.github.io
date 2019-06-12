@@ -12,7 +12,7 @@ title-visible: false
             <div class="card-body">
                 <i class="icon {{ website.icon }} fa-fw fa-3x" aria-hidden="true"></i>
                 <strong>
-                    <a href="{% if website.site contains 'http' %}{{ website.site }}{% else %}{{ website.site | absolute_url }}{% endif %}">
+                    <a href="{% if website.site contains 'http' %}{{ website.site }}{% endif %}{% unless website.site contains 'http' %}{{ website.site | absolute_url }}{% endunless %}">
                         {{ website.title }}
                     </a>
                 </strong>
