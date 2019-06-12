@@ -1,10 +1,26 @@
-version: '3.1'
+version: '3.7'
+
+volumes:
+
+    website:
+        driver: local
+        driver_opts:
+            o: bind
+            type: none
+            device: $PWD/
 
 services:
     jekyll:
-        image: jekyll/jekyll:pages
-        command: jekyll serve --watch --force_polling --verbose
+        image: phpqa/github-pages-gem:v199
+        command: jekyll serve -H 0.0.0.0 -P 4000 --watch --force_polling --verbose
         ports:
-            - "4000:4000"
+            - target: 4000
+              published: 4000
+              protocol: tcp
+              mode: host
         volumes:
-            - ./:/srv/jekyll
+            - type: volume
+              source: website
+              target: /src/site
+              volume:
+                  nocopy: true
