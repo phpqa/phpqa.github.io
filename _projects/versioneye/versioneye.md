@@ -22,9 +22,8 @@ about security vulnerabilities, license violations and out-dated dependencies in
 **The online service of VersionEye was [shut down](https://blog.versioneye.com/2017/10/19/versioneye-sunset-process/) December 2017.**
 
 > The software solution itself behind VersionEye.com is completely open source.
-> All code repositories are on GitHub: [https://github.com/versioneye/]().
+> All code repositories are on [GitHub](https://github.com/versioneye/).
 
-> In this repository is a description how to setup your own VersionEye instance:
-> [https://github.com/versioneye/ops_contrib]().
+> In [this repository](https://github.com/versioneye/ops_contrib) is a description how to setup your own VersionEye instance.
 > There is a set of Docker images which can be started through Docker Compose.
 > There is a also a Vagrantfile available, if you prefer that.
