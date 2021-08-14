@@ -16,7 +16,7 @@ dockerhub:          [{name: 'phpqa/phpmd'}]
 dependencies:       []
 composer-dev:       {command: 'vendor/bin/phpmd'}
 git:                {update-submodules: true, install-composer-dependencies: true, command: 'src/bin/phpmd'}
-phar:               {url: 'https://static.phpmd.org/php/latest/phpmd.phar'}
+phar:               {url: 'https://phpmd.org/static/latest/phpmd.phar'}
 
 ---
 
