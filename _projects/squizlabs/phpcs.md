@@ -4,13 +4,13 @@ title:              'PHP_CodeSniffer'
 order:              'php_codesniffer'
 tags:               ['coding standards', 'cli']
 
-authors:            [{name: 'Greg Sherwood'}] 
+authors:            [{name: 'Greg Sherwood'}, {name: 'Juliette Reinders Folmer'}]
 
-website:            [{url: 'https://pear.php.net/package/PHP_CodeSniffer'}]
-wiki:               [{url: 'https://github.com/squizlabs/PHP_CodeSniffer/wiki'}]
-license:            [{url: 'https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt', label: 'BSD 3-clause "New" or "Revised" License'}]
+website:            [{url: 'https://github.com/PHPCSStandards/PHP_CodeSniffer/'}]
+license:            [{url: 'https://github.com/PHPCSStandards/PHP_CodeSniffer/blob/master/licence.txt', label: 'BSD 3-clause "New" or "Revised" License'}]
+wiki:               [{url: 'https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki'}]
 
-github:             [{name: 'squizlabs/PHP_CodeSniffer'}]
+github:             [{name: 'PHPCSStandards/PHP_CodeSniffer'}]
 packagist:          [{name: 'squizlabs/php_codesniffer'}]               
 dockerhub:          [{name: 'phpqa/phpcs'}]     
 
@@ -18,8 +18,7 @@ dependencies:       []
 composer-dev:       {command: 'vendor/bin/phpcs'}  
 composer-global:    {command: 'phpcs'} 
 git:                {command: 'bin/phpcs'}
-pear:               {name: 'PHP_CodeSniffer'}
-phar:               {url: 'https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar'}
+phar:               {url: 'http://phars.phpcodesniffer.com/phpcs.phar'}
 
 ---
 
