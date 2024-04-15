@@ -4,7 +4,7 @@ title:              'PHPCompatibility'
 order:              'phpcompatibility'
 tags:               ['coding standards', 'php compatibility', 'cli']
 
-authors:            [{name: 'Wim Godden'}] 
+authors:            [{name: 'Wim Godden'}, {name: 'Juliette Reinders Folmer'}] 
 
 website:            [{url: 'https://github.com/PHPCompatibility/PHPCompatibility'}]
 license:            [{url: 'https://github.com/PHPCompatibility/PHPCompatibility/blob/master/LICENSE', label: 'GNU Lesser General Public License v3.0 (LGPL)'}]
