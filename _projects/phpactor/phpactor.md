@@ -6,9 +6,9 @@ tags:               ['completion', 'refactoring']
 
 authors:            [{name: 'Daniel Leech'}]   
 
-website:            [{url: 'https://phpactor.github.io/phpactor/'}]
+website:            [{url: 'https://phpactor.readthedocs.io/en/master/'}]
 license:            [{url: 'https://github.com/phpactor/phpactor/blob/develop/LICENSE', label: 'MIT License'}]
-docs:               [{url: 'https://phpactor.github.io/phpactor/'}]
+docs:               [{url: 'https://phpactor.readthedocs.io/en/master/'}]
 
 github:             [{name: 'phpactor/phpactor'}]
 packagist:          [{name: 'phpactor/phpactor'}]               
